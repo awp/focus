@@ -1,0 +1,4 @@
+# settings for creating this content type
+name: Organization
+description: Organizations are basic pieces of content that describe a grouping of sort.
+title_label: Organization Name

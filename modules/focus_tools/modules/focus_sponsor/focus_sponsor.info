@@ -1,0 +1,10 @@
+name = FOCUS Sponsor
+description = Provides the FOCUS Sponsor Content Type.
+;configure = admin/config/focus/node/sponsor
+
+package = "FOCUS Tools"
+
+dependencies[] = focus_tools
+
+version = 7.x-1.0
+core = 7.x

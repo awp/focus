@@ -1,0 +1,23 @@
+<?php
+/**
+ * Implements hook_focus_content_type()
+ */
+function focus_quote_focus_content_type() {
+    return array('focus_quote');
+}
+
+/**
+ * Implements hook_focus_field_group()
+ */
+function focus_quote_focus_field_group() {
+    return array('focus_quote');
+}
+
+/**
+ * Implements hook_form()
+ * 
+ * This function must exist in order for this content type to appear at admin/stucture/types
+ */
+function focus_quote_form($node, &$form_state) {
+    return array();
+}

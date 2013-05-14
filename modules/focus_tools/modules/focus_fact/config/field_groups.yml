@@ -1,0 +1,8 @@
+group_details:
+  data:
+    label: Details
+    children:
+      field_focus_tags
+      field_focus_source
+      field_focus_number
+      body

@@ -1,0 +1,67 @@
+## Entity References ##
+
+field_focus_embedded_slideshow:
+  label: Embed Slideshow
+  type: entityreference
+  widget:
+    type: options_select
+  settings:
+    target_type: node
+    handler_settings:
+      target_bundles:
+        focus_slideshow: focus_slideshow
+
+## Field Collections ##
+
+field_focus_slideshow: # field collection reference
+  label: Slideshow
+  type: field_collection
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget:
+    type: field_collection_embed
+
+field_focus_slide_title: # field collection field
+  label: Slide Title
+  bundle: field_focus_slideshow
+  entity_type: field_collection_item
+  type: text
+  widget: 
+    type: text_textfield
+
+field_focus_slide_subtitle: # field collection field
+  label: Slide Subtitle
+  bundle: field_focus_slideshow
+  entity_type: field_collection_item
+  type: text
+  widget: 
+    type: text_textfield
+
+field_focus_slide_caption: # field collection field
+  label: Slide Caption
+  bundle: field_focus_slideshow
+  entity_type: field_collection_item
+  type: text
+  widget: 
+    type: text_textfield
+
+field_focus_slide_image: # field collection field
+  label: Slide Image
+  bundle: field_focus_slideshow
+  entity_type: field_collection_item
+  type: image
+  widget: 
+    type: media_generic
+  settings:
+    default_image:
+    file_extensions: jpg jpeg gif png
+
+field_focus_slide_links: # field collection field
+  label: Slide Link
+  bundle: field_focus_slideshow
+  entity_type: field_collection_item
+  type: link_field
+  widget: 
+    type: link_field
+  settings:
+    attributes:
+      target: user

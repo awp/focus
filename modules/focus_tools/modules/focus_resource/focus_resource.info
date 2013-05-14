@@ -1,0 +1,10 @@
+name = FOCUS Resource
+description = Provides the FOCUS Resource Content Type.
+;configure = admin/config/focus/node/resource
+
+package = "FOCUS Tools"
+
+dependencies[] = focus_tools
+
+version = 7.x-1.0
+core = 7.x

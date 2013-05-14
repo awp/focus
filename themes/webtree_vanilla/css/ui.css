@@ -1,0 +1,35 @@
+.ui-widget{
+    font-size: 12px;
+}
+
+a:link.ui-selectmenu{
+    text-decoration: none;
+}
+
+select.form-select{
+    padding-right: 32px;
+}
+
+/* -- Fix workbench overrides -- */
+
+form.workbench-moderation-moderate-form{
+    display: block;
+}
+
+form.workbench-moderation-moderate-form .form-type-select{
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+
+form.workbench-moderation-moderate-form .form-type-select .ui-selectmenu-menu{
+    left: 0;
+}
+
+form.workbench-moderation-moderate-form div.ui-selectmenu-menu{
+    display: none;
+}
+
+form.workbench-moderation-moderate-form div.ui-selectmenu-open{
+    display: block;
+}

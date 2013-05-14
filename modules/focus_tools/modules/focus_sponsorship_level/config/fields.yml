@@ -1,0 +1,13 @@
+field_focus_sponsorship_level:
+  label: Sponsorship Level
+  type: taxonomy_term_reference
+  widget:
+    type: taxonomy_autocomplete
+    settings:
+      autocomplete_path: taxonomy/autocomplete
+    module: taxonomy
+  settings:
+    allowed_values:
+      0:
+        vocabulary: focus_sponsorship_level
+        parent: 0

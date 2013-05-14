@@ -1,0 +1,31 @@
+field_focus_name:
+  label: Name
+  description: Name of this person
+  
+field_focus_position:
+  label: Position
+  description: The job title of this person
+
+field_focus_department:
+  label: Department
+  description: The department with which this person is associated
+
+body:
+  label: Biography
+
+field_focus_phone:
+  label: Phone
+  description: Phone number of this person
+
+field_focus_email:
+  label: Email
+  description: Email address of this person
+
+field_focus_portrait:
+  label: Portrait
+  description: Image of this person
+  
+field_focus_download:
+  label: Downloads
+  description: File downloads associated with this person
+    

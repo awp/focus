@@ -1,0 +1,4 @@
+# settings for creating this content type
+name: FAQ
+description: Frequently Asked Questions with Answers
+title_label: Question

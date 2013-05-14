@@ -1,0 +1,6 @@
+language: und # LANGUAGE_NONE
+uid: 1
+status: 1
+promote: 0
+comment: 1 # 1 is off, 2 is on
+type: focus_page

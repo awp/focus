@@ -1,0 +1,26 @@
+<?php
+/**
+ * @file
+ * @todo
+ */
+
+/**
+ * Implements hook_focus_taxonomy().
+ */
+function focus_casestudy_tag_focus_taxonomy() {
+    return array('focus_casestudy_tag');
+}
+
+/**
+ * Implements hook_focus_field_group().
+ */
+function focus_casestudy_tag_focus_field_group() {
+    return array('focus_casestudy_tag');
+}
+
+/**
+ * Implements hook_focus_fields().
+ */
+function focus_casestudy_tag_focus_fields() {
+    return array('focus_casestudy_tag');
+}

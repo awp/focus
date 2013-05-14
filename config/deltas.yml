@@ -1,0 +1,21 @@
+home:
+  name: Home
+  description:
+  mode: preserve
+  parent:
+  settings: []
+  
+page_default:
+  name: Default Page
+  description:
+  mode: preserve
+  parent:
+  settings: []
+  
+section_default:
+  name: Default Section
+  description:
+  mode: preserve
+  parent:
+  settings: []
+  

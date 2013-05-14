@@ -1,0 +1,4 @@
+# settings for creating this content type
+name: Callout
+description: Callouts are short pieces of content that are featured somewhere noticable.
+title_label: Callout Title

@@ -1,0 +1,4 @@
+# settings for creating this content type
+name: Sponsor
+description: Sponsors are companies or organizations that have contributed to your organization in one way or another.
+title_label: Sponsor Name

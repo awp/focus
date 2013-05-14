@@ -1,0 +1,36 @@
+group_content:
+  data:
+    label: "Title & Description"
+    children:
+      title
+      body
+
+group_images:
+  data:
+    label: Images
+    children:
+      field_focus_thumbnail
+      field_focus_primary_image
+      field_focus_gallery_image
+      
+group_media:
+  data:
+    label: Media
+    children:
+      field_focus_download
+      
+group_details:
+  data:
+    label: Details
+    children:
+      field_focus_semester
+      field_focus_person
+      field_focus_location
+      field_focus_courses
+      
+group_sidebar:
+  data:
+    label: Sidebar
+    children:
+      field_focus_sidebar
+      

@@ -1,0 +1,18 @@
+group_content:
+  data:
+    label: "Title & Description"
+    children:
+      title
+      field_focus_job_duties
+      field_focus_job_qualifications
+      field_focus_job_skills
+      body
+
+group_details:
+  data:
+    label: Employment Details
+    children:
+      field_focus_job_hours
+      field_focus_dateline
+      field_focus_deadline
+      field_focus_download

@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file
+ * Contains functions relevant to installing/updating/uninstalling this module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function focus_core_install() {
+    _focus_core_ckeditor_settings_set();
+    _focus_core_roles_create();
+}

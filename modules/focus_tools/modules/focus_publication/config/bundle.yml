@@ -1,0 +1,4 @@
+# settings for creating this content type
+name: Publication
+description: Publications are content that present files with additional information.
+title_label: Publication Name

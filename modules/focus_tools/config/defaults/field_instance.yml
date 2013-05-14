@@ -1,0 +1,11 @@
+# default settings for creating a field instance
+# see field_create_instance()
+entity_type: node
+display:
+  default:
+    label: hidden
+  teaser:
+    label: hidden
+settings:
+  default_image:
+  default_file:

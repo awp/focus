@@ -1,0 +1,14 @@
+group_content:
+  data:
+    label: "Title & Description"
+    children:
+      title
+      body
+
+group_details:
+  data:
+    label: Details
+    children:
+      field_focus_courses
+      field_focus_people
+      

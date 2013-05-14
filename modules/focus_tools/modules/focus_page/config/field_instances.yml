@@ -1,0 +1,23 @@
+body:
+
+field_focus_primary_image:
+  label: Primary Image
+  description: Image associated with this page
+  
+field_focus_gallery_image:
+  label: Gallery Images
+  description: Gallery of images associated with this page
+  
+field_focus_download:
+  label: Downloads
+  description: Files associated with this page
+  settings:
+    file_extensions: txt pdf rtf csv mp3 wav doc
+  
+field_focus_media:
+  label: Media
+  description: Media associated with this page
+  
+field_focus_sidebar:
+  label: Page Sidebar
+  description: Sidebar associated with this page

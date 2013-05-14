@@ -1,0 +1,15 @@
+group_content:
+  entity_type: taxonomy_term
+  data:
+    label: "Name & Description"
+    children:
+      name
+      description
+      
+group_dates:
+  entity_type: taxonomy_term
+  data:
+    label: Dates Active
+    children:
+      field_focus_calendar_date
+      

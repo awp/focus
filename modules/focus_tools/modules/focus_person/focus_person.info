@@ -1,0 +1,13 @@
+name = FOCUS Person
+description = Provides the FOCUS Person Content Type.
+;configure = admin/config/focus/node/person
+
+package = "FOCUS Tools"
+
+dependencies[] = focus_tools
+dependencies[] = field_collection
+;dependencies[] = focus_department
+dependencies[] = entity_token
+
+version = 7.x-1.0
+core = 7.x

@@ -1,0 +1,5 @@
+menu_options:
+  main-menu
+focus_contexts:
+  page_default
+focus_structure_enabled: 0 # FOCUS_STRUCTURE_NEVER

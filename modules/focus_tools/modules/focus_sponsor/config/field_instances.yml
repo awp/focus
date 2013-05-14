@@ -1,0 +1,18 @@
+body:
+
+field_focus_thumbnail:
+  label: Sponsor Logo
+  description: "This sponsor's logo"
+  
+field_focus_website:
+  label: Sponsor Website
+  type: link_field
+  widget:
+    type: link_field
+  settings:
+    attributes:
+      target: _blank
+
+field_focus_sponsorship_level:
+  label: Sponsorship Level
+  description: "This sponsor's level of funding."

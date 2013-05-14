@@ -1,0 +1,11 @@
+name = FOCUS Tools
+package = FOCUS Tools
+description = Provides API for FOCUS tools
+
+dependencies[] = date_popup
+dependencies[] = focus_core
+
+;configure = admin/focus/tools/config
+
+version = 7.x-1.x-alpha2
+core = 7.x

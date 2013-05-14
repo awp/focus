@@ -1,0 +1,21 @@
+body:
+
+field_focus_thumbnail:
+  label: Blog Post Thumbnail
+  description: Thumbnail associated with this blog post
+  
+field_focus_primary_image:
+  label: Primary Image
+  description: Image associated with this blog post
+  
+field_focus_gallery_image:
+  label: Gallery Images
+  description: Gallery of images associated with this blog post
+  
+field_focus_download:
+  label: Downloads
+  description: Files associated with this blog post
+  
+field_focus_sidebar:
+  label: blog post Sidebar
+  description: Sidebar associated with this section

@@ -1,0 +1,26 @@
+field_focus_deck:
+  label: News Deck
+  description: A brief introduction to this news article
+  
+body:
+  label: News Story
+
+field_focus_primary_image:
+  label: Primary Image
+  description: Image associated with this news article
+  
+field_focus_gallery_image:
+  label: Gallery Images
+  description: Image gallery associated with this news article
+  
+field_focus_download:
+  label: Downloads
+  description: File downloads associated with this news article
+  
+field_focus_media:
+  label: Media
+  description: Media associated with this news article
+  
+field_focus_dateline:
+  label: Dateline
+  description: Publication date associated with this news article

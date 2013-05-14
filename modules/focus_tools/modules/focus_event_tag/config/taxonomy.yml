@@ -1,0 +1,4 @@
+name: Event Tag
+machine_name: focus_event_tag
+description: Event tags are keywords for meta data associations with events.
+title_label: Tag Name

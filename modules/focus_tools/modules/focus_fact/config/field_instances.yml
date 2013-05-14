@@ -1,0 +1,20 @@
+field_focus_number:
+  label: Statistic
+  description: A number associated with this fact.  Can be a percent '88%', a decimal '0.8', or a count '#88'
+  required: 1
+  widget:
+    settings:
+      size: 20
+  settings:
+    max_length: 10
+  
+body:
+  label: Fact
+  
+field_focus_tags:
+  label: Type
+  description: A keyword to associate this fact with other facts
+
+field_focus_source:
+  label: Source
+  description: A citation for where this fact came from

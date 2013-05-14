@@ -1,0 +1,436 @@
+<?php
+/**
+ * @file
+ * Installation for WebTree
+ */
+
+require_once('includes/constants.inc');
+
+/**
+ * Implements hook_install_tasks()
+ */
+function focus_install_tasks() {
+
+    // set the maintenance theme to FOCUS Admin
+    _focus_set_theme('focal');
+
+    // remove any status messages that might have been set. They are unneeded.
+    drupal_get_messages('status', TRUE);
+    
+    $tasks['focus_configure_form'] = array(
+        'display_name' => st('Configure FOCUS'),
+        'type' => 'form',
+    );
+    
+    $tasks['focus_install_tools'] = array(
+        'display_name' => st('Choose FOCUS Tools'),
+        'type' => 'batch',
+    );
+    
+    $tasks['focus_choose_themes'] = array(
+        'display_name' => st('Choose Site Themes'),
+        'type' => 'form',
+    );
+    
+    $tasks['focus_complete_installation'] = array(
+        'display_name' => st('Complete FOCUS Configuration'),
+        'type' => 'batch',
+    );
+    
+    return $tasks;
+
+}
+
+/**
+ * Implements hook_install_tasks_alter()
+ */
+function focus_install_tasks_alter(&$tasks, $install_state) {
+
+    $tasks['install_select_profile']['display'] = FALSE;
+    $tasks['install_select_profile']['run']     = INSTALL_TASK_SKIP;
+    
+    $tasks['install_select_locale']['display']  = FALSE;
+    $tasks['install_select_locale']['run']      = INSTALL_TASK_SKIP;
+    
+    // set welcome screen task
+    $welcome = array(
+        'focus_welcome' => array(
+            'display'      => TRUE,
+            'display_name' => st('Welcome to FOCUS!'),
+            'type'         => 'form',
+            'run'          => (isset($install_state['parameters']['welcome'])) ? INSTALL_TASK_SKIP : INSTALL_TASK_RUN_IF_REACHED,
+        ),
+    );
+    
+    foreach ($tasks as $task => &$info) {
+        if (FALSE !== strpos($task, 'focus_') || empty($info['display_name'])) continue;
+        $info['display_name'] = ucwords($info['display_name']);
+    }
+    
+    $tasks = array_slice($tasks, 0, 0) + $welcome + array_slice($tasks, 2);
+
+}
+
+/**
+ * Gets themes, formats list for use in FAPI #options and sorts
+ */
+function focus_themes_get() {
+    $themes = list_themes(TRUE);
+    
+    foreach ($themes as $theme => $info) {
+        $themes[$theme] = $info->info['name'];
+    }
+    
+    asort($themes);
+    
+    return $themes;
+}
+
+/**
+ * Task callback
+ */
+function focus_configure_form() {
+
+    global $base_path;
+
+    $tools = focus_tools_get();
+    $toolkeys = array_keys($tools);
+    
+    $form['title'] = array(
+        '#markup' => '<h2>Configure FOCUS</h2>',
+    );
+    
+    $form['#attached']['js'][] = FOCAL_PATH . '/js/dependencies.js';
+    
+    // Content Type Selection
+    
+    $form['tools'] = array(
+        '#type' => 'fieldset',
+        '#title' => st('Install Content Types'),
+        '#tree' => TRUE,
+    );
+    
+    foreach ($tools as $tool => $info) {
+        if ($info->status) continue;
+        
+        $requires = array_keys($info->requires);
+        $requires = array_intersect($toolkeys, $requires);
+        if (FALSE != $selfrequires = array_search($tool, $requires)) {
+            unset($requires[$selfrequires]);
+        }
+        
+        $form['tools'][$tool] = array(
+            '#type' => 'checkbox',
+            '#title' => t($info->info['name']),
+            '#disabled' => $info->status,
+            '#default_value' => $info->status,
+            '#attributes' => array(
+                'data-dependencies' => implode(',', $requires),
+            ),
+        );
+    }
+    
+    // Form actions
+    
+    $form['actions'] = array('#type' => 'actions');
+    $form['actions']['submit'] = array(
+        '#type' => 'submit',
+        '#value' => st('Submit Settings'),
+        '#weight' => 15,
+    );
+
+    return $form;
+
+}
+
+/**
+ * Task callback
+ */
+function focus_choose_themes() {
+    
+    $form['title'] = array(
+        '#markup' => '<h2>Choose FOCUS Themes</h2>',
+    );
+    
+    $form['new_theme'] = array(
+        '#type' => 'checkbox',
+        '#title' => st('Create FOCUS subtheme?'),
+    );
+    
+    // New Subtheme
+    
+    $form['subtheme'] = array(
+        '#type' => 'fieldset',
+        '#title' => st('Theme Settings'),
+        '#tree' => TRUE,
+        '#states' => array(
+            'visible' => array(
+                ':input[name="new_theme"]' => array('checked' => TRUE),
+            ),
+        ),
+    );
+    
+    $form['subtheme']['name'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Name'),
+        '#description' => t('The human-readable name for this theme.'),
+        '#default_value' => variable_get('site_name'),
+        '#size' => 30,
+        '#required' => TRUE,
+    );
+    
+    $form['subtheme']['machine_name'] = array(
+        '#type' => 'machine_name',
+        '#default_value' => '',
+        '#maxlength' => 30,
+        '#machine_name' => array(
+            'source' => array('subtheme', 'name'),
+        ),
+        '#element_validate' => array('_omega_tools_validate_theme_name'),
+    );
+
+    $form['subtheme']['description'] = array(
+        '#type' => 'textarea',
+        '#title' => t('Description'),
+        '#description' => t('The description that will be shown on the theme listing page.'),
+    );
+  
+    $form['subtheme']['version'] = array(
+        '#type' => 'hidden',
+        '#default_value' => '1.0',
+    );
+    
+    // Theme Selection
+    
+    $form['themes'] = array(
+        '#type' => 'fieldset',
+        '#tree' => TRUE,
+    );
+    
+    $form['themes']['default'] = array(
+        '#type' => 'select',
+        '#title' => st('Default Theme'),
+        '#options' => focus_themes_get(),
+        '#default_value' => variable_get('theme_default', 'bartik'),
+        '#states' => array(
+            'visible' => array(
+                ':input[name="new_theme"]' => array('checked' => FALSE),
+            ),
+        ),
+    );
+    
+    $form['themes']['admin'] = array(
+        '#type' => 'select',
+        '#title' => st('Admin Theme'),
+        '#options' => focus_themes_get(),
+        '#default_value' => 'focal',
+    );
+    
+    // Form actions
+    
+    $form['actions'] = array('#type' => 'actions');
+    $form['actions']['submit'] = array(
+        '#type' => 'submit',
+        '#value' => st('Submit Settings'),
+        '#weight' => 15,
+    );
+    
+    return $form;
+    
+}
+
+/**
+ * Form submit callback
+ */
+function focus_choose_themes_submit(&$form, &$form_state) {
+    
+    // Set admin theme
+    variable_set('admin_theme', $form_state['values']['themes']['admin']);
+    
+    // If we're creating a new theme, do it now.
+    if ($form_state['values']['new_theme']) {
+        require_once('includes/subtheme.inc');
+        focus_subtheme_create($form_state['values']['subtheme']);
+    } else {
+        // Set default theme.
+        variable_set('theme_default', $form_state['values']['themes']['default']);
+    }
+    
+}
+
+/**
+ * Form submit callback
+ */
+function focus_configure_form_submit(&$form, &$form_state) {
+
+    $tools = array();
+    
+    // Set tool install
+    foreach ($form_state['values']['tools'] as $tool => $enable) {
+        if (empty($enable)) continue;
+        $tools[] = $tool;
+    }
+    
+    variable_set('focus_tools', $tools);
+
+}
+
+/**
+ * Batch callback
+ * Identifies WebTree Tools to be installed and prepares the batch installer
+ * 
+ * @return array $batch
+ *  The batch to be implemented
+ */
+function focus_install_tools() {
+
+    $files = system_rebuild_module_data();
+
+    // first, get all dependencies and add them to our install list
+    $tools = variable_get('focus_tools', array());
+    foreach ($tools as $tool) {
+        if (empty($files[$tool]->requires)) continue;
+        $dependencies = array_keys($files[$tool]->requires);
+        $dependencies = array_filter($dependencies, 'module_exists');
+        
+        $tools = array_merge($tools, $dependencies);
+    }
+    
+    // next, ignore already installed modules and sort by module sort
+    $sorted = array();
+    foreach ($tools as $tool) {
+        if ($files[$tool]->status) continue;
+        
+        $sorted[$tool] = $files[$tool]->sort; 
+    }
+    arsort($sorted);
+    
+    // finally, add modules that need to be installed to batch operations
+    $operations = array();
+    foreach ($sorted as $tool => $sort) {
+        if ($info = $files[$tool]) {
+            $operations[] = array('_focus_module_batch_install', array($tool, $info->info['name']));
+        }
+    }
+    
+    if (empty($operations)) return _install_profile_modules_finished(array(), array(), array());
+    
+    $batch = array(
+        'operations' => $operations,
+        'title' => st('Installing FOCUS Content Types'),
+        'error_message' => st('The installation has encountered an error.'),
+        'finished' => '_install_profile_modules_finished',
+        'file' => WEBTREE_PROFILE_PATH . '/includes/batch.inc',
+    );
+
+    return $batch;
+
+}
+
+/**
+ * Task callback
+ */
+function focus_complete_installation() {
+    
+    $modules = system_rebuild_module_data();
+    
+    $disable = array('bartik');
+    $enable = array('focus_admin');
+    
+    $disable_blocks = array('help', 'recent', 'form', 'new', 'online');
+    $disable_modules = array('omega_tools');
+    $enable_modules = array('entityconnect');
+    
+    $operations = array(
+        array('_focus_themes_disable', array($disable)),
+        array('_focus_themes_enable', array($enable)),
+        array('_focus_blocks_disable', array($disable_blocks)),
+        array('_focus_deltas_create', array()),
+        array('_focus_contexts_create', array()),
+        array('_focus_variables_set', array()),
+    );
+    
+    foreach ($enable_modules as $module) {
+        if ($info = $modules[$module]) {
+            $operations[] = array('_focus_module_batch_install', array($module, $info->info['name']));
+        }
+    }
+    
+    foreach ($disable_modules as $module) {
+        if ($info = $modules[$module]) {
+            $operations[] = array('_focus_module_batch_uninstall', array($module, $info->info['name']));
+        }
+    }
+    
+    $batch = array(
+        'operations' => $operations,
+        'title' => st('Wrapping up remaining installation tasks.'),
+        'error_message' => st('There was an error completing this installation.'),
+        'finished' => 'install_import_locales_remaining',
+        'file' => WEBTREE_PROFILE_PATH . '/includes/batch.inc',
+    );
+    
+    return $batch;
+    
+}
+
+/**
+ * Install Task Callback
+ */
+function focus_welcome($form, &$form_state, &$install_state) {
+    
+    drupal_set_title(st('Welcome to FOCUS!'));
+    
+    $message[] = st('FOCUS for Drupal... coming right up!');
+    $message[] = st('This distribution will install FOCUS for Drupal - a better way to Drupal');
+    $message[] = st('We hope you enjoy your awpsome new website!');
+    
+    $form = array();
+    
+    $form['welcome_message'] = array(
+        '#markup' => '<p>'.(implode('</p><p>', $message)).'</p>',
+    );
+    
+    $form['actions'] = array(
+        '#type' => 'actions',
+    );
+    
+    $form['actions']['submit'] = array(
+        '#type' => 'submit',
+        '#value' => st("Let's do this!"),
+        '#weight' => 50,
+    );
+    
+    return $form;
+    
+}
+
+/**
+ * Force theme setting during installation.
+ * 
+ * Shamelessly stolen from the Commerce Guys's Commerce Kickstart profile.
+ * Thank You!
+ */
+function _focus_set_theme($theme) {
+    
+    if ($GLOBALS['theme'] != $theme) {
+        unset($GLOBALS['theme']);
+    
+        drupal_static_reset();
+        $GLOBALS['conf']['maintenance_theme'] = $theme;
+        _drupal_maintenance_theme();
+    }
+    
+}
+ 
+/**
+ * Form Callback
+ */
+function focus_welcome_submit($form, &$form_state) {
+    
+    global $install_state;
+    
+    $install_state['parameters']['welcome'] = 'complete';
+    $install_state['parameters']['locale']  = 'en';
+    
+}

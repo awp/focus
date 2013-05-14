@@ -1,0 +1,4 @@
+# settings for creating this content type
+name: Degree
+description: Degrees are documents that people get when they graduate
+title_label: Degree Title

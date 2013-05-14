@@ -1,0 +1,6 @@
+menu_options:
+  main-menu
+focus_contexts:
+  section_default
+focus_structure_children_view: "focus_structure_children:focus_structure_children"
+focus_structure_enabled: 2 # FOCUS_STRUCTURE_OPTIONAL_YES

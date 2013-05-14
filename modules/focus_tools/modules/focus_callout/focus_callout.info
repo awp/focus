@@ -1,0 +1,10 @@
+name = FOCUS Callout
+description = Provides the FOCUS Callout Content Type.
+;configure = admin/config/focus/node/callout
+
+package = "FOCUS Tools"
+
+dependencies[] = focus_tools
+
+version = 7.x-1.0
+core = 7.x

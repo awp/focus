@@ -1,0 +1,4 @@
+# settings for creating this content type
+name: Quote
+description: Quotes can be testimonials or simple quotes
+title_label: Said By

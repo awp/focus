@@ -1,0 +1,12 @@
+group_content:
+  data:
+    label: "Title & Content"
+    children:
+      title
+      body
+
+group_link:
+  data:
+    label: Link
+    children:
+      field_focus_link

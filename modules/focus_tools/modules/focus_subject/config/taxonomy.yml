@@ -1,0 +1,4 @@
+name: Subject
+machine_name: focus_subject
+description: Subjects are topics that relate to other nodes.
+title_label: Subject

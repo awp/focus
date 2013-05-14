@@ -1,0 +1,11 @@
+name = FOCUS Tool Views
+package = FOCUS Tools
+description = Provides Common Views for FOCUS tools
+
+dependencies[] = focus_tools
+dependencies[] = colorbox
+
+;configure = admin/focus/tools/views/config
+
+version = 7.x-1.x-alpha1
+core = 7.x

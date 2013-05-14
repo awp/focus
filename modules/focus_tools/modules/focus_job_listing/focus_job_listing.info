@@ -1,0 +1,11 @@
+name = FOCUS Job Listing
+description = Provides the FOCUS Job Listing Content Type.
+;configure = admin/config/focus/node/job_listing
+
+package = "FOCUS Tools"
+
+dependencies[] = list
+dependencies[] = focus_tools
+
+version = 7.x-1.0
+core = 7.x

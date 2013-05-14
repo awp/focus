@@ -1,0 +1,4 @@
+# settings for creating this content type
+name: Event
+description: Events are piece of content that display events
+title_label: Event Title

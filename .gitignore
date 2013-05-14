@@ -1,0 +1,4 @@
+# Ignore built distro folders
+libraries/*
+modules/contrib/*
+themes/contrib/*

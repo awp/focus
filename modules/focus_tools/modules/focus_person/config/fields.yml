@@ -1,0 +1,57 @@
+field_focus_portrait:
+  label: Portrait
+  type: image
+  widget:
+    type: media_generic
+  settings:
+    default_image:
+    file_extensions: jpg jpeg gif png
+    
+## Entity References ##
+    
+field_focus_person:
+  label: Associated Person
+  type: entityreference
+  widget:
+    type: entityreference_autocomplete
+  settings:
+    target_type: node
+    handler_settings:
+      target_bundles:
+        focus_person: focus_person
+
+field_focus_people:
+  label: Associated People
+  type: entityreference
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget:
+    type: entityreference_autocomplete
+  settings:
+    target_type: node
+    handler_settings:
+      target_bundles:
+        focus_person: focus_person
+
+## Field Collections ##
+
+field_focus_name: # field collection reference
+  label: Name
+  type: field_collection
+  widget: 
+    type: field_collection_embed
+
+field_focus_first_name: # field collection field
+  label: First Name
+  bundle: field_focus_name
+  entity_type: field_collection_item
+  type: text
+  widget: 
+    type: text_textfield
+
+field_focus_last_name: # field collection field
+  label: Last Name
+  bundle: field_focus_name
+  entity_type: field_collection_item
+  type: text
+  widget:
+    type: text_textfield

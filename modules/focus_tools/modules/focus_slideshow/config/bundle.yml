@@ -1,0 +1,4 @@
+# settings for creating this content type
+name: Slideshow
+description: Slideshows display a series of images as a slideshow.
+title_label: Slideshow Title

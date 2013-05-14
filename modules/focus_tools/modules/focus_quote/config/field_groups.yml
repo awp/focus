@@ -1,0 +1,8 @@
+group_details:
+  data:
+    label: Details
+    children:
+      body
+      field_focus_person
+      field_focus_dateline
+      

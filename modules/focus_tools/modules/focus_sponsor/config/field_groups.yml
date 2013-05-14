@@ -1,0 +1,14 @@
+group_content:
+  data:
+    label: "Name & Description"
+    children:
+      title
+      body
+
+group_extra:
+  data:
+    label: Additional Information
+    children:
+      field_focus_thumbnail
+      field_focus_website
+      field_focus_sponsorship_level

@@ -1,0 +1,12 @@
+name = FOCUS Views
+package = FOCUS
+description = Provides views plugins and abstraction layer
+
+; configure = admin/focus/config/views
+
+dependencies[] = views
+
+files[] = plugins/focus_views_plugin_display_block.inc
+
+version = 7.x-1.x-alpha1
+core = 7.x

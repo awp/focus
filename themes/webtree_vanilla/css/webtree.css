@@ -1,0 +1,147 @@
+/* -- Reset -- */
+
+* { margin: 0; padding: 0; border: 0; outline: none; box-shadow: none; font: inherit; vertical-align: baseline; background: transparent; }
+html { position: relative; overflow-y: scroll; }
+body { line-height: 1.5; font-size: 16px; }
+html, body{ min-height: 100%; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ul { list-style: none; }
+ol { list-style: decimal; }
+blockquote, q { quotes: none; }
+:before, :after { content: ''; content: none; }
+:hover, :focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; } /* tables still need 'cellspacing="0"' in the markup */
+textarea { resize: none; overflow: auto }
+a, a *, input[type="submit"], input[type="button"], button, button * { cursor: pointer; }
+input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, button::-moz-focus-inner { border: 0; padding: 0; }
+img { -ms-interpolation-mode: bicubic; }
+
+/* -- Global Styles -- */
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* -- Override Drupal Styles -- */
+
+body .form-item,
+body .form-actions {
+    margin: 0;
+}
+
+body .item-list ul,
+body .item-list ul li{
+    margin: 0;
+}
+
+body label.option.ui-button{
+    display: inline-block;
+}
+
+body .region{
+    min-height: 0;
+}
+
+body.front #region-content .feed-icon{
+    display: none;
+}
+
+body #colorbox tbody{
+    border-top: none;
+}
+
+body #region-page-bottom{
+    overflow: hidden;
+}
+
+body ul li.leaf{
+    list-style: none;
+}
+
+/* -- Alpha Debug Blocks -- */
+
+body .region .alpha-debug-block{
+    clear: both !important;
+    background: #fff !important;
+}
+
+body .region .alpha-debug-block h2,
+body .region .alpha-debug-block p{
+    font: normal 14px/1 Helvetica, Arial, sans-serif !important;
+    color: #999 !important;
+}
+
+/* -- Grid Styles -- */
+
+.alpha{
+    clear: left;
+}
+
+/* -- Contextual Links -- */
+
+.contextual-links-wrapper ul,
+.contextual-links-wrapper li{
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #fff !important;
+}
+
+.contextual-links-wrapper li{
+    font: normal 14px/1.5 Helvetica, Arial, sans-serif !important;
+    text-transform: none !important;
+    list-style: none !important;
+}
+
+.contextual-links-wrapper li a{
+    display: block !important;
+    text-decoration: none !important;
+}
+
+/* -- Generic Content Helpers -- */
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+    color: inherit;
+}
+
+/* -- Navigation Styles -- */
+
+.navigation > ul.menu{
+    float: left;
+    width: 100%;
+}
+
+.navigation ul.menu li{
+    position: relative;
+    list-style: none;
+    list-style-image: none;
+    z-index: 1;
+}
+
+.navigation > ul.menu > li{
+    float: left;
+}
+
+.navigation ul ul li{
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul ul{
+    position: absolute;
+    display: none;
+}
+
+.navigation > ul > li:hover{
+    z-index: 10;
+}
+
+.navigation > ul > li:hover > ul,
+.navigation > ul > li.mobile-hover > ul{
+    display: block;
+}
+
+.navigation ul ul ul{
+    display: none !important;
+}

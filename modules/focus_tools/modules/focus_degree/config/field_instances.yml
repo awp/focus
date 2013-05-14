@@ -1,0 +1,10 @@
+body:
+  label: Degree Description
+  
+field_focus_courses:
+  label: Courses
+  description: Courses related to this degree
+  
+field_focus_people:
+  label: Advisor(s)
+  description: Advisors associated with this degree

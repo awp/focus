@@ -1,0 +1,30 @@
+field_focus_job_duties:
+  label: Job Duties
+  description: These entries describe responsibilities to be performed by this position.
+
+field_focus_job_qualifications:
+  label: Qualifications
+  description: These entries describe qualifications to be eligible for this position.
+
+field_focus_job_skills:
+  label: Preferred Skills
+  description: These entries describe skills that are preferred for this position.
+  
+body:
+  label: Job Description
+  
+field_focus_job_hours:
+  label: Employment Hours
+  description: The basic time commitment this job requires.
+  
+field_focus_dateline:
+  label: Start Date
+  description: When applicants can expect this job to start.
+
+field_focus_deadline:
+  label: Application Deadline
+  description: When the application is due.
+  
+field_focus_download:
+  label: Downloads
+  description: File downloads associated with this job listing.

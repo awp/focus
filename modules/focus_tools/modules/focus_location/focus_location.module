@@ -1,0 +1,26 @@
+<?php
+/**
+ * @file
+ * @todo
+ */
+
+/**
+ * Implements hook_focus_taxonomy().
+ */
+function focus_location_focus_taxonomy() {
+    return array('focus_location');
+}
+
+/**
+ * Implements hook_focus_field_group
+ */
+function focus_location_focus_field_group() {
+    return array('focus_location');
+}
+
+/**
+ * Implements hook_focus_fields().
+ */
+function focus_location_focus_fields() {
+    return array('focus_location');
+}

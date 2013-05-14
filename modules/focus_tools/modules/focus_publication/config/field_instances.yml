@@ -1,0 +1,18 @@
+body:
+  label: Publication Description
+  
+field_focus_download:
+  label: Publication File
+  description: File associated with this publication
+
+field_focus_preview:
+  label: Preview Image
+  description: Image associated with this publication
+  
+field_focus_dateline:
+  label: Publication Date
+  description: Gallery of images associated with this publication
+
+field_focus_tags:
+  label: Keywords
+  description: Associated keywords (tagging)

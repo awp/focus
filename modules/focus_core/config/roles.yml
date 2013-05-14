@@ -1,0 +1,33 @@
+# @format
+#  rolename:
+#    permission_1: 1
+#    permission_2: 1
+#    permission_3: 0
+#
+
+administrator: *
+
+anonymous user:
+  access content: 1
+  search content: 1
+  view embedded child view: 1
+
+authenticated user:
+  access content: 1
+  search content: 1
+  view embedded child view: 1
+
+site manager:
+  access content: 1
+  search content: 1
+  view embedded child view: 1
+  
+editor:
+  access content: 1
+  search content: 1
+  view embedded child view: 1
+
+contributor:
+  access content: 1
+  search content: 1
+  view embedded child view: 1

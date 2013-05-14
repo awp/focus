@@ -1,0 +1,10 @@
+name = FOCUS Semester
+description = Provides the FOCUS Semester Taxonomy.
+;configure = admin/config/focus/node/semester
+
+package = "FOCUS Tools"
+
+dependencies[] = focus_tools
+
+version = 7.x-1.0
+core = 7.x

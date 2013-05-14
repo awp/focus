@@ -1,0 +1,14 @@
+body:
+  label: About
+
+field_focus_thumbnail:
+  label: Organization Thumbnail
+  description: Thumbnail associated with this organization
+  
+field_focus_primary_image:
+  label: Primary Image
+  description: Image associated with this organization
+  
+field_focus_sidebar:
+  label: Organization Sidebar
+  description: Sidebar associated with this organization

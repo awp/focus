@@ -1,0 +1,20 @@
+group_content:
+  data:
+    label: "Name & Info"
+    children:
+      title
+      body
+
+group_images:
+  data:
+    label: Images
+    children:
+      field_focus_thumbnail
+      field_focus_primary_image
+      
+group_sidebar:
+  data:
+    label: Sidebar
+    children:
+      field_focus_sidebar
+      

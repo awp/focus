@@ -1,0 +1,4 @@
+# settings for creating this content type
+name: News
+description: News is content that presents a recent story or announcement.
+title_label: News Title

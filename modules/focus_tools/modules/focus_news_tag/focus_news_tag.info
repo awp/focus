@@ -1,0 +1,10 @@
+name = FOCUS News Tag
+description = Provides the FOCUS News Tag Taxonomy.
+;configure = admin/config/focus/taxonomy/news
+
+package = "FOCUS Tools"
+
+dependencies[] = focus_news
+
+version = 7.x-1.0
+core = 7.x

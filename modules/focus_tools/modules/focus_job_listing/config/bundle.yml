@@ -1,0 +1,4 @@
+# settings for creating this content type
+name: Job Listing
+description: Job Listings are content that presents an employment opportunity.
+title_label: Job Title

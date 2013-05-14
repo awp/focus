@@ -1,0 +1,21 @@
+group_content:
+  data:
+    label: "Title & Description"
+    children:
+      title
+      body
+
+group_images:
+  data:
+    label: Details
+    children:
+      field_focus_download
+      field_focus_preview
+      field_focus_dateline
+
+group_meta:
+  data:
+    label: Keywords
+    children:
+      field_focus_tags
+      

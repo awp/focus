@@ -1,0 +1,222 @@
+# Fields required by focus node modules should be defined here.
+# If focus_tools is already installed, additional fields can be added here, 
+# but must be installed manually at /admin/focus/config/fields/rebuild
+#
+# Example --------------------------------------------------
+#
+# field_name:
+#   label: example_field
+#   type: field_type
+#   cardinality: 1 (use -1 for FIELD_CARDINALITY_UNLIMITED)
+#   widget: 
+#     type: field_instance_widget_type
+#   settings:
+#
+
+field_focus_extra_info:
+  label: Extra Information
+  type: text_long
+  widget:
+    type: text_textarea
+
+field_focus_deck:
+  label: Deck
+  type: text_long
+  widget:
+    type: text_textarea
+
+field_focus_display_name:
+  label: Display Name
+  type: text
+  widget: 
+    type: text_textfield
+    
+field_focus_email:
+  label: Email
+  type: text
+  widget:
+    type: text_textfield
+    
+field_focus_phone:
+  label: Phone
+  type: text
+  widget:
+    type: text_textfield
+
+field_focus_source:
+  label: Source
+  type: text
+  widget: 
+    type: text_textfield
+  
+field_focus_calendar_date:
+  label: Calendar Date
+  type: date
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget:
+    type: date_popup
+  settings:
+    enddate_get: 1
+    todate: optional
+    repeat: 1
+    cache_enabled: 1
+    cache_count: 4
+    default_value: now
+    default_value_code:
+    default_value2: same
+    default_value_code2:
+    user_register_form:
+
+field_focus_dateline:
+  label: Date
+  type: date
+  widget:
+    type: date_popup
+  settings:
+    cache_enabled: 1
+    cache_count: 4
+    default_value: now
+    default_value_code:
+    user_register_form:
+    granularity:
+      year: year
+      month: month
+      day: day
+      hour: 0
+      minute: 0
+      second: 0
+  display:
+    default:
+      settings:
+        format_type: longdate
+
+field_focus_address:
+  label: Address
+  type: addressfield
+  widget:
+    type: addressfield_standard
+  
+field_focus_website:
+  label: Website
+  type: link_field
+  widget:
+    type: link_field
+  settings:
+    attributes:
+      target: _blank
+    
+field_focus_links:
+  label: Links
+  type: link_field
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget:
+    type: link_field
+  settings:
+    attributes:
+      target: user
+
+field_focus_link:
+  label: Link
+  type: link_field
+  widget:
+    type: link_field
+  settings:
+    attributes:
+      target: user
+  
+field_focus_position:
+  label: Position
+  type: text
+  widget:
+    type: text_textfield
+    
+field_focus_number:
+  label: Number
+  type: text
+  widget:
+    type: text_textfield
+
+field_focus_subtitle:
+  label: Subtitle
+  type: text
+  widget:
+    type: text_textfield
+    
+## Files ##
+
+field_focus_thumbnail:
+  label: Thumbnail
+  type: image
+  widget:
+    type: media_generic
+  settings:
+    default_image:
+    file_extensions: jpg jpeg gif png
+
+field_focus_preview:
+  label: Preview Image
+  type: image
+  widget:
+    type: media_generic
+  settings:
+    default_image:
+    file_extensions: jpg jpeg gif png
+    
+field_focus_primary_image:
+  label: Primary Image
+  type: image
+  widget:
+    type: media_generic
+  settings:
+    default_image:
+    file_extensions: jpg jpeg gif png
+
+field_focus_gallery_image:
+  label: Gallery Image
+  type: image
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget:
+    type: media_generic
+  settings:
+    default_image:
+    file_extensions: jpg jpeg gif png
+  
+field_focus_download:
+  label: Download
+  type: file
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget:
+    type: media_generic
+  settings:
+    default_file:
+    file_extensions: txt pdf rtf csv mp3 wav
+  
+field_focus_media:
+  label: Media
+  type: file
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget:
+    type: media_generic
+  settings:
+    default_file:
+    file_extensions: wmv asf mp4 mp3 wav
+  
+field_focus_video:
+  label: Video
+  type: file
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget:
+    type: media_generic
+  settings:
+    default_file:
+    file_extensions: wmv asf mp4
+  
+field_focus_audio:
+  label: Audio
+  type: file
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget:
+    type: media_generic
+  settings:
+    default_file:
+    file_extensions: mp3 wav

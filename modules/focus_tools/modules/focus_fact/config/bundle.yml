@@ -1,0 +1,3 @@
+# settings for creating this content type
+name: Fact
+description: Facts are statements, with an optional statistic associated with it

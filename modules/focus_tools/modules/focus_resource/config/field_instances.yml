@@ -1,0 +1,30 @@
+body:
+  label: Resource Information
+
+field_focus_thumbnail:
+  label: Resource Thumbnail
+  description: Thumbnail associated with this resource
+  
+field_focus_primary_image:
+  label: Primary Image
+  description: Image associated with this resource
+  
+field_focus_gallery_image:
+  label: Gallery Images
+  description: Gallery of images associated with this resource
+  
+field_focus_download:
+  label: Downloads
+  description: Files associated with this resource
+  
+field_focus_audio:
+  label: Audio
+  description: Audio associated with this resource
+  
+field_focus_video:
+  label: Video
+  description: Video associated with this resource
+  
+field_focus_tags:
+  label: Keywords
+  description: Associated keywords (tagging)

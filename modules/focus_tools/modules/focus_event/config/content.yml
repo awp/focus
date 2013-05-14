@@ -1,0 +1,10 @@
+# Build content
+# Format:
+#   $variable:
+#     $node->{$key}: $node->{$key}->value()
+#     $node->{$key}: $node->{$key}->value()
+#     $node->{$key}: $node->{$key}->value()
+
+events:
+  title: Events
+  type: focus_section

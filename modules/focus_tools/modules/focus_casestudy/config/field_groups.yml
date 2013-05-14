@@ -1,0 +1,26 @@
+group_content:
+  data:
+    label: "Title & Description"
+    children:
+      title
+      body
+
+group_images:
+  data:
+    label: Images
+    children:
+      field_focus_primary_image
+      field_focus_gallery_image
+      
+group_media:
+  data:
+    label: Media
+    children:
+      field_focus_download
+      field_focus_media
+      
+group_metadat:
+  data:
+    label: Metadata
+    children:
+      field_focus_tags

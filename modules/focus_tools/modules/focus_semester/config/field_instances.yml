@@ -1,0 +1,3 @@
+field_focus_calendar_date:
+  label: Start / End Dates
+  description: The time this semester is active

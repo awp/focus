@@ -1,0 +1,5 @@
+body:
+  label: Slideshow Description
+
+field_focus_slideshow:
+  label: Slides

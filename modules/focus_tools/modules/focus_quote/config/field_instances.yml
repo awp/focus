@@ -1,0 +1,10 @@
+body:
+  label: Quote
+
+field_focus_person:
+  label: Quoter
+  description: Who said it?
+  
+field_focus_dateline:
+  label: Date
+  description: When was this quote said?

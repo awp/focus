@@ -1,0 +1,4 @@
+name: Region
+machine_name: focus_region
+description: Regions are location grouping terms.
+title_label: Region Name

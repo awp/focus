@@ -1,0 +1,54 @@
+focus_filtered_html:
+  format:
+    name: Filtered HTML
+    status: 1
+    filters:
+      filter_autop
+      filter_html
+      filter_htmlcorrector
+      filter_url
+      media_filter
+      focus_caption
+      ckeditor_link_filter
+  roles:
+    authenticated user
+    administrator
+    site manager
+  
+focus_full_html:
+  format:
+    name: Full HTML
+    status: 0
+    filters:
+      filter_autop
+      filter_htmlcorrector
+      filter_url
+      media_filter
+      focus_caption
+      ckeditor_link_filter
+  roles:
+  settings:
+    show_toggle: 0
+    buttons:
+      default:
+        Bold: 1
+        Italic: 1
+        Underline: 1
+        JustifyLeft: 1
+        JustifyCenter: 1
+        JustifyRight: 1
+        BulletedList: 1
+        NumberedList: 1
+        Link: 1
+        Unlink: 1
+        Indent: 1
+        Outdent: 1
+        Blockquote: 1
+        PasteText: 1
+        Format: 1
+        Source: 1
+        RemoveFormat: 1
+      drupal:
+        media: 1
+      drupal_path:
+        Link: 1

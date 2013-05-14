@@ -1,0 +1,25 @@
+<?php
+/**
+ * @flie
+ * @todo
+ */
+
+/**
+ * Implements hook_install().
+ */
+function focus_event_install() {
+    
+    // Create Events section
+    $node = new stdClass;
+    $node->title = 'Events';
+    $node->type = 'focus_section';
+    focus_tools_node_prepare($node);
+    node_object_prepare($node);
+    node_save($node);
+    
+    if (function_exists('_focus_structure_link_save')) {
+        $link = _focus_structure_link_save($node);
+        variable_set('menu_parent_focus_event', $link['menu_name'] . ':' . $link['mlid']);
+    }
+    
+}

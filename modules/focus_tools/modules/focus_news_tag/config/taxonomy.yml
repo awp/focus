@@ -1,0 +1,4 @@
+name: News Tag
+machine_name: focus_news_tag
+description: News Tags are keywords for meta data associations to News.
+title_label: Tag Name

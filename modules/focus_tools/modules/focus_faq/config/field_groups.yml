@@ -1,0 +1,7 @@
+group_content:
+  data:
+    label: "Q & A"
+    children:
+      title
+      body
+      

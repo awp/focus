@@ -1,0 +1,4 @@
+# settings for creating this content type
+name: Resource
+description: Resources are content that provide meta data for a file
+title_label: Resource Name

@@ -1,0 +1,398 @@
+<?php
+/**
+ * @file
+ * @todo
+ */
+
+module_load_include('inc', 'focus_core', 'includes/debug');
+module_load_include('inc', 'focus_core', 'includes/libraries');
+module_load_include('inc', 'focus_core', 'includes/constants');
+module_load_include('inc', 'focus_core', 'includes/helpers');
+module_load_include('inc', 'focus_core', 'includes/preprocess');
+
+/**
+ * Implements hook_permission()
+ */
+function focus_core_permission() {
+    $permissions['administer focus'] = array(
+        'title'       => t('FOCUS Administrator'),
+        'description' => t('Allows full access to manage all aspects of FOCUS.'),
+    );
+    
+    return $permissions;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function focus_core_menu() {
+    $items['admin/focus'] = array(
+        'title'            => 'FOCUS',
+        'page callback'    => 'drupal_goto',
+        'page arguments'   => array('admin'),
+        'access arguments' => array('administer focus'),
+        'type'             => MENU_NORMAL_ITEM,
+        'weight'           => -1000,
+    );
+    
+    return $items;
+}
+
+/**
+ * Implements hook_custom_theme().
+ */
+function focus_core_custom_theme() {
+    switch ($_GET['q']) {
+        case 'user':
+            return variable_get('admin_theme');
+    }
+}
+
+/**
+ * Implements hook_admin_paths().
+ */
+function focus_core_admin_paths() {
+    if (variable_get('node_admin_theme')) {
+        $paths = array(
+            'user/*' => TRUE,
+        );
+        return $paths;
+    }
+}
+
+/**
+ * Implements hook_image_default_styles()
+ */
+function focus_core_image_default_styles() {
+    $styles['inline'] = array(
+        'effects' => array(
+            array(
+                'label' => 'Scale',
+                'name' => 'image_scale',
+                'data' => array(
+                    'height' => 320,
+                    'width' => 320,
+                    'upscale' => 0,
+                    'retinafy' => 1,
+                ),
+            ),
+        ),
+    );
+    
+    $styles['slideshow'] = array(
+        'effects' => array(
+            array(
+                'label' => 'Scale',
+                'name' => 'image_scale',
+                'data' => array(
+                    'width' => 1600,
+                    'height' => '',
+                    'upscale' => 1,
+                ),
+            ),
+            array(
+                'label' => 'Crop',
+                'name' => 'image_crop',
+                'data' => array(
+                    'height' => 540,
+                    'width' => 1600,
+                    'anchor' => 'center-center',
+                    'retinafy' => 1,
+                ),
+            ),
+        ),
+    );
+
+    $styles['small'] = array(
+        'effects' => array(
+            array(
+                'label' => 'Scale',
+                'name' => 'image_scale',
+                'data' => array(
+                    'width' => 360,
+                    'height' => '',
+                    'upscale' => 1,
+                ),
+            ),
+            array(
+                'label' => 'Crop',
+                'name' => 'image_crop',
+                'data' => array(
+                    'height' => 360,
+                    'width' => 360,
+                    'anchor' => 'center-center',
+                    'retinafy' => 1,
+                ),
+            ),
+        ),
+    );
+    
+    $styles['square_thumbnail'] = array(
+        'effects' => array(
+            array(
+                'label' => 'Scale',
+                'name' => 'image_scale',
+                'data' => array(
+                    'width' => 140,
+                    'height' => '',
+                    'upscale' => 1,
+                ),
+            ),
+            array(
+                'label' => 'Crop',
+                'name' => 'image_crop',
+                'data' => array(
+                    'height' => 140,
+                    'width' => 140,
+                    'anchor' => 'center-center',
+                    'retinafy' => 1,
+                ),
+            ),
+        ),
+    );
+
+    return $styles;
+}
+
+/**
+ * Implements hook_image_styles_alter()
+ */
+function focus_core_image_styles_alter(&$styles) {
+    if ($styles['thumbnail']['storage'] == IMAGE_STORAGE_DEFAULT) {
+        $styles['thumbnail']['effects'] = array(
+            array(
+                'label' => 'Scale',
+                'name' => 'image_scale',
+                'data' => array(
+                    'height' => 140,
+                    'width' => 140,
+                    'upscale' => 1,
+                    'retinafy' => 1,
+                ),
+                'weight' => 0,
+                'effect callback' => 'image_scale_effect',
+            ),
+        );
+    }
+    
+    if ($styles['square_thumbnail']['storage'] == IMAGE_STORAGE_DEFAULT) {        
+        $styles['square_thumbnail']['effects'] = array(
+            array(
+                'label' => 'Scale & Crop',
+                'name' => 'image_scale_and_crop',
+                'data' => array(
+                    'width' => 140,
+                    'height' => 140,
+                    'retinafy' => 1,
+                ),
+                'weight' => 0,
+                'effect callback' => 'image_scale_and_crop_effect',
+            ),
+        );
+    }
+  
+    if ($styles['medium']['storage'] == IMAGE_STORAGE_DEFAULT) {
+        $styles['medium']['effects'] = array(
+            array(
+                'label' => 'Scale & Crop',
+                'name' => 'image_scale_and_crop',
+                'data' => array(
+                    'width'  => 540,
+                    'height' => 540,
+                    'retinafy' => 1,
+                ),
+                'weight' => 0,
+                'effect callback' => 'image_scale_and_crop_effect',
+            ),
+        );
+    }
+
+    if ($styles['large']['storage'] == IMAGE_STORAGE_DEFAULT) {
+        $styles['large']['effects'] = array(
+            array(
+                'label' => 'Scale & Crop',
+                'name' => 'image_scale_and_crop',
+                'data' => array(
+                    'width'  => 760,
+                    'height' => 760,
+                    'retinafy' => 1,
+                ),
+                'weight' => 0,
+                'effect callback' => 'image_scale_and_crop_effect',
+            ),
+        );
+    }
+}
+
+/**
+ * Implements hook_date_format_types()
+ */
+function focus_core_date_format_types() {
+    return array(
+        'longdate' => t('Long Date'),
+        'mediumdate' => t('Medium Date'),
+        'shortdate' => t('Short Date'),
+        'tiny' => t('Tiny'),
+        'year' => t('Year'),
+        'time' => t('Time'),
+    );
+}
+
+/**
+ * Implements hook_date_formats()
+ */
+function focus_core_date_formats() {
+    return array(
+        array(
+            'type' => 'longdate',
+            'format' => 'l, F j, Y',
+            'locales' => array('en', 'en-us'),
+        ),
+        array(
+            'type' => 'mediumdate',
+            'format' => 'F j, Y',
+            'locales' => array('en', 'en-us'),
+        ),
+        array(
+            'type' => 'shortdate',
+            'format' => 'M j Y',
+            'locales' => array('en', 'en-us'),
+        ),
+        array(
+            'type' => 'tiny',
+            'format' => 'n/j/y',
+            'locales' => array('en', 'en-us'),
+        ),
+        array(
+            'type' => 'tiny',
+            'format' => 'j/n/y',
+            'locales' => array(),
+        ),
+        array(
+            'type' => 'tiny',
+            'format' => 'y/j/n',
+            'locales' => array(),
+        ),
+        array(
+            'type' => 'year',
+            'format' => 'Y',
+            'locales' => array(),
+        ),
+        array(
+            'type' => 'time',
+            'format' => 'g:ia',
+            'locales' => array(),
+        ),
+        array(
+            'type' => 'time',
+            'format' => 'h:ia',
+            'locales' => array(),
+        ),
+        array(
+            'type' => 'time',
+            'format' => 'G:i',
+            'locales' => array(),
+        ),
+        array(
+            'type' => 'time',
+            'format' => 'H:i',
+            'locales' => array(),
+        ),
+    );  
+}
+
+
+/**
+ * Implements hook_filter_info()
+ */
+function focus_core_filter_info() {
+    $filters['focus_caption'] = array(
+        'title' => t('FOCUS Image Caption'),
+        'description' => t("Adds captions to images"),
+        'process callback' => 'focus_filter_caption',
+        'weight' => 10,
+        'cache' => FALSE,
+    );
+    
+    return $filters;
+}
+
+/**
+ * Callback for hook_filter_info
+ */
+function focus_filter_caption($text) {
+    $text = preg_replace_callback("#\<img.*?\>#i", 'focus_filter_caption_callback', $text);
+    return $text;
+}
+
+/**
+ * Callback for preg_replace_callback
+ */
+function focus_filter_caption_callback($match) {
+    $image = reset($match);
+    
+    if (!is_string($image)) throw new Exception('Unable to find matching tag');
+    
+    preg_match_all('#title="(.*?)"#i', $image, $title);
+    
+    $output = '<span class="inline-image-wrapper">';
+    $output .= '<span class="inline-image">';
+    $output .= $image;
+    
+    if (!empty($title[1][0])) {
+        $output .= "<span class='inline-image-caption'>{$title[1][0]}</span>";
+    }
+    
+    $output .= '</span></span>';
+    
+    return $output;
+}
+
+
+/**
+ * Implements hook_theme_registry_alter()
+ */
+function focus_core_theme_registry_alter(&$theme_registry) {
+    $theme_registry['colorbox_image_formatter']['preprocess functions'][] = 'focus_core_colorbox_image_formatter_preprocess';
+}
+
+/**
+ * Theme preprocessor
+ * Adds fielded values to file itself
+ */
+function focus_core_colorbox_image_formatter_preprocess(&$vars) {
+
+    // set alt to fielded alt
+    if (!empty($vars['item']['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'])) {
+        $vars['item']['alt'] = $vars['item']['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'];
+    }
+
+    // set title to fielded title
+    if (!empty($vars['item']['field_file_image_title_text'][LANGUAGE_NONE][0]['value'])) {
+        $vars['item']['title'] = $vars['item']['field_file_image_title_text'][LANGUAGE_NONE][0]['value'];
+    }
+
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function focus_core_preprocess_html(&$vars) {
+    // if we're using JIRA Issue Collector, override the styles.
+    // TODO: don't explicitly set the css here.  Instead point it to the active
+    // theme to allow it to override these styles.
+    if (module_exists('jira_issue_collector')) {
+        drupal_add_css(FOCUS_CORE_PATH . '/css/jira.css', array('group' => CSS_THEME, 'weight' => 20));
+    }
+}
+
+/**
+ * Implements hook_wysiwyg_editor_settings_alter().
+ * 
+ * @see http://drupal.org/node/1951964
+ */
+function focus_core_wysiwyg_editor_settings_alter(&$settings, $context) {
+    if ($context['profile']->editor == 'ckeditor') {
+        $settings['allowedContent'] = TRUE;
+    }
+}

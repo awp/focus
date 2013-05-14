@@ -1,0 +1,4 @@
+# settings for creating this content type
+name: Case Study
+description: Case Studies are content that present examples of something
+title_label: Case Study Title

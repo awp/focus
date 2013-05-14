@@ -1,0 +1,84 @@
+name = FOCUS for Drupal
+description = Welcome to FOCUS for Drupal.
+core = 7.x
+distribution_name = FOCUS
+
+; Core
+dependencies[] = block
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = dblog
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = taxonomy
+dependencies[] = rdf
+
+; Contrib
+dependencies[] = addressfield
+dependencies[] = admin_menu
+dependencies[] = auto_nodetitle
+dependencies[] = backup_migrate
+dependencies[] = ctools
+dependencies[] = ckeditor_link
+dependencies[] = colorbox
+dependencies[] = content_access
+dependencies[] = context
+dependencies[] = context_layouts
+dependencies[] = context_ui
+dependencies[] = date
+dependencies[] = date_context
+dependencies[] = date_popup
+dependencies[] = date_repeat
+dependencies[] = date_repeat_field
+dependencies[] = date_views
+dependencies[] = delta
+dependencies[] = delta_ui
+dependencies[] = entity
+dependencies[] = entity_token
+dependencies[] = entityreference
+dependencies[] = fast_404
+dependencies[] = field_collection
+dependencies[] = field_group
+dependencies[] = file_entity
+dependencies[] = imageapi_optimize
+dependencies[] = jquery_update
+dependencies[] = link
+dependencies[] = media
+dependencies[] = missioncontrol
+dependencies[] = module_filter
+dependencies[] = omega_tools
+dependencies[] = pathauto
+dependencies[] = retina_images
+dependencies[] = search_config
+dependencies[] = sitewide
+dependencies[] = structural
+dependencies[] = views
+dependencies[] = views_column_class
+dependencies[] = views_ui
+dependencies[] = webform
+dependencies[] = workbench_moderation
+dependencies[] = wysiwyg
+dependencies[] = xmlsitemap
+
+; FOCUS
+dependencies[] = focus_core
+dependencies[] = focus_tools
+dependencies[] = focus_toolviews
+dependencies[] = focus_views
+
+; FOCUS Required Tools
+dependencies[] = focus_sidebar
+dependencies[] = focus_section
+dependencies[] = focus_page
+
+; System Requirements
+php_memory_limit = 256M

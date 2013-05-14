@@ -1,0 +1,12 @@
+diff --git a/.gitignore b/.gitignore
+index baff153..d7b9d00 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -4,3 +4,7 @@ sites/*/settings*.php
+ # Ignore paths that contain user-generated content.
+ sites/*/files
+ sites/*/private
++
++# FOCUS Extras
++profiles/focus/.git/
++

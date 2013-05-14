@@ -1,0 +1,56 @@
+field_focus_job_duties:
+  label: Job Duties
+  type: text
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget: 
+    type: text_textfield
+
+field_focus_job_qualifications:
+  label: Qualifications
+  type: text
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget: 
+    type: text_textfield
+
+field_focus_job_skills:
+  label: Preferred Skills
+  type: text
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget: 
+    type: text_textfield
+    
+field_focus_job_hours:
+  label: Employment Hours
+  type: list_text
+  widget:
+    type: options_select
+  settings:
+    allowed_values:
+      40: Full Time (40 Hours)
+      30: Part Time (30+ Hours)
+      20: Part Time (20+ Hours)
+      10: Part Time (10+ Hours)
+      0: Contract (Hours TBD)
+
+field_focus_deadline:
+  label: Deadline
+  type: date
+  widget:
+    type: date_popup
+  settings:
+    cache_enabled: 1
+    cache_count: 4
+    default_value: now
+    default_value_code:
+    user_register_form:
+    granularity:
+      year: year
+      month: month
+      day: day
+      hour: 0
+      minute: 0
+      second: 0
+  display:
+    default:
+      settings:
+        format_type: longdate

@@ -1,0 +1,4 @@
+# settings for creating this content type
+name: Blog Post
+description: Blog posts are basic pieces of content that are organized differently than pages
+title_label: Post Title

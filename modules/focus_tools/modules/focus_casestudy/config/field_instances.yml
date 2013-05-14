@@ -1,0 +1,18 @@
+body:
+  label: Case Study Description
+
+field_focus_primary_image:
+  label: Primary Image
+  description: Image associated with this case study
+  
+field_focus_gallery_image:
+  label: Gallery Images
+  description: Gallery of images associated with this case study
+  
+field_focus_download:
+  label: Downloads
+  description: Files associated with this case study
+  
+field_focus_media:
+  label: Media
+  description: Media associated with this case study

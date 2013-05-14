@@ -1,0 +1,12 @@
+group_details:
+  data:
+    label: 'Title & Description'
+    children:
+      title
+      body
+      
+group_slides:
+  data:
+    label: Slides
+    children:
+      field_focus_slideshow

@@ -1,0 +1,4 @@
+# settings for creating the default content type
+name: FOCUS
+description: FOCUS content is dummy content
+disabled: 1

@@ -1,0 +1,10 @@
+body:
+
+field_focus_primary_image:
+  label: Section Image
+  description: Image associated with this section
+  
+field_focus_sidebar:
+  label: Section Sidebar
+  description: Sidebar associated with this section
+  

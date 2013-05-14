@@ -1,0 +1,13 @@
+field_focus_department:
+  label: Department
+  type: taxonomy_term_reference
+  widget:
+    type: taxonomy_autocomplete
+    settings:
+      autocomplete_path: taxonomy/autocomplete
+    module: taxonomy
+  settings:
+    allowed_values:
+      0:
+        vocabulary: focus_department
+        parent: 0

@@ -1,0 +1,17 @@
+group_content:
+  entity_type: taxonomy_term
+  data:
+    label: "Title & Description"
+    children:
+      name
+      description
+
+group_details:
+  entity_type: taxonomy_term
+  data:
+    label: Details
+    children:
+      field_focus_person
+      field_focus_people
+      field_focus_location
+      
