@@ -90,7 +90,6 @@ field_focus_course_combo: # field collection reference
 
 field_focus_course_group_label: # field collection field
   label: Label
-  # bundle: field_focus_course_group
   entity_type: field_collection_item
   type: text
   widget:
@@ -98,7 +97,6 @@ field_focus_course_group_label: # field collection field
 
 field_focus_course_group_hours: # field collection field
   label: Credit Hours
-  # bundle: field_focus_course_group
   entity_type: field_collection_item
   type: text
   widget:

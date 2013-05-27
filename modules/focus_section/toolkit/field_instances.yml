@@ -1,5 +1,6 @@
 focus_section:
   body:
+    label: Section Content
   
   field_focus_primary_image:
     label: Section Image

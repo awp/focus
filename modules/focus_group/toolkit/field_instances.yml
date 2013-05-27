@@ -1,5 +1,6 @@
 focus_group:
   body:
+    label: Group Description
 
   field_focus_primary_image:
     label: Headline Image

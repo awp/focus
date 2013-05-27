@@ -7,7 +7,16 @@ focus_slideshow:
   
 field_focus_slideshow:
   field_focus_slide_title:
+    label: Slide Title
+
   field_focus_slide_subtitle:
+    label: Slide Subtitle
+
   field_focus_slide_caption:
+    label: Slide Caption
+
   field_focus_slide_image:
+    label: Slide Image
+
   field_focus_slide_links:
+    label: Slide Link

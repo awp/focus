@@ -1,2 +1,3 @@
-body:
-  label: Answer
+focus_faq:
+  body:
+    label: Answer
