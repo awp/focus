@@ -21,7 +21,7 @@ focus_person:
         
   group_media:
     data:
-      label: Media
+      label: Files
       children:
         field_focus_download
       

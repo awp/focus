@@ -15,3 +15,11 @@ entity_types:
         children:
           path
         weight: 100
+        
+webform:
+  group_content:
+    data:
+      label: "Title & Content"
+      children:
+        title
+        body
