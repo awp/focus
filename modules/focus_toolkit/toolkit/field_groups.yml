@@ -1,0 +1,17 @@
+entity_types:
+  taxonomy_term:
+    group_relations:
+      entity_type: taxonomy_term
+      data:
+        label: Relationships
+        children:
+          relations
+        weight: 99
+          
+    group_path:
+      entity_type: taxonomy_term
+      data:
+        label: Path Settings
+        children:
+          path
+        weight: 100

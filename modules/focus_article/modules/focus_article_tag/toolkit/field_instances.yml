@@ -1,0 +1,4 @@
+focus_article:
+  field_focus_article_tag:
+    label: Article Tag
+    description: A tagging system specific to Articles.

@@ -1,0 +1,9 @@
+focus_course_subject:
+  name: Course Subject
+  description: Course Subjects are keywords for associating courses with each other.
+  title_label: Subject Name
+  
+focus_semester:
+  name: Semester
+  description: Semesters are periods of time.
+  title_label: Semester

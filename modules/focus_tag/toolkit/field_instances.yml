@@ -1,0 +1,4 @@
+*:
+  field_focus_tags:
+    label: Tags
+    description: Sitewide vocabulary for managing keywords.

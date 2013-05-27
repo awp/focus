@@ -1,0 +1,24 @@
+name = FOCUS Job Listing
+description = Provides the FOCUS Job Listing Content Type.
+;configure = admin/toolkit/toolkit/node/job_listing
+
+package = "Toolkit"
+
+dependencies[] = list
+dependencies[] = toolkit
+
+version = 7.x-1.0
+core = 7.x
+
+; Information added by drush on 2013-05-16
+version = ""
+project = "toolkit"
+datestamp = "1368729512"
+
+
+
+; Information added by drush on 2013-05-22
+version = ""
+project = "toolkit"
+datestamp = "1369241248"
+

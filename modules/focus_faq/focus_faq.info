@@ -1,0 +1,9 @@
+name = FOCUS FAQ
+description = Provides the FOCUS FAQ toolkit.
+
+package = "Toolkit"
+
+dependencies[] = toolkit
+
+version = 7.x-1.0
+core = 7.x

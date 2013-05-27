@@ -1,0 +1,4 @@
+focus_event:
+  field_focus_event_tag:
+    label: Event Tag
+    description: A tagging system specific to Events.

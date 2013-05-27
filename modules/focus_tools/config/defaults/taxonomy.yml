@@ -1,6 +1,0 @@
-name: Taxonomy Name
-machine_name: taxonomy_name
-description:
-hierarchy: 0
-module: focus_core
-weight: 0

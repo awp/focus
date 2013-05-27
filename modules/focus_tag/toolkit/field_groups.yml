@@ -1,0 +1,16 @@
+focus_tag:
+  group_content:
+    entity_type: taxonomy_term
+    data:
+      label: "Tag w/ Description"
+      children:
+        name
+        description
+
+*:
+  group_metadata:
+    weight: 10
+    data:
+      label: "Keywords & Metadata"
+      children:
+        field_focus_tags

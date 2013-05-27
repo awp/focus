@@ -1,0 +1,14 @@
+content_default:
+  reactions:
+    block:
+      blocks:
+        views-downloads-downloads:
+          module: views
+          delta: downloads-downloads
+          region: sidebar_first
+          weight: -9
+        views-gallery-gallery:
+          module: views
+          delta: gallery-gallery
+          region: sidebar_first
+          weight: -8

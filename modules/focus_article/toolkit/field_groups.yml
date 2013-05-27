@@ -1,0 +1,27 @@
+focus_article:
+  group_content:
+    data:
+      label: "Title & Article"
+      children:
+        title
+        field_focus_deck
+        body
+  
+  group_images:
+    data:
+      label: Images
+      children:
+        field_focus_primary_image
+        field_focus_gallery_image
+        
+  group_media:
+    data:
+      label: Media
+      children:
+        field_focus_download
+        
+  group_details:
+    data:
+      label: Details
+      children:
+        field_focus_dateline

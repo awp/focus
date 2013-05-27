@@ -1,0 +1,10 @@
+name = FOCUS Department
+description = Provides the FOCUS Department toolkit.
+
+package = "Toolkit"
+
+dependencies[] = toolkit
+dependencies[] = focus_person
+
+version = 7.x-1.0
+core = 7.x

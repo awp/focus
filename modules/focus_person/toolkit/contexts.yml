@@ -1,0 +1,29 @@
+section_person:
+  description: This context is used for people section pages
+  tag: Sections
+  conditions:
+    node:
+      values:
+        focus_section: focus_section
+      options:
+        node_form: 0
+    focus_contexts_menu:
+      values:
+        people: people
+  reactions:
+    debug:
+      debug: 1
+    block:
+      blocks:
+        views-in_this_section-its:
+          module: views
+          delta: in_this_section-its
+          region: sidebar_first
+          weight: -10
+  condition_mode: 1
+  
+section_default:
+  conditions:
+    focus_contexts_menu:
+      values:
+        main-menu: main-menu

@@ -1,4 +1,0 @@
-ant: 1 # enable auto nodetitle
-ant_php: 0 # don't use php for auto nodetitle
-ant_pattern: "[node:field_focus_person]"
-focus_structure_enabled: 0 # FOCUS_STRUCTURE_NEVER

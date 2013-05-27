@@ -3,7 +3,7 @@
     var webtreeInit = function(cx, s) {
         
         $('#page', cx).once('webtree-init', function() {
-            console.log('WebTree Init');
+            console.log('WEBTREE Init');
         });
         
         

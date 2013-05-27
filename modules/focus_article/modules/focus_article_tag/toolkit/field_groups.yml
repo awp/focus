@@ -1,0 +1,15 @@
+focus_article_tag:
+  group_content:
+    entity_type: taxonomy_term
+    data:
+      label: "Tag w/ Description"
+      children:
+        name
+        description
+
+focus_article:
+  group_metadata:
+    data:
+      label: "Keywords & Metadata"
+      children:
+        field_focus_article_tag

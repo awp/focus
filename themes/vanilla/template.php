@@ -20,3 +20,12 @@ function vanilla_preprocess_html(&$vars) {
         drupal_add_css("$path/css/inner.css");
     }
 }
+
+/**
+ * Implements hook_css_alter().
+ */
+function vanilla_css_alter(&$css) {
+    foreach ($css as $path => $info) {
+        
+    }
+}

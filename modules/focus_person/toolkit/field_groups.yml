@@ -1,0 +1,29 @@
+focus_person:
+  group_content:
+    data:
+      label: Basic Information
+      children:
+        field_focus_name
+        # field_focus_position
+        # field_focus_department
+        body
+  
+  group_contact:
+    data:
+      label: Contact Information
+      children:
+        field_focus_phone
+        field_focus_email
+  
+  group_images:
+    data:
+      label: Images
+      children:
+        field_focus_portrait
+        
+  group_media:
+    data:
+      label: Media
+      children:
+        field_focus_download
+      

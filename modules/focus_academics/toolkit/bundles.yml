@@ -1,0 +1,14 @@
+focus_course:
+  name: Course
+  description: Courses are educational content
+  title_label: Course Title
+  
+focus_degree:
+  name: Degree
+  description: Degrees are the accumulation of hard work and classes.
+  title_label: Degree Name
+  
+focus_concentration:
+  name: Concentration
+  description: Concentrations are areas of academic study.
+  

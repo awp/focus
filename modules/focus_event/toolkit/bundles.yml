@@ -1,0 +1,4 @@
+focus_event:
+  name: Event
+  description: Events are piece of content that display events
+  title_label: Event Title

@@ -1,0 +1,13 @@
+focus_slideshow: 
+  body:
+    label: Slideshow Description
+  
+  field_focus_slideshow:
+    label: Slides
+  
+field_focus_slideshow:
+  field_focus_slide_title:
+  field_focus_slide_subtitle:
+  field_focus_slide_caption:
+  field_focus_slide_image:
+  field_focus_slide_links:

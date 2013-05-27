@@ -1,0 +1,212 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+/* -- General -- */
+/* line 3, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  font: inherit;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 4, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+html {
+  position: relative;
+  overflow-y: scroll;
+}
+
+/* line 5, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+body {
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* line 6, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+html, body {
+  min-height: 100%;
+}
+
+/* line 7, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+ul {
+  list-style: none;
+}
+
+/* line 8, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 9, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+nav ul, nav ol {
+  list-style: none;
+}
+
+/* line 10, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 11, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+ins {
+  text-decoration: none;
+}
+
+/* line 12, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 13, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+/* line 14, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+/* line 15, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 16, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+a, a *, input[type="submit"], input[type="button"], button, button * {
+  cursor: pointer;
+}
+
+/* line 17, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 18, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 19, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+:before, :after {
+  content: '';
+  content: none;
+}
+
+/* line 20, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+:hover {
+  outline: 0;
+}
+
+/* line 21, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+:focus {
+  outline: thin dotted;
+}
+
+/* -- HTML5 -- */
+/* line 25, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 26, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+/* line 27, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* -- Font Styles -- */
+/* line 31, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 32, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+pre, code, kbd, samp, tt, var {
+  font-family: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+}
+
+/* -- Image Styles -- */
+/* line 36, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 37, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* -- Navigation Styles -- */
+/* line 3, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation > ul.menu {
+  float: left;
+  width: 100%;
+}
+
+/* line 8, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation ul.menu li {
+  position: relative;
+  list-style: none;
+  list-style-image: none;
+  z-index: 1;
+}
+
+/* line 15, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation > ul.menu > li {
+  float: left;
+}
+
+/* line 19, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation ul ul li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 24, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation ul ul {
+  position: absolute;
+  display: none;
+}
+
+/* line 29, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation > ul > li:hover {
+  z-index: 10;
+}
+
+/* line 34, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation > ul > li:hover > ul,
+.navigation > ul > li.mobile-hover > ul {
+  display: block;
+}
+
+/* line 38, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation ul ul ul {
+  display: none !important;
+}
+
+/* Layout rules */
+/* Module rules */
+/* Global state rules */
+/* Theme rules */
+/* @import "theme-A"; */
+/* @import "theme-B"; */

@@ -1,0 +1,14 @@
+field_focus_article_tag:
+  label: Article Tag
+  type: taxonomy_term_reference
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget:
+    type: taxonomy_autocomplete
+    settings:
+      autocomplete_path: taxonomy/autocomplete
+    module: taxonomy
+  settings:
+    allowed_values:
+      0:
+        vocabulary: focus_article_tag
+        parent: 0

@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * Provides the FOCUS Department toolkit.
+ */
+
+/**
+ * Implements hook_toolkit_api().
+ */
+function focus_department_toolkit_api() {
+    return array(
+        'api' => 1,
+    );
+}

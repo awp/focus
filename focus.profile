@@ -1,11 +1,101 @@
 <?php
 /**
  * @file
- * WebTree Installation Profile
+ * FOCUS Distribution Profile.
  */
 
+module_load_include('inc', 'focus', 'includes/libraries');
+module_load_include('inc', 'focus', 'includes/preprocess');
+
 /**
- * Implements hook_form_FORM_ID_alter()
+ * Implements hook_toolkit_api().
+ */
+function focus_toolkit_api() {
+    return array(
+        'api' => 1,
+    );
+}
+
+/**
+ * Implements hook_views_api()
+ */
+function focus_views_api() {
+    return array(
+        'api' => 3,
+    );
+}
+
+/**
+ * Implements hook_custom_theme().
+ */
+function focus_custom_theme() {
+    switch ($_GET['q']) {
+        case 'user':
+            return variable_get('admin_theme', variable_get('theme_default'));
+    }
+}
+
+/**
+ * Implements hook_admin_paths().
+ */
+function focus_admin_paths() {
+    if (variable_get('node_admin_theme')) {
+        $paths = array(
+            'user/*' => TRUE,
+        );
+        return $paths;
+    }
+}
+
+/**
+ * Implements hook_filter_info().
+ */
+function focus_filter_info() {
+    
+    $filters['focus_caption'] = array(
+        'title' => t('FOCUS Image Caption'),
+        'description' => t("Adds captions to images"),
+        'process callback' => 'focus_filter_caption',
+        'weight' => 10,
+        'cache' => FALSE,
+    );
+    
+    return $filters;
+    
+}
+
+/**
+ * Callback for hook_filter_info.
+ */
+function focus_filter_caption($text) {
+    return preg_replace_callback("#\<img.*?\>#i", 'focus_filter_caption_callback', $text);
+}
+
+/**
+ * Callback for preg_replace_callback.
+ */
+function focus_filter_caption_callback($match) {
+    $image = reset($match);
+    
+    if (!is_string($image)) throw new Exception('Unable to find matching tag');
+    
+    preg_match_all('#title="(.*?)"#i', $image, $title);
+    
+    $output = '<span class="inline-image-wrapper">';
+    $output .= '<span class="inline-image">';
+    $output .= $image;
+    
+    if (!empty($title[1][0])) {
+        $output .= "<span class='inline-image-caption'>{$title[1][0]}</span>";
+    }
+    
+    $output .= '</span></span>';
+    
+    return $output;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
  * 
  * We use 'system' for the hook because this form is before the full Drupal Bootstrap
  * @see http://drupal.org/node/1153646
@@ -213,4 +303,52 @@ function focus_install_dandelion_write($file, $values) {
 
     file_put_contents($file, utf8_encode($data));
 
+}
+
+/**
+ * Implements hook_theme_registry_alter()
+ */
+function focus_theme_registry_alter(&$theme_registry) {
+    $theme_registry['colorbox_image_formatter']['preprocess functions'][] = 'focus_colorbox_image_formatter_preprocess';
+}
+
+/**
+ * Theme preprocessor
+ * Adds fielded values to file itself
+ */
+function focus_colorbox_image_formatter_preprocess(&$vars) {
+
+    // set alt to fielded alt
+    if (!empty($vars['item']['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'])) {
+        $vars['item']['alt'] = $vars['item']['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'];
+    }
+
+    // set title to fielded title
+    if (!empty($vars['item']['field_file_image_title_text'][LANGUAGE_NONE][0]['value'])) {
+        $vars['item']['title'] = $vars['item']['field_file_image_title_text'][LANGUAGE_NONE][0]['value'];
+    }
+
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function focus_preprocess_html(&$vars) {
+    // if we're using JIRA Issue Collector, override the styles.
+    // TODO: don't explicitly set the css here.  Instead point it to the active
+    // theme to allow it to override these styles.
+    // if (module_exists('jira_issue_collector')) {
+        // drupal_add_css(FOCUS_CORE_PATH . '/css/jira.css', array('group' => CSS_THEME, 'weight' => 20));
+    // }
+}
+
+/**
+ * Implements hook_wysiwyg_editor_settings_alter().
+ * 
+ * @see http://drupal.org/node/1951964
+ */
+function focus_wysiwyg_editor_settings_alter(&$settings, $context) {
+    if ($context['profile']->editor == 'ckeditor') {
+        $settings['allowedContent'] = TRUE;
+    }
 }

@@ -1,0 +1,15 @@
+<?php
+/**
+ * @file
+ * Provides the FOCUS Academics toolkit, which adds relationships across other
+ * toolkits, including FOCUS Person, FOCUS Department, and FOCUS Course.
+ */
+
+/**
+ * Implements hook_toolkit_api().
+ */
+function focus_academics_toolkit_api() {
+    return array(
+        'api' => 1,
+    );
+}

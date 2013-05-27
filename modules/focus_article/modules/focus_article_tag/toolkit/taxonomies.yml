@@ -1,0 +1,4 @@
+focus_article_tag:
+  name: Article Tag
+  description: Article Tags are keywords for metadata associations to Articles.
+  title_label: Tag Name

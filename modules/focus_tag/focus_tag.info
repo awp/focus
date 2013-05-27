@@ -1,0 +1,9 @@
+name = FOCUS Tag
+description = Provides the FOCUS Tag toolkit.
+
+package = "Toolkit"
+
+dependencies[] = toolkit
+
+version = 7.x-1.0
+core = 7.x

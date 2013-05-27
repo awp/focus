@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Set of helper functions available to the WebTree Vanilla theme and subthemes
+ * Set of helper functions available to the WEBTREE Vanilla theme and subthemes
  */
 
 /**

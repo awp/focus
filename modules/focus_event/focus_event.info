@@ -1,0 +1,12 @@
+name = FOCUS Event
+description = Provides the FOCUS Event toolkit.
+
+package = "Toolkit"
+
+dependencies[] = calendar
+dependencies[] = toolkit
+dependencies[] = focus_sidebar
+dependencies[] = focus_section
+
+version = 7.x-1.0
+core = 7.x

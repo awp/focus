@@ -1,8 +1,0 @@
-group_content:
-  entity_type: taxonomy_term
-  data:
-    label: "Tag w/ Description"
-    children:
-      name
-      description
-      

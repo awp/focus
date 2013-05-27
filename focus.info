@@ -3,6 +3,9 @@ description = Welcome to FOCUS for Drupal.
 core = 7.x
 distribution_name = FOCUS
 
+; Files
+files[] = plugins/focus_plugin_display_block.inc
+
 ; Core
 dependencies[] = block
 dependencies[] = contextual
@@ -55,7 +58,6 @@ dependencies[] = link
 dependencies[] = media
 dependencies[] = missioncontrol
 dependencies[] = module_filter
-dependencies[] = omega_tools
 dependencies[] = pathauto
 dependencies[] = retina_images
 dependencies[] = search_config
@@ -69,16 +71,17 @@ dependencies[] = workbench_moderation
 dependencies[] = wysiwyg
 dependencies[] = xmlsitemap
 
-; FOCUS
-dependencies[] = focus_core
-dependencies[] = focus_views
-
 ; Toolkit
 dependencies[] = toolkit
-dependencies[] = toolkit_views
-dependencies[] = toolkit_sidebar
-dependencies[] = toolkit_section
-dependencies[] = toolkit_page
+dependencies[] = toolkit_context
+
+; FOCUS Toolkits
+dependencies[] = focus_contexts
+dependencies[] = focus_toolkit
+dependencies[] = focus_views
+dependencies[] = focus_sidebar
+dependencies[] = focus_section
+dependencies[] = focus_page
 
 ; System Requirements
 php_memory_limit = 256M

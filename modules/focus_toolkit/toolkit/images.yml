@@ -1,0 +1,64 @@
+square_thumbnail:
+  effects:
+    0:
+      name: image_scale_and_crop
+      data:
+        height: 120
+        width: 120
+        retinafy: 1
+
+thumbnail:
+  effects:
+    0:
+      name: image_scale
+      data:
+        height: 140
+        width: 140
+        upscale: 1
+        retinafy: 1
+
+small:
+  effects:
+    0:
+      name: image_scale
+      data:
+        width: 300
+        height: 300
+        retinafy: 1
+
+medium:
+  effects:
+    0:
+      name: image_scale
+      data:
+        width: 540
+        height: 540
+        retinafy: 1
+
+large:
+  effects:
+    0:
+      name: image_scale
+      data:
+        width: 760
+        height: 760
+        retinafy: 1
+
+colorbox:
+  effects:
+    0:
+      name: image_scale
+      data:
+        height: 1200
+        width: 1200
+        retinafy: 1
+
+headline:
+  effects:
+    0:
+      name: image_scale_and_crop
+      data:
+        height: 220
+        width: 660
+        retinafy: 1
+        

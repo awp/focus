@@ -1,0 +1,9 @@
+name = FOCUS Toolkit
+description = Provides the FOCUS Toolkit.
+
+package = "Toolkit"
+
+dependencies[] = toolkit
+
+version = 7.x-1.0
+core = 7.x

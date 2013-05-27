@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Installation for WebTree
+ * Installation for FOCUS
  */
 
 require_once('includes/constants.inc');
@@ -12,7 +12,7 @@ require_once('includes/constants.inc');
 function focus_install_tasks() {
 
     // set the maintenance theme to FOCUS Admin
-    _focus_set_theme('focal');
+    _focus_set_theme('simplicity');
 
     // remove any status messages that might have been set. They are unneeded.
     drupal_get_messages('status', TRUE);
@@ -26,7 +26,7 @@ function focus_install_tasks() {
         'display_name' => st('Choose FOCUS Tools'),
         'type' => 'batch',
     );
-    
+
     $tasks['focus_choose_themes'] = array(
         'display_name' => st('Choose Site Themes'),
         'type' => 'form',
@@ -91,22 +91,19 @@ function focus_themes_get() {
  */
 function focus_configure_form() {
 
-    global $base_path;
-
-    $tools = focus_tools_get();
+    $tools = toolkit_toolkits_get_all();
     $toolkeys = array_keys($tools);
     
     $form['title'] = array(
         '#markup' => '<h2>Configure FOCUS</h2>',
     );
+
+    $form['#attached']['js'][] = FOCUS_PROFILE_PATH . '/js/dependencies.js';
     
-    $form['#attached']['js'][] = FOCAL_PATH . '/js/dependencies.js';
-    
-    // Content Type Selection
-    
+    // Tool Selection
     $form['tools'] = array(
         '#type' => 'fieldset',
-        '#title' => st('Install Content Types'),
+        '#title' => st('Install Tools'),
         '#tree' => TRUE,
     );
     
@@ -186,7 +183,7 @@ function focus_choose_themes() {
         '#machine_name' => array(
             'source' => array('subtheme', 'name'),
         ),
-        '#element_validate' => array('_omega_tools_validate_theme_name'),
+        '#element_validate' => array('focus_theme_name_validate'),
     );
 
     $form['subtheme']['description'] = array(
@@ -223,7 +220,7 @@ function focus_choose_themes() {
         '#type' => 'select',
         '#title' => st('Admin Theme'),
         '#options' => focus_themes_get(),
-        '#default_value' => 'focal',
+        '#default_value' => 'simplicity',
     );
     
     // Form actions
@@ -237,6 +234,29 @@ function focus_choose_themes() {
     
     return $form;
     
+}
+
+/**
+ * Form element validation callback.
+ */
+function focus_theme_name_validate($element, &$form_state) {
+    system_rebuild_theme_data();
+
+    if (!preg_match('/^[a-z][a-z0-9_]*$/', $element['#value'])) {
+        form_error($element, t('The theme name is invalid. It may only contain lowercase numbers, letters and underscores and must start with a letter.'));
+    }
+    else if (focus_theme_exists($element['#value'])) {
+        form_error($element, t('A theme with that name already exists. The machine-readable name must be unique.'));  
+    }
+}
+
+/**
+ * @todo
+ */
+function focus_theme_exists($theme) {
+  $themes = list_themes();
+  
+  return isset($themes[$theme]);
 }
 
 /**
@@ -277,7 +297,7 @@ function focus_configure_form_submit(&$form, &$form_state) {
 
 /**
  * Batch callback
- * Identifies WebTree Tools to be installed and prepares the batch installer
+ * Identifies FOCUS Tools to be installed and prepares the batch installer
  * 
  * @return array $batch
  *  The batch to be implemented
@@ -286,7 +306,7 @@ function focus_install_tools() {
 
     $files = system_rebuild_module_data();
 
-    // first, get all dependencies and add them to our install list
+    // First, get all dependencies and add them to our install list.
     $tools = variable_get('focus_tools', array());
     foreach ($tools as $tool) {
         if (empty($files[$tool]->requires)) continue;
@@ -296,7 +316,7 @@ function focus_install_tools() {
         $tools = array_merge($tools, $dependencies);
     }
     
-    // next, ignore already installed modules and sort by module sort
+    // Next, ignore already installed modules and sort by module sort.
     $sorted = array();
     foreach ($tools as $tool) {
         if ($files[$tool]->status) continue;
@@ -305,11 +325,11 @@ function focus_install_tools() {
     }
     arsort($sorted);
     
-    // finally, add modules that need to be installed to batch operations
+    // Finally, add modules that need to be installed to batch operations.
     $operations = array();
     foreach ($sorted as $tool => $sort) {
         if ($info = $files[$tool]) {
-            $operations[] = array('_focus_module_batch_install', array($tool, $info->info['name']));
+            $operations[] = array('_install_module_batch', array($tool, $info->info['name']));
         }
     }
     
@@ -317,10 +337,10 @@ function focus_install_tools() {
     
     $batch = array(
         'operations' => $operations,
-        'title' => st('Installing FOCUS Content Types'),
+        'title' => st('Installing FOCUS Tools'),
         'error_message' => st('The installation has encountered an error.'),
         'finished' => '_install_profile_modules_finished',
-        'file' => WEBTREE_PROFILE_PATH . '/includes/batch.inc',
+        'file' => FOCUS_PROFILE_PATH . '/includes/batch.inc',
     );
 
     return $batch;
@@ -335,24 +355,22 @@ function focus_complete_installation() {
     $modules = system_rebuild_module_data();
     
     $disable = array('bartik');
-    $enable = array('focus_admin');
+    $enable = array('simplicity');
     
     $disable_blocks = array('help', 'recent', 'form', 'new', 'online');
-    $disable_modules = array('omega_tools');
+    $disable_modules = array();
     $enable_modules = array('entityconnect');
     
     $operations = array(
         array('_focus_themes_disable', array($disable)),
         array('_focus_themes_enable', array($enable)),
         array('_focus_blocks_disable', array($disable_blocks)),
-        array('_focus_deltas_create', array()),
-        array('_focus_contexts_create', array()),
         array('_focus_variables_set', array()),
     );
     
     foreach ($enable_modules as $module) {
         if ($info = $modules[$module]) {
-            $operations[] = array('_focus_module_batch_install', array($module, $info->info['name']));
+            $operations[] = array('_install_module_batch', array($module, $info->info['name']));
         }
     }
     
@@ -367,7 +385,7 @@ function focus_complete_installation() {
         'title' => st('Wrapping up remaining installation tasks.'),
         'error_message' => st('There was an error completing this installation.'),
         'finished' => 'install_import_locales_remaining',
-        'file' => WEBTREE_PROFILE_PATH . '/includes/batch.inc',
+        'file' => FOCUS_PROFILE_PATH . '/includes/batch.inc',
     );
     
     return $batch;

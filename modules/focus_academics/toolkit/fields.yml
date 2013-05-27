@@ -1,0 +1,105 @@
+field_focus_courses:
+  label: Courses
+  type: entityreference
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget:
+    type: entityreference_autocomplete
+  settings:
+    target_type: node
+    handler_settings:
+      target_bundles:
+        focus_course: focus_course
+        
+field_focus_prerequisites:
+  label: Prerequisites
+  type: entityreference
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget:
+    type: entityreference_autocomplete
+  settings:
+    target_type: node
+    handler_settings:
+      target_bundles:
+        focus_course: focus_course
+        
+field_focus_course_subjects:
+  label: Course Subjects
+  type: taxonomy_term_reference
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget:
+    type: taxonomy_autocomplete
+    settings:
+      autocomplete_path: taxonomy/autocomplete
+    module: taxonomy
+  settings:
+    allowed_values:
+      0:
+        vocabulary: focus_course_subject
+        parent: 0
+        
+field_focus_semester:
+  label: Semester
+  type: taxonomy_term_reference
+  widget:
+    type: taxonomy_autocomplete
+    settings:
+      autocomplete_path: taxonomy/autocomplete
+    module: taxonomy
+  settings:
+    allowed_values:
+      0:
+        vocabulary: focus_semester
+        parent: 0
+        
+## Field Collections ##
+
+field_focus_group_core_req: # field collection reference
+  label: Core Requirements
+  type: field_collection
+  widget:
+    type: field_collection_embed
+    
+field_focus_group_conc_req: # field collection reference
+  label: Concentration Requirements
+  type: field_collection
+  widget:
+    type: field_collection_embed
+
+field_focus_course_group: # field collection reference
+  label: Course Group
+  type: field_collection
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget: 
+    type: field_collection_embed
+
+field_focus_course_options: # field collection reference
+  label: Course Group Options (OR)
+  type: field_collection
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget: 
+    type: field_collection_embed
+
+field_focus_course_combo: # field collection reference
+  label: Course Combinations (AND)
+  type: field_collection
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
+  widget:
+    type: field_collection_embed
+
+## Field Collection Fields ##
+
+field_focus_course_group_label: # field collection field
+  label: Label
+  # bundle: field_focus_course_group
+  entity_type: field_collection_item
+  type: text
+  widget:
+    type: text_textfield
+
+field_focus_course_group_hours: # field collection field
+  label: Credit Hours
+  # bundle: field_focus_course_group
+  entity_type: field_collection_item
+  type: text
+  widget:
+    type: text_textfield

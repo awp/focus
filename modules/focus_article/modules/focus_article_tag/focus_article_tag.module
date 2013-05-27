@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * @todo
+ */
+
+/**
+ * Implements hook_toolkit_api().
+ */
+function focus_article_tag_toolkit_api() {
+    return array(
+        'api' => 1,
+    );
+}

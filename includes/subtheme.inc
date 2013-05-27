@@ -27,15 +27,15 @@ function focus_subtheme_create($values) {
     $subtheme->starterkit = 'prime';
     $subtheme->base = 'vanilla';
     $subtheme->destination = 'sites/default/themes/' . $subtheme->machine_name;
-    $subtheme->path = 'temporary://webtree/' . $subtheme->machine_name . '-' . substr(hash('sha256', serialize($subtheme) . microtime()), 0, 8);
+    $subtheme->path = 'temporary://focus/' . $subtheme->machine_name . '-' . substr(hash('sha256', serialize($subtheme) . microtime()), 0, 8);
     
     if (is_dir($subtheme->path)) {
         file_unmanaged_delete_recursive($subtheme->path);
     }
     
     if (!file_prepare_directory($subtheme->path, FILE_CREATE_DIRECTORY)) {
-        drupal_set_message(t('WebTree could not create the directory %dir.', array('%dir' => $subtheme->path)), 'error');
-        watchdog('WebTree Install', t('WebTree could not create the directory %dir.', array('%dir' => $subtheme->path)), array(), WATCHDOG_ERROR);        
+        drupal_set_message(t('FOCUS could not create the directory %dir.', array('%dir' => $subtheme->path)), 'error');
+        watchdog('FOCUS Install', t('FOCUS could not create the directory %dir.', array('%dir' => $subtheme->path)), array(), WATCHDOG_ERROR);        
 
         return FALSE;
     }
@@ -43,8 +43,8 @@ function focus_subtheme_create($values) {
     if (!focus_copy_recursive(drupal_get_path('theme', $subtheme->starterkit), $subtheme->path)) {
         $themes = list_themes();
         
-        drupal_set_message(t('WebTree could not copy the starterkit %starterkit.', array('%starterkit' => $themes[$subtheme->starterkit]->info['name'])), 'error');
-        watchdog('WebTree Install', t('WebTree could not copy the starterkit %starterkit.', array('%starterkit' => $themes[$subtheme->starterkit]->info['name'])), array(), WATCHDOG_ERROR);        
+        drupal_set_message(t('FOCUS could not copy the starterkit %starterkit.', array('%starterkit' => $themes[$subtheme->starterkit]->info['name'])), 'error');
+        watchdog('FOCUS Install', t('FOCUS could not copy the starterkit %starterkit.', array('%starterkit' => $themes[$subtheme->starterkit]->info['name'])), array(), WATCHDOG_ERROR);        
 
         return FALSE;
     }

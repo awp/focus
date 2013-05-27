@@ -1,0 +1,9 @@
+name = FOCUS Article Tag
+description = Provides the FOCUS Article Tag Taxonomy.
+
+package = "Toolkit"
+
+dependencies[] = focus_article
+
+version = 7.x-1.0
+core = 7.x

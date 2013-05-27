@@ -1,0 +1,6 @@
+@mixin fixed($x: 0, $y: 0, $z: 1) {
+  position: fixed;
+  left: $x;
+  top: $y;
+  z-index: $z;
+}

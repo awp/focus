@@ -1,0 +1,5 @@
+content_default:
+  conditions:
+    node:
+      values:
+        focus_page: focus_page

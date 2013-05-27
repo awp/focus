@@ -1,0 +1,4 @@
+focus_page:
+  name: Page
+  description: Pages are basic pieces of content
+  title_label: Page Title

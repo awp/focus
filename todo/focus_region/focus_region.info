@@ -1,0 +1,23 @@
+name = FOCUS Region
+description = Provides the FOCUS Region Taxonomy.
+;configure = admin/toolkit/toolkit/taxonomy/region
+
+package = "Toolkit"
+
+dependencies[] = toolkit
+
+version = 7.x-1.0
+core = 7.x
+
+; Information added by drush on 2013-05-16
+version = ""
+project = "toolkit"
+datestamp = "1368729512"
+
+
+
+; Information added by drush on 2013-05-22
+version = ""
+project = "toolkit"
+datestamp = "1369241248"
+

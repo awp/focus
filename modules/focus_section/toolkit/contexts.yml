@@ -1,0 +1,45 @@
+content_default:
+  description: This context is used for the majority of standard content types
+  tag: Inner Pages
+  conditions:
+    node:
+      values:
+      options:
+        node_form: 0
+    path:
+      values:
+        ~<front>: '~<front>'
+        ~*/edit: '~*/edit'
+        ~media/browser: '~media/browser'
+  reactions:
+    debug:
+      debug: 1
+    block:
+      blocks:
+        views-in_this_section-its:
+          module: views
+          delta: in_this_section-its
+          region: sidebar_first
+          weight: -10
+  condition_mode: 1
+  
+section_default:
+  description: This context is used for the majority of section pages
+  tag: Sections
+  conditions:
+    node:
+      values:
+        focus_section: focus_section
+      options:
+        node_form: 0
+  reactions:
+    debug:
+      debug: 1
+    block:
+      blocks:
+        views-in_this_section-its:
+          module: views
+          delta: in_this_section-its
+          region: sidebar_first
+          weight: -10
+  condition_mode: 1

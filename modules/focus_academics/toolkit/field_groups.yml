@@ -1,0 +1,80 @@
+focus_course:
+  group_content:
+    data:
+      label: "Title & Description"
+      children:
+        title
+        body
+
+  group_media:
+    data:
+      label: Media
+      children:
+        field_focus_download
+        
+  group_details:
+    data:
+      label: Details
+      children:
+        field_focus_course_subjects
+        field_focus_semester
+        field_focus_person
+        field_focus_prerequisites
+        
+  group_sidebar:
+    data:
+      label: Sidebar
+      children:
+        field_focus_sidebar
+        
+focus_degree:
+  group_content:
+    data:
+      label: "Title & Description"
+      children:
+        title
+        body
+
+  group_media:
+    data:
+      label: Media
+      children:
+        field_focus_download
+        
+  group_sidebar:
+    data:
+      label: Sidebar
+      children:
+        field_focus_sidebar
+        
+focus_concentration:
+  group_content:
+    data:
+      label: "Title & Description"
+      children:
+        title
+        body
+
+  group_core_req:
+    data:
+      label: Core Requirements
+      children:
+        field_focus_group_core_req
+
+  group_conc_req:
+    data:
+      label: Concentration Requirements
+      children:
+        field_focus_group_conc_req
+
+  group_media:
+    data:
+      label: Media
+      children:
+        field_focus_download
+        
+  group_sidebar:
+    data:
+      label: Sidebar
+      children:
+        field_focus_sidebar

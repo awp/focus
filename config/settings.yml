@@ -7,15 +7,6 @@ admin_menu_components:
   admin_menu.account: 1
   admin_menu.search:
   admin_menu.users:
-content_access_settings:
-  view:
-    webtree: []
-  view_own:
-    webtree: []
-  per_node:
-    webtree: 0
-  priority:
-    webtree: 0
 date_format_long: l, F j, Y - g:ia
 date_format_medium: F j, Y - g:ia
 date_format_short: M j Y - g:ia
@@ -45,7 +36,6 @@ menu_main_links_source: main-menu
 menu_secondary_links_source: user-menu
 node_admin_theme: 1
 views_ui_show_advanced_help_warning: ~
-webtree_search_form_text: Search this site... # TODO: move to webtree_settings install
 
 # Webform Node Config
 ant_pattern_webform:
@@ -58,6 +48,6 @@ node_options_webform:
   status
 node_preview_webform: 1
 node_submitted_webform: 0
-webtree_structure_children_view_webform: 0
-webtree_structure_enabled_webform: 1 # WEBTREE_STRUCTURE_OPTIONAL_NO
-webtree_structure_children_webform: []
+structural_childview_webform: 0
+structural_enabled_webform: 1 # FOCUS_STRUCTURE_OPTIONAL_NO
+structural_children_webform: []

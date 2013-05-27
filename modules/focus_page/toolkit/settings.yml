@@ -1,0 +1,9 @@
+focus_page:
+  menu_options:
+    main-menu
+  structural_hidden: 2 # Display in Navigation? STRUCTURAL_OPTIONAL_YES
+  structural_enabled: 1 # STRUCTURAL_OPTIONAL_NO
+  
+focus_section:
+  structural_children:
+    focus_page

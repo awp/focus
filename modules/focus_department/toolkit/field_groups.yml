@@ -1,0 +1,22 @@
+focus_department:
+  group_content:
+    entity_type: taxonomy_term
+    data:
+      label: "Title & Description"
+      children:
+        name
+        description
+  
+  group_details:
+    entity_type: taxonomy_term
+    data:
+      label: Details
+      children:
+        field_focus_person
+        
+focus_person:
+  group_contact:
+    data:
+      children:
+        field_focus_department
+      

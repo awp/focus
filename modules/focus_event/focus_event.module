@@ -1,0 +1,37 @@
+<?php
+/**
+ * @file
+ * @todo
+ */
+
+function focus_event_field_formatter_info_alter(&$info) {
+    // echo '<pre>'; print_r($info); echo '</pre>';
+    // die();
+}
+
+/**
+ * Implements hook_toolkit_api().
+ */
+function focus_event_toolkit_api() {
+    return array(
+        'api' => 1,
+    );
+}
+
+/**
+ * Implements hook_form().
+ * 
+ * This function must exist in order for this content type to appear at admin/stucture/types
+ */
+function focus_event_form($node, &$form_state) {
+    return array();
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function focus_event_views_api() {
+    return array(
+        'api' => 3,
+    );
+}

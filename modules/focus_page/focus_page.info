@@ -1,0 +1,10 @@
+name = FOCUS Page
+description = Provides the FOCUS Page toolkit.
+
+package = "Toolkit"
+
+dependencies[] = toolkit
+dependencies[] = focus_sidebar
+
+version = 7.x-1.0
+core = 7.x

@@ -1,0 +1,11 @@
+name = FOCUS Academics
+description = Provides the FOCUS Academics toolkit.
+
+package = "Toolkit"
+
+dependencies[] = toolkit
+dependencies[] = focus_person
+dependencies[] = focus_department
+
+version = 7.x-1.0
+core = 7.x

@@ -1,0 +1,26 @@
+administrator: *
+
+anonymous user:
+  access content: 1
+  search content: 1
+  view structural child view: 1
+
+authenticated user:
+  access content: 1
+  search content: 1
+  view structural child view: 1
+
+site manager:
+  access content: 1
+  search content: 1
+  view structural child view: 1
+  
+editor:
+  access content: 1
+  search content: 1
+  view structural child view: 1
+
+contributor:
+  access content: 1
+  search content: 1
+  view structural child view: 1

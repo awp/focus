@@ -1,0 +1,3 @@
+focus_sidebar:
+  structural_hidden: 0 # Display in Navigation? STRUCTURAL_NEVER
+  structural_enabled: 0 # STRUCTURAL_NEVER

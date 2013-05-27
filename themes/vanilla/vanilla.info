@@ -5,12 +5,6 @@ description = A Zen base theme.
 core        = 7.x
 base theme  = zen
 
-; Stylesheets
-stylesheets[all][] = css/styles.css
-
-; Javascript
-;scripts[] = js/script.js
-
 ; Zen Features
 features[] = logo
 features[] = name
