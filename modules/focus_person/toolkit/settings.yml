@@ -4,8 +4,7 @@ focus_person:
   ant_pattern: "[node:field-focus-name:field_focus_first_name] [node:field-focus-name:field_focus_last_name]"
   menu_options:
     people
-  menu_parent:
-    "people:0"
+  menu_parent: "people:0"
   structural_hidden: 2 # Display in Navigation? STRUCTURAL_OPTIONAL_YES
   structural_enabled: 2 # STRUCTURAL_OPTIONAL_YES
 
