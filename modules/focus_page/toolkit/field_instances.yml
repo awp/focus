@@ -9,10 +9,10 @@ focus_page:
     label: Gallery Images
     description: Gallery of images associated with this page
 
+  field_focus_sidebar:
+    label: Section Sidebar
+    description: Sidebar associated with this section
+
   field_focus_download:
     label: Downloads
     description: Files associated with this page
-
-  field_focus_sidebar:
-    label: Page Sidebar
-    description: Sidebar associated with this page

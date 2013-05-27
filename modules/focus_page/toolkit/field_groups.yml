@@ -12,16 +12,16 @@ focus_page:
       children:
         field_focus_primary_image
         field_focus_gallery_image
-        
-  group_media:
-    data:
-      label: Media
-      children:
-        field_focus_download
-        
+  
   group_sidebar:
     data:
       label: Sidebar
       children:
         field_focus_sidebar
+  
+  group_media:
+    data:
+      label: Downloads
+      children:
+        field_focus_download
         

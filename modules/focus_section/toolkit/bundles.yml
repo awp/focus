@@ -1,4 +1,3 @@
-# settings for creating this content type
 focus_section:
   name: Section
   description: Sections help you organize your content into structural groupings

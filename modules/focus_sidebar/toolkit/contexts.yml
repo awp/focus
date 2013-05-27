@@ -1,7 +1,9 @@
 content_default:
-  blocks:
-    views-sidebars-sidebars:
-      module: views
-      delta: sidebars-sidebars
-      region: sidebar_first
-      weight: -7
+  reactions:
+    block:
+      blocks:
+        views-sidebars-sidebars:
+          module: views
+          delta: sidebars-sidebars
+          region: sidebar_first
+          weight: -7

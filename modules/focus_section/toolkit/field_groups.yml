@@ -17,4 +17,3 @@ focus_section:
       label: Sidebar
       children:
         field_focus_sidebar
-      

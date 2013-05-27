@@ -2,10 +2,6 @@ content_default:
   description: This context is used for the majority of standard content types
   tag: Inner Pages
   conditions:
-    node:
-      values:
-      options:
-        node_form: 0
     path:
       values:
         ~<front>: '~<front>'
