@@ -15,28 +15,27 @@ ckeditor:
       authenticated user
       administrator
       site manager
-    settings:
-      show_toggle: 0
-      buttons:
-        default:
-          Bold: 1
-          Italic: 1
-          Underline: 1
-          JustifyLeft: 1
-          JustifyCenter: 1
-          JustifyRight: 1
-          BulletedList: 1
-          NumberedList: 1
-          Link: 1
-          Unlink: 1
-          Indent: 1
-          Outdent: 1
-          Blockquote: 1
-          PasteText: 1
-          Format: 1
-          Source: 1
-          RemoveFormat: 1
-        drupal:
-          media: 1
-        drupal_path:
-          Link: 1
+    show_toggle: 0
+    buttons:
+      default:
+        Bold: 1
+        Italic: 1
+        Underline: 1
+        JustifyLeft: 1
+        JustifyCenter: 1
+        JustifyRight: 1
+        BulletedList: 1
+        NumberedList: 1
+        Link: 1
+        Unlink: 1
+        Indent: 1
+        Outdent: 1
+        Blockquote: 1
+        PasteText: 1
+        Format: 1
+        Source: 1
+        RemoveFormat: 1
+      drupal:
+        media: 1
+      drupal_path:
+        Link: 1
