@@ -4,8 +4,6 @@ focus_person:
       label: Basic Information
       children:
         field_focus_name
-        # field_focus_position
-        # field_focus_department
         body
   
   group_contact:
@@ -23,7 +21,7 @@ focus_person:
         
   group_media:
     data:
-      label: Media
+      label: Files
       children:
         field_focus_download
       

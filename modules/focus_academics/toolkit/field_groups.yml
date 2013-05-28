@@ -8,7 +8,7 @@ focus_course:
 
   group_media:
     data:
-      label: Media
+      label: Files
       children:
         field_focus_download
         
@@ -37,7 +37,7 @@ focus_degree:
 
   group_media:
     data:
-      label: Media
+      label: Files
       children:
         field_focus_download
         
@@ -69,7 +69,7 @@ focus_concentration:
 
   group_media:
     data:
-      label: Media
+      label: Files
       children:
         field_focus_download
         

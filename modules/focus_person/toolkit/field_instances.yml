@@ -2,15 +2,7 @@ focus_person:
   field_focus_name:
     label: Name
     description: Name of this person
-    
-  # field_focus_position:
-    # label: Position
-    # description: The job title of this person
-  
-  # field_focus_department:
-    # label: Department
-    # description: The department with which this person is associated
-  
+
   body:
     label: Biography
   

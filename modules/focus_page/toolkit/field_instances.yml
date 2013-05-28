@@ -1,5 +1,6 @@
 focus_page:
   body:
+    label: Page Content
 
   field_focus_primary_image:
     label: Headline Image

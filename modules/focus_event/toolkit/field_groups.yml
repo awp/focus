@@ -15,7 +15,7 @@ focus_event:
         
   group_media:
     data:
-      label: Media
+      label: Files
       children:
         field_focus_download
         

@@ -354,18 +354,13 @@ function focus_complete_installation() {
     
     $modules = system_rebuild_module_data();
     
-    $disable = array('bartik');
-    $enable = array('simplicity');
-    
+    $disable_themes = array('bartik');
     $disable_blocks = array('help', 'recent', 'form', 'new', 'online');
-    $disable_modules = array();
     $enable_modules = array('entityconnect');
     
     $operations = array(
-        array('_focus_themes_disable', array($disable)),
-        array('_focus_themes_enable', array($enable)),
+        array('_focus_themes_disable', array($disable_themes)),
         array('_focus_blocks_disable', array($disable_blocks)),
-        array('_focus_variables_set', array()),
     );
     
     foreach ($enable_modules as $module) {
@@ -373,13 +368,7 @@ function focus_complete_installation() {
             $operations[] = array('_install_module_batch', array($module, $info->info['name']));
         }
     }
-    
-    foreach ($disable_modules as $module) {
-        if ($info = $modules[$module]) {
-            $operations[] = array('_focus_module_batch_uninstall', array($module, $info->info['name']));
-        }
-    }
-    
+
     $batch = array(
         'operations' => $operations,
         'title' => st('Wrapping up remaining installation tasks.'),

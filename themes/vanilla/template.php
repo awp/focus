@@ -7,17 +7,28 @@
  * @see http://drupal.org/node/1728096
  */
 
+require_once(dirname(__FILE__) . '/includes/helpers.inc');
+
 /**
  * Implements hook_preprocess_html().
  */
 function vanilla_preprocess_html(&$vars) {
-    $path = drupal_get_path('theme', $GLOBALS['theme']);
-    
     if (drupal_is_front_page()) {
-        drupal_add_css("$path/css/home.css");
+        _vanilla_add_css('home');
     }
     else {
-        drupal_add_css("$path/css/inner.css");
+        _vanilla_add_css('inner');
+    }
+    
+    // Add contextual layout(s).
+    if ($contexts = context_active_contexts()) {
+        foreach ($contexts as $context_name => $context_info) {
+            $added = _vanilla_add_css('layouts/' . $context_name);
+        }
+    }
+
+    if (empty($added)) {
+        _vanilla_add_css('layouts/default');
     }
 }
 

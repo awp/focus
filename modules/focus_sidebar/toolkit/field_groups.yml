@@ -14,7 +14,7 @@ focus_sidebar:
         
   group_media:
     data:
-      label: Media
+      label: Files
       children:
         field_focus_download
         field_focus_media
