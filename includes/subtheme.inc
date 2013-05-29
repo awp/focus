@@ -53,7 +53,7 @@ function focus_subtheme_create($values) {
     
     file_unmanaged_delete($subtheme->path . '/' . $subtheme->starterkit . '.info');
 
-    $subtheme->info = drupal_parse_info_file(drupal_get_path('theme', $subtheme->base) . '/' . $subtheme->base . '.info');
+    // $subtheme->info = drupal_parse_info_file(drupal_get_path('theme', $subtheme->base) . '/' . $subtheme->base . '.info');
     $subtheme->info['name'] = $subtheme->name;
     $subtheme->info['description'] = $subtheme->description;
     $subtheme->info['base theme'] = $subtheme->base;

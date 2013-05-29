@@ -23,20 +23,11 @@ function vanilla_preprocess_html(&$vars) {
     // Add contextual layout(s).
     if ($contexts = context_active_contexts()) {
         foreach ($contexts as $context_name => $context_info) {
-            $added = _vanilla_add_css('layouts/' . $context_name);
+            $added = _vanilla_add_css('contexts/' . $context_name);
         }
     }
 
     if (empty($added)) {
-        _vanilla_add_css('layouts/default');
-    }
-}
-
-/**
- * Implements hook_css_alter().
- */
-function vanilla_css_alter(&$css) {
-    foreach ($css as $path => $info) {
-        
+        _vanilla_add_css('contexts/default');
     }
 }
