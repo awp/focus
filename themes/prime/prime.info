@@ -6,7 +6,7 @@ core        = 7.x
 base theme  = vanilla
 
 ; Stylesheets
-stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/global.css
 
 ; Javascript
 ;scripts[] = js/script.js
