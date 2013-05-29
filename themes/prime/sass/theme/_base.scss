@@ -1,2 +1,13 @@
-$base_font_family: Arial, Helvetica, sans-serif;
-$base_font_family_mono: 'Lucida Console', Monaco, monospace, sans-serif;
+@import 'dropcloth';
+@import 'fonts';
+
+// colors
+
+// fonts
+
+// styles
+
+// Theme rules
+@import 'theme/global';
+@import 'theme/colorbox';
+@import 'theme/blocks';
