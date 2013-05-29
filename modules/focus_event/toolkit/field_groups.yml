@@ -6,6 +6,12 @@ focus_event:
         title
         body
   
+  group_details:
+    data:
+      label: Event Details
+      children:
+        field_focus_calendar_date
+        
   group_images:
     data:
       label: Images
@@ -13,21 +19,15 @@ focus_event:
         field_focus_primary_image
         field_focus_gallery_image
         
-  group_media:
-    data:
-      label: Files
-      children:
-        field_focus_download
-        
-  group_details:
-    data:
-      label: Details
-      children:
-        field_focus_calendar_date
-        
   group_sidebar:
     data:
       label: Sidebar
       children:
         field_focus_sidebar
       
+  group_media:
+    data:
+      label: Files
+      children:
+        field_focus_download
+        

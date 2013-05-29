@@ -8,7 +8,7 @@ focus_sidebar:
   
   group_images:
     data:
-      label: Thumbnail
+      label: Images
       children:
         field_focus_thumbnail
         
@@ -24,3 +24,4 @@ focus_sidebar:
       label: Links
       children:
         field_focus_links
+        

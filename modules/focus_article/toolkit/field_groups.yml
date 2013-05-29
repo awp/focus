@@ -7,6 +7,12 @@ focus_article:
         field_focus_deck
         body
   
+  group_details:
+    data:
+      label: Details
+      children:
+        field_focus_dateline
+        
   group_images:
     data:
       label: Images
@@ -20,8 +26,3 @@ focus_article:
       children:
         field_focus_download
         
-  group_details:
-    data:
-      label: Details
-      children:
-        field_focus_dateline
