@@ -40,6 +40,7 @@ field_focus_course_subjects:
 field_focus_semester:
   label: Semester
   type: taxonomy_term_reference
+  cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
   widget:
     type: taxonomy_autocomplete
     settings:
