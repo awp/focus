@@ -12,7 +12,6 @@ global:
   date_format_year: "Y"
   date_format_time: g:ia
   file_default_scheme: public
-  file_private_path: sites/default/files/private
   file_public_path: sites/default/files
   imageapi_optimize_service: smushit
   imageapi_optimize_toolkit: gd

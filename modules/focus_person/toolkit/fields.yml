@@ -48,7 +48,6 @@ field_focus_name: # field collection reference
 
 field_focus_first_name: # field collection field
   label: First Name
-  bundle: field_focus_name
   entity_type: field_collection_item
   type: text
   widget: 
@@ -56,7 +55,6 @@ field_focus_first_name: # field collection field
 
 field_focus_last_name: # field collection field
   label: Last Name
-  bundle: field_focus_name
   entity_type: field_collection_item
   type: text
   widget:

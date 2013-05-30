@@ -21,3 +21,10 @@ focus_person:
   field_focus_download:
     label: Downloads
     description: File downloads associated with this person
+    
+field_focus_name:
+  field_focus_first_name:
+    entity_type: field_collection_item
+    
+  field_focus_last_name:
+    entity_type: field_collection_item
