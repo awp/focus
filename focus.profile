@@ -4,17 +4,9 @@
  * FOCUS Distribution Profile.
  */
 
+module_load_include('inc', 'focus', 'includes/debug');
 module_load_include('inc', 'focus', 'includes/libraries');
 module_load_include('inc', 'focus', 'includes/preprocess');
-
-/**
- * Implements hook_toolkit_api().
- */
-function focus_toolkit_api() {
-    return array(
-        'api' => 1,
-    );
-}
 
 /**
  * Implements hook_views_api()
@@ -41,6 +33,7 @@ function focus_custom_theme() {
 function focus_admin_paths() {
     if (variable_get('node_admin_theme')) {
         $paths = array(
+            'user'   => TRUE,
             'user/*' => TRUE,
         );
         return $paths;
