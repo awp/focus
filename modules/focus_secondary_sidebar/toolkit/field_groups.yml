@@ -1,0 +1,13 @@
+focus_section:
+  group_sidebar:
+    data:
+      label: Sidebar
+      children:
+        field_focus_sidebar2
+        
+focus_page:
+  group_sidebar:
+    data:
+      label: Sidebar
+      children:
+        field_focus_sidebar2

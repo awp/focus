@@ -1,24 +1,3 @@
-content_default:
-  description: This context is used for the majority of standard content types
-  tag: Inner Pages
-  conditions:
-    path:
-      values:
-        ~<front>: '~<front>'
-        ~*/edit: '~*/edit'
-        ~media/browser: '~media/browser'
-  reactions:
-    debug:
-      debug: 1
-    block:
-      blocks:
-        views-in_this_section-its:
-          module: views
-          delta: in_this_section-its
-          region: sidebar_first
-          weight: -10
-  condition_mode: 1
-  
 section_default:
   description: This context is used for the majority of section pages
   tag: Sections
@@ -33,6 +12,11 @@ section_default:
       debug: 1
     block:
       blocks:
+        views-sidebars-sidebars:
+          module: views
+          delta: sidebars-sidebars
+          region: sidebar_first
+          weight: -7
         views-in_this_section-its:
           module: views
           delta: in_this_section-its

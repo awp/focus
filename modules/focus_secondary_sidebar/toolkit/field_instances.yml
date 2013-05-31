@@ -1,0 +1,9 @@
+focus_section:
+  field_focus_sidebar2:
+    label: Secondary Sidebar
+    description: Sidebar content not displayed in the main sidebar area.
+    
+focus_page:
+  field_focus_sidebar2:
+    label: Secondary Sidebar
+    description: Sidebar content not displayed in the main sidebar area.
