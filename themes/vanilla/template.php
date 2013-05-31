@@ -26,3 +26,17 @@ function vanilla_preprocess_html(&$vars) {
         _vanilla_add_css('default');
     }
 }
+
+/**
+ * Implements hook_html_head_alter().
+ */
+function vanilla_html_head_alter(&$elements) {
+    $elements['vanilla_xua'] = array(
+        '#type' => 'html_tag',
+        '#tag' => 'meta',
+        '#attributes' => array(
+            'http-equiv' => 'X-UA-Compatible',
+            'content' => 'IE=edge,chrome=1',
+        ),
+    );
+}

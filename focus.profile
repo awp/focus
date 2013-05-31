@@ -345,3 +345,30 @@ function focus_wysiwyg_editor_settings_alter(&$settings, $context) {
         $settings['allowedContent'] = TRUE;
     }
 }
+
+/**
+ * Implements hook_page_build().
+ */
+function focus_page_build(&$page) {
+    $page['page_top']['focus_legacy'] = array(
+        '#type' => 'container',
+        '#attributes' => array('class' => 'chromeframe'),
+        '#weight' => -1000,
+        '#prefix' => t('<!--[if lte IE 7]>'),
+        '#suffix' => t('<![endif]-->'),
+        'content' => array(
+            '#type' => 'html_tag',
+            '#tag' => 'p',
+            '#value' => t('You are using an <em>outdated</em> browser.  Please !upgrade or !chromeframe to improve your experience.', array(
+                '!upgrade' => l('upgrade your browser', 'http://browsehappy.com', array(
+                    'attributes' => array(
+                        'target' => '_blank',
+                    ),
+                )),
+                '!chromeframe' => l('activate Google Chrome Frame', 'http://www.google.com/chromeframe/', array(
+                    'query' => array('redirect' => 'true'),
+                )),
+            )),
+        ),
+    );
+}
