@@ -1,0 +1,14 @@
+focus_homepage:
+  group_content:
+    data:
+      label: "Title & Content"
+      children:
+        title
+        body
+  
+  group_extra_content:
+    data:
+      label: Associated Content
+      children:
+        field_focus_embedded_slideshow
+        field_focus_sidebar

@@ -1,0 +1,11 @@
+focus_homepage:
+  body:
+    label: Primary Content
+    
+  field_focus_embedded_slideshow:
+    label: Slideshow
+    description: This slideshow will appear on this homepage.
+    
+  field_focus_sidebar:
+    label: Sidebar
+    description: Secondary content for this homepage.

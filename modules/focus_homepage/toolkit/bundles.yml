@@ -1,0 +1,4 @@
+focus_homepage:
+  name: Homepage
+  description: Home pages are unique.  Only one will be active at a time.
+  title_label: Homepage Label

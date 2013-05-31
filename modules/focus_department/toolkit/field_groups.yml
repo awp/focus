@@ -17,6 +17,7 @@ focus_department:
 focus_person:
   group_contact:
     data:
+      label: Contact Information
       children:
         field_focus_department
       

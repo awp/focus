@@ -22,7 +22,6 @@ field_focus_slideshow: # field collection reference
 
 field_focus_slide_title: # field collection field
   label: Slide Title
-  bundle: field_focus_slideshow
   entity_type: field_collection_item
   type: text
   widget: 
@@ -30,7 +29,6 @@ field_focus_slide_title: # field collection field
 
 field_focus_slide_subtitle: # field collection field
   label: Slide Subtitle
-  bundle: field_focus_slideshow
   entity_type: field_collection_item
   type: text
   widget: 
@@ -38,7 +36,6 @@ field_focus_slide_subtitle: # field collection field
 
 field_focus_slide_caption: # field collection field
   label: Slide Caption
-  bundle: field_focus_slideshow
   entity_type: field_collection_item
   type: text
   widget: 
@@ -46,7 +43,6 @@ field_focus_slide_caption: # field collection field
 
 field_focus_slide_image: # field collection field
   label: Slide Image
-  bundle: field_focus_slideshow
   entity_type: field_collection_item
   type: image
   widget: 
@@ -57,7 +53,6 @@ field_focus_slide_image: # field collection field
 
 field_focus_slide_links: # field collection field
   label: Slide Link
-  bundle: field_focus_slideshow
   entity_type: field_collection_item
   type: link_field
   widget: 

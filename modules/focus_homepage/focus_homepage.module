@@ -1,13 +1,22 @@
 <?php
 /**
  * @file
- * @todo
+ * Provides the FOCUS Homepage toolkit.
  */
+
+/**
+ * Implements hook_views_api().
+ */
+function focus_homepage_views_api() {
+    return array(
+        'api' => 3,
+    );
+}
 
 /**
  * Implements hook_toolkit_api().
  */
-function focus_page_toolkit_api() {
+function focus_homepage_toolkit_api() {
     return array(
         'api' => 1,
     );
@@ -18,6 +27,6 @@ function focus_page_toolkit_api() {
  * 
  * This function must exist in order for this content type to appear at admin/stucture/types
  */
-function focus_page_form($node, &$form_state) {
+function focus_homepage_form($node, &$form_state) {
     return array();
 }

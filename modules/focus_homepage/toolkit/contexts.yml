@@ -1,0 +1,9 @@
+home:
+  conditions:
+    path:
+      values:
+        <front>
+    node:
+      values:
+        focus_homepage: focus_homepage
+  condition_mode: 0

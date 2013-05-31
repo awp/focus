@@ -1,5 +1,10 @@
 <?php
 /**
+ * @file
+ * Provides the FOCUS Slideshow toolkit.
+ */
+
+/**
  * Implements hook_toolkit_api()
  */
 function focus_slideshow_toolkit_api() {
