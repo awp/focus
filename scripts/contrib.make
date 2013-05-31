@@ -25,6 +25,7 @@ projects[content_access][version] = 1.2-beta2
 projects[content_access][subdir] = contrib
 projects[context][version] = 3.0-beta6
 projects[context][subdir] = contrib
+projects[context][patch][] = https://drupal.org/files/context-css-errors-2006526-1.patch
 projects[ctools][version] = 1.3
 projects[ctools][subdir] = contrib
 projects[ctools][patch][] = http://drupal.org/files/autosubmit_enhanced_textfield-1694988-4.patch
