@@ -350,6 +350,7 @@ function focus_wysiwyg_editor_settings_alter(&$settings, $context) {
  * Implements hook_page_build().
  */
 function focus_page_build(&$page) {
+    // Add Legacy Browser Warning.
     $page['page_top']['focus_legacy'] = array(
         '#type' => 'container',
         '#attributes' => array('class' => 'chromeframe'),

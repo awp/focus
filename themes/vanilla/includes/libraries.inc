@@ -1,41 +1,48 @@
 <?php
 /**
  * @file
- * Contains functions related to the Libraries API.
+ * Contains all functions related to the libraries API.
  */
 
 /**
- * Implements hook_libraries_info().
+ * Implements hook_libraries_info_alter().
  */
-function webtree_vanilla_libraries_info() {
+function vanilla_libraries_info() {
     $libraries['console.log'] = array(
         'name' => 'Console.log',
         'vendor url' => 'http://patik.com/blog/complete-cross-browser-console-log/',
         'download url' => 'https://github.com/cpatik/console.log-wrapper/zipball/master',
-        'version' => '4648a1ec80', // using the git ref as this project is not versioned
+        // Using the license year as this project is not versioned.
+        'version arguments' => array(
+            'file' => 'LICENSE',
+            'pattern' => '/\(c\)\s([\d]+)/i',
+            'lines' => 6,
+        ),
+        'callbacks' => array(),
         'files' => array(
             'js' => array(
-                'consolelog.min.js' => array(
-                    'browsers' => array(
-                        'IE' => TRUE,
-                    ),
-                ),
+                'consolelog.min.js',
             ),
         ),
     );
     
     $libraries['ie7-js'] = array(
-        'name' => 'IE7js',
+        'name' => 'IE9js',
         'vendor url' => 'https://code.google.com/p/ie7-js/',
         'download url' => 'https://code.google.com/p/ie7-js/',
         'version arguments' => array(
-            'file' => 'IE7.js',
+            'file' => 'IE9.js',
             'pattern' => '/version:"(.*?)"/i',
             'lines' => 6,
         ),
         'files' => array(
             'js' => array(
-                'IE7.js',
+                'IE9.js' => array(
+                    'browsers' => array(
+                        'IE' => 'lt IE 9',
+                        '!IE' => FALSE,
+                    ),
+                ),
             ),
         ),
     );
@@ -51,7 +58,30 @@ function webtree_vanilla_libraries_info() {
         ),
         'files' => array(
             'js' => array(
-                'dist/html5shiv.js',
+                'dist/html5shiv.js' => array(
+                    'browsers' => array(
+                        'IE' => 'lt IE 9',
+                        '!IE' => FALSE,
+                    ),
+                ),
+            ),
+        ),
+    );
+    
+    $libraries['respondjs'] = array(
+        'name' => 'HTML5 Shiv',
+        'vendor url' => 'https://github.com/scottjehl/Respond',
+        'download url' => 'https://github.com/scottjehl/Respond/archive/master.zip',
+        // Using the git ref as this project is not versioned.
+        'version' => '2c59aebba',
+        'files' => array(
+            'js' => array(
+                'dist/html5shiv.js' => array(
+                    'browsers' => array(
+                        'IE' => 'lte IE 9',
+                        '!IE' => FALSE,
+                    ),
+                ),
             ),
         ),
     );
@@ -90,7 +120,7 @@ function webtree_vanilla_libraries_info() {
                 'themes/base/jquery.ui.selectmenu.css',
             ),
         ),
-        'dependencies' => array('jquery.ui'),
+        // 'dependencies' => array('jquery.ui'),
     );
     
     return $libraries;
