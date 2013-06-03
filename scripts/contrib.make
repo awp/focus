@@ -157,6 +157,11 @@ projects[xmlsitemap][version] = 2.0-rc2
 projects[xmlsitemap][subdir] = contrib
 
 ; Sandbox
+projects[context_menu][type] = module
+projects[context_menu][subdir] = contrib
+projects[context_menu][download][type] = git
+projects[context_menu][download][branch] = 7.x-1.x
+projects[context_menu][download][url] = git://drupalcode.org/sandbox/kaidjohnson/2010952.git
 projects[current][type] = module
 projects[current][subdir] = contrib
 projects[current][download][type] = git

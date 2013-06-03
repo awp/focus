@@ -7,7 +7,7 @@ section_person:
         focus_section: focus_section
       options:
         node_form: 0
-    focus_contexts_menu:
+    context_menu:
       values:
         people: people
   reactions:
@@ -24,6 +24,6 @@ section_person:
   
 section_default:
   conditions:
-    focus_contexts_menu:
+    context_menu:
       values:
         main-menu: main-menu

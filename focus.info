@@ -36,6 +36,7 @@ dependencies[] = colorbox
 dependencies[] = content_access
 dependencies[] = context
 dependencies[] = context_layouts
+dependencies[] = context_menu
 dependencies[] = context_ui
 dependencies[] = date
 dependencies[] = date_context
@@ -76,7 +77,6 @@ dependencies[] = toolkit
 dependencies[] = toolkit_context
 
 ; FOCUS Toolkits
-dependencies[] = focus_contexts
 dependencies[] = focus_toolkit
 dependencies[] = focus_views
 dependencies[] = focus_sidebar
