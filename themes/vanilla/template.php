@@ -55,6 +55,15 @@ function vanilla_preprocess_html(&$vars) {
 }
 
 /**
+ * Implements hook_preprocess_page().
+ */
+function vanilla_preprocess_page(&$vars) {
+    if (!empty($vars['node']->type)) {
+        $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
+    }
+}
+
+/**
  * Implements hook_page_alter().
  */
 function vanilla_page_alter(&$page) {
