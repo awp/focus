@@ -16,32 +16,10 @@
 <head>
   <?= $head; ?>
   <title><?= $head_title; ?></title>
-
-  <?php if ($default_mobile_metatags): ?>
-    <meta name="MobileOptimized" content="width">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="viewport" content="width=device-width">
-  <?php endif; ?>
-  <meta http-equiv="cleartype" content="on">
-
   <?= $styles; ?>
   <?= $scripts; ?>
-  <?php if ($add_respond_js): ?>
-    <!--[if lt IE 9]>
-    <script src="<?= $base_path . $path_to_zen; ?>/js/html5-respond.js"></script>
-    <![endif]-->
-  <?php elseif ($add_html5_shim): ?>
-    <!--[if lt IE 9]>
-    <script src="<?= $base_path . $path_to_zen; ?>/js/html5.js"></script>
-    <![endif]-->
-  <?php endif; ?>
 </head>
 <body class="<?= $classes; ?>" <?= $attributes;?>>
-  <?php if ($skip_link_text && $skip_link_anchor): ?>
-    <p id="skip-link">
-      <a href="#<?= $skip_link_anchor; ?>" class="element-invisible element-focusable"><?= $skip_link_text; ?></a>
-    </p>
-  <?php endif; ?>
   <?= $page_top; ?>
   <?= $page; ?>
   <?= $page_bottom; ?>

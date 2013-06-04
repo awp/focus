@@ -1,0 +1,20 @@
+@import 'global';
+
+#page{
+  @include zen-grid-container();
+  width: 960px;
+  margin: 0 auto;
+}
+
+#logo{
+  @include zen-grid-item(2, 1);
+}
+
+#name-and-slogan{
+  @include zen-grid-item(4, 4);
+}
+
+#secondary-menu{
+  @include zen-clear(left);
+  @include zen-grid-item(8, 8);
+}

@@ -1,0 +1,355 @@
+/* -- General -- */
+/* line 3, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  font: inherit;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 4, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+html {
+  position: relative;
+  overflow-y: scroll;
+}
+
+/* line 5, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+body {
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* line 6, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+html, body {
+  min-height: 100%;
+}
+
+/* line 7, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+ul {
+  list-style: none;
+}
+
+/* line 8, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 9, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+nav ul, nav ol {
+  list-style: none;
+}
+
+/* line 10, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 11, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+ins {
+  text-decoration: none;
+}
+
+/* line 12, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 13, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+/* line 14, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+/* line 15, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 16, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+a, a *, input[type="submit"], input[type="button"], button, button * {
+  cursor: pointer;
+}
+
+/* line 17, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 18, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 19, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+:before, :after {
+  content: '';
+  content: none;
+}
+
+/* line 20, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+:hover {
+  outline: 0;
+}
+
+/* line 21, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+:focus {
+  outline: thin dotted;
+}
+
+/* -- HTML5 -- */
+/* line 25, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 26, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+/* line 27, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* -- Font Styles -- */
+/* line 31, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 32, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+pre, code, kbd, samp, tt, var {
+  font-family: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+}
+
+/* -- Image Styles -- */
+/* line 36, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 37, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_awp-reset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* -- Override Drupal Styles -- */
+/* line 4, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+body .form-item,
+body .form-actions {
+  margin: 0;
+}
+
+/* line 9, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+body .item-list ul,
+body .item-list ul li {
+  margin: 0;
+}
+
+/* line 13, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+body label.option.ui-button {
+  display: inline-block;
+}
+
+/* line 17, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+body .region {
+  min-height: 0;
+}
+
+/* line 21, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+body.front #region-content .feed-icon {
+  display: none;
+}
+
+/* line 25, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+body #colorbox tbody {
+  border-top: none;
+}
+
+/* line 29, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+body #region-page-bottom {
+  overflow: hidden;
+}
+
+/* line 33, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+body ul li.leaf {
+  list-style: none;
+}
+
+/* -- Alpha Debug Blocks -- */
+/* line 39, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+body .region .alpha-debug-block {
+  clear: both !important;
+  background: #fff !important;
+}
+
+/* line 45, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+body .region .alpha-debug-block h2,
+body .region .alpha-debug-block p {
+  font: normal 14px/1 Helvetica, Arial, sans-serif !important;
+  color: #999 !important;
+}
+
+/* -- Grid Styles -- */
+/* line 52, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+.alpha {
+  clear: left;
+}
+
+/* -- Contextual Links -- */
+/* line 59, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+.contextual-links-wrapper ul,
+.contextual-links-wrapper li {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #fff !important;
+}
+
+/* line 65, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+.contextual-links-wrapper li {
+  font: normal 14px/1.5 Helvetica, Arial, sans-serif !important;
+  text-transform: none !important;
+  list-style: none !important;
+}
+
+/* line 71, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+.contextual-links-wrapper li a {
+  display: block !important;
+  text-decoration: none !important;
+}
+
+/* -- Generic Content Helpers -- */
+/* line 78, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_base.scss */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+}
+
+/* -- Navigation Styles -- */
+/* line 3, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation > ul.menu {
+  float: left;
+  width: 100%;
+}
+
+/* line 8, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation ul.menu li {
+  position: relative;
+  list-style: none;
+  list-style-image: none;
+  z-index: 1;
+}
+
+/* line 15, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation > ul.menu > li {
+  float: left;
+}
+
+/* line 19, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation ul ul li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 24, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation ul ul {
+  position: absolute;
+  display: none;
+}
+
+/* line 29, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation > ul > li:hover {
+  z-index: 10;
+}
+
+/* line 34, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation > ul > li:hover > ul,
+.navigation > ul > li.mobile-hover > ul {
+  display: block;
+}
+
+/* line 38, ../../../../../../../lib/gems/1.8/gems/dropcloth-0.0.1/stylesheets/dropcloth/_layout.scss */
+.navigation ul ul ul {
+  display: none !important;
+}
+
+/* line 3, ../sass/theme/_global.scss */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 3, ../sass/layouts/_default.scss */
+#page {
+  width: 960px;
+  margin: 0 auto;
+}
+/* line 52, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#page:before, #page:after {
+  content: "";
+  display: table;
+}
+/* line 56, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#page:after {
+  clear: both;
+}
+
+/* line 9, ../sass/layouts/_default.scss */
+#logo {
+  float: left;
+  width: 120px;
+  margin-left: 0px;
+  margin-right: -120px;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 13, ../sass/layouts/_default.scss */
+#name-and-slogan {
+  float: left;
+  width: 240px;
+  margin-left: 180px;
+  margin-right: -420px;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 17, ../sass/layouts/_default.scss */
+#secondary-menu {
+  clear: left;
+  float: left;
+  width: 480px;
+  margin-left: 420px;
+  margin-right: -900px;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}

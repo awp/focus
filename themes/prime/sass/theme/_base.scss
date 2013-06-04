@@ -1,13 +1,21 @@
 @import 'dropcloth';
 @import 'fonts';
 
-// colors
+// Colors
 
-// fonts
+// Fonts
+$base_font: Helvetica, Arial, sans-serif;
 
-// styles
+// Styles
 
 // Theme rules
-@import 'theme/global';
-@import 'theme/colorbox';
-@import 'theme/blocks';
+@import 'global';
+@import 'header';
+@import 'footer';
+@import 'colorbox';
+@import 'blocks';
+
+// Grid rules
+$zen-column-count: 16;
+$zen-gutter-width: 20px;
+$zen-grid-width: 960px;

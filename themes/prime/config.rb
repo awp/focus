@@ -25,6 +25,7 @@ javascripts_dir = "js"
 
 
 # Require any additional compass plugins installed on your system.
+# require 'bourbon'
 require 'dropcloth'
 # require 'ninesixty'
 require 'zen-grids'
