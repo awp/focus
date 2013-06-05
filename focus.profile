@@ -23,6 +23,8 @@ function focus_views_api() {
 function focus_custom_theme() {
     switch ($_GET['q']) {
         case 'user':
+        case 'user/password':
+        case 'user/register':
             return variable_get('admin_theme', variable_get('theme_default'));
     }
 }
@@ -36,6 +38,7 @@ function focus_admin_paths() {
             'user'   => TRUE,
             'user/*' => TRUE,
         );
+        
         return $paths;
     }
 }
