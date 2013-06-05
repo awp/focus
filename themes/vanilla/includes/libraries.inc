@@ -76,7 +76,7 @@ function vanilla_libraries_info() {
         'version' => '2c59aebba',
         'files' => array(
             'js' => array(
-                'dist/html5shiv.js' => array(
+                'respond.min.js' => array(
                     'browsers' => array(
                         'IE' => 'lte IE 9',
                         '!IE' => FALSE,
