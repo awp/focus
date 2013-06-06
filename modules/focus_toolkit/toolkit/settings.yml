@@ -20,7 +20,7 @@ global:
   jira_issue_collector_pages: media/browser
   jira_issue_collector_visibility: 0
   jquery_update_compression_type: min
-  jquery_update_jquery_cdn: google
+  jquery_update_jquery_cdn: none
   jquery_update_jquery_version: 1.8
   media__wysiwyg_browser_plugins: 
     upload
