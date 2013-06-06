@@ -72,11 +72,10 @@ function vanilla_page_alter(&$page) {
     
     if ($skip_link_text && $skip_link_anchor) {
         $page['page_top']['vanilla_skip_link'] = array(
-            '#type' => 'html_tag',
-            '#tag' => 'p',
+            '#type' => 'container',
             '#attributes' => array('id' => 'skip-link'),
             '#weight' => -9999,
-            '#value' => l($skip_link_text, '', array(
+            '#children' => l($skip_link_text, '', array(
                 'fragment' => $skip_link_anchor,
                 'attributes' => array(
                     'class' => array(
