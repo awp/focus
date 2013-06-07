@@ -1,0 +1,17 @@
+focus_location:
+  field_focus_display_name:
+    label: Display Name
+    description: Alternate display name for areas with less space
+    entity_type: taxonomy_term
+    widget:
+      weight: 1
+    
+  field_focus_address:
+    label: Address
+    description: Physical address of this location
+    entity_type: taxonomy_term
+    
+focus_event:
+  field_focus_location:
+    label: Event Location
+    description: Venue where this event is taking place.

@@ -24,3 +24,19 @@ function fp($v, $keys = FALSE, $array = FALSE) {
     
     echo '<pre>'; print_r($v); echo '</pre>';
 }
+
+/**
+ * FOCUS Print with exit.
+ * 
+ * A quick & dirty debugger that also exits after executing.
+ * 
+ *  @param mixed $v
+ *   The value to see
+ * 
+ * @param bool $keys
+ *   Output only the keys of $v
+ */
+function fpx($v, $keys = FALSE) {
+    fp($v, $keys);
+    exit();
+}

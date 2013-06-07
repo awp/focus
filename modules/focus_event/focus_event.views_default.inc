@@ -8,7 +8,86 @@
  * Implements hook_views_default_views()
  */
 function focus_event_views_default_views() {
-    // Start event calendar view
+    // Start upcoming events view.
+    $view = new view();
+    $view->name = 'upcoming_events';
+    $view->description = '';
+    $view->tag = 'default';
+    $view->base_table = 'node';
+    $view->human_name = 'Upcoming Events';
+    $view->core = 7;
+    $view->api_version = '3.0';
+    $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+    
+    /* Display: Master */
+    $handler = $view->new_display('default', 'Master', 'default');
+    $handler->display->display_options['title'] = 'Upcoming Events';
+    $handler->display->display_options['use_more_always'] = FALSE;
+    $handler->display->display_options['access']['type'] = 'perm';
+    $handler->display->display_options['cache']['type'] = 'none';
+    $handler->display->display_options['query']['type'] = 'views_query';
+    $handler->display->display_options['exposed_form']['type'] = 'basic';
+    $handler->display->display_options['pager']['type'] = 'some';
+    $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+    $handler->display->display_options['style_plugin'] = 'default';
+    $handler->display->display_options['row_plugin'] = 'fields';
+    /* Field: Content: Title */
+    $handler->display->display_options['fields']['title']['id'] = 'title';
+    $handler->display->display_options['fields']['title']['table'] = 'node';
+    $handler->display->display_options['fields']['title']['field'] = 'title';
+    $handler->display->display_options['fields']['title']['label'] = '';
+    $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+    $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+    /* Field: Content: Event Date */
+    $handler->display->display_options['fields']['field_focus_calendar_date']['id'] = 'field_focus_calendar_date';
+    $handler->display->display_options['fields']['field_focus_calendar_date']['table'] = 'field_data_field_focus_calendar_date';
+    $handler->display->display_options['fields']['field_focus_calendar_date']['field'] = 'field_focus_calendar_date';
+    $handler->display->display_options['fields']['field_focus_calendar_date']['label'] = '';
+    $handler->display->display_options['fields']['field_focus_calendar_date']['element_label_colon'] = FALSE;
+    $handler->display->display_options['fields']['field_focus_calendar_date']['settings'] = array(
+      'format_type' => 'short',
+      'fromto' => 'value',
+      'multiple_number' => '1',
+      'multiple_from' => 'now',
+      'multiple_to' => '',
+      'show_repeat_rule' => 'hide',
+    );
+    $handler->display->display_options['fields']['field_focus_calendar_date']['delta_limit'] = '1';
+    $handler->display->display_options['fields']['field_focus_calendar_date']['delta_offset'] = 'now';
+    $handler->display->display_options['fields']['field_focus_calendar_date']['separator'] = '';
+    /* Sort criterion: Content: Event Date -  start date (field_focus_calendar_date) */
+    $handler->display->display_options['sorts']['field_focus_calendar_date_value']['id'] = 'field_focus_calendar_date_value';
+    $handler->display->display_options['sorts']['field_focus_calendar_date_value']['table'] = 'field_data_field_focus_calendar_date';
+    $handler->display->display_options['sorts']['field_focus_calendar_date_value']['field'] = 'field_focus_calendar_date_value';
+    /* Filter criterion: Content: Published */
+    $handler->display->display_options['filters']['status']['id'] = 'status';
+    $handler->display->display_options['filters']['status']['table'] = 'node';
+    $handler->display->display_options['filters']['status']['field'] = 'status';
+    $handler->display->display_options['filters']['status']['value'] = 1;
+    $handler->display->display_options['filters']['status']['group'] = 1;
+    $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+    /* Filter criterion: Content: Type */
+    $handler->display->display_options['filters']['type']['id'] = 'type';
+    $handler->display->display_options['filters']['type']['table'] = 'node';
+    $handler->display->display_options['filters']['type']['field'] = 'type';
+    $handler->display->display_options['filters']['type']['value'] = array(
+      'focus_event' => 'focus_event',
+    );
+    /* Filter criterion: Content: Event Date -  start date (field_focus_calendar_date) */
+    $handler->display->display_options['filters']['field_focus_calendar_date_value']['id'] = 'field_focus_calendar_date_value';
+    $handler->display->display_options['filters']['field_focus_calendar_date_value']['table'] = 'field_data_field_focus_calendar_date';
+    $handler->display->display_options['filters']['field_focus_calendar_date_value']['field'] = 'field_focus_calendar_date_value';
+    $handler->display->display_options['filters']['field_focus_calendar_date_value']['operator'] = '>=';
+    $handler->display->display_options['filters']['field_focus_calendar_date_value']['default_date'] = 'now';
+    $handler->display->display_options['filters']['field_focus_calendar_date_value']['add_delta'] = 'yes';
+    
+    /* Display: Block */
+    $handler = $view->new_display('block', 'Block', 'block');
+    
+    // Add upcoming events view.
+    $views[$view->name] = $view;
+    
+    // Start event calendar view.
     $view = new view();
     $view->name = 'focus_event_calendar';
     $view->description = '';
@@ -117,8 +196,7 @@ function focus_event_views_default_views() {
     );
     $handler->display->display_options['block_description'] = 'Event Calendar: Full';
 
-    
-    // Add event calendar view
+    // Add event calendar view.
     $views[$view->name] = $view;
     
     return $views;

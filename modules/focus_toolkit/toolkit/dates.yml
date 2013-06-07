@@ -1,0 +1,100 @@
+types:
+  longdate: Long Date
+  mediumdate: Medium Date
+  shortdate: Short Date
+  tiny: Tiny
+  year: Year
+  time: Time
+  
+formats:
+  - 
+    type: longdate
+    format: "l, F j, Y"
+    
+  - 
+    type: longdate
+    format: "l, F j"
+    
+  - 
+    type: longdate
+    format: "l, F jS, Y"
+    
+  - 
+    type: longdate
+    format: "l, F jS"
+    
+  -
+    type: mediumdate
+    format: "F j, Y"
+    
+  -
+    type: mediumdate
+    format: "l, F j"
+    
+  -
+    type: mediumdate
+    format: "F j"
+    
+  -
+    type: mediumdate
+    format: "F jS, Y"
+    
+  -
+    type: mediumdate
+    format: "l, F jS"
+    
+  -
+    type: mediumdate
+    format: "F jS"
+    
+  -
+    type: shortdate
+    format: "M j Y"
+    
+  -
+    type: shortdate
+    format: "M j"
+    
+  -
+    type: shortdate
+    format: "M jS Y"
+    
+  -
+    type: shortdate
+    format: "M jS"
+    
+  -
+    type: tiny
+    format: "n/j/y"
+    
+  -
+    type: tiny
+    format: "j/n/y"
+    
+  -
+    type: tiny
+    format: "y/j/n"
+    
+  -
+    type: year
+    format: "Y"
+    
+  -
+    type: year
+    format: "y"
+    
+  -
+    type: time
+    format: "h:ia"
+    
+  -
+    type: time
+    format: "g:ia"
+    
+  -
+    type: time
+    format: "G:i"
+    
+  -
+    type: time
+    format: "H:i"
