@@ -49,8 +49,22 @@ function vanilla_preprocess_html(&$vars) {
         }
     }
     
+    // If no matches, try adding a generic layout based on contexts.
     if (empty($added)) {
-        _vanilla_add_css('default');
+        foreach ($contexts as $context_name => $context_info) {
+            if (FALSE === strpos($context_name, '_')) continue;
+
+            $parts = explode('_', $context_name);
+            $part  = reset($parts);
+            if (_vanilla_add_css($part)) {
+                $added = TRUE;
+                break;
+            }
+        }
+        
+        if (empty($added)) {
+            _vanilla_add_css('default');
+        }
     }
 }
 
