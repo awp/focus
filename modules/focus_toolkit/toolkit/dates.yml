@@ -3,6 +3,7 @@ types:
   mediumdate: Medium Date
   shortdate: Short Date
   tiny: Tiny
+  month: Month
   year: Year
   time: Time
   shorttime: Short Time
@@ -131,6 +132,38 @@ formats:
   -
     type: tiny
     format: "y/j/n"
+
+  -
+    type: month
+    format: "F Y"
+
+  -
+    type: month
+    format: "F y"
+
+  -
+    type: month
+    format: "M Y"
+
+  -
+    type: month
+    format: "M y"
+
+  -
+    type: month
+    format: "m Y"
+
+  -
+    type: month
+    format: "m y"
+
+  -
+    type: month
+    format: "n Y"
+
+  -
+    type: month
+    format: "n y"
 
   -
     type: year
