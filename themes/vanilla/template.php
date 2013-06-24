@@ -16,19 +16,19 @@ require_once(dirname(__FILE__) . '/includes/libraries.inc');
 function vanilla_preprocess_html(&$vars) {
     // The following scripts are mostly IE dependent.
     // @see http://stackoverflow.com/questions/3855294/html5shiv-vs-dean-edwards-ie7-js-vs-modernizr-which-to-choose
-    
-    // For some reason, libraries_detect needs to be run first to get the 
+
+    // For some reason, libraries_detect needs to be run first to get the
     // load to work persistently.
     $library = libraries_detect('console.log');
     if (!empty($library['installed'])) {
         libraries_load('console.log');
     }
-    
+
     $library = libraries_detect('ie7-js');
     if (!empty($library['installed'])) {
         libraries_load('ie7-js');
     }
-    
+
     $library = libraries_detect('respondjs');
     if (!empty($library['installed']) && $vars['add_respond_js']) {
         libraries_load('respondjs');
@@ -39,7 +39,13 @@ function vanilla_preprocess_html(&$vars) {
             libraries_load('html5shiv');
         }
     }
-    
+
+    $library = libraries_detect('jquery.ui.selectmenu');
+    if (!empty($library['installed'])) {
+        libraries_load('jquery.ui.selectmenu');
+        drupal_add_js(drupal_get_path('theme', 'vanilla') . '/js/selectmenu.js');
+    }
+
     // Add contextual layout css.
     if ($contexts = context_active_contexts()) {
         foreach ($contexts as $context_name => $context_info) {
@@ -48,7 +54,7 @@ function vanilla_preprocess_html(&$vars) {
             }
         }
     }
-    
+
     // If no matches, try adding a generic layout based on contexts.
     if (empty($added)) {
         foreach ($contexts as $context_name => $context_info) {
@@ -61,7 +67,7 @@ function vanilla_preprocess_html(&$vars) {
                 break;
             }
         }
-        
+
         if (empty($added)) {
             _vanilla_add_css('default');
         }
@@ -83,7 +89,7 @@ function vanilla_preprocess_page(&$vars) {
 function vanilla_page_alter(&$page) {
     $skip_link_anchor = theme_get_setting('zen_skip_link_anchor');
     $skip_link_text   = theme_get_setting('zen_skip_link_text');
-    
+
     if ($skip_link_text && $skip_link_anchor) {
         $page['page_top']['vanilla_skip_link'] = array(
             '#type' => 'container',
@@ -116,7 +122,7 @@ function vanilla_html_head_alter(&$elements) {
             'content'    => 'IE=edge,chrome=1',
         ),
     );
-    
+
     // Add cleartype.
     $elements['vanilla_cleartype'] = array(
         '#type'   => 'html_tag',
@@ -127,7 +133,7 @@ function vanilla_html_head_alter(&$elements) {
             'contents'   => 'on',
         ),
     );
-    
+
     // Get mobile metatag settings.
     $html5_respond_meta = array_filter((array) theme_get_setting('zen_html5_respond_meta'));
     if (in_array('meta', $html5_respond_meta)) {
