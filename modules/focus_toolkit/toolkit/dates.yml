@@ -208,6 +208,14 @@ formats:
 
   -
     type: block
+    format: "l F d Y"
+
+  -
+    type: block
+    format: "l F d y"
+
+  -
+    type: block
     format: "l M j Y"
 
   -
@@ -246,3 +254,26 @@ formats:
     type: block
     format: "M jS"
 
+  -
+    type: block
+    format: "l M d Y"
+
+  -
+    type: block
+    format: "l M d y"
+
+  -
+    type: block
+    format: "F d"
+
+  -
+    type: block
+    format: "F d Y"
+
+  -
+    type: block
+    format: "M d Y"
+
+  -
+    type: block
+    format: "M d"

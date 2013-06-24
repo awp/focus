@@ -9,11 +9,11 @@
  */
 function _vanilla_active_theme_path() {
     static $path;
-    
+
     if (empty($path)) {
         $path = drupal_get_path('theme', $GLOBALS['theme']);
     }
-    
+
     return $path;
 }
 
@@ -30,4 +30,26 @@ function _vanilla_add_css($filename) {
     else {
         return FALSE;
     }
+}
+
+/**
+ * Wraps each word of a string with a tag for styling.
+ *
+ * @param string $string
+ *   The string which will have each word wrapped.
+ *
+ * @param string $tag
+ *   An html tag to wrap each word in.
+ *
+ * @return string
+ *   The original string with each word wrapped in an html tag.
+ */
+function _vanilla_html_wrap(&$string, $tag = 'span') {
+    $raw = strip_tags($string);
+    $parts = explode(' ', $raw);
+    foreach ($parts as $k => &$part) {
+        $part = "<$tag class='part-$k'>$part</$tag>";
+    }
+    $parts = implode('', $parts);
+    $string = str_replace($raw, $parts, $string);
 }

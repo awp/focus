@@ -85,6 +85,7 @@ projects[link][version] = 1.1
 projects[link][subdir] = contrib
 projects[media][version] = 2.x-dev
 projects[media][subdir] = contrib
+projects[media][patch][] = https://drupal.org/files/media-browser-not-removing-iframe-1947094-8.patch
 projects[media_vimeo][version] = 2.x-dev
 projects[media_vimeo][subdir] = contrib
 projects[media_youtube][version] = 2.0-rc3
