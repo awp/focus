@@ -61,4 +61,12 @@ headline:
         height: 220
         width: 660
         retinafy: 1
-        
+
+inline:
+  effects:
+    0:
+      name: image_scale_and_crop
+      data:
+        height: 330
+        width: 500
+        retinafy: 1
