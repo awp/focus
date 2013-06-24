@@ -24,6 +24,7 @@ small:
       data:
         width: 300
         height: 300
+        upscale: 0
         retinafy: 1
 
 medium:
@@ -33,6 +34,7 @@ medium:
       data:
         width: 540
         height: 540
+        upscale: 0
         retinafy: 1
 
 large:
@@ -42,6 +44,7 @@ large:
       data:
         width: 760
         height: 760
+        upscale: 0
         retinafy: 1
 
 colorbox:
@@ -51,6 +54,7 @@ colorbox:
       data:
         height: 1200
         width: 1200
+        upscale: 0
         retinafy: 1
 
 headline:
