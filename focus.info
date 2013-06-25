@@ -2,6 +2,7 @@ name = FOCUS for Drupal
 description = Welcome to FOCUS for Drupal.
 core = 7.x
 distribution_name = FOCUS
+exclusive = TRUE
 
 ; Files
 files[] = plugins/focus_plugin_display_block.inc
@@ -29,7 +30,7 @@ dependencies[] = rdf
 dependencies[] = addressfield
 dependencies[] = admin_menu
 dependencies[] = auto_nodetitle
-dependencies[] = backup_migrate
+;dependencies[] = backup_migrate
 dependencies[] = ctools
 dependencies[] = ckeditor_link
 dependencies[] = colorbox

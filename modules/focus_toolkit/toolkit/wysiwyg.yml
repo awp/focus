@@ -9,7 +9,6 @@ ckeditor:
         filter_htmlcorrector
         filter_url
         media_filter
-        focus_caption
         ckeditor_link_filter
     filters:
       filter_html:
