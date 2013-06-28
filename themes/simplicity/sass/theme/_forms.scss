@@ -1,0 +1,74 @@
+label{
+  display: block;
+  font: normal 12px/1 $rk;
+  color: $blue;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  .form-required{
+    color: $red;
+  }
+  &.option{
+    display: inline;
+    margin-left: 8px;
+    color: $black;
+    text-transform: none;
+  }
+}
+
+input,
+textarea{
+  background: $white;
+  padding: 24px 28px;
+  font: normal 16px/1 $rm;
+  border: 1px solid $gray;
+  border-bottom: 3px solid $blue;
+  width: 100%;
+  font: normal 18px/1.5 $rl;
+  @include box-sizing(border-box);
+  @include transition(border-color 0.2s);
+  &:focus{
+    border-bottom-color: $dkblue;
+  }
+}
+
+textarea{
+  padding-bottom: 40px;
+}
+
+input[type="submit"] {
+  background: $blue;
+  color: $white;
+  font: normal 22px/1 $rb;
+  width: 308px;
+  height: 70px;
+  margin-top: 40px;
+  @include transition(background 0.2s);
+  &:hover,
+  &:focus{
+    background: $dkblue;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-bottom: 0;
+  @include box-sizing(content-box);
+}
+
+.form-item{
+  margin-bottom: 40px !important;
+  .description{
+    font: normal 12px/1 $rm;
+    color: $dkgray;
+    margin-top: 12px;
+  }
+}
+
+.form-radios,
+.form-checkboxes{
+  .form-item{
+    margin-bottom: 0 !important;
+  }
+}
