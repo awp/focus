@@ -46,6 +46,14 @@ function vanilla_preprocess_html(&$vars) {
         drupal_add_js(drupal_get_path('theme', 'vanilla') . '/js/selectmenu.js');
     }
 
+    // Add colorbox modifications.
+    if (module_exists('colorbox')) {
+        drupal_add_js(drupal_get_path('theme', 'vanilla') . '/js/colorbox.js', array(
+            'scope' => 'footer',
+            'weight' => 100,
+        ));
+    }
+
     // Add contextual layout css.
     if ($contexts = context_active_contexts()) {
         foreach ($contexts as $context_name => $context_info) {
@@ -168,5 +176,4 @@ function vanilla_html_head_alter(&$elements) {
             ),
         );
     }
-
 }

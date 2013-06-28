@@ -1,0 +1,8 @@
+sidebar:
+  effects:
+    0:
+      name: image_scale_and_crop
+      data:
+        height: 200
+        width: 300
+        retinafy: 1
