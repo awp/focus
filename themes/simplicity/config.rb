@@ -6,7 +6,6 @@
 # file for more information.
 #
 
-
 # Change this to :production when ready to deploy the CSS to the live server.
 environment = :development
 #environment = :production
@@ -14,7 +13,6 @@ environment = :development
 # In development, we can turn on the FireSass-compatible debug_info.
 firesass = false
 #firesass = true
-
 
 # Location of the theme's resources.
 css_dir         = "css"
@@ -26,15 +24,7 @@ javascripts_dir = "js"
 
 # Require any additional compass plugins installed on your system.
 require 'dropcloth'
-# require 'ninesixty'
 require 'zen-grids'
-
-# Assuming this theme is in sites/*/themes/THEMENAME, you can add the partials
-# included with a module by uncommenting and modifying one of the lines below:
-#add_import_path "../../../default/modules/FOO"
-#add_import_path "../../../all/modules/FOO"
-#add_import_path "../../../../modules/FOO"
-
 
 ##
 ## You probably don't need to edit anything below this.
