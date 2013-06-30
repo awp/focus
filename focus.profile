@@ -99,7 +99,6 @@ function focus_theme_registry_alter(&$theme_registry) {
 /**
  * Theme preprocessor
  * Adds fielded values to file itself
- * // TODO: Move to theme.
  */
 function focus_colorbox_image_formatter_preprocess(&$vars) {
     // set alt to fielded alt
@@ -110,6 +109,31 @@ function focus_colorbox_image_formatter_preprocess(&$vars) {
     // set title to fielded title
     if (!empty($vars['item']['field_file_image_title_text'][LANGUAGE_NONE][0]['value'])) {
         $vars['item']['title'] = $vars['item']['field_file_image_title_text'][LANGUAGE_NONE][0]['value'];
+    }
+}
+
+/**
+ * Theme preprocessor
+ * Adds fielded values to field slideshow file itself
+ */
+function focus_preprocess_field_slideshow(&$vars) {
+    foreach ($vars['items'] as $num => &$item) {
+        if (!empty($item['field_file_image_title_text'][LANGUAGE_NONE][0]['value'])) {
+            $item['caption'] = $item['field_file_image_title_text'][LANGUAGE_NONE][0]['value'];
+            $item['title']   = $item['field_file_image_title_text'][LANGUAGE_NONE][0]['value'];
+            $item['path']['options']['attributes']['title'] = $item['caption'];
+            $item['caption_path']['options']['attributes']['title'] = $item['caption'];
+            $rebuild = TRUE;
+        }
+        
+        if (!empty($item['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'])) {
+            $item['alt'] = $item['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'];
+            $rebuild = TRUE;
+        }
+    }
+
+    if (!empty($rebuild)) {
+        template_preprocess_field_slideshow($vars);
     }
 }
 
