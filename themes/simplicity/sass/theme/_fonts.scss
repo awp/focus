@@ -1,0 +1,138 @@
+@import 'compass/css3/font-face';
+
+// Roboto
+
+@include font-face('RobotoRegular',
+  font-files(
+    'Roboto-Regular-webfont.woff', woff,
+    'Roboto-Regular-webfont.ttf', ttf,
+    'Roboto-Regular-webfont.svg', svg,
+    'Roboto-Regular-webfont.eot'
+  )
+);
+
+@include font-face('RobotoItalic',
+  font-files(
+    'Roboto-Italic-webfont.woff', woff,
+    'Roboto-Italic-webfont.ttf', ttf,
+    'Roboto-Italic-webfont.svg', svg,
+    'Roboto-Italic-webfont.eot'
+  )
+);
+
+@include font-face('RobotoBold',
+  font-files(
+    'Roboto-Bold-webfont.woff', woff,
+    'Roboto-Bold-webfont.ttf', ttf,
+    'Roboto-Bold-webfont.svg', svg,
+    'Roboto-Bold-webfont.eot'
+  )
+);
+
+@include font-face('RobotoBoldItalic',
+  font-files(
+    'Roboto-Bold-webfont.woff', woff,
+    'Roboto-Bold-webfont.ttf', ttf,
+    'Roboto-Bold-webfont.svg', svg,
+    'Roboto-Bold-webfont.eot'
+  )
+);
+
+@include font-face('RobotoCondensed',
+  font-files(
+    'Roboto-Condensed-webfont.woff', woff,
+    'Roboto-Condensed-webfont.ttf', ttf,
+    'Roboto-Condensed-webfont.svg', svg,
+    'Roboto-Condensed-webfont.eot'
+  )
+);
+
+@include font-face('RobotoCondensedItalic',
+  font-files(
+    'Roboto-CondensedItalic-webfont.woff', woff,
+    'Roboto-CondensedItalic-webfont.ttf', ttf,
+    'Roboto-CondensedItalic-webfont.svg', svg,
+    'Roboto-CondensedItalic-webfont.eot'
+  )
+);
+
+@include font-face('RobotoBoldCondensedItalic',
+  font-files(
+    'Roboto-BoldCondensedItalic-webfont.woff', woff,
+    'Roboto-BoldCondensedItalic-webfont.ttf', ttf,
+    'Roboto-BoldCondensedItalic-webfont.svg', svg,
+    'Roboto-BoldCondensedItalic-webfont.eot'
+  )
+);
+
+@include font-face('RobotoThin',
+  font-files(
+    'Roboto-Thin-webfont.woff', woff,
+    'Roboto-Thin-webfont.ttf', ttf,
+    'Roboto-Thin-webfont.svg', svg,
+    'Roboto-Thin-webfont.eot'
+  )
+);
+
+@include font-face('RobotoThinItalic',
+  font-files(
+    'Roboto-ThinItalic-webfont.woff', woff,
+    'Roboto-ThinItalic-webfont.ttf', ttf,
+    'Roboto-ThinItalic-webfont.svg', svg,
+    'Roboto-ThinItalic-webfont.eot'
+  )
+);
+
+@include font-face('RobotoLight',
+  font-files(
+    'Roboto-Light-webfont.woff', woff,
+    'Roboto-Light-webfont.ttf', ttf,
+    'Roboto-Light-webfont.svg', svg,
+    'Roboto-Light-webfont.eot'
+  )
+);
+
+@include font-face('RobotoLightItalic',
+  font-files(
+    'Roboto-LightItalic-webfont.woff', woff,
+    'Roboto-LightItalic-webfont.ttf', ttf,
+    'Roboto-LightItalic-webfont.svg', svg,
+    'Roboto-LightItalic-webfont.eot'
+  )
+);
+
+@include font-face('RobotoMedium',
+  font-files(
+    'Roboto-Medium-webfont.woff', woff,
+    'Roboto-Medium-webfont.ttf', ttf,
+    'Roboto-Medium-webfont.svg', svg,
+    'Roboto-Medium-webfont.eot'
+  )
+);
+
+@include font-face('RobotoMediumItalic',
+  font-files(
+    'Roboto-MediumItalic-webfont.woff', woff,
+    'Roboto-MediumItalic-webfont.ttf', ttf,
+    'Roboto-MediumItalic-webfont.svg', svg,
+    'Roboto-MediumItalic-webfont.eot'
+  )
+);
+
+@include font-face('RobotoBlack',
+  font-files(
+    'Roboto-Black-webfont.woff', woff,
+    'Roboto-Black-webfont.ttf', ttf,
+    'Roboto-Black-webfont.svg', svg,
+    'Roboto-Black-webfont.eot'
+  )
+);
+
+@include font-face('RobotoBlackItalic',
+  font-files(
+    'Roboto-BlackItalic-webfont.woff', woff,
+    'Roboto-BlackItalic-webfont.ttf', ttf,
+    'Roboto-BlackItalic-webfont.svg', svg,
+    'Roboto-BlackItalic-webfont.eot'
+  )
+);

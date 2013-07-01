@@ -17,8 +17,9 @@
 
     if (!!Drupal.settings.colorbox) {
         Drupal.settings.colorbox.title = function() {
-            var title = '<table cellspacing="0"><tr><td>'+$(this).attr('title')+'</td></tr></table>';
-            return (!$(this).attr('title')) ? false : title;
+            var title = $(this).attr('title');
+            var html  = '<table cellspacing="0"><tr><td>'+title+'</td></tr></table>'; 
+            return (!title) ? false : html;
         }
     }
 

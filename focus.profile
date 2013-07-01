@@ -99,7 +99,6 @@ function focus_theme_registry_alter(&$theme_registry) {
 /**
  * Theme preprocessor
  * Adds fielded values to file itself
- * // TODO: Move to theme.
  */
 function focus_colorbox_image_formatter_preprocess(&$vars) {
     // set alt to fielded alt
@@ -114,16 +113,54 @@ function focus_colorbox_image_formatter_preprocess(&$vars) {
 }
 
 /**
+ * Theme preprocessor
+ * Adds fielded values to field slideshow file itself
+ */
+function focus_preprocess_field_slideshow(&$vars) {
+    foreach ($vars['items'] as $num => &$item) {
+        if (!empty($item['field_file_image_title_text'][LANGUAGE_NONE][0]['value'])) {
+            $item['caption'] = $item['field_file_image_title_text'][LANGUAGE_NONE][0]['value'];
+            $item['title']   = $item['field_file_image_title_text'][LANGUAGE_NONE][0]['value'];
+            $item['path']['options']['attributes']['title'] = $item['caption'];
+            $item['caption_path']['options']['attributes']['title'] = $item['caption'];
+            $rebuild = TRUE;
+        }
+        
+        if (!empty($item['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'])) {
+            $item['alt'] = $item['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'];
+            $rebuild = TRUE;
+        }
+    }
+
+    if (!empty($rebuild)) {
+        template_preprocess_field_slideshow($vars);
+    }
+}
+
+/**
  * Implements hook_preprocess_html().
  */
-// function focus_preprocess_html(&$vars) {
+function focus_preprocess_html(&$vars) {
     // if we're using JIRA Issue Collector, override the styles.
     // TODO: don't explicitly set the css here.  Instead point it to the active
     // theme to allow it to override these styles.
-    // if (module_exists('jira_issue_collector')) {
-        // drupal_add_css(FOCUS_CORE_PATH . '/css/jira.css', array('group' => CSS_THEME, 'weight' => 20));
-    // }
-// }
+    if (module_exists('jira_issue_collector')) {
+        if (variable_get('node_admin_theme', FALSE)) {
+            $theme = variable_get('admin_theme', 'bartik');
+        }
+        else {
+            $theme = variable_get('theme_default', 'bartik');
+        }
+        
+        $path = drupal_get_path('theme', $theme);
+        if (file_exists("$path/css/jira.css")) {
+            drupal_add_css("$path/css/jira.css", array(
+                'group'  => CSS_THEME,
+                'weight' => 20,
+            ));
+        }
+    }
+}
 
 /**
  * Implements hook_wysiwyg_editor_settings_alter().

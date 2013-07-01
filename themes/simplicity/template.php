@@ -17,14 +17,14 @@ foreach ($includes as $include) {
  * Implements hook_preprocess_html().
  */
 function simplicity_preprocess_html(&$vars) {
-    drupal_add_css(SIMPLICITY_PATH . '/css/layouts/default.css');
+    drupal_add_css(SIMPLICITY_PATH . '/css/default.css');
 }
 
 /**
  * Implements hook_preprocess_maintenance_page().
  */
 function simplicity_preprocess_maintenance_page(&$vars, $hook) {
-    drupal_add_css(SIMPLICITY_PATH . '/css/layouts/maintenance.css');
+    drupal_add_css(SIMPLICITY_PATH . '/css/maintenance.css');
 }
 
 /**
