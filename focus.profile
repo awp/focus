@@ -142,8 +142,6 @@ function focus_preprocess_field_slideshow(&$vars) {
  */
 function focus_preprocess_html(&$vars) {
     // if we're using JIRA Issue Collector, override the styles.
-    // TODO: don't explicitly set the css here.  Instead point it to the active
-    // theme to allow it to override these styles.
     if (module_exists('jira_issue_collector')) {
         if (variable_get('node_admin_theme', FALSE)) {
             $theme = variable_get('admin_theme', 'bartik');
@@ -158,6 +156,10 @@ function focus_preprocess_html(&$vars) {
                 'group'  => CSS_THEME,
                 'weight' => 20,
             ));
+        }
+        else {
+            // If no theme customizes the jira button, use the simplicity.
+            drupal_add_css(drupal_get_path('theme', 'simplicity') .'/css/jira.css');
         }
     }
 }
