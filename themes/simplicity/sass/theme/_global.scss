@@ -8,7 +8,7 @@ h1{
   font: normal 39px/1.5 $rt;
   color: $blue;
   border-bottom: 3px solid $blue;
-  margin-bottom: 48px;
+  margin-bottom: $bottom * 3;
 }
 
 h2{
@@ -16,11 +16,11 @@ h2{
 }
 
 h3{
-
+  font: normal 27px/1.5 $rl;
 }
 
 h4{
-
+  font: normal 23px/1.5 $rl;
 }
 
 h5{
@@ -31,7 +31,39 @@ h6{
 
 }
 
-p{
-  margin-bottom: 20px;
+a{
+  color: $blue;
+  text-decoration: none;
+  &:hover,
+  &:focus{
+    text-decoration: underline;
+  }
+  &:visited{
+    color: $dkblue;
+  }
 }
 
+p{
+  margin-bottom: $bottom;
+}
+
+form{
+  padding-bottom: $bottom * 3;
+}
+
+fieldset{
+  margin-bottom: $bottom * 4;
+}
+
+legend{
+  @extend h4;
+  line-height: 1;
+  margin-bottom: $bottom * 2;
+  a{
+    text-decoration: none;
+    display: inline-block;
+    &:hover{
+      color: $blue;
+    }
+  }
+}

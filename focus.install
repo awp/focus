@@ -461,14 +461,14 @@ function system_form_install_settings_form_alter(&$form, $form_state) {
         $form['settings']['mysql']['database_new'] = array(
             '#type' => 'checkbox',
             '#title' => st('Create New Database'),
-            '#default_value' => FALSE,
-            '#description' => st('If the database does not yet exist on this server, one will be created for you.'),
+            '#default_value' => TRUE,
+            '#description' => st('If the database does not yet exist on this server, one will be created for you, otherwise the existing database will be used.'),
             '#states' => array(
                 'visible' => array(
                     ':input[name="driver"]' => array('value' => 'mysql'),
                 ),
             ),
-            '#weight' => 0.0001,
+            '#weight' => -0.0001,
         );
 
         // put custom validation ahead of the existing validation
@@ -532,9 +532,16 @@ function focus_form_install_configure_form_alter(&$form, $form_state) {
     $form['update_notifications']['update_status_module']['#default_value'] = array(0, 0);
 
     // expose the clean_url option
-    $form['clean_url']['#type'] = 'checkbox';
-    $form['clean_url']['#title'] = st('Enable clean urls?');
-    $form['clean_url']['#default_value'] = 1;
+    $form['server_settings']['clean_url'] = array(
+        '#type' => 'checkbox',
+        '#title' => st('Enable clean urls?'),
+        '#default_value' => TRUE,
+        '#attributes' => array(
+            'id' => 'edit-clean-url',
+            'class' => array('install'),
+        ),
+        '#weight' => 10,
+    );
 
     // add custom validator
     $form['#validate'][] = 'focus_install_configure_form_validate';

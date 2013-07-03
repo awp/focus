@@ -4,15 +4,16 @@ label{
   color: $blue;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 20px;
+  margin-bottom: $bottom;
   .form-required{
     color: $red;
   }
   &.option{
-    display: inline;
-    margin-left: 8px;
     color: $black;
     text-transform: none;
+    vertical-align: middle;
+    margin-bottom: 8px;
+    display: inline;
   }
 }
 
@@ -42,7 +43,6 @@ input[type="submit"] {
   font: normal 22px/1 $rb;
   width: 308px;
   height: 70px;
-  margin-top: 40px;
   @include transition(background 0.2s);
   &:hover,
   &:focus{
@@ -50,25 +50,76 @@ input[type="submit"] {
   }
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  width: auto;
-  margin-bottom: 0;
-  @include box-sizing(content-box);
+$inputs: 
+    'input[type="checkbox"]',
+    'input[type="checkbox"]:checked',
+    'input[type="radio"]',
+    'input[type="radio"]:checked';
+
+@for $i from 1 through length($inputs) {
+  $x: -($i * 20px - 20);
+  $input: nth($inputs, $i);
+
+  #{$input} {
+    opacity: 0;
+    width: 0;
+    position: absolute;
+    + label{
+      &:before{
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 16px;
+        background-image: url('../img/input.png');
+        background-position: $x 0 !important;
+        vertical-align: middle;
+        margin: -1px 4px 1px 0;
+      } 
+    }
+  } 
 }
 
 .form-item{
-  margin-bottom: 40px !important;
+  margin-bottom: $bottom * 3 !important;
   .description{
-    font: normal 12px/1 $rm;
+    font: normal 12px/1.5 $rm;
     color: $dkgray;
     margin-top: 12px;
   }
 }
 
 .form-radios,
-.form-checkboxes{
+.form-checkboxes,
+.form-type-checkbox,
+.form-type-radio{
   .form-item{
     margin-bottom: 0 !important;
+  }
+}
+
+.fieldset-description{
+  margin-bottom: $bottom * 2;
+  font-family: $rli;
+}
+
+.collapsible{
+  &.collapsed{
+    legend{
+      a:before{
+        @include rotate(0);
+      }
+    }
+  }
+  legend{
+    a:before{
+      content: '';
+      display: inline-block;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 10px solid $dkgray;
+      @include rotate(90deg);
+      vertical-align: middle;
+      margin-bottom: 4px;
+    }
   }
 }

@@ -161,7 +161,7 @@ input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, 
 }
 
 /* line 2, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/dropcloth-0.0.3/stylesheets/dropcloth/_globals.scss */
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a, h2 a, h3 a, h4 a, legend a, h5 a, h6 a {
   color: inherit;
 }
 
@@ -361,12 +361,61 @@ h1 {
   font: normal 39px/1.5 "RobotoThin", sans-serif;
   color: #00c2e7;
   border-bottom: 3px solid #00c2e7;
-  margin-bottom: 48px;
+  margin-bottom: 60px;
+}
+
+/* line 18, ../sass/theme/_global.scss */
+h3 {
+  font: normal 27px/1.5 "RobotoLight", sans-serif;
+}
+
+/* line 22, ../sass/theme/_global.scss */
+h4, legend {
+  font: normal 23px/1.5 "RobotoLight", sans-serif;
 }
 
 /* line 34, ../sass/theme/_global.scss */
+a {
+  color: #00c2e7;
+  text-decoration: none;
+}
+/* line 38, ../sass/theme/_global.scss */
+a:hover, a:focus {
+  text-decoration: underline;
+}
+/* line 41, ../sass/theme/_global.scss */
+a:visited {
+  color: #00b5d8;
+}
+
+/* line 46, ../sass/theme/_global.scss */
 p {
   margin-bottom: 20px;
+}
+
+/* line 50, ../sass/theme/_global.scss */
+form {
+  padding-bottom: 60px;
+}
+
+/* line 54, ../sass/theme/_global.scss */
+fieldset {
+  margin-bottom: 80px;
+}
+
+/* line 58, ../sass/theme/_global.scss */
+legend {
+  line-height: 1;
+  margin-bottom: 40px;
+}
+/* line 62, ../sass/theme/_global.scss */
+legend a {
+  text-decoration: none;
+  display: inline-block;
+}
+/* line 65, ../sass/theme/_global.scss */
+legend a:hover {
+  color: #00c2e7;
 }
 
 /* line 1, ../sass/theme/_forms.scss */
@@ -384,13 +433,14 @@ label .form-required {
 }
 /* line 11, ../sass/theme/_forms.scss */
 label.option {
-  display: inline;
-  margin-left: 8px;
   color: #707070;
   text-transform: none;
+  vertical-align: middle;
+  margin-bottom: 8px;
+  display: inline;
 }
 
-/* line 20, ../sass/theme/_forms.scss */
+/* line 21, ../sass/theme/_forms.scss */
 input,
 textarea {
   background: white;
@@ -408,25 +458,24 @@ textarea {
   -o-transition: border-color 0.2s;
   transition: border-color 0.2s;
 }
-/* line 30, ../sass/theme/_forms.scss */
+/* line 31, ../sass/theme/_forms.scss */
 input:focus,
 textarea:focus {
   border-bottom-color: #00b5d8;
 }
 
-/* line 35, ../sass/theme/_forms.scss */
+/* line 36, ../sass/theme/_forms.scss */
 textarea {
   padding-bottom: 40px;
 }
 
-/* line 39, ../sass/theme/_forms.scss */
+/* line 40, ../sass/theme/_forms.scss */
 input[type="submit"] {
   background: #00c2e7;
   color: white;
   font: normal 22px/1 "RobotoBold", sans-serif;
   width: 308px;
   height: 70px;
-  margin-top: 40px;
   -webkit-transition: background 0.2s;
   -moz-transition: background 0.2s;
   -o-transition: background 0.2s;
@@ -437,31 +486,137 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   background: #00b5d8;
 }
 
-/* line 54, ../sass/theme/_forms.scss */
-input[type="checkbox"],
-input[type="radio"] {
-  width: auto;
-  margin-bottom: 0;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+/* line 63, ../sass/theme/_forms.scss */
+input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  position: absolute;
+}
+/* line 68, ../sass/theme/_forms.scss */
+input[type="checkbox"] + label:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  background-image: url("../img/input.png");
+  background-position: 0px 0 !important;
+  vertical-align: middle;
+  margin: -1px 4px 1px 0;
 }
 
-/* line 60, ../sass/theme/_forms.scss */
-.form-item {
-  margin-bottom: 40px !important;
+/* line 63, ../sass/theme/_forms.scss */
+input[type="checkbox"]:checked {
+  opacity: 0;
+  width: 0;
+  position: absolute;
 }
-/* line 62, ../sass/theme/_forms.scss */
+/* line 68, ../sass/theme/_forms.scss */
+input[type="checkbox"]:checked + label:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  background-image: url("../img/input.png");
+  background-position: -20px 0 !important;
+  vertical-align: middle;
+  margin: -1px 4px 1px 0;
+}
+
+/* line 63, ../sass/theme/_forms.scss */
+input[type="radio"] {
+  opacity: 0;
+  width: 0;
+  position: absolute;
+}
+/* line 68, ../sass/theme/_forms.scss */
+input[type="radio"] + label:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  background-image: url("../img/input.png");
+  background-position: -40px 0 !important;
+  vertical-align: middle;
+  margin: -1px 4px 1px 0;
+}
+
+/* line 63, ../sass/theme/_forms.scss */
+input[type="radio"]:checked {
+  opacity: 0;
+  width: 0;
+  position: absolute;
+}
+/* line 68, ../sass/theme/_forms.scss */
+input[type="radio"]:checked + label:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  background-image: url("../img/input.png");
+  background-position: -60px 0 !important;
+  vertical-align: middle;
+  margin: -1px 4px 1px 0;
+}
+
+/* line 82, ../sass/theme/_forms.scss */
+.form-item {
+  margin-bottom: 60px !important;
+}
+/* line 84, ../sass/theme/_forms.scss */
 .form-item .description {
-  font: normal 12px/1 "RobotoMedium", sans-serif;
+  font: normal 12px/1.5 "RobotoMedium", sans-serif;
   color: #c8c8c8;
   margin-top: 12px;
 }
 
-/* line 71, ../sass/theme/_forms.scss */
+/* line 95, ../sass/theme/_forms.scss */
 .form-radios .form-item,
-.form-checkboxes .form-item {
+.form-checkboxes .form-item,
+.form-type-checkbox .form-item,
+.form-type-radio .form-item {
   margin-bottom: 0 !important;
+}
+
+/* line 100, ../sass/theme/_forms.scss */
+.fieldset-description {
+  margin-bottom: 40px;
+  font-family: "RobotoLightItalic", sans-serif;
+}
+
+/* line 108, ../sass/theme/_forms.scss */
+.collapsible.collapsed legend a:before {
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  transform: rotate(0);
+}
+/* line 114, ../sass/theme/_forms.scss */
+.collapsible legend a:before {
+  content: '';
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid #c8c8c8;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  vertical-align: middle;
+  margin-bottom: 4px;
+}
+
+/* line 2, ../sass/theme/_content.scss */
+.progress .bar {
+  background: white;
+  border: 1px solid #dbdbdb;
+}
+/* line 6, ../sass/theme/_content.scss */
+.progress .filled {
+  background: #00c2e7;
+  border: 1px solid #00c2e7;
+  margin: -1px;
 }
 
 /* line 3, ../sass/maintenance.scss */
