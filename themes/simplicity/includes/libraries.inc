@@ -12,14 +12,16 @@ function simplicity_libraries_info() {
         'name' => 'Chosen',
         'vendor url' => 'http://harvesthq.github.io/chosen/',
         'download url' => 'http://chosen.getharvest.com.s3.amazonaws.com/chosen_v0.11.1.zip',
-        // Using the license year as this project is not versioned.
         'version arguments' => array(
             'file' => 'chosen.jquery.min.js',
-            'pattern' => '/v([\d].[\d].[\d])/i',
+            'pattern' => '/v([\d].[\d]{1,2}.[\d]{1,2})/i',
             'lines' => 1,
         ),
         'callbacks' => array(),
         'files' => array(
+            'css' => array(
+                'chosen.min.css',
+            ),
             'js' => array(
                 'chosen.jquery.min.js',
             ),
