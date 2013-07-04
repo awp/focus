@@ -2,6 +2,9 @@
 libraries[backbone][type] = libraries
 libraries[backbone][download][type] = git
 libraries[backbone][download][url] = git://github.com/documentcloud/backbone.git
+libraries[chosen][type] = libraries
+libraries[chosen][download][type] = file
+libraries[chosen][download][url] = http://chosen.getharvest.com.s3.amazonaws.com/chosen_v0.11.1.zip
 libraries[ckeditor][type] = libraries
 libraries[ckeditor][download][type] = git
 libraries[ckeditor][download][url] = git://github.com/ckeditor/ckeditor-releases.git
