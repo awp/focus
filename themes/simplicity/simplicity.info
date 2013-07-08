@@ -13,6 +13,7 @@ stylesheets[all][] = css/styles.css
 
 ; Javascript
 ;scripts[] = js/script.js
+scripts[] = js/simplicity.js
 
 ; Regions
 regions[header]         = Header

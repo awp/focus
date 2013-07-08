@@ -25,6 +25,13 @@ function simplicity_preprocess_html(&$vars) {
  */
 function simplicity_preprocess_maintenance_page(&$vars, $hook) {
     drupal_add_css(SIMPLICITY_PATH . '/css/maintenance.css');
+
+    if (function_exists('libraries_detect')) {
+        $library = libraries_detect('jquery.chosen');
+        if (!empty($library['installed'])) {
+            libraries_load('jquery.chosen');
+        }
+    }
 }
 
 /**

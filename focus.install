@@ -153,9 +153,7 @@ function focus_configure_form() {
  */
 function focus_choose_themes() {
 
-    $form['title'] = array(
-        '#markup' => '<h2>Choose FOCUS Themes</h2>',
-    );
+    drupal_set_title('Choose Site Themes');
 
     $form['new_theme'] = array(
         '#type' => 'checkbox',
