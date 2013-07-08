@@ -20,17 +20,21 @@ label{
 
 input,
 textarea{
+  display: block;
   background: $white;
   padding: 24px 28px;
-  font: normal 16px/1 $rm;
   border: 1px solid $gray;
   border-bottom: 3px solid $blue;
   width: 100%;
   font: normal 18px/1.5 $rl;
+  color: $black;
   @include box-sizing(border-box);
   @include transition(border-color 0.2s);
   &:focus{
     border-bottom-color: $dkblue;
+  }
+  &.error{
+    border-bottom-color: $red;
   }
 }
 
@@ -52,7 +56,7 @@ input[type="submit"] {
   }
 }
 
-$inputs: 
+$inputs:
     'input[type="checkbox"]',
     'input[type="checkbox"]:checked',
     'input[type="radio"]',
@@ -76,13 +80,82 @@ $inputs:
         background-position: $x 0 !important;
         vertical-align: middle;
         margin: -1px 4px 1px 0;
-      } 
+      }
     }
-  } 
+  }
 }
 
 .form-item{
   margin-bottom: $bottom * 3 !important;
+  &.form-type-password-confirm{
+    position: relative;
+    .password-strength{
+      position: absolute;
+      right: 0;
+      top: 32px;
+      width: 50%;
+      height: 32px;
+      border: 1px solid $gray;
+      @include box-sizing(border-box);
+    }
+    .password-indicator{
+      background-color: $white;
+      height: 100%;
+    }
+    .password-strength-title,
+    .password-strength-text{
+      font: normal 12px/32px $rm;
+      position: absolute;
+      top: 0;
+      left: 20px;
+      color: $dkblue;
+    }
+    .password-strength-text{
+      left: auto;
+      right: 20px;
+    }
+    .indicator{
+      background: $ltblue;
+    }
+  }
+  &.confirm-parent{
+    & > div{
+      position: absolute;
+      left: -20px;
+      top: -2px;
+      text-indent: -9999px;
+      width: 14px;
+      height: 12px;
+      margin: 0;
+    }
+    .ok{
+      background: url(../img/check.png) no-repeat;
+      width: 14px;
+      height: 12px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      &:after{
+        content: '';
+        background: url(../img/check.png) no-repeat;
+        width: 14px;
+        height: 12px;
+        position: absolute;
+        top: 171px;
+        left: 0;
+      }
+    }
+  }
+  .password-suggestions{
+    position: absolute;
+    right: 0;
+    top: 86px;
+    width: 50% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    @include box-sizing(border-box);
+  }
   .description{
     font: normal 12px/1.5 $rm;
     color: $dkgray;
@@ -126,5 +199,92 @@ $inputs:
         margin-bottom: 4px;
       }
     }
+  }
+}
+
+.form-type-textfield{
+  position: relative;
+  input{
+    position: relative;
+    z-index: 1;
+  }
+  .field-suffix{
+    position: absolute;
+    z-index: 10;
+    right: 28px;
+    top: 50%;
+    margin-top: -12px;
+  }
+  .machine-name-label{
+    display: none;
+  }
+  .machine-name-value{
+    color: $dkgray;
+    margin-right: 8px;
+  }
+  .admin-link{
+    &:after,
+    &:before{
+      content: '';
+    }
+  }
+}
+
+// Chosen
+
+form .form-item .chzn-container{
+  a, span{
+    background: $white !important;
+    color: $black;
+  }
+  a, .chzn-drop{
+    border-color: $gray !important;
+    @include border-radius(0);
+    @include box-shadow(none);
+  }
+  .chzn-drop{
+    z-index: 1;
+  }
+  .chzn-results{
+    margin: 0 !important;
+    padding: 0 !important;
+    li{
+      padding: 8px 28px 7px;
+    }
+    .no-results{
+      background: $white;
+      color: $dkgray;
+      span{
+        color: $blue;
+      }
+    }
+  }
+  & > a{
+    font: normal 18px/1.5 $rl;
+    border-bottom: 3px solid $blue !important;
+    padding: 24px 28px 28px;
+    position: relative;
+    z-index: 10;
+    &:after{
+      content: '';
+      border-top: 10px solid $dkgray;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      margin-top: -5px;
+    }
+  }
+  div{
+    background-color: $white !important;
+    b{
+      background: none !important;
+    }
+  }
+  .highlighted{
+    background: $blue;
   }
 }

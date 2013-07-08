@@ -79,3 +79,12 @@ body, html{
   margin-left: 354px;
   padding: 60px 110px;
 }
+
+// Messages
+
+.messages{
+  margin-bottom: $bottom * 2;
+  li{
+    color: $red;
+  }
+}
