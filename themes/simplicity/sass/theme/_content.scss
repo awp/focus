@@ -1,0 +1,11 @@
+.progress{
+  .bar{
+    background: $white;
+    border: 1px solid $gray;
+  }
+  .filled{
+    background: $blue;
+    border: 1px solid $blue;
+    margin: -1px;
+  }
+}
