@@ -14,6 +14,7 @@ label{
     vertical-align: middle;
     margin-bottom: 8px;
     display: inline;
+    cursor: pointer;
   }
 }
 
@@ -43,6 +44,7 @@ input[type="submit"] {
   font: normal 22px/1 $rb;
   width: 308px;
   height: 70px;
+  border: none !important;
   @include transition(background 0.2s);
   &:hover,
   &:focus{
@@ -111,15 +113,18 @@ $inputs:
     }
   }
   legend{
-    a:before{
-      content: '';
-      display: inline-block;
-      border-top: 5px solid transparent;
-      border-bottom: 5px solid transparent;
-      border-left: 10px solid $dkgray;
-      @include rotate(90deg);
-      vertical-align: middle;
-      margin-bottom: 4px;
+    a{
+      text-decoration: none !important;
+      &:before{
+        content: '';
+        display: inline-block;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 10px solid $dkgray;
+        @include rotate(90deg);
+        vertical-align: middle;
+        margin-bottom: 4px;
+      }
     }
   }
 }

@@ -438,9 +438,10 @@ label.option {
   vertical-align: middle;
   margin-bottom: 8px;
   display: inline;
+  cursor: pointer;
 }
 
-/* line 21, ../sass/theme/_forms.scss */
+/* line 22, ../sass/theme/_forms.scss */
 input,
 textarea {
   background: white;
@@ -458,41 +459,42 @@ textarea {
   -o-transition: border-color 0.2s;
   transition: border-color 0.2s;
 }
-/* line 31, ../sass/theme/_forms.scss */
+/* line 32, ../sass/theme/_forms.scss */
 input:focus,
 textarea:focus {
   border-bottom-color: #00b5d8;
 }
 
-/* line 36, ../sass/theme/_forms.scss */
+/* line 37, ../sass/theme/_forms.scss */
 textarea {
   padding-bottom: 40px;
 }
 
-/* line 40, ../sass/theme/_forms.scss */
+/* line 41, ../sass/theme/_forms.scss */
 input[type="submit"] {
   background: #00c2e7;
   color: white;
   font: normal 22px/1 "RobotoBold", sans-serif;
   width: 308px;
   height: 70px;
+  border: none !important;
   -webkit-transition: background 0.2s;
   -moz-transition: background 0.2s;
   -o-transition: background 0.2s;
   transition: background 0.2s;
 }
-/* line 48, ../sass/theme/_forms.scss */
+/* line 50, ../sass/theme/_forms.scss */
 input[type="submit"]:hover, input[type="submit"]:focus {
   background: #00b5d8;
 }
 
-/* line 63, ../sass/theme/_forms.scss */
+/* line 65, ../sass/theme/_forms.scss */
 input[type="checkbox"] {
   opacity: 0;
   width: 0;
   position: absolute;
 }
-/* line 68, ../sass/theme/_forms.scss */
+/* line 70, ../sass/theme/_forms.scss */
 input[type="checkbox"] + label:before {
   content: '';
   display: inline-block;
@@ -504,13 +506,13 @@ input[type="checkbox"] + label:before {
   margin: -1px 4px 1px 0;
 }
 
-/* line 63, ../sass/theme/_forms.scss */
+/* line 65, ../sass/theme/_forms.scss */
 input[type="checkbox"]:checked {
   opacity: 0;
   width: 0;
   position: absolute;
 }
-/* line 68, ../sass/theme/_forms.scss */
+/* line 70, ../sass/theme/_forms.scss */
 input[type="checkbox"]:checked + label:before {
   content: '';
   display: inline-block;
@@ -522,13 +524,13 @@ input[type="checkbox"]:checked + label:before {
   margin: -1px 4px 1px 0;
 }
 
-/* line 63, ../sass/theme/_forms.scss */
+/* line 65, ../sass/theme/_forms.scss */
 input[type="radio"] {
   opacity: 0;
   width: 0;
   position: absolute;
 }
-/* line 68, ../sass/theme/_forms.scss */
+/* line 70, ../sass/theme/_forms.scss */
 input[type="radio"] + label:before {
   content: '';
   display: inline-block;
@@ -540,13 +542,13 @@ input[type="radio"] + label:before {
   margin: -1px 4px 1px 0;
 }
 
-/* line 63, ../sass/theme/_forms.scss */
+/* line 65, ../sass/theme/_forms.scss */
 input[type="radio"]:checked {
   opacity: 0;
   width: 0;
   position: absolute;
 }
-/* line 68, ../sass/theme/_forms.scss */
+/* line 70, ../sass/theme/_forms.scss */
 input[type="radio"]:checked + label:before {
   content: '';
   display: inline-block;
@@ -558,18 +560,18 @@ input[type="radio"]:checked + label:before {
   margin: -1px 4px 1px 0;
 }
 
-/* line 82, ../sass/theme/_forms.scss */
+/* line 84, ../sass/theme/_forms.scss */
 .form-item {
   margin-bottom: 60px !important;
 }
-/* line 84, ../sass/theme/_forms.scss */
+/* line 86, ../sass/theme/_forms.scss */
 .form-item .description {
   font: normal 12px/1.5 "RobotoMedium", sans-serif;
   color: #c8c8c8;
   margin-top: 12px;
 }
 
-/* line 95, ../sass/theme/_forms.scss */
+/* line 97, ../sass/theme/_forms.scss */
 .form-radios .form-item,
 .form-checkboxes .form-item,
 .form-type-checkbox .form-item,
@@ -577,13 +579,13 @@ input[type="radio"]:checked + label:before {
   margin-bottom: 0 !important;
 }
 
-/* line 100, ../sass/theme/_forms.scss */
+/* line 102, ../sass/theme/_forms.scss */
 .fieldset-description {
   margin-bottom: 40px;
   font-family: "RobotoLightItalic", sans-serif;
 }
 
-/* line 108, ../sass/theme/_forms.scss */
+/* line 110, ../sass/theme/_forms.scss */
 .collapsible.collapsed legend a:before {
   -webkit-transform: rotate(0);
   -moz-transform: rotate(0);
@@ -591,7 +593,11 @@ input[type="radio"]:checked + label:before {
   -o-transform: rotate(0);
   transform: rotate(0);
 }
-/* line 114, ../sass/theme/_forms.scss */
+/* line 116, ../sass/theme/_forms.scss */
+.collapsible legend a {
+  text-decoration: none !important;
+}
+/* line 118, ../sass/theme/_forms.scss */
 .collapsible legend a:before {
   content: '';
   display: inline-block;
@@ -611,8 +617,9 @@ input[type="radio"]:checked + label:before {
 .progress .bar {
   background: white;
   border: 1px solid #dbdbdb;
+  margin-bottom: 8px;
 }
-/* line 6, ../sass/theme/_content.scss */
+/* line 7, ../sass/theme/_content.scss */
 .progress .filled {
   background: #00c2e7;
   border: 1px solid #00c2e7;
