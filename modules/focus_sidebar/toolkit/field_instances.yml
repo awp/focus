@@ -1,8 +1,6 @@
 focus_sidebar:
   body:
     label: Sidebar Content
-    widget:
-      type: text_long
     settings:
       text_processing: 0
 
