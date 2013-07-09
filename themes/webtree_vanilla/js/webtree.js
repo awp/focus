@@ -1,12 +1,6 @@
 (function($){
-    
+
     var webtreeInit = function(cx, s) {
-        
-        $('#page', cx).once('webtree-init', function() {
-            console.log('WEBTREE Init');
-        });
-        
-        
         $('body').once('webtree-colorbox', function() {
             $(window).bind({
                 cbox_load: function() {
@@ -17,17 +11,17 @@
                 }
             });
         });
-        
     }
-    
+
     Drupal.behaviors.webtree = {
         attach: webtreeInit
     }
-    
+
     if (!!Drupal.settings.colorbox) {
         Drupal.settings.colorbox.title = function() {
-            var title = '<table cellspacing="0"><tr><td>'+$(this).attr('title')+'</td></tr></table>'; 
-            return (!$(this).attr('title')) ? false : title;
+            var title = $(this).attr('title');
+            var html  = '<table cellspacing="0"><tr><td>'+title+'</td></tr></table>';
+            return (!title) ? false : html;
         }
     }
 

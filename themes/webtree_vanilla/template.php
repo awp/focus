@@ -23,18 +23,17 @@ function webtree_vanilla_includes($file) {
  * Allows certain sections to pop out of the grid and expand to full-screen width
  */
 function webtree_vanilla_form_system_theme_settings_alter(&$form, &$form_state) {
-    
     if (empty($form_state['build_info']['args'])) return;
     if ($GLOBALS['theme_key'] != $form_state['build_info']['args'][0]) return;
 
     $theme = alpha_get_theme();
     $containers = isset($theme->grids[$theme->settings['grid']]) ? webtree_vanilla_container_options($theme->grids[$theme->settings['grid']]) : array();
     $columns = $spacing = !empty($containers) ? webtree_vanilla_column_options(max(array_keys($containers))) : array();
-    
+
     // Create a container width selection menu for EACH zone
     foreach ($theme->zones as $zone => $item) {
         $section = $item['enabled'] ? $item['section'] : '__unassigned__';
-        
+
         $form['alpha_settings']['structure'][$section][$zone]['zone']['alpha_zone_' . $zone . '_columns'] = array(
             '#type' => 'select',
             '#title' => t('Column count'),
@@ -42,12 +41,12 @@ function webtree_vanilla_form_system_theme_settings_alter(&$form, &$form_state) 
             '#options' => $containers,
         );
     }
-    
+
     // Create a container width selection menu for EACH region
     foreach ($theme->regions as $region => $item) {
         $zone = $item['enabled'] ? $item['zone'] : '__unassigned__';
         $section = $item['enabled'] && $theme->zones[$item['zone']]['enabled'] ? $item['section'] : '__unassigned__';
-        
+
         $form['alpha_settings']['structure'][$section][$zone]['regions'][$region]['alpha_region_' . $region . '_columns'] = array(
             '#type' => 'select',
             '#title' => t('Width'),
@@ -55,17 +54,16 @@ function webtree_vanilla_form_system_theme_settings_alter(&$form, &$form_state) 
             '#options' => $columns,
         );
     }
-    
 }
 
 /**
  * Implements hook_form_alter
  * Attaches custom webtree forms script to all forms
  */
-function webtree_vanilla_form_alter(&$form, &$form_state, $form_id) {
+// function webtree_vanilla_form_alter(&$form, &$form_state, $form_id) {
     // if (drupal_get_bootstrap_phase() == DRUPAL_BOOTSTRAP_FULL)
-    $form['#attached']['js'][] = WEBTREE_VANILLA_PATH . '/js/webtree_forms.js';
-}
+    // $form['#attached']['js'][] = WEBTREE_VANILLA_PATH . '/js/webtree_forms.js';
+// }
 
 /**
  * Implements hook_preprocess_webform_form().
@@ -89,7 +87,7 @@ function webtree_vanilla_css_alter(&$css) {
         if (empty($css[$old])) continue;
         $css[$new] = $css[$old];
         $css[$new]['data'] = $new;
-        
+
         unset($css[$old]);
     }
 }
@@ -98,16 +96,16 @@ function webtree_vanilla_css_alter(&$css) {
  * Implements hook_js_alter()
  */
 function webtree_vanilla_js_alter(&$javascript) {
-    
+
     // remove overridden javascripts
     $js_overrides = variable_get('webtree_js_overrides', array());
-    
+
     // foreach ($js_overrides as $old => $new) {
         // if (empty($javascript[$old])) continue;
         // $javascript[$new] = $javascript[$old];
         // $javascript[$new]['data'] = $new;
         // $javascript[$new]['version'] = '1.8.24';
-//         
+//
         // unset($javascript[$old]);
     // }
 
@@ -118,10 +116,10 @@ function webtree_vanilla_js_alter(&$javascript) {
  * Builds better markup for breadcrumb styling
  */
 function webtree_vanilla_breadcrumb($variables) {
-    
+
     $breadcrumb = $variables['breadcrumb'];
     $separator  = (empty($variables['separator'])) ? '&rsaquo;' : $variables['separator'];
-    
+
     if ($node = node_load(arg(1))) {
         switch (arg(2)) {
             case 'children': $breadcrumb[] = 'Children'; break;
@@ -135,7 +133,7 @@ function webtree_vanilla_breadcrumb($variables) {
     if (!empty($breadcrumb)) {
         return '<div class="breadcrumbs">' . implode("<span class='breadcrumb-separator'>$separator</span>", $breadcrumb) . '</div>';
     }
-    
+
 }
 
 /**
@@ -157,7 +155,7 @@ function webtree_vanilla_process_region(&$vars) {
             case 'content':
                 $vars['title'] = (empty($GLOBALS['title_replaced'])) ? $theme->page['title'] : FALSE;
                 break;
-    
+
             case 'branding':
                 $vars['linked_logo_img'] = _webtree_vanilla_linked_logo_make($theme->page['logo'], $vars['site_name']);
                 break;

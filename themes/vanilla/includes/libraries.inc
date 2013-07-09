@@ -25,7 +25,7 @@ function vanilla_libraries_info() {
             ),
         ),
     );
-    
+
     $libraries['ie7-js'] = array(
         'name' => 'IE9js',
         'vendor url' => 'https://code.google.com/p/ie7-js/',
@@ -46,7 +46,7 @@ function vanilla_libraries_info() {
             ),
         ),
     );
-    
+
     $libraries['html5shiv'] = array(
         'name' => 'HTML5 Shiv',
         'vendor url' => 'https://code.google.com/p/html5shiv/',
@@ -67,7 +67,7 @@ function vanilla_libraries_info() {
             ),
         ),
     );
-    
+
     $libraries['respondjs'] = array(
         'name' => 'HTML5 Shiv',
         'vendor url' => 'https://github.com/scottjehl/Respond',
@@ -85,7 +85,7 @@ function vanilla_libraries_info() {
             ),
         ),
     );
-    
+
     $libraries['mobile-detect'] = array(
         'name' => 'Mobile Detect',
         'vendor url' => 'https://github.com/serbanghita/Mobile-Detect',
@@ -101,7 +101,7 @@ function vanilla_libraries_info() {
             ),
         ),
     );
-    
+
     $libraries['jquery.ui.selectmenu'] = array(
         'name' => 'jQuery UI - Selectmenu',
         'vendor url' => 'https://github.com/fnagel/jquery-ui',
@@ -120,8 +120,7 @@ function vanilla_libraries_info() {
                 'themes/base/jquery.ui.selectmenu.css',
             ),
         ),
-        // 'dependencies' => array('jquery.ui'),
     );
-    
+
     return $libraries;
 }

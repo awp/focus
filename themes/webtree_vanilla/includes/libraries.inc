@@ -15,15 +15,11 @@ function webtree_vanilla_libraries_info() {
         'version' => '4648a1ec80', // using the git ref as this project is not versioned
         'files' => array(
             'js' => array(
-                'consolelog.min.js' => array(
-                    'browsers' => array(
-                        'IE' => TRUE,
-                    ),
-                ),
+                'consolelog.min.js',
             ),
         ),
     );
-    
+
     $libraries['ie7-js'] = array(
         'name' => 'IE7js',
         'vendor url' => 'https://code.google.com/p/ie7-js/',
@@ -39,7 +35,7 @@ function webtree_vanilla_libraries_info() {
             ),
         ),
     );
-    
+
     $libraries['html5shiv'] = array(
         'name' => 'HTML5 Shiv',
         'vendor url' => 'https://code.google.com/p/html5shiv/',
@@ -55,7 +51,7 @@ function webtree_vanilla_libraries_info() {
             ),
         ),
     );
-    
+
     $libraries['mobile-detect'] = array(
         'name' => 'Mobile Detect',
         'vendor url' => 'https://github.com/serbanghita/Mobile-Detect',
@@ -71,7 +67,7 @@ function webtree_vanilla_libraries_info() {
             ),
         ),
     );
-    
+
     $libraries['jquery.ui.selectmenu'] = array(
         'name' => 'jQuery UI - Selectmenu',
         'vendor url' => 'https://github.com/fnagel/jquery-ui',
@@ -90,8 +86,7 @@ function webtree_vanilla_libraries_info() {
                 'themes/base/jquery.ui.selectmenu.css',
             ),
         ),
-        'dependencies' => array('jquery.ui'),
     );
-    
+
     return $libraries;
 }
