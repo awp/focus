@@ -122,5 +122,21 @@ function vanilla_libraries_info() {
         ),
     );
 
+    $libraries['jquery.cycle'] = array(
+        'name' => 'jQuery Cycle',
+        'vendor url' => 'http://malsup.com/jquery/cycle/',
+        'download url' => 'http://malsup.com/jquery/cycle/download.html',
+        'version arguments' => array(
+            'file' => 'jquery.cycle.all.js',
+            'pattern' => '/([\d]\.[\d]\.[\d])/i',
+            'lines' => 5,
+        ),
+        'files' => array(
+            'js' => array(
+                'jquery.cycle.all.js',
+            ),
+        ),
+    );
+
     return $libraries;
 }
