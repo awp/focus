@@ -374,7 +374,7 @@ function focus_complete_installation() {
 
     $batch = array(
         'operations' => $operations,
-        'title' => st('Wrapping up remaining installation tasks.'),
+        'title' => st('Wrapping up installation.'),
         'error_message' => st('There was an error completing this installation.'),
         'finished' => 'install_import_locales_remaining',
         'file' => FOCUS_PROFILE_PATH . '/includes/batch.inc',

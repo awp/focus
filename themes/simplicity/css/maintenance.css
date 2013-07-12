@@ -582,16 +582,17 @@ input[type="radio"]:checked + label:before {
   width: 50%;
   height: 32px;
   border: 1px solid #dbdbdb;
+  margin: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 101, ../sass/theme/_forms.scss */
+/* line 102, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm .password-indicator {
   background-color: white;
   height: 100%;
 }
-/* line 106, ../sass/theme/_forms.scss */
+/* line 107, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm .password-strength-title,
 .form-item.form-type-password-confirm .password-strength-text {
   font: normal 12px/32px "RobotoMedium", sans-serif;
@@ -600,16 +601,16 @@ input[type="radio"]:checked + label:before {
   left: 20px;
   color: #00b5d8;
 }
-/* line 113, ../sass/theme/_forms.scss */
+/* line 114, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm .password-strength-text {
   left: auto;
   right: 20px;
 }
-/* line 117, ../sass/theme/_forms.scss */
+/* line 118, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm .indicator {
   background: #9ef0ff;
 }
-/* line 122, ../sass/theme/_forms.scss */
+/* line 123, ../sass/theme/_forms.scss */
 .form-item.confirm-parent > div {
   position: absolute;
   left: -20px;
@@ -619,7 +620,7 @@ input[type="radio"]:checked + label:before {
   height: 12px;
   margin: 0;
 }
-/* line 131, ../sass/theme/_forms.scss */
+/* line 132, ../sass/theme/_forms.scss */
 .form-item.confirm-parent .ok {
   background: url(../img/check.png) no-repeat;
   width: 14px;
@@ -628,7 +629,7 @@ input[type="radio"]:checked + label:before {
   top: 0;
   left: 0;
 }
-/* line 138, ../sass/theme/_forms.scss */
+/* line 139, ../sass/theme/_forms.scss */
 .form-item.confirm-parent .ok:after {
   content: '';
   background: url(../img/check.png) no-repeat;
@@ -638,7 +639,7 @@ input[type="radio"]:checked + label:before {
   top: 171px;
   left: 0;
 }
-/* line 149, ../sass/theme/_forms.scss */
+/* line 150, ../sass/theme/_forms.scss */
 .form-item .password-suggestions {
   position: absolute;
   right: 0;
@@ -651,14 +652,14 @@ input[type="radio"]:checked + label:before {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 159, ../sass/theme/_forms.scss */
+/* line 160, ../sass/theme/_forms.scss */
 .form-item .description {
   font: normal 12px/1.5 "RobotoMedium", sans-serif;
   color: #c8c8c8;
   margin-top: 12px;
 }
 
-/* line 170, ../sass/theme/_forms.scss */
+/* line 171, ../sass/theme/_forms.scss */
 .form-radios .form-item,
 .form-checkboxes .form-item,
 .form-type-checkbox .form-item,
@@ -666,13 +667,13 @@ input[type="radio"]:checked + label:before {
   margin-bottom: 0 !important;
 }
 
-/* line 175, ../sass/theme/_forms.scss */
+/* line 176, ../sass/theme/_forms.scss */
 .fieldset-description {
   margin-bottom: 40px;
   font-family: "RobotoLightItalic", sans-serif;
 }
 
-/* line 183, ../sass/theme/_forms.scss */
+/* line 184, ../sass/theme/_forms.scss */
 .collapsible.collapsed legend a:before {
   -webkit-transform: rotate(0);
   -moz-transform: rotate(0);
@@ -680,11 +681,11 @@ input[type="radio"]:checked + label:before {
   -o-transform: rotate(0);
   transform: rotate(0);
 }
-/* line 189, ../sass/theme/_forms.scss */
+/* line 190, ../sass/theme/_forms.scss */
 .collapsible legend a {
   text-decoration: none !important;
 }
-/* line 191, ../sass/theme/_forms.scss */
+/* line 192, ../sass/theme/_forms.scss */
 .collapsible legend a:before {
   content: '';
   display: inline-block;
@@ -700,16 +701,16 @@ input[type="radio"]:checked + label:before {
   margin-bottom: 4px;
 }
 
-/* line 205, ../sass/theme/_forms.scss */
+/* line 206, ../sass/theme/_forms.scss */
 .form-type-textfield {
   position: relative;
 }
-/* line 207, ../sass/theme/_forms.scss */
+/* line 208, ../sass/theme/_forms.scss */
 .form-type-textfield input {
   position: relative;
   z-index: 1;
 }
-/* line 211, ../sass/theme/_forms.scss */
+/* line 212, ../sass/theme/_forms.scss */
 .form-type-textfield .field-suffix {
   position: absolute;
   z-index: 10;
@@ -717,26 +718,26 @@ input[type="radio"]:checked + label:before {
   top: 50%;
   margin-top: -12px;
 }
-/* line 218, ../sass/theme/_forms.scss */
+/* line 219, ../sass/theme/_forms.scss */
 .form-type-textfield .machine-name-label {
   display: none;
 }
-/* line 221, ../sass/theme/_forms.scss */
+/* line 222, ../sass/theme/_forms.scss */
 .form-type-textfield .machine-name-value {
   color: #c8c8c8;
   margin-right: 8px;
 }
-/* line 227, ../sass/theme/_forms.scss */
+/* line 228, ../sass/theme/_forms.scss */
 .form-type-textfield .admin-link:after, .form-type-textfield .admin-link:before {
   content: '';
 }
 
-/* line 236, ../sass/theme/_forms.scss */
+/* line 237, ../sass/theme/_forms.scss */
 form .form-item .chzn-container a, form .form-item .chzn-container span {
   background: white !important;
   color: #707070;
 }
-/* line 240, ../sass/theme/_forms.scss */
+/* line 241, ../sass/theme/_forms.scss */
 form .form-item .chzn-container a, form .form-item .chzn-container .chzn-drop {
   border-color: #dbdbdb !important;
   -webkit-border-radius: 0;
@@ -748,29 +749,29 @@ form .form-item .chzn-container a, form .form-item .chzn-container .chzn-drop {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 245, ../sass/theme/_forms.scss */
+/* line 246, ../sass/theme/_forms.scss */
 form .form-item .chzn-container .chzn-drop {
-  z-index: 1;
+  z-index: 100;
 }
-/* line 248, ../sass/theme/_forms.scss */
+/* line 249, ../sass/theme/_forms.scss */
 form .form-item .chzn-container .chzn-results {
   margin: 0 !important;
   padding: 0 !important;
 }
-/* line 251, ../sass/theme/_forms.scss */
+/* line 252, ../sass/theme/_forms.scss */
 form .form-item .chzn-container .chzn-results li {
   padding: 8px 28px 7px;
 }
-/* line 254, ../sass/theme/_forms.scss */
+/* line 255, ../sass/theme/_forms.scss */
 form .form-item .chzn-container .chzn-results .no-results {
   background: white;
   color: #c8c8c8;
 }
-/* line 257, ../sass/theme/_forms.scss */
+/* line 258, ../sass/theme/_forms.scss */
 form .form-item .chzn-container .chzn-results .no-results span {
   color: #00c2e7;
 }
-/* line 262, ../sass/theme/_forms.scss */
+/* line 263, ../sass/theme/_forms.scss */
 form .form-item .chzn-container > a {
   font: normal 18px/1.5 "RobotoLight", sans-serif;
   border-bottom: 3px solid #00c2e7 !important;
@@ -778,7 +779,7 @@ form .form-item .chzn-container > a {
   position: relative;
   z-index: 10;
 }
-/* line 268, ../sass/theme/_forms.scss */
+/* line 269, ../sass/theme/_forms.scss */
 form .form-item .chzn-container > a:after {
   content: '';
   border-top: 10px solid #c8c8c8;
@@ -791,15 +792,15 @@ form .form-item .chzn-container > a:after {
   top: 50%;
   margin-top: -5px;
 }
-/* line 281, ../sass/theme/_forms.scss */
+/* line 282, ../sass/theme/_forms.scss */
 form .form-item .chzn-container div {
   background-color: white !important;
 }
-/* line 283, ../sass/theme/_forms.scss */
+/* line 284, ../sass/theme/_forms.scss */
 form .form-item .chzn-container div b {
   background: none !important;
 }
-/* line 287, ../sass/theme/_forms.scss */
+/* line 288, ../sass/theme/_forms.scss */
 form .form-item .chzn-container .highlighted {
   background: #00c2e7;
 }

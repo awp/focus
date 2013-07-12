@@ -1,5 +1,5 @@
 # Fields required by toolkit node modules should be defined here.
-# If toolkit is already installed, additional fields can be added here, 
+# If toolkit is already installed, additional fields can be added here,
 # but must be installed manually at /admin/toolkit/toolkit/fields/rebuild
 #
 # Example --------------------------------------------------
@@ -8,7 +8,7 @@
 #   label: example_field
 #   type: field_type
 #   cardinality: 1 (use -1 for FIELD_CARDINALITY_UNLIMITED)
-#   widget: 
+#   widget:
 #     type: field_instance_widget_type
 #   settings:
 #
@@ -28,15 +28,15 @@ field_focus_deck:
 field_focus_display_name:
   label: Display Name
   type: text
-  widget: 
+  widget:
     type: text_textfield
-    
+
 field_focus_email:
   label: Email
   type: text
   widget:
     type: text_textfield
-    
+
 field_focus_phone:
   label: Phone
   type: text
@@ -46,9 +46,9 @@ field_focus_phone:
 field_focus_source:
   label: Source
   type: text
-  widget: 
+  widget:
     type: text_textfield
-  
+
 field_focus_calendar_date:
   label: Calendar Date
   type: date
@@ -95,7 +95,7 @@ field_focus_address:
   type: addressfield
   widget:
     type: addressfield_standard
-  
+
 field_focus_website:
   label: Website
   type: link_field
@@ -104,7 +104,7 @@ field_focus_website:
   settings:
     attributes:
       target: _blank
-    
+
 field_focus_links:
   label: Links
   type: link_field
@@ -123,13 +123,13 @@ field_focus_link:
   settings:
     attributes:
       target: user
-  
+
 field_focus_position:
   label: Position
   type: text
   widget:
     type: text_textfield
-    
+
 field_focus_number:
   label: Number
   type: text
@@ -141,7 +141,7 @@ field_focus_subtitle:
   type: text
   widget:
     type: text_textfield
-    
+
 ## Files ##
 
 field_focus_thumbnail:
@@ -168,7 +168,7 @@ field_focus_preview:
     default:
       settings:
         image_style: small
-    
+
 field_focus_primary_image:
   label: Primary Image
   type: image
@@ -179,7 +179,9 @@ field_focus_primary_image:
     file_extensions: jpg jpeg gif png
   display:
     default:
+      label: hidden
       type: colorbox
+      weight: -10
       settings:
         colorbox_node_style: headline
         colorbox_image_style: colorbox
@@ -199,7 +201,7 @@ field_focus_gallery_image:
       type: hidden
       settings:
         image_style: square_thumbnail
-  
+
 field_focus_download:
   label: Download
   type: file
@@ -222,7 +224,7 @@ field_focus_media:
   settings:
     default_file:
     file_extensions: wmv asf mp4 mp3 wav
-  
+
 field_focus_video:
   label: Video
   type: file
@@ -232,7 +234,7 @@ field_focus_video:
   settings:
     default_file:
     file_extensions: wmv asf mp4
-  
+
 field_focus_audio:
   label: Audio
   type: file
