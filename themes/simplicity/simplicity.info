@@ -3,7 +3,7 @@ screenshot  = screenshot.png
 name        = Simplicity, by AWP
 description = A clean, simple admin theme, used by default in the distribution: FOCUS for Drupal.
 core        = 7.x
-base theme  = zen
+base theme  = vanilla
 
 ; Stylesheets
 stylesheets[all][] = system.menus.css
@@ -16,7 +16,7 @@ scripts[] = js/simplicity.js
 ; Regions
 regions[header]         = Header
 regions[content]        = Content
-regions[sidebar]        = Sidebar
+regions[sidebar_first]  = Sidebar
 
 ; Required Regions
 regions[page_top]       = Page top

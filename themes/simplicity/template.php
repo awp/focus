@@ -16,15 +16,15 @@ foreach ($includes as $include) {
 /**
  * Implements hook_preprocess_html().
  */
-function simplicity_preprocess_html(&$vars) {
-    drupal_add_css(SIMPLICITY_PATH . '/css/default.css');
-}
+function simplicity_preprocess_html(&$vars, $hook) {
+    switch ($hook) {
+        case 'maintenance_page':
+            drupal_add_css(SIMPLICITY_PATH . '/css/maintenance.css');
+            break;
 
-/**
- * Implements hook_preprocess_maintenance_page().
- */
-function simplicity_preprocess_maintenance_page(&$vars, $hook) {
-    drupal_add_css(SIMPLICITY_PATH . '/css/maintenance.css');
+        default:
+            drupal_add_css(SIMPLICITY_PATH . '/css/default.css');
+    }
 
     if (function_exists('libraries_detect')) {
         $library = libraries_detect('jquery.chosen');
@@ -32,6 +32,13 @@ function simplicity_preprocess_maintenance_page(&$vars, $hook) {
             libraries_load('jquery.chosen');
         }
     }
+}
+
+/**
+ * Implements hook_preprocess_maintenance_page().
+ */
+function simplicity_preprocess_maintenance_page(&$vars, $hook) {
+    simplicity_preprocess_html($vars, $hook);
 }
 
 /**

@@ -33,11 +33,11 @@
                 <?= $feed_icons; ?>
             </section>
 
-            <?php if ($sidebar = render($page['sidebar'])): ?>
-                <aside class="primary-sidebar">
+            <?php if ($sidebar = render($page['sidebar-first'])) { ?>
+                <aside class="sidebar">
                     <?= $sidebar; ?>
                 </aside>
-            <?php endif; ?>
+            <?php } ?>
         </div>
     </div>
 

@@ -34,7 +34,7 @@
             </section>
 
             <?php if ($sidebar = render($page['sidebar'])): ?>
-                <aside class="primary-sidebar">
+                <aside class="sidebar">
                     <?= $sidebar; ?>
                 </aside>
             <?php endif; ?>
