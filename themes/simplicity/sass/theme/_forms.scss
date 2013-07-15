@@ -96,6 +96,7 @@ $inputs:
       width: 50%;
       height: 32px;
       border: 1px solid $gray;
+      margin: 0;
       @include box-sizing(border-box);
     }
     .password-indicator{
@@ -243,7 +244,7 @@ form .form-item .chzn-container{
     @include box-shadow(none);
   }
   .chzn-drop{
-    z-index: 1;
+    z-index: 100;
   }
   .chzn-results{
     margin: 0 !important;
