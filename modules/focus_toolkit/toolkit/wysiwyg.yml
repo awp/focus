@@ -13,7 +13,7 @@ ckeditor:
     filters:
       filter_html:
         settings:
-          allowed_html: "<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p> <h1> <h2> <h3> <h4> <h5> <h6>"
+          allowed_html: "<a> <u> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p> <h2> <h3> <h4> <h5> <h6>"
     roles:
       authenticated user
       administrator
