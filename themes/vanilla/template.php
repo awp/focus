@@ -145,34 +145,33 @@ function vanilla_html_head_alter(&$elements) {
     // Get mobile metatag settings.
     $html5_respond_meta = array_filter((array) theme_get_setting('zen_html5_respond_meta'));
     if (in_array('meta', $html5_respond_meta)) {
-        // Add cleartype.
         $elements['vanilla_mobile'] = array(
             '#type'   => 'html_tag',
             '#tag'    => 'meta',
             '#weight' => -5,
             '#attributes' => array(
-                'name'     => 'MobileOptimized',
-                'contents' => 'width',
+                'name'    => 'MobileOptimized',
+                'content' => 'width',
             ),
         );
-        // Add cleartype.
+
         $elements['vanilla_handheld'] = array(
             '#type'   => 'html_tag',
             '#tag'    => 'meta',
             '#weight' => -5,
             '#attributes' => array(
-                'name'     => 'HandheldFriendly',
-                'contents' => 'true',
+                'name'    => 'HandheldFriendly',
+                'content' => 'true',
             ),
         );
-        // Add cleartype.
+
         $elements['vanilla_viewport'] = array(
             '#type'   => 'html_tag',
             '#tag'    => 'meta',
             '#weight' => -5,
             '#attributes' => array(
                 'name'     => 'viewport',
-                'viewport' => 'width=device-width',
+                'content' => 'width=device-width',
             ),
         );
     }
