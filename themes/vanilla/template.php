@@ -138,7 +138,7 @@ function vanilla_html_head_alter(&$elements) {
         '#weight' => -9,
         '#attributes' => array(
             'http-equiv' => 'cleartype',
-            'contents'   => 'on',
+            'content'    => 'on',
         ),
     );
 
