@@ -77,6 +77,9 @@ function webtree_vanilla_libraries_info() {
             'pattern' => '/([\d]\.[\d]\.[\d])/i',
             'lines' => 5,
         ),
+        'callbacks' => array(
+            'pre-load' => array('webtree_vanilla_ui_selectmenu_preload'),
+        ),
         'files' => array(
             'js' => array(
                 'ui/jquery.ui.position.js',
@@ -89,4 +92,9 @@ function webtree_vanilla_libraries_info() {
     );
 
     return $libraries;
+}
+
+function webtree_vanilla_ui_selectmenu_preload() {
+    drupal_add_library('system', 'ui.widget');
+    drupal_add_library('system', 'ui.position');
 }
