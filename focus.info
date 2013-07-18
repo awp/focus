@@ -64,16 +64,14 @@ dependencies[] = retina_images
 dependencies[] = search_config
 dependencies[] = sitewide
 dependencies[] = structural
+dependencies[] = toolkit
+dependencies[] = toolkit_context
 dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = webform
 dependencies[] = workbench_moderation
 dependencies[] = wysiwyg
 dependencies[] = xmlsitemap
-
-; Toolkit
-dependencies[] = toolkit
-dependencies[] = toolkit_context
 
 ; FOCUS Toolkits
 dependencies[] = focus_toolkit
