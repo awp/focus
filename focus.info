@@ -67,7 +67,6 @@ dependencies[] = structural
 dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = webform
-dependencies[] = workbench_moderation
 dependencies[] = wysiwyg
 dependencies[] = xmlsitemap
 
