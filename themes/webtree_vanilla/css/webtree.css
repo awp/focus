@@ -9,13 +9,13 @@ ul { list-style: none; }
 ol { list-style: decimal; }
 blockquote, q { quotes: none; }
 :before, :after { content: ''; content: none; }
-:hover, :webtree { outline: 0; }
+:hover, :focus { outline: 0; }
 ins { text-decoration: none; }
 del { text-decoration: line-through; }
 table { border-collapse: collapse; border-spacing: 0; } /* tables still need 'cellspacing="0"' in the markup */
 textarea { resize: none; overflow: auto }
 a, a *, input[type="submit"], input[type="button"], button, button * { cursor: pointer; }
-input[type="submit"]::-moz-webtree-inner, input[type="button"]::-moz-webtree-inner, button::-moz-webtree-inner { border: 0; padding: 0; }
+input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, button::-moz-focus-inner { border: 0; padding: 0; }
 img { -ms-interpolation-mode: bicubic; }
 
 /* -- Global Styles -- */
@@ -71,6 +71,8 @@ body .region .alpha-debug-block h2,
 body .region .alpha-debug-block p{
     font: normal 14px/1 Helvetica, Arial, sans-serif !important;
     color: #999 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* -- Grid Styles -- */

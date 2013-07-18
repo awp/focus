@@ -8,6 +8,8 @@ set -e
 WT4_PATH="`pwd`"
 
 # Check Drush Version
+# Compatible with drush 5.5 and up due to stability to drush make.
+# @see https://drupal.org/node/1719512
 DRUSH=$(`drush --version`)
 DRUSH_MIN="5.5"
 IFS=' ' read -a array <<< $DRUSH
@@ -17,9 +19,16 @@ if [ "$VERSION" == "1" ]; then
 	exit
 fi
 
+# Check that sites/default has proper permissions to be updated
+TEST=$(test -w ../../sites/default; echo $?);
+if [ "$TEST" == "1" ]; then
+    echo "No write permissions on sites/default.  Updating..."
+    sudo chmod -R 755 ../../sites/default
+fi
+
 # Update the profile.
 echo "Updating the FOCUS profile..."
-git fetch origin
+git pull
 
 # Go to Drupal root directory.
 cd ../../

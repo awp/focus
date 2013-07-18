@@ -4,23 +4,45 @@ anonymous user:
   access content: 1
   search content: 1
   view structural child view: 1
+  view the administration theme: 1
 
 authenticated user:
   access content: 1
   search content: 1
+  use mission control: 1
   view structural child view: 1
+  view the administration theme: 1
 
 site manager:
   access content: 1
+  administer sitewide: 1
+  edit sitewide details: 1
+  edit sitewide front: 1
+  edit sitewide error: 1
+  edit sitewide address: 1
+  edit sitewide phone: 1
+  edit sitewide email: 1
+  edit sitewide extra contact: 1
+  edit sitewide copyright: 1
+  edit sitewide credit: 1
+  edit sitewide social media: 1
+  edit sitewide form: 1
+  edit sitewide custom: 1
   search content: 1
+  use mission control: 1
   view structural child view: 1
-  
+  view the administration theme: 1
+
 editor:
   access content: 1
   search content: 1
+  use mission control: 1
   view structural child view: 1
+  view the administration theme: 1
 
 contributor:
   access content: 1
   search content: 1
+  use mission control: 1
   view structural child view: 1
+  view the administration theme: 1

@@ -1,4 +1,4 @@
-name = WEBTREE Vanilla
+name = WebTree Vanilla
 description = A basetheme from which to build
 core = 7.x
 engine = phptemplate

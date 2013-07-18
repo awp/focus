@@ -99,19 +99,16 @@ function focus_themes_get() {
  */
 function focus_configure_form() {
 
+    drupal_set_title('Install Tools');
+
     $tools = toolkit_toolkits_get_all();
     $toolkeys = array_keys($tools);
-
-    $form['title'] = array(
-        '#markup' => '<h2>Configure FOCUS</h2>',
-    );
 
     $form['#attached']['js'][] = FOCUS_PROFILE_PATH . '/js/dependencies.js';
 
     // Tool Selection
     $form['tools'] = array(
         '#type' => 'fieldset',
-        '#title' => st('Install Tools'),
         '#tree' => TRUE,
     );
 
@@ -377,7 +374,7 @@ function focus_complete_installation() {
 
     $batch = array(
         'operations' => $operations,
-        'title' => st('Wrapping up remaining installation tasks.'),
+        'title' => st('Wrapping up installation.'),
         'error_message' => st('There was an error completing this installation.'),
         'finished' => 'install_import_locales_remaining',
         'file' => FOCUS_PROFILE_PATH . '/includes/batch.inc',

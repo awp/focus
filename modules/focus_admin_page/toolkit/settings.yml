@@ -1,0 +1,16 @@
+focus_admin_page:
+  menu_options:
+    main-menu
+  structural_hidden: 0 # Display in Navigation? STRUCTURAL_NEVER
+  structural_enabled: 0 # STRUCTURAL_NEVER
+  content_access:
+    view_own:
+      3 # Administrator
+      4 # Site Manager
+    view:
+      3 # Administrator
+      4 # Site Manager
+
+focus_section:
+  structural_children:
+    focus_admin_page

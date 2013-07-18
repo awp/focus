@@ -438,18 +438,20 @@ label.option {
   vertical-align: middle;
   margin-bottom: 8px;
   display: inline;
+  cursor: pointer;
 }
 
-/* line 21, ../sass/theme/_forms.scss */
+/* line 22, ../sass/theme/_forms.scss */
 input,
 textarea {
+  display: block;
   background: white;
   padding: 24px 28px;
-  font: normal 16px/1 "RobotoMedium", sans-serif;
   border: 1px solid #dbdbdb;
   border-bottom: 3px solid #00c2e7;
   width: 100%;
   font: normal 18px/1.5 "RobotoLight", sans-serif;
+  color: #707070;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -458,41 +460,47 @@ textarea {
   -o-transition: border-color 0.2s;
   transition: border-color 0.2s;
 }
-/* line 31, ../sass/theme/_forms.scss */
+/* line 33, ../sass/theme/_forms.scss */
 input:focus,
 textarea:focus {
   border-bottom-color: #00b5d8;
 }
-
 /* line 36, ../sass/theme/_forms.scss */
+input.error,
+textarea.error {
+  border-bottom-color: #e4870d;
+}
+
+/* line 41, ../sass/theme/_forms.scss */
 textarea {
   padding-bottom: 40px;
 }
 
-/* line 40, ../sass/theme/_forms.scss */
+/* line 45, ../sass/theme/_forms.scss */
 input[type="submit"] {
   background: #00c2e7;
   color: white;
   font: normal 22px/1 "RobotoBold", sans-serif;
   width: 308px;
   height: 70px;
+  border: none !important;
   -webkit-transition: background 0.2s;
   -moz-transition: background 0.2s;
   -o-transition: background 0.2s;
   transition: background 0.2s;
 }
-/* line 48, ../sass/theme/_forms.scss */
+/* line 54, ../sass/theme/_forms.scss */
 input[type="submit"]:hover, input[type="submit"]:focus {
   background: #00b5d8;
 }
 
-/* line 63, ../sass/theme/_forms.scss */
+/* line 69, ../sass/theme/_forms.scss */
 input[type="checkbox"] {
   opacity: 0;
   width: 0;
   position: absolute;
 }
-/* line 68, ../sass/theme/_forms.scss */
+/* line 74, ../sass/theme/_forms.scss */
 input[type="checkbox"] + label:before {
   content: '';
   display: inline-block;
@@ -504,13 +512,13 @@ input[type="checkbox"] + label:before {
   margin: -1px 4px 1px 0;
 }
 
-/* line 63, ../sass/theme/_forms.scss */
+/* line 69, ../sass/theme/_forms.scss */
 input[type="checkbox"]:checked {
   opacity: 0;
   width: 0;
   position: absolute;
 }
-/* line 68, ../sass/theme/_forms.scss */
+/* line 74, ../sass/theme/_forms.scss */
 input[type="checkbox"]:checked + label:before {
   content: '';
   display: inline-block;
@@ -522,13 +530,13 @@ input[type="checkbox"]:checked + label:before {
   margin: -1px 4px 1px 0;
 }
 
-/* line 63, ../sass/theme/_forms.scss */
+/* line 69, ../sass/theme/_forms.scss */
 input[type="radio"] {
   opacity: 0;
   width: 0;
   position: absolute;
 }
-/* line 68, ../sass/theme/_forms.scss */
+/* line 74, ../sass/theme/_forms.scss */
 input[type="radio"] + label:before {
   content: '';
   display: inline-block;
@@ -540,13 +548,13 @@ input[type="radio"] + label:before {
   margin: -1px 4px 1px 0;
 }
 
-/* line 63, ../sass/theme/_forms.scss */
+/* line 69, ../sass/theme/_forms.scss */
 input[type="radio"]:checked {
   opacity: 0;
   width: 0;
   position: absolute;
 }
-/* line 68, ../sass/theme/_forms.scss */
+/* line 74, ../sass/theme/_forms.scss */
 input[type="radio"]:checked + label:before {
   content: '';
   display: inline-block;
@@ -558,18 +566,100 @@ input[type="radio"]:checked + label:before {
   margin: -1px 4px 1px 0;
 }
 
-/* line 82, ../sass/theme/_forms.scss */
+/* line 88, ../sass/theme/_forms.scss */
 .form-item {
   margin-bottom: 60px !important;
 }
-/* line 84, ../sass/theme/_forms.scss */
+/* line 90, ../sass/theme/_forms.scss */
+.form-item.form-type-password-confirm {
+  position: relative;
+}
+/* line 92, ../sass/theme/_forms.scss */
+.form-item.form-type-password-confirm .password-strength {
+  position: absolute;
+  right: 0;
+  top: 32px;
+  width: 50%;
+  height: 32px;
+  border: 1px solid #dbdbdb;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 102, ../sass/theme/_forms.scss */
+.form-item.form-type-password-confirm .password-indicator {
+  background-color: white;
+  height: 100%;
+}
+/* line 107, ../sass/theme/_forms.scss */
+.form-item.form-type-password-confirm .password-strength-title,
+.form-item.form-type-password-confirm .password-strength-text {
+  font: normal 12px/32px "RobotoMedium", sans-serif;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  color: #00b5d8;
+}
+/* line 114, ../sass/theme/_forms.scss */
+.form-item.form-type-password-confirm .password-strength-text {
+  left: auto;
+  right: 20px;
+}
+/* line 118, ../sass/theme/_forms.scss */
+.form-item.form-type-password-confirm .indicator {
+  background: #9ef0ff;
+}
+/* line 123, ../sass/theme/_forms.scss */
+.form-item.confirm-parent > div {
+  position: absolute;
+  left: -20px;
+  top: -2px;
+  text-indent: -9999px;
+  width: 14px;
+  height: 12px;
+  margin: 0;
+}
+/* line 132, ../sass/theme/_forms.scss */
+.form-item.confirm-parent .ok {
+  background: url(../img/check.png) no-repeat;
+  width: 14px;
+  height: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 139, ../sass/theme/_forms.scss */
+.form-item.confirm-parent .ok:after {
+  content: '';
+  background: url(../img/check.png) no-repeat;
+  width: 14px;
+  height: 12px;
+  position: absolute;
+  top: 171px;
+  left: 0;
+}
+/* line 150, ../sass/theme/_forms.scss */
+.form-item .password-suggestions {
+  position: absolute;
+  right: 0;
+  top: 86px;
+  width: 50% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 160, ../sass/theme/_forms.scss */
 .form-item .description {
   font: normal 12px/1.5 "RobotoMedium", sans-serif;
   color: #c8c8c8;
   margin-top: 12px;
 }
 
-/* line 95, ../sass/theme/_forms.scss */
+/* line 171, ../sass/theme/_forms.scss */
 .form-radios .form-item,
 .form-checkboxes .form-item,
 .form-type-checkbox .form-item,
@@ -577,13 +667,13 @@ input[type="radio"]:checked + label:before {
   margin-bottom: 0 !important;
 }
 
-/* line 100, ../sass/theme/_forms.scss */
+/* line 176, ../sass/theme/_forms.scss */
 .fieldset-description {
   margin-bottom: 40px;
   font-family: "RobotoLightItalic", sans-serif;
 }
 
-/* line 108, ../sass/theme/_forms.scss */
+/* line 184, ../sass/theme/_forms.scss */
 .collapsible.collapsed legend a:before {
   -webkit-transform: rotate(0);
   -moz-transform: rotate(0);
@@ -591,7 +681,11 @@ input[type="radio"]:checked + label:before {
   -o-transform: rotate(0);
   transform: rotate(0);
 }
-/* line 114, ../sass/theme/_forms.scss */
+/* line 190, ../sass/theme/_forms.scss */
+.collapsible legend a {
+  text-decoration: none !important;
+}
+/* line 192, ../sass/theme/_forms.scss */
 .collapsible legend a:before {
   content: '';
   display: inline-block;
@@ -607,12 +701,117 @@ input[type="radio"]:checked + label:before {
   margin-bottom: 4px;
 }
 
+/* line 206, ../sass/theme/_forms.scss */
+.form-type-textfield {
+  position: relative;
+}
+/* line 208, ../sass/theme/_forms.scss */
+.form-type-textfield input {
+  position: relative;
+  z-index: 1;
+}
+/* line 212, ../sass/theme/_forms.scss */
+.form-type-textfield .field-suffix {
+  position: absolute;
+  z-index: 10;
+  right: 28px;
+  top: 50%;
+  margin-top: -12px;
+}
+/* line 219, ../sass/theme/_forms.scss */
+.form-type-textfield .machine-name-label {
+  display: none;
+}
+/* line 222, ../sass/theme/_forms.scss */
+.form-type-textfield .machine-name-value {
+  color: #c8c8c8;
+  margin-right: 8px;
+}
+/* line 228, ../sass/theme/_forms.scss */
+.form-type-textfield .admin-link:after, .form-type-textfield .admin-link:before {
+  content: '';
+}
+
+/* line 237, ../sass/theme/_forms.scss */
+form .form-item .chzn-container a, form .form-item .chzn-container span {
+  background: white !important;
+  color: #707070;
+}
+/* line 241, ../sass/theme/_forms.scss */
+form .form-item .chzn-container a, form .form-item .chzn-container .chzn-drop {
+  border-color: #dbdbdb !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 246, ../sass/theme/_forms.scss */
+form .form-item .chzn-container .chzn-drop {
+  z-index: 100;
+}
+/* line 249, ../sass/theme/_forms.scss */
+form .form-item .chzn-container .chzn-results {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* line 252, ../sass/theme/_forms.scss */
+form .form-item .chzn-container .chzn-results li {
+  padding: 8px 28px 7px;
+}
+/* line 255, ../sass/theme/_forms.scss */
+form .form-item .chzn-container .chzn-results .no-results {
+  background: white;
+  color: #c8c8c8;
+}
+/* line 258, ../sass/theme/_forms.scss */
+form .form-item .chzn-container .chzn-results .no-results span {
+  color: #00c2e7;
+}
+/* line 263, ../sass/theme/_forms.scss */
+form .form-item .chzn-container > a {
+  font: normal 18px/1.5 "RobotoLight", sans-serif;
+  border-bottom: 3px solid #00c2e7 !important;
+  padding: 24px 28px 28px;
+  position: relative;
+  z-index: 10;
+}
+/* line 269, ../sass/theme/_forms.scss */
+form .form-item .chzn-container > a:after {
+  content: '';
+  border-top: 10px solid #c8c8c8;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -5px;
+}
+/* line 282, ../sass/theme/_forms.scss */
+form .form-item .chzn-container div {
+  background-color: white !important;
+}
+/* line 284, ../sass/theme/_forms.scss */
+form .form-item .chzn-container div b {
+  background: none !important;
+}
+/* line 288, ../sass/theme/_forms.scss */
+form .form-item .chzn-container .highlighted {
+  background: #00c2e7;
+}
+
 /* line 2, ../sass/theme/_content.scss */
 .progress .bar {
   background: white;
   border: 1px solid #dbdbdb;
+  margin-bottom: 8px;
 }
-/* line 6, ../sass/theme/_content.scss */
+/* line 7, ../sass/theme/_content.scss */
 .progress .filled {
   background: #00c2e7;
   border: 1px solid #00c2e7;
@@ -724,4 +923,13 @@ body, html {
 #content {
   margin-left: 354px;
   padding: 60px 110px;
+}
+
+/* line 85, ../sass/maintenance.scss */
+.messages {
+  margin-bottom: 40px;
+}
+/* line 87, ../sass/maintenance.scss */
+.messages li {
+  color: #e4870d;
 }

@@ -1,0 +1,4 @@
+focus_admin_page:
+  name: Admin Page
+  description: Admin Pages are basic pieces of content that can only be viewed by users with permission.
+  title_label: Page Title

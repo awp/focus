@@ -8,20 +8,6 @@
  */
 
 /**
- * Implements hook_preprocess_html().
- */
-function prime_preprocess_html(&$vars) {
-    $path = path_to_theme();
-    
-    if (drupal_is_front_page()) {
-        drupal_add_css("$path/css/home.css");
-    }
-    else {
-        drupal_add_css("$path/css/inner.css");
-    }
-}
-
-/**
  * Override or insert variables into the maintenance page template.
  *
  * @param $variables
