@@ -69,7 +69,6 @@ dependencies[] = toolkit_context
 dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = webform
-dependencies[] = workbench_moderation
 dependencies[] = wysiwyg
 dependencies[] = xmlsitemap
 
