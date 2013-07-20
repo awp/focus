@@ -4,6 +4,7 @@ projects[addressfield][subdir] = contrib
 projects[addressfield][patch][] = https://drupal.org/files/addressfield-element_info-970048-31.patch
 projects[addressfield_staticmap][version] = 1.0
 projects[addressfield_staticmap][subdir] = contrib
+projects[addressfield_staticmap][patch][] = https://drupal.org/files/addressfield-staticmap-get-directions-link-2046675-1.patch
 projects[admin_menu][version] = 3.0-rc4
 projects[admin_menu][subdir] = contrib
 projects[audiofield][version] = 1.0-beta8
