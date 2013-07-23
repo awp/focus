@@ -6,7 +6,7 @@
                 // initialize selectmenus
                 $('select:visible', cx).not('[multiple]').each(function(i, el) {
                     var parent = $(el).parent();
-                    $(el).selectmenu({ style: 'popup', appendTo: parent });
+                    $(el).selectmenu({ appendTo: parent });
                 });
             }
 
