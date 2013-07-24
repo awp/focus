@@ -11,7 +11,6 @@ files[] = plugins/focus_plugin_display_block.inc
 ; Core
 dependencies[] = block
 dependencies[] = contextual
-dependencies[] = dashboard
 dependencies[] = dblog
 dependencies[] = field_ui
 dependencies[] = file
@@ -23,7 +22,6 @@ dependencies[] = number
 dependencies[] = options
 dependencies[] = path
 dependencies[] = search
-dependencies[] = shortcut
 dependencies[] = taxonomy
 dependencies[] = rdf
 
@@ -46,6 +44,7 @@ dependencies[] = date_popup
 dependencies[] = date_repeat
 dependencies[] = date_repeat_field
 dependencies[] = date_views
+dependencies[] = email
 dependencies[] = entity
 dependencies[] = entity_token
 dependencies[] = entityreference
