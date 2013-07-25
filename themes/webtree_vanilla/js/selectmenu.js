@@ -10,12 +10,12 @@
                 });
             }
 
-            if (!!$.ui.button) {
-                // initialize checkboxes
-                $('[type="checkbox"]', cx).each(function(i, el){
-                    $(el).button();
-                });
-            }
+            // if (!!$.ui.button) {
+                // // initialize checkboxes
+                // $('[type="checkbox"]', cx).each(function(i, el){
+                    // $(el).button();
+                // });
+            // }
         }
     }
 
