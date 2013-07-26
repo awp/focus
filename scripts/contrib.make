@@ -2,6 +2,7 @@
 projects[addressfield][version] = 1.0-beta4
 projects[addressfield][subdir] = contrib
 projects[addressfield][patch][] = https://drupal.org/files/addressfield-element_info-970048-31.patch
+projects[addressfield][patch][] = https://drupal.org/files/addressfield-flexible-orgainsation-label-1846850-5.patch
 projects[addressfield_staticmap][version] = 1.0
 projects[addressfield_staticmap][subdir] = contrib
 projects[addressfield_staticmap][patch][] = https://drupal.org/files/addressfield-staticmap-get-directions-link-2046675-1.patch
