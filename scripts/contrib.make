@@ -70,6 +70,7 @@ projects[field_slideshow][version] = 1.82
 projects[field_slideshow][subdir] = contrib
 projects[file_entity][version] = 2.x-dev
 projects[file_entity][subdir] = contrib
+projects[file_entity][patch][] = https://drupal.org/files/file_entity-7212-fails-on-empty-table-2051691-1.patch
 projects[google_analytics][version] = 1.3
 projects[google_analytics][subdir] = contrib
 projects[imageapi_optimize][version] = 1.0
