@@ -7,7 +7,7 @@ set -e
 # Usage: scripts/build.sh [-y] <destination> from the profile main directory.
 #
 
-WT4_PATH="`pwd`"
+FOCUS_PATH="`pwd`"
 
 # Figure out directory real path.
 realpath () {
@@ -52,16 +52,16 @@ fi
 
 # Build the distribution and copy the profile in place.
 echo "Building the FOCUS distribution..."
-drush make scripts/focus.make $DESTINATION
+drush make $FOCUS_PATH/scripts/focus.make $DESTINATION
 
 # Add custom focus patches
 echo "Implementing FOCUS patches..."
-patch $DESTINATION/.htaccess < $WT4_PATH/patches/focus-htaccess.patch
-patch $DESTINATION/.gitignore < $WT4_PATH/patches/focus-gitignore.patch
+patch $DESTINATION/.htaccess < $FOCUS_PATH/patches/focus-htaccess.patch
+patch $DESTINATION/.gitignore < $FOCUS_PATH/patches/focus-gitignore.patch
 
 # Move to destination
 echo "Copying FOCUS profile..."
-cp -R $WT4_PATH $DESTINATION/profiles/focus/
+cp -R $FOCUS_PATH $DESTINATION/profiles/focus/
 
 # Setup Drupal stuff
 echo "Creating settings.php..."

@@ -6,9 +6,7 @@ core = 7.x
 projects[drupal][version] = 7.22
 
 ; Patches for Core
-;projects[drupal][patch][] = https://drupal.org/files/issues/1074108-skip-profile-2.patch
 projects[drupal][patch][] = https://drupal.org/files/1074108-skip-profile-16-7.x-do-not-test.patch
-;projects[drupal][patch][] = https://drupal.org/files/drupal-1630110-1-hide_other_profiles.patch
 projects[drupal][patch][] = https://drupal.org/files/drupal-1470656-14.patch
 projects[drupal][patch][] = https://drupal.org/files/drupal-865536-204.patch
 projects[drupal][patch][] = https://drupal.org/files/allow_change_system-requirements-1772316-4.patch

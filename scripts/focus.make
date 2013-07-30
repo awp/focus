@@ -1,6 +1,3 @@
-api = 2
-core = 7.x
-
 ; core
 includes[] = drupal.make
 
