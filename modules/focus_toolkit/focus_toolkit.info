@@ -3,6 +3,10 @@ description = Provides the FOCUS Toolkit.
 
 package = "Toolkit"
 
+dependencies[] = missioncontrol
+dependencies[] = search
+dependencies[] = sitewide
+dependencies[] = structural
 dependencies[] = toolkit
 
 version = 7.x-1.0
