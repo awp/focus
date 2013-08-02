@@ -55,6 +55,7 @@ dependencies[] = imageapi_optimize
 dependencies[] = jquery_update
 dependencies[] = link
 dependencies[] = media
+dependencies[] = media_wysiwyg_view_mode
 dependencies[] = missioncontrol
 dependencies[] = module_filter
 dependencies[] = pathauto
