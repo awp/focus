@@ -113,6 +113,7 @@ projects[pathauto][subdir] = contrib
 projects[quicktabs][version] = 3.4
 projects[quicktabs][subdir] = contrib
 projects[quicktabs][patch][] = https://drupal.org/files/quicktabs-more-explicit-tabs-1964952-2.patch
+projects[quicktabs][patch][] = https://drupal.org/files/quicktabs-default-tab-none-1023378-16.patch
 projects[redirect][version] = 1.0-rc1
 projects[redirect][subdir] = contrib
 projects[redirect][patch][] = https://drupal.org/files/redirect-detect_prevent_circular_redirects_patch_and_test-1796596-48.patch
