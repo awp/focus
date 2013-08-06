@@ -10,6 +10,7 @@ projects[admin_menu][version] = 3.0-rc4
 projects[admin_menu][subdir] = contrib
 projects[audiofield][version] = 1.0-beta8
 projects[audiofield][subdir] = contrib
+projects[audiofield][patch][] = https://drupal.org/files/audiofield-xspf-player-not-working-1946332-2.patch
 projects[auto_nodetitle][version] = 1.0
 projects[auto_nodetitle][subdir] = contrib
 projects[auto_nodetitle][patch][] = https://drupal.org/files/auto_nodetitle-deprecated-jquery-selector-1968870-1.patch
