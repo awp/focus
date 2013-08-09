@@ -89,7 +89,6 @@ projects[link][version] = 1.1
 projects[link][subdir] = contrib
 projects[media][version] = 2.x-dev
 projects[media][subdir] = contrib
-projects[media][patch][] = https://drupal.org/files/media-browser-not-removing-iframe-1947094-8.patch
 projects[media][patch][] = https://drupal.org/files/media-infinite-recursion-1266064-11.patch
 projects[media_flickr][version] = 2.0-alpha3
 projects[media_flickr][subdir] = contrib
