@@ -45,11 +45,15 @@ function _vanilla_add_css($filename) {
  *   The original string with each word wrapped in an html tag.
  */
 function _vanilla_html_wrap(&$string, $tag = 'span') {
-    $raw = strip_tags($string);
-    $parts = explode(' ', $raw);
-    foreach ($parts as $k => &$part) {
-        $part = "<$tag class='part-$k'>$part</$tag>";
+    preg_match_all('#\>(.*?)\<\/#i', $string, $matches);
+
+    foreach ($matches[1] as $i => $raw) {
+        $raw   = trim(strip_tags($raw));
+        $parts = explode(' ', $raw);
+        foreach ($parts as $k => &$part) {
+            $part = "<$tag class='part-$k'>$part</$tag>";
+        }
+        $parts  = implode('', $parts);
+        $string = str_replace($raw, $parts, $string);
     }
-    $parts = implode('', $parts);
-    $string = str_replace($raw, $parts, $string);
 }
