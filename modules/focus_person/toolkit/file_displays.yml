@@ -1,0 +1,5 @@
+image:
+  portrait:
+    file_field_image:
+      settings:
+        image_style: portrait
