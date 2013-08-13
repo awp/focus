@@ -1,0 +1,8 @@
+image:
+  field_file_image_title_text:
+    entity_type: file
+    display:
+      default:
+        label: hidden
+        type: text_default
+        weight: 1

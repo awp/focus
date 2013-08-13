@@ -44,6 +44,21 @@ function focus_admin_paths() {
 }
 
 /**
+ * Implements hook_media_token_to_markup_alter().
+ */
+function focus_media_token_to_markup_alter(&$element, &$tag_info, &$settings) {
+    // Check for floated images and add a class to the element container to
+    // reflect the float.
+    $file =& $element['content']['file'];
+    if (!empty($file['#attributes']['style'])) {
+        preg_match_all('#float\:[\s]?(.*?)\;#i', $file['#attributes']['style'], $floats);
+        foreach (@$floats[1] as $float) {
+            $element['content']['#attributes']['class'][] = 'media-' . $float;
+        }
+    }
+}
+
+/**
  * Implements hook_filter_info().
  */
 // function focus_filter_info() {
@@ -125,7 +140,7 @@ function focus_preprocess_field_slideshow(&$vars) {
             $item['caption_path']['options']['attributes']['title'] = $item['caption'];
             $rebuild = TRUE;
         }
-        
+
         if (!empty($item['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'])) {
             $item['alt'] = $item['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'];
             $rebuild = TRUE;
@@ -149,7 +164,7 @@ function focus_preprocess_html(&$vars) {
         else {
             $theme = variable_get('theme_default', 'bartik');
         }
-        
+
         $path = drupal_get_path('theme', $theme);
         if (file_exists("$path/css/jira.css")) {
             drupal_add_css("$path/css/jira.css", array(
