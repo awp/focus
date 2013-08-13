@@ -17,34 +17,42 @@ function vanilla_preprocess_html(&$vars) {
     // The following scripts are mostly IE dependent.
     // @see http://stackoverflow.com/questions/3855294/html5shiv-vs-dean-edwards-ie7-js-vs-modernizr-which-to-choose
 
-    // For some reason, libraries_detect needs to be run first to get the
-    // load to work persistently.
-    $library = libraries_detect('console.log');
-    if (!empty($library['installed'])) {
-        libraries_load('console.log');
-    }
+    if (module_exists('libraries')) {
+        // For some reason, libraries_detect needs to be run first to get the
+        // load to work persistently.
+        $library = libraries_detect('console.log');
+        if (!empty($library['installed'])) {
+            libraries_load('console.log');
+        }
 
-    $library = libraries_detect('ie7-js');
-    if (!empty($library['installed'])) {
-        libraries_load('ie7-js');
-    }
+        $library = libraries_detect('ie7-js');
+        if (!empty($library['installed'])) {
+            libraries_load('ie7-js');
+        }
 
-    $library = libraries_detect('respondjs');
-    if (!empty($library['installed']) && $vars['add_respond_js']) {
-        libraries_load('respondjs');
-    }
-    else {
-        $library = libraries_detect('html5shiv');
-        if (!empty($library['installed']) && $vars['add_html5_shim']) {
-            libraries_load('html5shiv');
+        $library = libraries_detect('respondjs');
+        if (!empty($library['installed']) && $vars['add_respond_js']) {
+            libraries_load('respondjs');
+        }
+        else {
+            $library = libraries_detect('html5shiv');
+            if (!empty($library['installed']) && $vars['add_html5_shim']) {
+                libraries_load('html5shiv');
+            }
+        }
+
+        $library = libraries_detect('jquery.chosen');
+        if (!empty($library['installed'])) {
+            libraries_load('jquery.chosen');
+            drupal_add_js(drupal_get_path('theme', 'vanilla') . '/js/chosen.js');
         }
     }
 
-    $library = libraries_detect('jquery.ui.selectmenu');
-    if (!empty($library['installed'])) {
-        libraries_load('jquery.ui.selectmenu');
-        drupal_add_js(drupal_get_path('theme', 'vanilla') . '/js/selectmenu.js');
-    }
+    // $library = libraries_detect('jquery.ui.selectmenu');
+    // if (!empty($library['installed'])) {
+        // libraries_load('jquery.ui.selectmenu');
+        // drupal_add_js(drupal_get_path('theme', 'vanilla') . '/js/selectmenu.js');
+    // }
 
     // Add colorbox modifications.
     if (module_exists('colorbox')) {
