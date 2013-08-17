@@ -1,4 +1,5 @@
 square_thumbnail:
+  label: Square Thumbnail (120x120)
   effects:
     0:
       name: image_scale_and_crop
@@ -8,6 +9,7 @@ square_thumbnail:
         retinafy: 1
 
 thumbnail:
+  label: Thumbnail (140x140)
   effects:
     0:
       name: image_scale
@@ -18,6 +20,7 @@ thumbnail:
         retinafy: 1
 
 small:
+  label: Small (300x300)
   effects:
     0:
       name: image_scale
@@ -28,6 +31,7 @@ small:
         retinafy: 1
 
 medium:
+  label: Medium (540x540)
   effects:
     0:
       name: image_scale
@@ -38,6 +42,7 @@ medium:
         retinafy: 1
 
 large:
+  label: Large (760x760)
   effects:
     0:
       name: image_scale
@@ -48,6 +53,7 @@ large:
         retinafy: 1
 
 colorbox:
+  label: Colorbox (1200x1200)
   effects:
     0:
       name: image_scale
@@ -58,6 +64,7 @@ colorbox:
         retinafy: 1
 
 headline:
+  label: Headline
   effects:
     0:
       name: image_scale_and_crop
@@ -67,6 +74,7 @@ headline:
         retinafy: 1
 
 inline:
+  label: Inline
   effects:
     0:
       name: image_scale_and_crop
@@ -74,3 +82,7 @@ inline:
         height: 330
         width: 500
         retinafy: 1
+
+large_retina: !
+medium_retina: !
+thumbnail_retina: !
