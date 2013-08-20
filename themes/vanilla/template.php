@@ -100,6 +100,24 @@ function vanilla_preprocess_page(&$vars) {
 }
 
 /**
+ * Implements hook_preprocess_block().
+ */
+function vanilla_preprocess_block(&$vars) {
+    switch ($vars['block']->module) {
+        case 'views':
+            $hashes = variable_get('views_block_hashes', array());
+
+            // Ensure all views blocks have a non-hashed id attribute.
+            if (!empty($hashes[$vars['block']->delta])) {
+                $delta = (strtr($hashes[$vars['block']->delta], '_', '-'));
+                $vars['attributes_array']['id'] = 'block-views-' . $delta;
+                $vars['block_html_id'] = 'block-views-' . $delta;
+            }
+            break;
+    }
+}
+
+/**
  * Implements hook_page_alter().
  */
 function vanilla_page_alter(&$page) {
