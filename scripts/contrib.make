@@ -50,6 +50,7 @@ projects[entityconnect][version] = 1.0-rc1
 projects[entityconnect][subdir] = contrib
 projects[entityreference][version] = 1.0
 projects[entityreference][subdir] = contrib
+projects[entityreference][patch][] = https://drupal.org/files/relationship_delta-1468862-6.patch
 projects[fast_404][version] = 1.3
 projects[fast_404][subdir] = contrib
 projects[fast_404][patch][] = https://drupal.org/files/1500092-dbtng-enable.patch
