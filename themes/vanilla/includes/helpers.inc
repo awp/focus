@@ -40,9 +40,6 @@ function _vanilla_add_css($filename) {
  *
  * @param string $tag
  *   An html tag to wrap each word in.
- *
- * @return string
- *   The original string with each word wrapped in an html tag.
  */
 function _vanilla_html_wrap(&$html, $tag = 'span') {
     preg_match_all('#\>(.*?)\<\/#i', $html, $matches);
@@ -56,6 +53,12 @@ function _vanilla_html_wrap(&$html, $tag = 'span') {
 
 /**
  * Wraps each word of a string with a tag for styling.
+ *
+ * @param string $string
+ *   The string which will have each word wrapped.
+ *
+ * @param string $tag
+ *   An html tag to wrap each word in.
  */
 function _vanilla_string_wrap(&$string, $tag = 'span') {
     $parts = explode(' ', $string);
