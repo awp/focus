@@ -33,10 +33,10 @@ function _vanilla_add_css($filename) {
 }
 
 /**
- * Wraps each word of a string with a tag for styling.
+ * Wraps each word of an html string with a tag for styling.
  *
- * @param string $string
- *   The string which will have each word wrapped.
+ * @param string $html
+ *   The html string which will have each word wrapped.
  *
  * @param string $tag
  *   An html tag to wrap each word in.
@@ -44,16 +44,23 @@ function _vanilla_add_css($filename) {
  * @return string
  *   The original string with each word wrapped in an html tag.
  */
-function _vanilla_html_wrap(&$string, $tag = 'span') {
-    preg_match_all('#\>(.*?)\<\/#i', $string, $matches);
+function _vanilla_html_wrap(&$html, $tag = 'span') {
+    preg_match_all('#\>(.*?)\<\/#i', $html, $matches);
 
     foreach ($matches[1] as $i => $raw) {
         $raw   = trim(strip_tags($raw));
-        $parts = explode(' ', $raw);
-        foreach ($parts as $k => &$part) {
-            $part = "<$tag class='part-$k'>$part</$tag>";
-        }
-        $parts  = implode('', $parts);
-        $string = str_replace($raw, $parts, $string);
+        _vanilla_string_wrap($raw);
+        $html = str_replace($raw, $parts, $html);
     }
+}
+
+/**
+ * Wraps each word of a string with a tag for styling.
+ */
+function _vanilla_string_wrap(&$string, $tag = 'span') {
+    $parts = explode(' ', $string);
+    foreach ($parts as $k => &$part) {
+        $part = "<$tag class='part-$k'>$part</$tag>";
+    }
+    $string = implode('', $parts);
 }
