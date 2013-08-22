@@ -79,16 +79,16 @@ global:
   views_ui_show_advanced_help_warning: ~
 
 webform:
-  ant_pattern_webform:
-  ant_php_webform: 0
-  ant_webform: 0
-  menu_options_webform:
+  ant_pattern:
+  ant_php: 0
+  ant: 0
+  menu_options:
     main-menu
-  menu_parent_webform: "main-menu:0"
-  node_options_webform:
+  menu_parent: "main-menu:0"
+  node_options:
     status
-  node_preview_webform: 1
-  node_submitted_webform: 0
-  structural_childview_webform: 0
-  structural_enabled_webform: 1 # FOCUS_STRUCTURE_OPTIONAL_NO
-  structural_children_webform: []
+  node_preview: 1
+  node_submitted: 0
+  structural_childview: 0
+  structural_enabled: 1 # FOCUS_STRUCTURE_OPTIONAL_NO
+  structural_children: []
