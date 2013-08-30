@@ -66,6 +66,7 @@ dependencies[] = structural
 dependencies[] = toolkit
 dependencies[] = toolkit_context
 dependencies[] = views
+dependencies[] = views_litepager
 dependencies[] = views_ui
 dependencies[] = webform
 dependencies[] = wysiwyg
