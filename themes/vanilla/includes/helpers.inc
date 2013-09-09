@@ -38,15 +38,29 @@ function _vanilla_add_css($filename) {
  * @param string $html
  *   The html string which will have each word wrapped.
  *
- * @param string $tag
- *   An html tag to wrap each word in.
+
+ * @param array $options
+ *   An associative array containing:
+ *   - tag: An html element string (i.e. 'span') that will be used as the
+ *     wrapping element.
+ *   - preserve: A string identical in the same format as $allowable_tags in
+ *     strip_tags.  If set, all html tags aside from the preserved tag(s) will
+ *     be stripped from the string, allowing for cleaner wrapping of strings.
  */
-function _vanilla_html_wrap(&$html, $tag = 'span') {
-    preg_match_all('#\>(.*?)\<\/#i', $html, $matches);
+function _vanilla_html_wrap(&$html, $options = array()) {
+    if (isset($options['preserve'])) {
+        $html = strip_tags($html, $options['preserve']);
+    }
+
+    if (empty($options['tag'])) {
+        $options['tag'] = 'span';
+    }
+
+    preg_match_all('#\<.*?\>(.*?)\<\/#i', $html, $matches);
 
     foreach ($matches[1] as $i => $raw) {
         $wrapped = trim(strip_tags($raw));
-        _vanilla_string_wrap($wrapped);
+        _vanilla_string_wrap($wrapped, $options['tag']);
         $html = str_replace($raw, $wrapped, $html);
     }
 }
