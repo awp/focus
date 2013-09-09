@@ -45,9 +45,9 @@ function _vanilla_html_wrap(&$html, $tag = 'span') {
     preg_match_all('#\>(.*?)\<\/#i', $html, $matches);
 
     foreach ($matches[1] as $i => $raw) {
-        $raw   = trim(strip_tags($raw));
-        _vanilla_string_wrap($raw);
-        $html = str_replace($raw, $parts, $html);
+        $wrapped = trim(strip_tags($raw));
+        _vanilla_string_wrap($wrapped);
+        $html = str_replace($raw, $wrapped, $html);
     }
 }
 
