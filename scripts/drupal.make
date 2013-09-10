@@ -14,4 +14,4 @@ projects[drupal][patch][] = https://drupal.org/files/drupal-menu_link_get_prefer
 projects[drupal][patch][] = https://drupal.org/files/961508-159.patch
 projects[drupal][patch][] = https://drupal.org/files/issues/471970_0.patch
 projects[drupal][patch][] = https://drupal.org/files/menu-link-save-recursive-equality-1982992-1.patch
-projects[drupal][patch][] = https://drupal.org/files/comment-disable-per-content-type.patch
+projects[drupal][patch][] = https://drupal.org/files/comment-disable-per-content-type-2085885-4.patch
