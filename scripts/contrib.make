@@ -26,6 +26,7 @@ projects[colorbox][patch][] = https://drupal.org/files/colorbox-parse-inline-cal
 projects[comment_goodness][version] = 1.4
 projects[comment_goodness][subdir] = contrib
 projects[comment_goodness][patch][] = https://drupal.org/files/comment-goodness-pseudo-field-theming-2005606-3.patch
+projects[comment_goodness][patch][] = https://drupal.org/files/comment_goodness-undefined-comments-per-page-1826966-3.patch
 projects[content_access][version] = 1.2-beta2
 projects[content_access][subdir] = contrib
 projects[context][version] = 3.0-beta7
