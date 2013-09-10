@@ -69,7 +69,12 @@ function webtree_vanilla_load_js() {
 
         drupal_add_css(WEBTREE_VANILLA_PATH . '/css/ui.css', array('group' => CSS_THEME, 'weight' => -10));
         webtree_vanilla_add_css('ui.selectmenu.css');
-        webtree_vanilla_add_css('jquery.ui.selectmenu.css');
+
+        // TODO: DEPRECATED
+        // Expire Sept 30, 2013
+        // Naming a css file in a custom theme jquery.ui.selectmenu.css prevents
+        // the core selectmenu styles from being loaded.
+        // webtree_vanilla_add_css('jquery.ui.selectmenu.css');
     }
 
     // no additional customizations for maintenance mode

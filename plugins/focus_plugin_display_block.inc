@@ -15,18 +15,19 @@ class views_plugin_argument_default_dateline extends views_plugin_argument_defau
                 $key = reset($parts);
                 $key = str_replace('field_data_', '', $key);
                 if ($key == 'node') $key = array_pop($parts);
-                
+
                 if (isset($node->{$key})) {
                     break;
                 }
             }
-            $node_ = entity_metadata_wrapper('node', $node);
 
+            $node_ = entity_metadata_wrapper('node', $node);
             $value = $node_->{$key}->value();
-           
+
             if (is_numeric($value)) {
                 $value = date('c', $value);
             }
+
             return $value;
         }
     }
@@ -41,7 +42,7 @@ class focus_handler_field_node extends views_handler_field_node {
     function render_as_link($alter, $text, $tokens) {
         if (function_exists('menu_get_active_trail')) {
             $menu = menu_get_active_trail();
-            
+
             if (!empty($menu) && !empty($alter['path'])) {
                 foreach ($menu as $link) {
                     if (!empty($link['link_path']) && $link['link_path'] != $_GET['q'] && $link['link_path'] == $alter['path']) {
@@ -58,9 +59,9 @@ class focus_handler_field_node extends views_handler_field_node {
 /**
  * Extends views_plugin_display_block
  * Add field where users can assign a class to the views block wrapper
- */ 
+ */
 class focus_plugin_display_block extends views_plugin_display_block {
-    
+
     function option_definition() {
         $options = parent::option_definition();
 
@@ -69,7 +70,7 @@ class focus_plugin_display_block extends views_plugin_display_block {
 
         return $options;
     }
-    
+
     function options_summary(&$categories, &$options) {
         parent::options_summary($categories, $options);
 
@@ -79,7 +80,7 @@ class focus_plugin_display_block extends views_plugin_display_block {
             'title'    => t('Block CSS class'),
             'value'    => ($block_class) ? $block_class : 'None',
         );
-        
+
         $block_featured = $this->get_option('block_featured');
         $options['block_featured'] = array(
             'category' => 'block',
@@ -103,7 +104,7 @@ class focus_plugin_display_block extends views_plugin_display_block {
                     '#default_value' => $this->get_option('block_css_class'),
                 );
             break;
-            
+
             case 'block_featured':
                 $form['block_featured'] = array(
                     '#type' => 'radios',
@@ -122,18 +123,18 @@ class focus_plugin_display_block extends views_plugin_display_block {
      */
     function options_submit(&$form, &$form_state) {
         parent::options_submit($form, $form_state);
-        
+
         switch ($form_state['section']) {
             case 'block_css_class':
                 $this->set_option('block_css_class', $form_state['values']['block_css_class']);
             break;
-            
+
             case 'block_featured':
                 $this->set_option('block_featured', $form_state['values']['block_featured']);
             break;
         }
     }
-    
+
     /**
      * Validate block_css_class to ensure it is proper html class markup
      */

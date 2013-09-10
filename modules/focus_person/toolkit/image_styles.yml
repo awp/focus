@@ -1,4 +1,5 @@
 portrait:
+  label: Portrait
   effects:
     0:
       name: image_scale_and_crop
@@ -6,8 +7,9 @@ portrait:
         height: 275
         width: 220
         retinafy: 1
-        
+
 square_portrait:
+  label: Square Portrait
   effects:
     0:
       name: image_scale_and_crop

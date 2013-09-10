@@ -1,0 +1,5 @@
+image:
+  default:
+    file_field_image:
+      settings:
+        image_style: inline
