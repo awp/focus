@@ -670,3 +670,259 @@ function focus_install_dandelion_write($file, $values) {
     file_put_contents($file, utf8_encode($data));
 
 }
+
+/**
+ * Unlock focus content types.
+ */
+function focus_update_7001(&$sandbox) {
+    $query = "UPDATE {node_type} SET locked = :zero WHERE type LIKE :type";
+    $placeholders = array(':zero' => 0, ':type' => 'focus_%');
+    db_query($query, $placeholders);
+}
+
+/**
+ * Remove focus_ prefix from content types.
+ */
+function focus_update_7002(&$sandbox) {
+    node_types_rebuild();
+
+    if (!isset($sandbox['node_types'])) {
+        $sandbox['node_types'] = node_type_get_types();
+        $sandbox['current'] = reset($sandbox['node_types']);
+    }
+
+    $orig = $sandbox['current']->type;
+    unset($sandbox['node_types'][$orig]);
+
+    if (0 === strpos($sandbox['current']->type, 'focus_')) {
+        $sandbox['current']->type = str_replace('focus_', '', $sandbox['current']->type);
+        $sandbox['current']->orig_type = $orig;
+        $sandbox['current']->old_type = $orig;
+        node_type_save($sandbox['current']);
+
+        $query = "UPDATE {node} SET type = :type WHERE type = :orig";
+        $placeholders = array(':type' => $sandbox['current']->type, ':orig' => $orig);
+        db_query($query, $placeholders);
+
+        watchdog('focus', 'Migrated node type ' . $orig .' to ' . $sandbox['current']->type);
+    }
+
+    $sandbox['#finished'] = (empty($sandbox['node_types']));
+    $sandbox['current'] = reset($sandbox['node_types']);
+}
+
+/**
+ * Update entityreference fields to work with new content type machine names.
+ */
+function focus_update_7003(&$sandbox) {
+    $updates = array();
+
+    $query = "
+        SELECT field_name, data
+        FROM {field_config}
+        WHERE type = :type
+        AND data LIKE :match
+    ";
+
+    $placeholders = array(
+        ':type' => 'entityreference',
+    );
+
+    foreach (node_type_get_types() as $new => $type) {
+        if (0 === strpos($type->orig_type, 'focus_')) {
+            $orig = $type->orig_type;
+            $new_length  = strlen($new);
+            $orig_length = strlen($orig);
+
+            $placeholders[':match'] = '%"' . $orig . '"%';
+            $results = db_query($query, $placeholders)->fetchAll();
+
+            foreach (@$results as $i => $data) {
+                if (isset($updates[$data->field_name])) {
+                    $data = $updates[$data->field_name];
+                }
+                else {
+                    $updates[$data->field_name] = $data;
+                }
+
+                preg_match_all('#\:[\d]+\:\"' . $orig . '\";#i', $data->data, $matches);
+
+                foreach ($matches[0] as $k => $match) {
+                    $replace = str_replace(array($orig_length, $orig), array($new_length, $new), $match);
+                    $updates[$data->field_name]->data = str_replace($match, $replace, $data->data);
+                }
+            }
+        }
+    }
+
+    foreach ($updates as $update) {
+        $query = "
+            UPDATE {field_config}
+            SET data = :updated
+            WHERE field_name = :name
+        ";
+        $placeholders = array(
+            ':updated' => $update->data,
+            ':name'    => $update->field_name,
+        );
+        db_query($query, $placeholders);
+    }
+
+    $sandbox['#finished'] = TRUE;
+
+}
+
+/**
+ * Update views to work with new content type machine names.
+ */
+function focus_update_7004(&$sandbox) {
+    $updates = array();
+
+    $query = "
+        SELECT vid, id, display_options
+        FROM {views_display}
+        WHERE display_options LIKE :options
+    ";
+
+    foreach (node_type_get_types() as $new => $type) {
+        if (0 === strpos($type->orig_type, 'focus_')) {
+            $orig = $type->orig_type;
+            $new_length  = strlen($new);
+            $orig_length = strlen($orig);
+
+            $placeholders = array(':options' => '%"' . $orig . '"%');
+            $displays = db_query($query, $placeholders)->fetchAll();
+
+            foreach (@$displays as $i => $data) {
+                if (isset($updates[$data->vid . '-' . $data->id])) {
+                    $data = $updates[$data->vid . '-' . $data->id];
+                }
+                else {
+                    $updates[$data->vid . '-' . $data->id] = $data;
+                }
+
+                preg_match_all('#\:[\d]+\:\"' . $orig . '\";#i', $data->display_options, $matches);
+
+                foreach ($matches[0] as $k => $match) {
+                    $replace = str_replace(array($orig_length, $orig), array($new_length, $new), $match);
+                    $updates[$data->vid . '-' . $data->id]->display_options = str_replace($match, $replace, $data->display_options);
+                }
+            }
+        }
+    }
+
+    foreach ($updates as $update) {
+        $query = "
+            UPDATE {views_display}
+            SET display_options = :updated
+            WHERE vid = :vid
+            AND id = :id
+        ";
+        $placeholders = array(
+            ':updated' => $update->display_options,
+            ':vid'     => $update->vid,
+            ':id'      => $update->id,
+        );
+        db_query($query, $placeholders);
+    }
+
+    $sandbox['#finished'] = TRUE;
+
+}
+
+/**
+ * Update contexts to work with new content type machine names.
+ */
+function focus_update_7005(&$sandbox) {
+    if (!isset($sandbox['contexts'])) {
+        $sandbox['contexts'] = context_load();
+        $sandbox['current'] = reset($sandbox['contexts']);
+    }
+
+    $updated = FALSE;
+
+    $name = $sandbox['current']->name;
+    unset($sandbox['contexts'][$name]);
+
+    if (isset($sandbox['current']->conditions['node']['values'])) {
+        foreach ($sandbox['current']->conditions['node']['values'] as $key => $value) {
+            if (0 === strpos($value, 'focus_')) {
+                $new = str_replace('focus_', '', $value);
+                $sandbox['current']->conditions['node']['values'][$new] = $new;
+                unset($sandbox['current']->conditions['node']['values'][$key]);
+                $updated = TRUE;
+            }
+        }
+
+        if ($updated) {
+            context_save($sandbox['current']);
+        }
+    }
+
+    $sandbox['#finished'] = (empty($sandbox['contexts']));
+    $sandbox['current'] = reset($sandbox['contexts']);
+}
+
+/**
+ * Update variables to work with new content type machine names.
+ */
+function focus_update_7006(&$sandbox) {
+    $query1 = "SELECT * FROM {variable} WHERE name LIKE :orig";
+    $query2 = "SELECT * FROM {variable} WHERE value LIKE :match";
+    $updates = array();
+
+    foreach (node_type_get_types() as $new => $type) {
+        if (0 === strpos($type->orig_type, 'focus_')) {
+            $orig = $type->orig_type;
+            $new_length  = strlen($new);
+            $orig_length = strlen($orig);
+
+            // First query and replace all variable names.
+            $placeholders = array(':orig' => '%' . $orig . '%');
+            $results = db_query($query1, $placeholders)->fetchAll();
+
+            foreach (@$results as $variable) {
+                $new_name = str_replace($orig, $new, $variable->name);
+                $value = variable_get($variable->name);
+                variable_del($variable->name);
+                variable_set($new_name, $value);
+            }
+
+            // Then query and replace all variable values.
+            $placeholders = array(':match' => '%"' . $orig . '"%');
+            $results = db_query($query2, $placeholders)->fetchAll();
+
+            foreach (@$results as $i => $data) {
+                if (isset($updates[$data->name])) {
+                    $data = $updates[$data->name];
+                }
+                else {
+                    $updates[$data->name] = $data;
+                }
+
+                preg_match_all('#\:[\d]+\:\"' . $orig . '\";#i', $data->value, $matches);
+
+                foreach ($matches[0] as $k => $match) {
+                    $replace = str_replace(array($orig_length, $orig), array($new_length, $new), $match);
+                    $updates[$data->name]->value = str_replace($match, $replace, $data->value);
+                }
+            }
+        }
+    }
+
+    foreach ($updates as $update) {
+        $query = "
+            UPDATE {variable}
+            SET value = :updated
+            WHERE name = :name
+        ";
+        $placeholders = array(
+            ':updated' => $update->value,
+            ':name'    => $update->name,
+        );
+        db_query($query, $placeholders);
+    }
+
+    $sandbox['#finished'] = TRUE;
+
+}
