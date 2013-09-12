@@ -28,7 +28,10 @@ fi
 
 # Update the profile.
 echo "Updating the FOCUS profile..."
-git pull
+git fetch origin
+git add .
+git clean -f -d
+git reset --hard origin/7.x-1.x
 
 # Go to Drupal root directory.
 cd ../../
