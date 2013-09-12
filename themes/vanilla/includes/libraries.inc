@@ -8,6 +8,18 @@
  * Implements hook_libraries_info_alter().
  */
 function vanilla_libraries_info() {
+    $libraries['json2'] = array(
+        'name' => 'JSON2',
+        'vendor url' => 'https://github.com/douglascrockford/JSON-js',
+        'download url' => 'git://github.com/douglascrockford/JSON-js.git',
+        'version' => '43d7836', // using the git ref as this project is not versioned
+        'files' => array(
+            'js' => array(
+                'json2.js',
+            ),
+        ),
+    );
+
     $libraries['jquery.chosen'] = array(
         'name' => 'Chosen',
         'vendor url' => 'http://harvesthq.github.io/chosen/',
