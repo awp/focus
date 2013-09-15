@@ -113,18 +113,24 @@ function focus_configure_form() {
     );
 
     foreach ($tools as $tool => $info) {
-        if ($info->status) continue;
+        // Skip tools already installed or flagged as hidden.
+        if ($info->status || !empty($info->hidden)) {
+            continue;
+        }
+
+        if (in_array($tool, array('focus_section', 'focus_page', 'focus_sidebar'))) {
+            $info->status = 1;
+        }
 
         $requires = array_keys($info->requires);
         $requires = array_intersect($toolkeys, $requires);
-        if (FALSE != $selfrequires = array_search($tool, $requires)) {
+        if (FALSE != ($selfrequires = array_search($tool, $requires))) {
             unset($requires[$selfrequires]);
         }
 
         $form['tools'][$tool] = array(
             '#type' => 'checkbox',
             '#title' => t($info->info['name']),
-            '#disabled' => $info->status,
             '#default_value' => $info->status,
             '#attributes' => array(
                 'data-dependencies' => implode(',', $requires),
@@ -336,7 +342,9 @@ function focus_install_tools() {
         }
     }
 
-    if (empty($operations)) return _install_profile_modules_finished(array(), array(), array());
+    if (empty($operations)) {
+        return _install_profile_modules_finished(array(), array(), array());
+    }
 
     $batch = array(
         'operations' => $operations,

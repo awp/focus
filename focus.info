@@ -75,9 +75,9 @@ dependencies[] = xmlsitemap
 ; FOCUS Toolkits
 dependencies[] = focus_toolkit
 dependencies[] = focus_views
-dependencies[] = focus_sidebar
-dependencies[] = focus_section
-dependencies[] = focus_page
+;dependencies[] = focus_sidebar
+;dependencies[] = focus_section
+;dependencies[] = focus_page
 
 ; System Requirements
 php_memory_limit = 256M

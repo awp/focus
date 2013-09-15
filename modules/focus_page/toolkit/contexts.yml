@@ -26,3 +26,13 @@ content_default:
           region: sidebar_first
           weight: -10
   condition_mode: 1
+  attach:
+    focus_sidebar:
+      reactions:
+        block:
+          blocks:
+            views-sidebars-sidebars:
+              module: views
+              delta: sidebars-sidebars
+              region: sidebar_first
+              weight: -7

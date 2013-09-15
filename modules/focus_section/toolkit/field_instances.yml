@@ -1,11 +1,11 @@
 focus_section:
   body:
-    label: Section Content
+    label: Description
 
   field_focus_primary_image:
-    label: Section Image
-    description: Image associated with this section
+    label: Primary Image
+    description: Primary image associated with this section.
 
   field_focus_sidebar:
-    label: Section Sidebar
-    description: Sidebar associated with this section
+    label: Sidebar
+    description: Secondary content associated with this section.
