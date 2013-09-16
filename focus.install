@@ -24,12 +24,12 @@ function focus_install_tasks(&$install_state) {
     }
 
     $tasks['focus_configure_form'] = array(
-        'display_name' => st('Configure FOCUS'),
+        'display_name' => st('Choose FOCUS Tools'),
         'type' => 'form',
     );
 
     $tasks['focus_install_tools'] = array(
-        'display_name' => st('Choose FOCUS Tools'),
+        'display_name' => st('Install FOCUS Tools'),
         'type' => 'batch',
     );
 
@@ -118,8 +118,10 @@ function focus_configure_form() {
             continue;
         }
 
-        if (in_array($tool, array('focus_section', 'focus_page', 'focus_sidebar'))) {
-            $info->status = 1;
+        $default = FALSE;
+
+        if ($info->status || in_array($tool, array('focus_section', 'focus_page', 'focus_sidebar'))) {
+            $default = TRUE;
         }
 
         $requires = array_keys($info->requires);
@@ -131,7 +133,7 @@ function focus_configure_form() {
         $form['tools'][$tool] = array(
             '#type' => 'checkbox',
             '#title' => t($info->info['name']),
-            '#default_value' => $info->status,
+            '#default_value' => $default,
             '#attributes' => array(
                 'data-dependencies' => implode(',', $requires),
             ),
@@ -291,17 +293,16 @@ function focus_choose_themes_submit(&$form, &$form_state) {
  * Form submit callback
  */
 function focus_configure_form_submit(&$form, &$form_state) {
-
     $tools = array();
 
     // Set tool install
     foreach ($form_state['values']['tools'] as $tool => $enable) {
-        if (empty($enable)) continue;
-        $tools[] = $tool;
+        if ($enable) {
+            $tools[] = $tool;
+        }
     }
 
     variable_set('focus_tools', $tools);
-
 }
 
 /**
@@ -312,13 +313,16 @@ function focus_configure_form_submit(&$form, &$form_state) {
  *  The batch to be implemented
  */
 function focus_install_tools() {
-
     $files = system_rebuild_module_data();
 
     // First, get all dependencies and add them to our install list.
     $tools = variable_get('focus_tools', array());
+
     foreach ($tools as $tool) {
-        if (empty($files[$tool]->requires)) continue;
+        if (empty($files[$tool]->requires)) {
+            continue;
+        }
+
         $dependencies = array_keys($files[$tool]->requires);
         $dependencies = array_filter($dependencies, 'module_exists');
 
@@ -328,9 +332,9 @@ function focus_install_tools() {
     // Next, ignore already installed modules and sort by module sort.
     $sorted = array();
     foreach ($tools as $tool) {
-        if ($files[$tool]->status) continue;
-
-        $sorted[$tool] = $files[$tool]->sort;
+        if (empty($files[$tool]->status)) {
+            $sorted[$tool] = $files[$tool]->sort;
+        }
     }
     arsort($sorted);
 
