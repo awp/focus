@@ -46,6 +46,11 @@ function vanilla_preprocess_html(&$vars) {
             libraries_load('jquery.chosen');
             drupal_add_js(drupal_get_path('theme', 'vanilla') . '/js/chosen.js');
         }
+
+        $library = libraries_load('jquery.placeholder');
+        if (!empty($library['installed'])) {
+            libraries_load('jquery.placeholder');
+        }
     }
 
     // $library = libraries_detect('jquery.ui.selectmenu');

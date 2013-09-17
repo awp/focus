@@ -18,6 +18,20 @@ function webtree_vanilla_includes($file) {
 }
 
 /**
+ * Implements hook_preprocess_html().
+ */
+function webtree_vanilla_preprocess_html(&$vars) {
+    if (module_exists('libraries')) {
+        // For some reason, libraries_detect needs to be run first to get the
+        // load to work persistently.
+        $library = libraries_load('jquery.placeholder');
+        if (!empty($library['installed'])) {
+            libraries_load('jquery.placeholder');
+        }
+    }
+}
+
+/**
  * Implements hook_form_system_theme_settings_alter()
  * Adds 'full' width options to zone and region grid settings
  * Allows certain sections to pop out of the grid and expand to full-screen width

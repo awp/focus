@@ -8,6 +8,22 @@
  * Implements hook_libraries_info().
  */
 function webtree_vanilla_libraries_info() {
+    $libraries['jquery.placeholder'] = array(
+        'name' => 'jQuery Placeholder',
+        'vendor url' => 'https://github.com/mathiasbynens/jquery-placeholder',
+        'download url' => 'https://github.com/mathiasbynens/jquery-placeholder/archive/master.zip',
+        'version arguments' => array(
+            'file' => 'jquery.placeholder.js',
+            'pattern' => '/v(.*?)[\s]/i',
+            'lines' => 1,
+        ),
+        'files' => array(
+            'js' => array(
+                'jquery.placeholder.js',
+            ),
+        ),
+    );
+
     $libraries['console.log'] = array(
         'name' => 'Console.log',
         'vendor url' => 'http://patik.com/blog/complete-cross-browser-console-log/',

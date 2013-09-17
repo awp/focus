@@ -20,6 +20,22 @@ function vanilla_libraries_info() {
         ),
     );
 
+    $libraries['jquery.placeholder'] = array(
+        'name' => 'jQuery Placeholder',
+        'vendor url' => 'https://github.com/mathiasbynens/jquery-placeholder',
+        'download url' => 'https://github.com/mathiasbynens/jquery-placeholder/archive/master.zip',
+        'version arguments' => array(
+            'file' => 'chosen.jquery.min.js',
+            'pattern' => '/v([\d]\.[\d]\.[\d])/i',
+            'lines' => 1,
+        ),
+        'files' => array(
+            'js' => array(
+                'jquery.placeholder.js',
+            ),
+        ),
+    );
+
     $libraries['jquery.chosen'] = array(
         'name' => 'Chosen',
         'vendor url' => 'http://harvesthq.github.io/chosen/',
@@ -29,7 +45,6 @@ function vanilla_libraries_info() {
             'pattern' => '/v([\d].[\d]{1,2}.[\d]{1,2})/i',
             'lines' => 1,
         ),
-        'callbacks' => array(),
         'files' => array(
             'css' => array(
                 'chosen.min.css',
@@ -50,7 +65,6 @@ function vanilla_libraries_info() {
             'pattern' => '/\(c\)\s([\d]+)/i',
             'lines' => 6,
         ),
-        'callbacks' => array(),
         'files' => array(
             'js' => array(
                 'consolelog.min.js',
