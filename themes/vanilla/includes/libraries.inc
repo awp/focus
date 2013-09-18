@@ -29,9 +29,6 @@ function vanilla_libraries_info() {
             'js' => array(
                 'js/jQuery.fileinput.js',
             ),
-            'css' => array(
-                'css/enhanced.css',
-            ),
         ),
     );
 
