@@ -20,12 +20,27 @@ function vanilla_libraries_info() {
         ),
     );
 
+    $libraries['jquery.custom-file-input'] = array(
+        'name' => 'jQuery Custom File Input',
+        'vendor url' => 'https://github.com/filamentgroup/jQuery-Custom-File-Input',
+        'download url' => 'https://github.com/filamentgroup/jQuery-Custom-File-Input/archive/master.zip',
+        'version' => '27dfbe7c79', // using the git ref as this project is not versioned
+        'files' => array(
+            'js' => array(
+                'js/jQuery.fileinput.js',
+            ),
+            'css' => array(
+                'css/enhanced.css',
+            ),
+        ),
+    );
+
     $libraries['jquery.placeholder'] = array(
         'name' => 'jQuery Placeholder',
         'vendor url' => 'https://github.com/mathiasbynens/jquery-placeholder',
         'download url' => 'https://github.com/mathiasbynens/jquery-placeholder/archive/master.zip',
         'version arguments' => array(
-            'file' => 'chosen.jquery.min.js',
+            'file' => 'jquery.placeholder.js',
             'pattern' => '/v([\d]\.[\d]\.[\d])/i',
             'lines' => 1,
         ),

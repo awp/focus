@@ -7,6 +7,7 @@
  * @see http://drupal.org/node/1728096
  */
 
+define('VANILLA_PATH', drupal_get_path('theme', 'vanilla'));
 require_once(dirname(__FILE__) . '/includes/helpers.inc');
 require_once(dirname(__FILE__) . '/includes/libraries.inc');
 
@@ -25,6 +26,22 @@ function vanilla_preprocess_html(&$vars) {
             libraries_load('console.log');
         }
 
+        $library = libraries_detect('jquery.custom-file-input');
+        if (!empty($library['installed'])) {
+            libraries_load('jquery.custom-file-input');
+        }
+
+        $library = libraries_detect('jquery.chosen');
+        if (!empty($library['installed'])) {
+            libraries_load('jquery.chosen');
+            drupal_add_js(VANILLA_PATH . '/js/forms.js');
+        }
+
+        $library = libraries_detect('jquery.placeholder');
+        if (!empty($library['installed'])) {
+            libraries_load('jquery.placeholder');
+        }
+
         $library = libraries_detect('ie7-js');
         if (!empty($library['installed'])) {
             libraries_load('ie7-js');
@@ -40,28 +57,11 @@ function vanilla_preprocess_html(&$vars) {
                 libraries_load('html5shiv');
             }
         }
-
-        $library = libraries_detect('jquery.chosen');
-        if (!empty($library['installed'])) {
-            libraries_load('jquery.chosen');
-            drupal_add_js(drupal_get_path('theme', 'vanilla') . '/js/chosen.js');
-        }
-
-        $library = libraries_load('jquery.placeholder');
-        if (!empty($library['installed'])) {
-            libraries_load('jquery.placeholder');
-        }
     }
-
-    // $library = libraries_detect('jquery.ui.selectmenu');
-    // if (!empty($library['installed'])) {
-        // libraries_load('jquery.ui.selectmenu');
-        // drupal_add_js(drupal_get_path('theme', 'vanilla') . '/js/selectmenu.js');
-    // }
 
     // Add colorbox modifications.
     if (module_exists('colorbox')) {
-        drupal_add_js(drupal_get_path('theme', 'vanilla') . '/js/colorbox.js', array(
+        drupal_add_js(VANILLA_PATH . '/js/colorbox.js', array(
             'scope' => 'footer',
             'weight' => 100,
         ));
