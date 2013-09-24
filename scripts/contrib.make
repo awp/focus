@@ -16,6 +16,8 @@ projects[auto_nodetitle][subdir] = contrib
 projects[auto_nodetitle][patch][] = https://drupal.org/files/auto_nodetitle-deprecated-jquery-selector-1968870-1.patch
 projects[backup_migrate][version] = 2.7
 projects[backup_migrate][subdir] = contrib
+projects[better_formats][version] = 1.0-beta1
+projects[better_formats][subdir] = contrib
 projects[calendar][version] = 3.4
 projects[calendar][subdir] = contrib
 projects[ckeditor_link][version] = 2.3
@@ -159,6 +161,7 @@ projects[revisioning][subdir] = contrib
 projects[wysiwyg][version] = 2.2
 projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][patch][] = https://drupal.org/files/wysiwyg-support_v4_ckeditor-1853550-73.patch
+projects[wysiwyg][patch][] = https://drupal.org/files/wysiwyg_field_size_507696_96_0.patch
 projects[xmlsitemap][version] = 2.0-rc2
 projects[xmlsitemap][subdir] = contrib
 
