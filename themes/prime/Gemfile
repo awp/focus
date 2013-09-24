@@ -17,7 +17,7 @@ group :development do
   gem 'guard-shell'             # Run shell commands.
   gem 'guard-livereload'        # Browser reload.
   gem 'yajl-ruby'               # Faster JSON with LiveReload in the browser.
-  gem 'zen-grids'               # The Grid.
   gem 'breakpoint'              # Real. Simple. Media Queries.
   gem 'dropcloth'               # A css neutralizer for Drupal.
+  #gem 'zen-grids'              # A Grid.  Use your own if you want.
 end

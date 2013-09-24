@@ -1,10 +1,20 @@
 @import 'compass/css3/font-face';
 
-// @include font-face('BebasNeueRegular',
-  // font-files(
-    // 'BebasNeue-webfont.woff', woff,
-    // 'BebasNeue-webfont.ttf', ttf,
-    // 'BebasNeue-webfont.svg', svg,
-    // 'BebasNeue-webfont.eot'
-  // )
-// );
+// $styles: regular oblique medium mediumoblique;
+//
+// @each $style in $styles {
+  // @include font-face('MankSans-#{$style}',
+    // font-files(
+      // 'manksans-#{$style}.woff', woff,
+      // 'manksans-#{$style}.ttf', ttf,
+      // 'manksans-#{$style}.svg', svg,
+      // 'manksans-#{$style}.eot'
+    // )
+  // );
+// }
+
+// $m: 'MankSans-regular', sans-serif;
+// $mo: 'MankSans-oblique', sans-serif;
+// $mm: 'MankSans-medium', sans-serif;
+// $mmo: 'MankSans-mediumoblique', sans-serif;
+// $h: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;

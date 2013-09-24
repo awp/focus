@@ -6,21 +6,17 @@ core        = 7.x
 base theme  = vanilla
 
 ; Stylesheets
-stylesheets[all][] = css/global.css
+;stylesheets[all][] = css/global.css
 
 ; Javascript
 ;scripts[] = js/script.js
 
 ; Regions
 regions[header]         = Header
-regions[navigation]     = Navigation bar
-regions[highlighted]    = Highlighted
-regions[help]           = Help
+regions[navigation]     = Navigation
 regions[content]        = Content
-regions[sidebar_first]  = First sidebar
-regions[sidebar_second] = Second sidebar
+regions[sidebar]        = Sidebar
 regions[footer]         = Footer
-regions[bottom]         = Page bottom
 
 ; Required Regions
 regions[page_top]       = Page top

@@ -10,12 +10,14 @@
 
 <div id="page">
 
-    <header class="header" id="header" role="banner">
+    <header id="header" role="banner">
         <div class="wrapper">
             <?php print render($page['header']); ?>
-            <nav id="navigation" role="navigation">
-                <?php print render($page['navigation']); ?>
-            </nav>
+            <?php if ($navigation = render($page['navigation'])) { ?>
+                <nav id="navigation" role="navigation">
+                    <?php print $navigation; ?>
+                </nav>
+            <?php } ?>
         </div>
     </header>
 
@@ -33,33 +35,20 @@
                 <?php print $feed_icons; ?>
             </section>
 
-            <?php if ($sidebar_first = render($page['sidebar_first'])): ?>
-                <aside class="primary-sidebar">
-                    <?php print $sidebar_first; ?>
+            <?php if ($sidebar = render($page['sidebar'])): ?>
+                <aside id="sidebar" class="sidebar" role="complimentary">
+                    <?php print $sidebar; ?>
                 </aside>
-            <?php endif; ?>
-
-            <?php if ($sidebar_second = render($page['sidebar_second'])): ?>
-                <section class="secondary-sidebar">
-                    <?php print $sidebar_second; ?>
-                </section>
-            <?php endif; ?>
-
-            <?php if ($postscript = render($page['postscript'])): ?>
-                <section class="postscript">
-                    <?php print $postscript; ?>
-                </section>
             <?php endif; ?>
         </div>
     </div>
 
-    <footer id="footer">
-        <div class="wrapper">
-            <?php print render($page['footer_left']); ?>
-            <?php print render($page['footer_right']); ?>
-        </div>
-    </footer>
+    <?php if ($footer = render($page['footer'])) { ?>
+        <footer id="footer">
+            <div class="wrapper">
+                <?php print $footer; ?>
+            </div>
+        </footer>
+    <?php } ?>
 
 </div>
-
-<?php print render($page['bottom']); ?>

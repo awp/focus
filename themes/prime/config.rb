@@ -24,8 +24,10 @@ javascripts_dir = "js"
 
 # Require any additional compass plugins installed on your system.
 require 'dropcloth'
-require 'zen-grids'
 require 'breakpoint'
+
+# A Grid.  Add one of your own choosing or use zen-grids.
+# require 'zen-grids'
 
 ##
 ## You probably don't need to edit anything below this.
