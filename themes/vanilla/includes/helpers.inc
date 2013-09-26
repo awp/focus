@@ -79,5 +79,5 @@ function _vanilla_string_wrap(&$string, $tag = 'span') {
     foreach ($parts as $k => &$part) {
         $part = "<$tag class='part-$k'>$part</$tag>";
     }
-    $string = implode('', $parts);
+    $string = implode(' ', $parts);
 }
