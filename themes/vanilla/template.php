@@ -105,6 +105,15 @@ function vanilla_preprocess_page(&$vars) {
 }
 
 /**
+ * Implements hook_process_page().
+ */
+function vanilla_process_page(&$vars) {
+    if ($separator = filter_xss_admin(theme_get_setting('zen_breadcrumb_separator'))) {
+        $vars['breadcrumb'] = preg_replace("#({$separator})#", '<span class="separator">$1</span>', $vars['breadcrumb']);
+    }
+}
+
+/**
  * Implements hook_preprocess_block().
  */
 function vanilla_preprocess_block(&$vars) {
