@@ -67,11 +67,16 @@ function vanilla_preprocess_html(&$vars) {
         ));
     }
 
-    // Add contextual layout css.
-    if ($contexts = context_active_contexts()) {
-        foreach ($contexts as $context_name => $context_info) {
-            if (_vanilla_add_css($context_name)) {
-                $added = TRUE;
+    if (module_exists('context')) {
+        if ($contexts = context_active_contexts()) {
+            foreach ($contexts as $context_name => $context_info) {
+                // Add contextual class to body.
+                $vars['classes_array'][] = 'context-' . drupal_html_class($context_name);
+
+                // Add contextual layout css.
+                if (_vanilla_add_css($context_name)) {
+                    $added = TRUE;
+                }
             }
         }
     }
