@@ -15,6 +15,8 @@ require_once(dirname(__FILE__) . '/includes/libraries.inc');
  * Implements hook_preprocess_html().
  */
 function vanilla_preprocess_html(&$vars) {
+    drupal_add_js(VANILLA_PATH . '/js/vanilla.js');
+
     // The following scripts are mostly IE dependent.
     // @see http://stackoverflow.com/questions/3855294/html5shiv-vs-dean-edwards-ie7-js-vs-modernizr-which-to-choose
 
