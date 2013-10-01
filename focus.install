@@ -715,6 +715,8 @@ function focus_update_7002(&$sandbox) {
  * Update entityreference fields to work with new content type machine names.
  */
 function focus_update_7003(&$sandbox) {
+    node_types_rebuild();
+
     $updates = array();
 
     $query = "
@@ -776,6 +778,8 @@ function focus_update_7003(&$sandbox) {
  * Update views to work with new content type machine names.
  */
 function focus_update_7004(&$sandbox) {
+    node_types_rebuild();
+
     $updates = array();
 
     $query = "
@@ -867,32 +871,45 @@ function focus_update_7005(&$sandbox) {
  * Update variables to work with new content type machine names.
  */
 function focus_update_7006(&$sandbox) {
+    node_types_rebuild();
+
     $query1 = "SELECT * FROM {variable} WHERE name LIKE :orig";
     $query2 = "SELECT * FROM {variable} WHERE value LIKE :match";
+
     $updates = array();
 
+    // First query and replace all variable names.
     foreach (node_type_get_types() as $new => $type) {
         if (0 === strpos($type->orig_type, 'focus_')) {
             $orig = $type->orig_type;
+
             $new_length  = strlen($new);
             $orig_length = strlen($orig);
 
-            // First query and replace all variable names.
             $placeholders = array(':orig' => '%' . $orig . '%');
-            $results = db_query($query1, $placeholders)->fetchAll();
+            $names = db_query($query1, $placeholders)->fetchAll();
 
-            foreach (@$results as $variable) {
+            foreach (@$names as $variable) {
                 $new_name = str_replace($orig, $new, $variable->name);
                 $value = variable_get($variable->name);
                 variable_del($variable->name);
                 variable_set($new_name, $value);
             }
+        }
+    }
 
-            // Then query and replace all variable values.
+    // Then query and replace all variable values.
+    foreach (node_type_get_types() as $new => $type) {
+        if (0 === strpos($type->orig_type, 'focus_')) {
+            $orig = $type->orig_type;
+
+            $new_length  = strlen($new);
+            $orig_length = strlen($orig);
+
             $placeholders = array(':match' => '%"' . $orig . '"%');
-            $results = db_query($query2, $placeholders)->fetchAll();
+            $values = db_query($query2, $placeholders)->fetchAll();
 
-            foreach (@$results as $i => $data) {
+            foreach (@$values as $i => $data) {
                 if (isset($updates[$data->name])) {
                     $data = $updates[$data->name];
                 }
