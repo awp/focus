@@ -1,4 +1,4 @@
-focus_event_tag:
+event_tag:
   group_content:
     entity_type: taxonomy_term
     data:
@@ -7,9 +7,9 @@ focus_event_tag:
         name
         description
 
-focus_event:
+event:
   group_metadata:
     data:
       label: "Keywords & Metadata"
       children:
-        field_focus_event_tag
+        field_event_tag

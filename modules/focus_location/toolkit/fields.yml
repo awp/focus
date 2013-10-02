@@ -1,4 +1,4 @@
-field_focus_location:
+field_location:
   label: Location
   type: taxonomy_term_reference
   widget:
@@ -9,5 +9,5 @@ field_focus_location:
   settings:
     allowed_values:
       0:
-        vocabulary: focus_location
+        vocabulary: location
         parent: 0

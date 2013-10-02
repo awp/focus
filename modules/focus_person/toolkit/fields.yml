@@ -1,4 +1,4 @@
-field_focus_portrait:
+field_portrait:
   label: Portrait
   type: image
   widget:
@@ -15,7 +15,7 @@ field_focus_portrait:
     
 ## Entity References ##
     
-field_focus_person:
+field_person:
   label: Associated Person
   type: entityreference
   widget:
@@ -24,9 +24,9 @@ field_focus_person:
     target_type: node
     handler_settings:
       target_bundles:
-        focus_person: focus_person
+        person: person
 
-field_focus_people:
+field_people:
   label: Associated People
   type: entityreference
   cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
@@ -36,24 +36,24 @@ field_focus_people:
     target_type: node
     handler_settings:
       target_bundles:
-        focus_person: focus_person
+        person: person
 
 ## Field Collections ##
 
-field_focus_name: # field collection reference
+field_name: # field collection reference
   label: Name
   type: field_collection
   widget: 
     type: field_collection_embed
 
-field_focus_first_name: # field collection field
+field_first_name: # field collection field
   label: First Name
   entity_type: field_collection_item
   type: text
   widget: 
     type: text_textfield
 
-field_focus_last_name: # field collection field
+field_last_name: # field collection field
   label: Last Name
   entity_type: field_collection_item
   type: text

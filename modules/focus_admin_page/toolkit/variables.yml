@@ -1,4 +1,4 @@
-focus_admin_page:
+admin_page:
   menu_options:
     main-menu
   structural_hidden: 0 # Display in Navigation? STRUCTURAL_NEVER
@@ -11,6 +11,6 @@ focus_admin_page:
       3 # Administrator
       4 # Site Manager
 
-focus_section:
+section:
   structural_children:
-    focus_admin_page
+    admin_page

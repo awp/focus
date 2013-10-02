@@ -1,4 +1,4 @@
-focus_slideshow:
+slideshow:
   group_details:
     data:
       label: 'Title & Description'
@@ -10,4 +10,4 @@ focus_slideshow:
     data:
       label: Slides
       children:
-        field_focus_slideshow
+        field_slideshow

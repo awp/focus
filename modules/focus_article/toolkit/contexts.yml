@@ -4,7 +4,7 @@ section_article:
   conditions:
     node:
       values:
-        focus_section: focus_section
+        section: section
       options:
         node_form: 0
     context_menu:

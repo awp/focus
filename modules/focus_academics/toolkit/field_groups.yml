@@ -1,4 +1,4 @@
-focus_course:
+course:
   group_content:
     data:
       label: "Title & Description"
@@ -10,24 +10,24 @@ focus_course:
     data:
       label: Details
       children:
-        field_focus_course_subjects
-        field_focus_semester
-        field_focus_person
-        field_focus_prerequisites
+        field_course_subjects
+        field_semester
+        field_person
+        field_prerequisites
       
   group_sidebar:
     data:
       label: Sidebar
       children:
-        field_focus_sidebar
+        field_sidebar
         
   group_media:
     data:
       label: Files
       children:
-        field_focus_download
+        field_download
   
-focus_degree:
+degree:
   group_content:
     data:
       label: "Title & Description"
@@ -39,15 +39,15 @@ focus_degree:
     data:
       label: Sidebar
       children:
-        field_focus_sidebar
+        field_sidebar
         
   group_media:
     data:
       label: Files
       children:
-        field_focus_download
+        field_download
         
-focus_concentration:
+concentration:
   group_content:
     data:
       label: "Title & Description"
@@ -59,23 +59,23 @@ focus_concentration:
     data:
       label: Core Requirements
       children:
-        field_focus_group_core_req
+        field_group_core_req
 
   group_conc_req:
     data:
       label: Concentration Requirements
       children:
-        field_focus_group_conc_req
+        field_group_conc_req
 
   group_sidebar:
     data:
       label: Sidebar
       children:
-        field_focus_sidebar
+        field_sidebar
         
   group_media:
     data:
       label: Files
       children:
-        field_focus_download
+        field_download
         

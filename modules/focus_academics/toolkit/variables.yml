@@ -1,28 +1,28 @@
-focus_course:
+course:
   menu_options:
     courses
   menu_parent: "courses:0"
   structural_hidden: 0 # Display in Navigation? STRUCTURAL_NEVER
   structural_enabled: 1 # STRUCTURAL_OPTIONAL_NO
   
-focus_degree:
+degree:
   menu_options:
     main-menu
   menu_parent: "main-menu:0"
   structural_hidden: 1 # Display in Navigation? STRUCTURAL_OPTIONAL_NO
   structural_enabled: 1 # STRUCTURAL_OPTIONAL_NO
   
-focus_concentration:
+concentration:
   menu_options:
     main-menu
   menu_parent: "main-menu:0"
   structural_hidden: 1 # Display in Navigation? STRUCTURAL_OPTIONAL_NO
   structural_enabled: 2 # STRUCTURAL_OPTIONAL_YES
   
-focus_section:
+section:
   menu_options:
     courses
   structural_children:
-    focus_concentration
-    focus_course
-    focus_degree
+    concentration
+    course
+    degree

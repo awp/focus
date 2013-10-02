@@ -1,4 +1,4 @@
-field_focus_article_tag:
+field_article_tag:
   label: Article Tag
   type: taxonomy_term_reference
   cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
@@ -10,5 +10,5 @@ field_focus_article_tag:
   settings:
     allowed_values:
       0:
-        vocabulary: focus_article_tag
+        vocabulary: article_tag
         parent: 0

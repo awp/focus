@@ -1,4 +1,4 @@
-focus_sidebar:
+sidebar:
   group_content:
     data:
       label: "Title & Content"
@@ -10,17 +10,17 @@ focus_sidebar:
     data:
       label: Images
       children:
-        field_focus_thumbnail
+        field_thumbnail
 
   group_media:
     data:
       label: Files
       children:
-        field_focus_download
-        field_focus_media
+        field_download
+        field_media
 
   group_links:
     data:
       label: Links
       children:
-        field_focus_links
+        field_links

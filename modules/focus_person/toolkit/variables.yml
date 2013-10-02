@@ -1,16 +1,16 @@
-focus_person:
+person:
   ant: 1 # enable auto nodetitle
   ant_php: 0 # don't use php for auto nodetitle
-  ant_pattern: "[node:field-focus-name:field_focus_first_name] [node:field-focus-name:field_focus_last_name]"
+  ant_pattern: "[node:field-focus-name:field_first_name] [node:field-focus-name:field_last_name]"
   menu_options:
     people
   menu_parent: "people:0"
   structural_hidden: 2 # Display in Navigation? STRUCTURAL_OPTIONAL_YES
   structural_enabled: 2 # STRUCTURAL_OPTIONAL_YES
 
-focus_section:
+section:
   menu_options:
     people
   structural_children:
-    focus_person
+    person
   structural_extralinks: 1

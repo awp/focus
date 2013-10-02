@@ -1,10 +1,10 @@
-focus_department:
-  field_focus_person:
+department:
+  field_person:
     label: Department Head
     description: The head of the department
     entity_type: taxonomy_term
 
-focus_person:
-  field_focus_department:
+person:
+  field_department:
     label: Department
     description: The department with which this person is associated.

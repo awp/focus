@@ -1,4 +1,4 @@
-focus_department:
+department:
   group_content:
     entity_type: taxonomy_term
     data:
@@ -12,12 +12,12 @@ focus_department:
     data:
       label: Details
       children:
-        field_focus_person
+        field_person
         
-focus_person:
+person:
   group_contact:
     data:
       label: Contact Information
       children:
-        field_focus_department
+        field_department
       

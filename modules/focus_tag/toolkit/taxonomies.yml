@@ -1,4 +1,4 @@
-focus_tag:
+tag:
   name: Tag
   description: Tags are keywords for keyword associations.
   title_label: Tag Name

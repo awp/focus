@@ -1,27 +1,27 @@
-focus_slideshow: 
+slideshow: 
   body:
     label: Slideshow Description
   
-  field_focus_slideshow:
+  field_slideshow:
     label: Slides
   
-field_focus_slideshow:
-  field_focus_slide_title:
+field_slideshow:
+  field_slide_title:
     label: Slide Title
     entity_type: field_collection_item
 
-  field_focus_slide_subtitle:
+  field_slide_subtitle:
     label: Slide Subtitle
     entity_type: field_collection_item
 
-  field_focus_slide_caption:
+  field_slide_caption:
     label: Slide Caption
     entity_type: field_collection_item
 
-  field_focus_slide_image:
+  field_slide_image:
     label: Slide Image
     entity_type: field_collection_item
 
-  field_focus_slide_links:
+  field_slide_links:
     label: Slide Link
     entity_type: field_collection_item

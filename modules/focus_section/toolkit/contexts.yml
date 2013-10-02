@@ -4,7 +4,7 @@ section_default:
   conditions:
     node:
       values:
-        focus_section: focus_section
+        section: section
       options:
         node_form: 0
   reactions:
@@ -19,7 +19,7 @@ section_default:
           weight: -10
   condition_mode: 1
   attach:
-    focus_sidebar:
+    sidebar:
       reactions:
         block:
           blocks:

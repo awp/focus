@@ -1,4 +1,4 @@
-focus_homepage:
+homepage:
   group_content:
     data:
       label: "Title & Content"
@@ -10,5 +10,5 @@ focus_homepage:
     data:
       label: Associated Content
       children:
-        field_focus_embedded_slideshow
-        field_focus_sidebar
+        field_embedded_slideshow
+        field_sidebar

@@ -1,4 +1,4 @@
-field_focus_sidebar:
+field_sidebar:
   label: Sidebar
   type: entityreference
   cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
@@ -8,7 +8,7 @@ field_focus_sidebar:
     target_type: node
     handler_settings:
       target_bundles:
-        focus_sidebar: focus_sidebar
+        sidebar: sidebar
   display:
     default:
       type: hidden

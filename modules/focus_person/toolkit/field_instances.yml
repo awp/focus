@@ -1,32 +1,32 @@
-focus_person:
-  field_focus_name:
+person:
+  field_name:
     label: Name
     description: Name of this person
 
   body:
     label: Biography
 
-  field_focus_phone:
+  field_phone:
     label: Phone
     description: Phone number of this person
 
-  field_focus_email:
+  field_email:
     label: Email
     description: Email address of this person
 
-  field_focus_portrait:
+  field_portrait:
     label: Portrait
     description: Image of this person
 
-  field_focus_download:
+  field_download:
     label: Downloads
     description: File downloads associated with this person
 
-field_focus_name:
-  field_focus_first_name:
+field_name:
+  field_first_name:
     entity_type: field_collection_item
 
-  field_focus_last_name:
+  field_last_name:
     entity_type: field_collection_item
 
 image:

@@ -1,4 +1,4 @@
-focus_tag:
+tag:
   group_content:
     entity_type: taxonomy_term
     data:
@@ -13,4 +13,4 @@ focus_tag:
     data:
       label: "Keywords & Metadata"
       children:
-        field_focus_tags
+        field_tags

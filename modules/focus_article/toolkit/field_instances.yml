@@ -1,23 +1,23 @@
-focus_article:
-  field_focus_deck:
+article:
+  field_deck:
     label: Article Deck
     description: A brief introduction to this article
     
   body:
     label: Article
   
-  field_focus_primary_image:
+  field_primary_image:
     label: Primary Image
     description: Image associated with this article
     
-  field_focus_gallery_image:
+  field_gallery_image:
     label: Gallery Images
     description: Image gallery associated with this article
 
-  field_focus_download:
+  field_download:
     label: Downloads
     description: File downloads associated with this article
     
-  field_focus_dateline:
+  field_dateline:
     label: Dateline
     description: Publication date associated with this article

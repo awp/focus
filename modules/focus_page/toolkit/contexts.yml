@@ -4,7 +4,7 @@ content_default:
   conditions:
     node:
       values:
-        focus_page: focus_page
+        page: page
     path:
       values:
         ~<front>: '~<front>'
@@ -27,7 +27,7 @@ content_default:
           weight: -10
   condition_mode: 1
   attach:
-    focus_sidebar:
+    sidebar:
       reactions:
         block:
           blocks:

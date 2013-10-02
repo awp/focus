@@ -1,28 +1,28 @@
-focus_article:
+article:
   group_content:
     data:
       label: "Title & Article"
       children:
         title
-        field_focus_deck
+        field_deck
         body
   
   group_details:
     data:
       label: Details
       children:
-        field_focus_dateline
+        field_dateline
         
   group_images:
     data:
       label: Images
       children:
-        field_focus_primary_image
-        field_focus_gallery_image
+        field_primary_image
+        field_gallery_image
         
   group_media:
     data:
       label: Files
       children:
-        field_focus_download
+        field_download
         

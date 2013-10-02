@@ -1,4 +1,4 @@
-focus_slideshow:
+slideshow:
   name: Slideshow
   description: Slideshows display a series of images as a slideshow.
   title_label: Slideshow Title

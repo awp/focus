@@ -1,19 +1,19 @@
-focus_page:
+page:
   body:
     label: Content
 
-  field_focus_primary_image:
+  field_primary_image:
     label: Primary Image
     description: Primary image associated with this page.
 
-  field_focus_gallery_image:
+  field_gallery_image:
     label: Image Gallery
     description: Gallery of images associated with this page.
 
-  field_focus_sidebar:
+  field_sidebar:
     label: Sidebar
     description: Sidebar associated with this page.
 
-  field_focus_download:
+  field_download:
     label: Downloads
     description: Downloadable files associated with this page.

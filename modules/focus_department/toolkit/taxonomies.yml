@@ -1,4 +1,4 @@
-focus_department:
+department:
   name: Department
   description: Departments are groupings of people
   title_label: Department Name

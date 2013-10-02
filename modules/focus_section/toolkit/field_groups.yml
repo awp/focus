@@ -1,4 +1,4 @@
-focus_section:
+section:
   group_content:
     data:
       label: "Title & Content"
@@ -10,10 +10,10 @@ focus_section:
     data:
       label: Images
       children:
-        field_focus_primary_image
+        field_primary_image
 
   group_sidebar:
     data:
       label: Sidebar
       children:
-        field_focus_sidebar
+        field_sidebar

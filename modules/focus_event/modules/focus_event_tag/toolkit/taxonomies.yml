@@ -1,4 +1,4 @@
-focus_event_tag:
+event_tag:
   name: Event Tag 
   description: Event tags are keywords for meta data associations with events.
   title_label: Tag Name

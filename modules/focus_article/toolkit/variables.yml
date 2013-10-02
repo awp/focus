@@ -1,12 +1,12 @@
-focus_article:
+article:
   menu_options:
     articles
   menu_parent: "articles:0"
   structural_hidden: 0 # Display in Navigation? STRUCTURAL_NEVER
   structural_enabled: 2 # STRUCTURAL_OPTIONAL_YES
 
-focus_section:
+section:
   menu_options:
     articles
   structural_children:
-    focus_article
+    article

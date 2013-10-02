@@ -1,4 +1,4 @@
-focus_group:
+group:
   name: Group
   description: Groups associate people with extra information.
   title_label: Group Name

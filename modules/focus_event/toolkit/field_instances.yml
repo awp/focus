@@ -1,23 +1,23 @@
-focus_event:
+event:
   body:
     label: Event Description
   
-  field_focus_primary_image:
+  field_primary_image:
     label: Headline Image
     description: Image associated with this event
 
-  field_focus_gallery_image:
+  field_gallery_image:
     label: Gallery Images
     description: Gallery of images associated with this event
     
-  field_focus_calendar_date:
+  field_calendar_date:
     label: Event Date
     description: Start / End date for this event
     
-  field_focus_download:
+  field_download:
     label: Downloads
     description: Files associated with this event
 
-  field_focus_sidebar:
+  field_sidebar:
     label: Event Sidebar
     description: Sidebar associated with this event

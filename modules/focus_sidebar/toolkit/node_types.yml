@@ -1,4 +1,4 @@
-focus_sidebar:
+sidebar:
   name: Sidebar
   description: Sidebars are basic pieces of content that only display as side content.
   title_label: Sidebar Title

@@ -5,5 +5,5 @@ home:
         <front>
     node:
       values:
-        focus_homepage: focus_homepage
+        homepage: homepage
   condition_mode: 0

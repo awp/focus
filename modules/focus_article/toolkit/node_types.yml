@@ -1,4 +1,4 @@
-focus_article:
+article:
   name: Article
   description: Articles are content that present a recent story or announcement.
   title_label: Article Title

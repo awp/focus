@@ -1,23 +1,23 @@
-focus_group:
+group:
   body:
     label: Group Description
 
-  field_focus_primary_image:
+  field_primary_image:
     label: Headline Image
     description: Image associated with this group
     
-  field_focus_gallery_image:
+  field_gallery_image:
     label: Gallery Images
     description: Gallery of images associated with this group
 
-  field_focus_download:
+  field_download:
     label: Downloads
     description: Files associated with this page
         
-  field_focus_video:
+  field_video:
     label: Videos
     description: Featured videos associated with this group
     
-  field_focus_sidebar:
+  field_sidebar:
     label: Page Sidebar
     description: Sidebar associated with this group

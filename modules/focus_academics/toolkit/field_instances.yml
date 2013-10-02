@@ -1,97 +1,97 @@
 # Courses
-focus_course:
+course:
   body:
     label: Course Description
   
-  field_focus_download:
+  field_download:
     label: Downloads
     description: Files associated with this course
 
-  field_focus_person:
+  field_person:
     label: Instructor
     description: The course instructor
     
-  field_focus_prerequisites:
+  field_prerequisites:
     label: Prerequisites
     description: Courses required to take this course
 
-  field_focus_semester:
+  field_semester:
     label: Semester(s)
     description: Semesters this course is offered
     
-  field_focus_sidebar:
+  field_sidebar:
     label: Page Sidebar
     description: Sidebar associated with this course
     
-  field_focus_course_subjects:
+  field_course_subjects:
     label: Course Subjects
     description: Course subjects.
 
 # Degrees
-focus_degree:
+degree:
   body:
     label: Degree Description
     
-  field_focus_download:
+  field_download:
     label: Downloads
     description: Files associated with this degree
     
-  field_focus_sidebar:
+  field_sidebar:
     label: Degree Sidebar
     description: Sidebar associated with this degree
 
 # Concentrations
-focus_concentration:
+concentration:
   body:
     label: Concentration Description
     
-  field_focus_group_core_req:
+  field_group_core_req:
     label: Core Requirements
     
-  field_focus_group_conc_req:
+  field_group_conc_req:
     label: Concentration Requirements
     
-  field_focus_download:
+  field_download:
     label: Downloads
     description: Files associated with this concentration
     
-  field_focus_sidebar:
+  field_sidebar:
     label: Concentration Sidebar
     description: Sidebar associated with this concentration
 
 # Requirements
-field_focus_group_core_req:
-  field_focus_course_group:
+field_group_core_req:
+  field_course_group:
     label: Course Group
     entity_type: field_collection_item
 
-field_focus_group_conc_req:
-  field_focus_course_group:
+field_group_conc_req:
+  field_course_group:
     label: Course Group
     entity_type: field_collection_item
 
 # Course Group
-field_focus_course_group:
-  field_focus_course_group_label:
+field_course_group:
+  field_course_group_label:
     label: Group Label
     entity_type: field_collection_item
   
-  field_focus_course_group_hours:
+  field_course_group_hours:
     label: Hours
     entity_type: field_collection_item
     
-  field_focus_course_options:
+  field_course_options:
     label: Course Group Options (OR)
     entity_type: field_collection_item
 
 # Course Options
-field_focus_course_options:
-  field_focus_course_combo:
+field_course_options:
+  field_course_combo:
     label: Course Combinations (AND)
     entity_type: field_collection_item
     
 # Course Combinations
-field_focus_course_combo:
-  field_focus_courses:
+field_course_combo:
+  field_courses:
     label: Courses
     entity_type: field_collection_item

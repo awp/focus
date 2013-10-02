@@ -13,43 +13,43 @@
 #   settings:
 #
 
-field_focus_extra_info:
+field_extra_info:
   label: Extra Information
   type: text_long
   widget:
     type: text_textarea
 
-field_focus_deck:
+field_deck:
   label: Deck
   type: text_long
   widget:
     type: text_textarea
 
-field_focus_display_name:
+field_display_name:
   label: Display Name
   type: text
   widget:
     type: text_textfield
 
-field_focus_email:
+field_email:
   label: Email
   type: text
   widget:
     type: text_textfield
 
-field_focus_phone:
+field_phone:
   label: Phone
   type: text
   widget:
     type: text_textfield
 
-field_focus_source:
+field_source:
   label: Source
   type: text
   widget:
     type: text_textfield
 
-field_focus_calendar_date:
+field_calendar_date:
   label: Calendar Date
   type: date
   cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
@@ -67,7 +67,7 @@ field_focus_calendar_date:
     default_value_code2:
     user_register_form:
 
-field_focus_dateline:
+field_dateline:
   label: Date
   type: date
   widget:
@@ -90,13 +90,13 @@ field_focus_dateline:
       settings:
         format_type: longdate
 
-field_focus_address:
+field_address:
   label: Address
   type: addressfield
   widget:
     type: addressfield_standard
 
-field_focus_website:
+field_website:
   label: Website
   type: link_field
   widget:
@@ -105,7 +105,7 @@ field_focus_website:
     attributes:
       target: _blank
 
-field_focus_links:
+field_links:
   label: Links
   type: link_field
   cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
@@ -115,7 +115,7 @@ field_focus_links:
     attributes:
       target: user
 
-field_focus_link:
+field_link:
   label: Link
   type: link_field
   widget:
@@ -124,19 +124,19 @@ field_focus_link:
     attributes:
       target: user
 
-field_focus_position:
+field_position:
   label: Position
   type: text
   widget:
     type: text_textfield
 
-field_focus_number:
+field_number:
   label: Number
   type: text
   widget:
     type: text_textfield
 
-field_focus_subtitle:
+field_subtitle:
   label: Subtitle
   type: text
   widget:
@@ -144,7 +144,7 @@ field_focus_subtitle:
 
 ## Files ##
 
-field_focus_thumbnail:
+field_thumbnail:
   label: Thumbnail
   type: image
   widget:
@@ -156,7 +156,7 @@ field_focus_thumbnail:
     settings:
       image_style: square_thumbnail
 
-field_focus_preview:
+field_preview:
   label: Preview Image
   type: image
   widget:
@@ -169,7 +169,7 @@ field_focus_preview:
       settings:
         image_style: small
 
-field_focus_primary_image:
+field_primary_image:
   label: Primary Image
   type: image
   widget:
@@ -187,7 +187,7 @@ field_focus_primary_image:
         colorbox_image_style: colorbox
         colorbox_caption: title
 
-field_focus_gallery_image:
+field_gallery_image:
   label: Gallery Image
   type: image
   cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
@@ -202,7 +202,7 @@ field_focus_gallery_image:
       settings:
         image_style: square_thumbnail
 
-field_focus_download:
+field_download:
   label: Download
   type: file
   cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
@@ -215,7 +215,7 @@ field_focus_download:
     default:
       type: hidden
 
-field_focus_media:
+field_media:
   label: Media
   type: file
   cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
@@ -225,7 +225,7 @@ field_focus_media:
     default_file:
     file_extensions: wmv asf mp4 mp3 wav
 
-field_focus_video:
+field_video:
   label: Video
   type: file
   cardinality: -1 # FIELD_CARDINALITY_UNLIMITED
@@ -235,7 +235,7 @@ field_focus_video:
     default_file:
     file_extensions: wmv asf mp4
 
-field_focus_audio:
+field_audio:
   label: Audio
   type: file
   cardinality: -1 # FIELD_CARDINALITY_UNLIMITED

@@ -4,7 +4,7 @@ content_admin_page:
   conditions:
     node:
       values:
-        focus_admin_page: focus_admin_page
+        admin_page: admin_page
     path:
       values:
         ~<front>: '~<front>'

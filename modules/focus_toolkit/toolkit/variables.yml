@@ -90,5 +90,5 @@ webform:
   node_preview: 1
   node_submitted: 0
   structural_childview: 0
-  structural_enabled: 1 # FOCUS_STRUCTURE_OPTIONAL_NO
+  structural_enabled: 1 # STRUCTURE_OPTIONAL_NO
   structural_children: []

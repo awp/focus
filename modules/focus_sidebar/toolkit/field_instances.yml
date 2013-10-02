@@ -1,21 +1,21 @@
-focus_sidebar:
+sidebar:
   body:
     label: Sidebar Content
     settings:
       text_processing: 0
 
-  field_focus_thumbnail:;
+  field_thumbnail:;
     label: Sidebar Thumbnail
     description: A thumbnail for this Sidebar
 
-  field_focus_download:
+  field_download:
     label: Downloads
     description: Files associated with this Sidebar
 
-  field_focus_media:
+  field_media:
     label: Media
     description: Media associated with this Sidebar
 
-  field_focus_links:
+  field_links:
     label: Links
     description: Links to more content

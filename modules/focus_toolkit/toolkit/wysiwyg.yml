@@ -1,5 +1,5 @@
 ckeditor:
-  focus_filtered_html:
+  filtered_html:
     format:
       name: Filtered HTML
       status: 1

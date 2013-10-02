@@ -1,11 +1,11 @@
-focus_location:
+location:
   group_content:
     entity_type: taxonomy_term
     data:
       label: "Title & Description"
       children:
         name
-        field_focus_display_name
+        field_display_name
         description
   
   group_details:
@@ -13,11 +13,11 @@ focus_location:
     data:
       label: Details
       children:
-        field_focus_address
+        field_address
         
-focus_event:
+event:
   group_details:
     data:
       label: Event Details
       children:
-        field_focus_location
+        field_location
