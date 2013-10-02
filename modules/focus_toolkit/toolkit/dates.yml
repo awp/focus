@@ -167,6 +167,26 @@ formats:
     format: "n y"
 
   -
+    type: month
+    format: "F"
+
+  -
+    type: month
+    format: "f"
+
+  -
+    type: month
+    format: "M"
+
+  -
+    type: month
+    format: "m"
+
+  -
+    type: month
+    format: "n"
+
+  -
     type: year
     format: "Y"
 

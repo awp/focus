@@ -1,5 +1,5 @@
 global:
-  description: This context will be active throughout your site
+  description: This context will be active throughout your site.
   tag: Global
   conditions:
     sitewide:
@@ -9,9 +9,9 @@ global:
     debug:
       debug: 1
   condition_mode: 0
-  
+
 home:
-  description: This context will be active on the <front> page only
+  description: This context will be active on the <front> page only.
   tag: Home
   conditions:
     path:
@@ -21,9 +21,9 @@ home:
     debug:
       debug: 1
   condition_mode: 1
-  
+
 inner:
-  description: This context is used for all pages, except the home page
+  description: This context is used for all pages, except the home page.
   tag: Inner Pages
   conditions:
     path:
@@ -35,9 +35,9 @@ inner:
     debug:
       debug: 1
   condition_mode: 1
-  
+
 search:
-  description: This context is used for all search pages
+  description: This context is used for all search pages.
   tag: Inner Pages
   conditions:
     path:
