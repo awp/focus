@@ -1,0 +1,6 @@
+slideshow:
+  group_secondary:
+    data:
+      label: Slides
+      children:
+        field_slideshow
