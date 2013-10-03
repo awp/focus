@@ -19,7 +19,7 @@ entity_types:
 *:
   group_primary:
     data:
-      weight: 0
+      weight: -10
       label: 'Title & Description'
       children:
         title
@@ -28,17 +28,17 @@ entity_types:
 
   group_secondary:
     data:
-      weight: 1
+      weight: -9
       label: Additional Content
 
   group_contact:
     data:
-      weight: 2
+      weight: -8
       label: Contact
 
   group_images:
     data:
-      weight: 3
+      weight: -7
       label: Images
       children:
         field_primary_image
@@ -47,7 +47,7 @@ entity_types:
   group_sidebar:
     data:
       label: Sidebar
-      weight: 4
+      weight: -6
       children:
         field_sidebar
         field_sidebar2
@@ -55,7 +55,7 @@ entity_types:
 
   group_media:
     data:
-      weight: 5
+      weight: -5
       label: Media
       children:
         field_video
@@ -63,7 +63,7 @@ entity_types:
 
   group_metadata:
     data:
-      weight: 6
+      weight: -4
       label: 'Tags & Metadata'
       children:
         field_tags
