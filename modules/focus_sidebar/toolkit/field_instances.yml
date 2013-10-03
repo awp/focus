@@ -15,7 +15,3 @@ sidebar:
   field_primary_image:
     label: Image
     description: An image for this Sidebar
-
-  field_download:
-    label: Downloads
-    description: Files associated with this Sidebar
