@@ -1,60 +1,14 @@
 course:
-  group_content:
+  group_secondary:
     data:
-      label: "Title & Description"
-      children:
-        title
-        body
-        
-  group_details:
-    data:
-      label: Details
+      label: Additional Information
       children:
         field_course_subjects
         field_semester
         field_person
         field_prerequisites
-      
-  group_sidebar:
-    data:
-      label: Sidebar
-      children:
-        field_sidebar
-        
-  group_media:
-    data:
-      label: Files
-      children:
-        field_download
-  
-degree:
-  group_content:
-    data:
-      label: "Title & Description"
-      children:
-        title
-        body
 
-  group_sidebar:
-    data:
-      label: Sidebar
-      children:
-        field_sidebar
-        
-  group_media:
-    data:
-      label: Files
-      children:
-        field_download
-        
 concentration:
-  group_content:
-    data:
-      label: "Title & Description"
-      children:
-        title
-        body
-
   group_core_req:
     data:
       label: Core Requirements
@@ -66,16 +20,3 @@ concentration:
       label: Concentration Requirements
       children:
         field_group_conc_req
-
-  group_sidebar:
-    data:
-      label: Sidebar
-      children:
-        field_sidebar
-        
-  group_media:
-    data:
-      label: Files
-      children:
-        field_download
-        

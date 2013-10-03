@@ -1,5 +1,5 @@
-field_location:
-  label: Location
+field_place:
+  label: Place
   type: taxonomy_term_reference
   widget:
     type: taxonomy_autocomplete
@@ -9,5 +9,5 @@ field_location:
   settings:
     allowed_values:
       0:
-        vocabulary: location
+        vocabulary: place
         parent: 0

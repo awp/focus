@@ -1,7 +1,7 @@
-name = FOCUS Article Tag
-description = Provides the FOCUS Article Tag Taxonomy.
+name = Article Tag Toolkit
+description = Provides the Article Tag vocabulary.
 
-package = "Toolkit"
+package = "FOCUS"
 
 dependencies[] = focus_article
 

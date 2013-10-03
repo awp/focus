@@ -1,6 +1,6 @@
-name = FOCUS Views
-package = Toolkit
-description = Provides Common Views for FOCUS
+name = Views Toolkit for FOCUS
+package = FOCUS
+description = Provides common views for FOCUS.
 
 dependencies[] = toolkit
 dependencies[] = colorbox

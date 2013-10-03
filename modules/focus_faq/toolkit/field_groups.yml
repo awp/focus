@@ -1,5 +1,5 @@
 faq:
-  group_content:
+  group_primary:
     data:
       label: "Q & A"
       children:

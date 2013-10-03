@@ -1,9 +1,9 @@
-name = FOCUS Department
-description = Provides the FOCUS Department toolkit.
+name = Department Toolkit
+description = Provides the Department content type.
 
-package = "Toolkit"
+package = "FOCUS"
 
-dependencies[] = toolkit
+dependencies[] = focus_toolkit
 dependencies[] = focus_person
 
 version = 7.x-1.0

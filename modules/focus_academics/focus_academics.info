@@ -1,11 +1,9 @@
-name = FOCUS Academics
-description = Provides the FOCUS Academics toolkit.
+name = Academics Toolkit
+description = Provides the Course, Degree, and Concentration content types as well as the Course Subject and Semester vocabularies.
 
-package = "Toolkit"
+package = "FOCUS"
 
-dependencies[] = toolkit
-dependencies[] = focus_person
-dependencies[] = focus_department
+dependencies[] = focus_toolkit
 
 version = 7.x-1.0
 core = 7.x

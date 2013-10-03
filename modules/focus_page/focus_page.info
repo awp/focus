@@ -1,9 +1,8 @@
-name = FOCUS Page
-description = Provides the FOCUS Page toolkit.
+name = Page Toolkit
+description = Provides the Page content type.
 
-package = "Toolkit"
+package = "FOCUS"
 
-dependencies[] = toolkit
 dependencies[] = focus_toolkit
 
 version = 7.x-1.0

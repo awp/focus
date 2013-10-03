@@ -8,5 +8,7 @@
  * Implements hook_toolkit_api().
  */
 function focus_toolkit_toolkit_api() {
-    return 1;
+    return array(
+        'api' => 1,
+    );
 }

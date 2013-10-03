@@ -1,5 +1,5 @@
 person:
-  field_name:
+  field_person_name:
     label: Name
     description: Name of this person
 
@@ -22,7 +22,11 @@ person:
     label: Downloads
     description: File downloads associated with this person
 
-field_name:
+  field_department:
+    label: Department
+    description: The department(s) associated with this person
+
+field_person_name:
   field_first_name:
     entity_type: field_collection_item
 

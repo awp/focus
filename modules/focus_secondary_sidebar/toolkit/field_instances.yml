@@ -1,9 +1,7 @@
 section:
   field_sidebar2:
-    label: Secondary Sidebar
     description: Sidebar content not displayed in the main sidebar area.
-    
+
 page:
   field_sidebar2:
-    label: Secondary Sidebar
     description: Sidebar content not displayed in the main sidebar area.

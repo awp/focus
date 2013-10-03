@@ -1,33 +1,6 @@
 event:
-  group_content:
+  group_secondary:
     data:
-      label: "Title & Description"
-      children:
-        title
-        body
-  
-  group_details:
-    data:
-      label: Event Details
+      label: Additional Information
       children:
         field_calendar_date
-        
-  group_images:
-    data:
-      label: Images
-      children:
-        field_primary_image
-        field_gallery_image
-        
-  group_sidebar:
-    data:
-      label: Sidebar
-      children:
-        field_sidebar
-      
-  group_media:
-    data:
-      label: Files
-      children:
-        field_download
-        

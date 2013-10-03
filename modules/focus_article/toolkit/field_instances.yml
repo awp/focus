@@ -1,23 +1,19 @@
 article:
-  field_deck:
-    label: Article Deck
-    description: A brief introduction to this article
-    
   body:
     label: Article
-  
+
   field_primary_image:
     label: Primary Image
     description: Image associated with this article
-    
+
   field_gallery_image:
     label: Gallery Images
     description: Image gallery associated with this article
 
+  field_sidebar:
+    label: Sidebar
+    description: Secondary content associated with this section.
+
   field_download:
     label: Downloads
     description: File downloads associated with this article
-    
-  field_dateline:
-    label: Dateline
-    description: Publication date associated with this article

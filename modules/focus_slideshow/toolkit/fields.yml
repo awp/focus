@@ -24,38 +24,38 @@ field_slide_title: # field collection field
   label: Slide Title
   entity_type: field_collection_item
   type: text
-  widget: 
+  widget:
     type: text_textfield
 
 field_slide_subtitle: # field collection field
   label: Slide Subtitle
   entity_type: field_collection_item
   type: text
-  widget: 
+  widget:
     type: text_textfield
 
 field_slide_caption: # field collection field
   label: Slide Caption
   entity_type: field_collection_item
   type: text
-  widget: 
+  widget:
     type: text_textfield
 
 field_slide_image: # field collection field
   label: Slide Image
   entity_type: field_collection_item
   type: image
-  widget: 
+  widget:
     type: media_generic
   settings:
     default_image:
     file_extensions: jpg jpeg gif png
 
-field_slide_links: # field collection field
+field_slide_link: # field collection field
   label: Slide Link
   entity_type: field_collection_item
   type: link_field
-  widget: 
+  widget:
     type: link_field
   settings:
     attributes:

@@ -10,6 +10,6 @@ article_tag:
 article:
   group_metadata:
     data:
-      label: "Keywords & Metadata"
+      label: "Tags & Metadata"
       children:
         field_article_tag

@@ -1,9 +1,9 @@
-name = FOCUS Sidebar
-description = Provides FOCUS Sidebar toolkit.
+name = Sidebar Toolkit
+description = Provides the Sidebar content type.
 
-package = "Toolkit"
+package = "FOCUS"
 
-dependencies[] = toolkit
+dependencies[] = focus_toolkit
 
 version = 7.x-1.0
 core = 7.x

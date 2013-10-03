@@ -1,7 +1,7 @@
-name = FOCUS Event Tag
-description = Provides the FOCUS Event Tag toolkit.
+name = Event Tag Toolkit
+description = Provides the Event Tag vocabulary.
 
-package = "Toolkit"
+package = "FOCUS"
 
 dependencies[] = focus_event
 

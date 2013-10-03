@@ -1,4 +1,32 @@
 ckeditor:
+  simple_link:
+    format:
+      name: Simple Link
+      status: 1
+      filters:
+        filter_html
+        filter_htmlcorrector
+        filter_url
+    filters:
+      filter_html:
+        settings:
+          allowed_html: "<p> <a> <em> <strong>"
+          filter_html_help: 0
+    roles:
+      authenticated user
+    show_toggle: 0
+    buttons:
+      default:
+        Bold: 1
+        Italic: 1
+        Link: 1
+        Unlink: 1
+      drupal_path:
+        Link: 1
+    paste_auto_cleanup_on_paste: 1
+    block_formats:
+      p
+
   filtered_html:
     format:
       name: Filtered HTML
@@ -13,11 +41,10 @@ ckeditor:
     filters:
       filter_html:
         settings:
-          allowed_html: "<a> <u> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p> <h2> <h3> <h4> <h5> <h6> <br>"
+          allowed_html: "<p> <a> <u> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p> <h2> <h3> <h4> <h5> <h6> <br>"
+          filter_html_help: 0
     roles:
       authenticated user
-      administrator
-      site manager
     show_toggle: 0
     buttons:
       default:
@@ -42,3 +69,4 @@ ckeditor:
         media: 1
       drupal_path:
         Link: 1
+    paste_auto_cleanup_on_paste: 1

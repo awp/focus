@@ -1,9 +1,9 @@
-name = FOCUS Admin Page
-description = Provides the FOCUS Admin Page toolkit.
+name = Admin Page Toolkit
+description = Provides the Admin Page content type.
 
-package = "Toolkit"
+package = "FOCUS"
 
-dependencies[] = toolkit
+dependencies[] = focus_toolkit
 dependencies[] = focus_sidebar
 
 version = 7.x-1.0
