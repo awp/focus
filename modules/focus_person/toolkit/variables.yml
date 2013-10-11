@@ -1,7 +1,7 @@
 person:
   ant: 1 # enable auto nodetitle
   ant_php: 0 # don't use php for auto nodetitle
-  ant_pattern: "[node:field-focus-name:field_first_name] [node:field-focus-name:field_last_name]"
+  ant_pattern: "[node:field-name:field_first_name] [node:field-name:field_last_name]"
   menu_options:
     people
   menu_parent: "people:0"
