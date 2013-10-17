@@ -1,7 +1,7 @@
 name = FOCUS Toolkit
 description = Provides the FOCUS Toolkit.
 
-package = "Toolkit"
+package = "FOCUS"
 
 dependencies[] = missioncontrol
 dependencies[] = search

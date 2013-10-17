@@ -1,10 +1,9 @@
-name = FOCUS Group
-description = Provides the FOCUS Group toolkit.
+name = Group Toolkit
+description = Provides the Group content type.
 
-package = "Toolkit"
+package = "FOCUS"
 
-dependencies[] = toolkit
-dependencies[] = focus_person
+dependencies[] = focus_toolkit
 
 version = 7.x-1.0
 core = 7.x

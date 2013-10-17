@@ -1,28 +1,22 @@
 person:
-  group_content:
+  group_primary:
     data:
       label: "Name & Biography"
       children:
-        title
-        field_name
-        body
-  
+        field_person_name
+
+  group_secondary:
+    data:
+      children:
+        field_department
+
   group_contact:
     data:
-      label: Contact Information
       children:
         field_phone
         field_email
-  
+
   group_images:
     data:
-      label: Images
       children:
         field_portrait
-        
-  group_media:
-    data:
-      label: Files
-      children:
-        field_download
-      

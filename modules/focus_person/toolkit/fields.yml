@@ -12,9 +12,9 @@ field_portrait:
         colorbox_node_style: headline
         colorbox_image_style: colorbox
         colorbox_caption: title
-    
+
 ## Entity References ##
-    
+
 field_person:
   label: Associated Person
   type: entityreference
@@ -40,17 +40,17 @@ field_people:
 
 ## Field Collections ##
 
-field_name: # field collection reference
+field_person_name: # field collection reference
   label: Name
   type: field_collection
-  widget: 
+  widget:
     type: field_collection_embed
 
 field_first_name: # field collection field
   label: First Name
   entity_type: field_collection_item
   type: text
-  widget: 
+  widget:
     type: text_textfield
 
 field_last_name: # field collection field

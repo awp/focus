@@ -1,14 +1,5 @@
 homepage:
-  group_content:
+  group_secondary:
     data:
-      label: "Title & Content"
-      children:
-        title
-        body
-  
-  group_extra_content:
-    data:
-      label: Associated Content
       children:
         field_embedded_slideshow
-        field_sidebar

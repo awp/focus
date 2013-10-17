@@ -1,23 +1,20 @@
-location:
-  group_content:
+place:
+  group_primary:
     entity_type: taxonomy_term
     data:
-      label: "Title & Description"
       children:
         name
         field_display_name
         description
-  
-  group_details:
+
+  group_secondary:
     entity_type: taxonomy_term
     data:
-      label: Details
       children:
         field_address
-        
+
 event:
-  group_details:
+  group_secondary:
     data:
-      label: Event Details
       children:
         field_location

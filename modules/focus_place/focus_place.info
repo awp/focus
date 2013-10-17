@@ -1,0 +1,10 @@
+name = Place Toolkit
+description = Provides the Place vocabulary.
+;configure = admin/toolkit/toolkit/node/place
+
+package = "FOCUS"
+
+dependencies[] = toolkit
+
+version = 7.x-1.0
+core = 7.x

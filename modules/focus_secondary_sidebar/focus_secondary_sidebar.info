@@ -1,9 +1,9 @@
-name = FOCUS Secondary Sidebar
-description = Provides FOCUS Secondary Sidebar toolkit.
+name = Secondary Sidebar Toolkit
+description = Provides the Secondary Sidebar content type.
 
-package = "Toolkit"
+package = "FOCUS"
 
-dependencies[] = toolkit
+dependencies[] = focus_toolkit
 
 version = 7.x-1.0
 core = 7.x

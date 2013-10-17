@@ -1,21 +1,17 @@
 sidebar:
   body:
-    label: Sidebar Content
+    label: Content
     settings:
-      text_processing: 0
+      better_formats:
+        allowed_formats_toggle: 1
+        allowed_formats:
+          filtered_html: 0
+          simple_link: 1
+          plain_text: 0
+    widget:
+      settings:
+        rows: 4
 
-  field_thumbnail:;
-    label: Sidebar Thumbnail
-    description: A thumbnail for this Sidebar
-
-  field_download:
-    label: Downloads
-    description: Files associated with this Sidebar
-
-  field_media:
-    label: Media
-    description: Media associated with this Sidebar
-
-  field_links:
-    label: Links
-    description: Links to more content
+  field_primary_image:
+    label: Image
+    description: An image for this Sidebar

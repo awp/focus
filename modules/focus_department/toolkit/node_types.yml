@@ -1,0 +1,4 @@
+department:
+  name: Department
+  description: Departments describe areas in which people work.
+  title_label: Department Name

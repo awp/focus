@@ -1,9 +1,9 @@
-name = FOCUS Slideshow
-description = Provides the FOCUS Slideshow toolkit.
+name = Slideshow Toolkit
+description = Provides the Slideshow content type.
 
-package = "Toolkit"
+package = "FOCUS"
 
-dependencies[] = toolkit
+dependencies[] = focus_toolkit
 dependencies[] = field_slideshow
 
 version = 7.x-1.0

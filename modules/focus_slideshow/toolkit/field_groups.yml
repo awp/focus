@@ -1,12 +1,5 @@
 slideshow:
-  group_details:
-    data:
-      label: 'Title & Description'
-      children:
-        title
-        body
-        
-  group_slides:
+  group_secondary:
     data:
       label: Slides
       children:

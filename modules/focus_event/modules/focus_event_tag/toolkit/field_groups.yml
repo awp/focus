@@ -10,6 +10,6 @@ event_tag:
 event:
   group_metadata:
     data:
-      label: "Keywords & Metadata"
+      label: "Tags & Metadata"
       children:
         field_event_tag

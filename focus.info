@@ -30,6 +30,7 @@ dependencies[] = addressfield
 dependencies[] = admin_menu
 dependencies[] = auto_nodetitle
 dependencies[] = backup_migrate
+dependencies[] = better_formats
 dependencies[] = ctools
 dependencies[] = ckeditor_link
 dependencies[] = colorbox
@@ -40,6 +41,7 @@ dependencies[] = context_menu
 dependencies[] = context_ui
 dependencies[] = date
 dependencies[] = date_popup
+dependencies[] = date_popup_authored
 dependencies[] = date_repeat
 dependencies[] = date_repeat_field
 dependencies[] = date_views
@@ -75,9 +77,6 @@ dependencies[] = xmlsitemap
 ; FOCUS Toolkits
 dependencies[] = focus_toolkit
 dependencies[] = focus_views
-;dependencies[] = focus_sidebar
-;dependencies[] = focus_section
-;dependencies[] = focus_page
 
 ; System Requirements
 php_memory_limit = 256M

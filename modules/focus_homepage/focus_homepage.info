@@ -1,13 +1,9 @@
-name = FOCUS Home Page
-description = Provides the FOCUS Home Page toolkit.
+name = Home Page Toolkit
+description = Provides the Home Page content type.
 
-package = "Toolkit"
+package = "FOCUS"
 
-dependencies[] = toolkit
 dependencies[] = focus_toolkit
-dependencies[] = focus_sidebar
-dependencies[] = focus_slideshow
-dependencies[] = views_slideshow_cycle
 
 version = 7.x-1.0
 core = 7.x

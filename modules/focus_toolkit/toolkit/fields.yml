@@ -67,8 +67,8 @@ field_calendar_date:
     default_value_code2:
     user_register_form:
 
-field_dateline:
-  label: Date
+field_publication_date:
+  label: Publication Date
   type: date
   widget:
     type: date_popup

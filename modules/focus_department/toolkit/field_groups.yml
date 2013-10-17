@@ -1,23 +1,5 @@
 department:
-  group_content:
-    entity_type: taxonomy_term
+  group_secondary:
     data:
-      label: "Title & Description"
-      children:
-        name
-        description
-  
-  group_details:
-    entity_type: taxonomy_term
-    data:
-      label: Details
       children:
         field_person
-        
-person:
-  group_contact:
-    data:
-      label: Contact Information
-      children:
-        field_department
-      

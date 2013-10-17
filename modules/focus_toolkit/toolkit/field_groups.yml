@@ -7,7 +7,7 @@ entity_types:
         children:
           relations
         weight: 99
-          
+
     group_path:
       entity_type: taxonomy_term
       data:
@@ -15,11 +15,55 @@ entity_types:
         children:
           path
         weight: 100
-        
-webform:
-  group_content:
+
+*:
+  group_primary:
     data:
-      label: "Title & Content"
+      weight: -10
+      label: 'Title & Description'
       children:
         title
         body
+        field_links
+
+  group_secondary:
+    data:
+      weight: -9
+      label: Additional Content
+
+  group_contact:
+    data:
+      weight: -8
+      label: Contact
+
+  group_images:
+    data:
+      weight: -7
+      label: Images
+      children:
+        field_primary_image
+        field_gallery_image
+
+  group_sidebar:
+    data:
+      label: Sidebar
+      weight: -6
+      children:
+        field_sidebar
+        field_sidebar2
+        field_download
+
+  group_media:
+    data:
+      weight: -5
+      label: Media
+      children:
+        field_video
+        field_audio
+
+  group_metadata:
+    data:
+      weight: -4
+      label: 'Tags & Metadata'
+      children:
+        field_tags

@@ -1,0 +1,4 @@
+place:
+  name: Place
+  description: Places define a physical place
+  title_label: Place Name

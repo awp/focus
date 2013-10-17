@@ -1,10 +1,15 @@
 department:
+  body:
+    label: Description
+
+  field_primary_image:
+    label: Primary Image
+    description: Primary image associated with this department.
+
+  field_sidebar:
+    label: Sidebar
+    description: Secondary content associated with this department.
+
   field_person:
     label: Department Head
-    description: The head of the department
-    entity_type: taxonomy_term
-
-person:
-  field_department:
-    label: Department
-    description: The department with which this person is associated.
+    description: Person that leads this department.
