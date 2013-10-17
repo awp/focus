@@ -150,8 +150,8 @@ function vanilla_libraries_info() {
         'download url' => 'https://github.com/serbanghita/Mobile-Detect.git',
         'version arguments' => array(
             'file' => 'Mobile_Detect.php',
-            'pattern' => '/\'([\d]\.[\d]\.[\d])\'/i',
-            'lines' => 50,
+            'pattern' => '/\@version.*?([\d]+\.[\d]+\.[\d]+)/i',
+            'lines' => 32,
         ),
         'files' => array(
             'php' => array(

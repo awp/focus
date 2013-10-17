@@ -81,3 +81,20 @@ function _vanilla_string_wrap(&$string, $tag = 'span') {
     }
     $string = implode(' ', $parts);
 }
+
+/**
+ * Prepares and statically caches mobile detect class.
+ */
+function _vanilla_mobile_detect() {
+    static $detect;
+
+    if (empty($detect) && module_exists('libraries')) {
+        $library = libraries_detect('mobile-detect');
+        if (!empty($library['installed'])) {
+            libraries_load('mobile-detect');
+            $detect = new Mobile_Detect;
+        }
+    }
+
+    return $detect;
+}

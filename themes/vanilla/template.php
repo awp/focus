@@ -100,6 +100,16 @@ function vanilla_preprocess_html(&$vars) {
             _vanilla_add_css('default');
         }
     }
+
+    if ($detect = _vanilla_mobile_detect()) {
+        if ($detect->isMobile()) {
+            $vars['classes_array'][] = 'is-mobile';
+        }
+
+        if ($detect->isTablet()) {
+            $vars['classes_array'][] = 'is-tablet';
+        }
+    }
 }
 
 /**
