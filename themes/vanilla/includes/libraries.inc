@@ -84,6 +84,22 @@ function vanilla_libraries_info() {
         ),
     );
 
+    $libraries['spin-js'] = array(
+        'name' => 'Spin.js',
+        'vendor url' => 'https://github.com/fgnass/spin.js/',
+        'download url' => 'https://github.com/fgnass/spin.js/',
+        'version arguments' => array(
+            'file' => 'spin.js',
+            'pattern' => '/v([\d]\.[\d]\.[\d])/i',
+            'lines' => 1,
+        ),
+        'files' => array(
+            'js' => array(
+                'spin.js',
+            ),
+        ),
+    );
+
     $libraries['ie7-js'] = array(
         'name' => 'IE9js',
         'vendor url' => 'https://code.google.com/p/ie7-js/',

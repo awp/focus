@@ -44,6 +44,11 @@ function vanilla_preprocess_html(&$vars) {
             libraries_load('jquery.placeholder');
         }
 
+        $library = libraries_detect('spin-js');
+        if (!empty($library['installed'])) {
+            libraries_load('spin-js');
+        }
+
         $library = libraries_detect('ie7-js');
         if (!empty($library['installed'])) {
             libraries_load('ie7-js');
