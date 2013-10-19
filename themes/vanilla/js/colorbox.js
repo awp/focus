@@ -7,8 +7,11 @@
                     cbox_load: function() {
                         $('html').addClass('colorbox-open');
                     },
+                    cbox_complete: function() {
+                        $('html').addClass('colorbox-loaded');
+                    },
                     cbox_cleanup: function() {
-                        $('html').removeClass('colorbox-open');
+                        $('html').removeClass('colorbox-open colorbox-loaded');
                     }
                 });
             });
