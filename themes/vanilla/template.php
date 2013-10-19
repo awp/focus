@@ -152,7 +152,11 @@ function vanilla_preprocess_block(&$vars) {
  * Implements hook_preprocess_item_list().
  */
 function vanilla_preprocess_item_list(&$vars) {
-    if (!empty($vars['attributes']['class']) && in_array('pager', $vars['attributes']['class'])) {
+    if (empty($vars['attributes']['class']) || !is_array($vars['attributes']['class'])) {
+        return;
+    }
+
+    if (in_array('pager', $vars['attributes']['class'])) {
         foreach ($vars['items'] as &$item) {
             if (!empty($item['class']) && in_array('pager-current', $item['class'])) {
                 $item['data'] = '<span class="pager-current">' . $item['data'] . '</span>';
