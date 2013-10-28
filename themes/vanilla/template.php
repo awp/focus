@@ -16,6 +16,7 @@ require_once(dirname(__FILE__) . '/includes/libraries.inc');
  */
 function vanilla_preprocess_html(&$vars) {
     drupal_add_js(VANILLA_PATH . '/js/vanilla.js');
+    drupal_add_js(VANILLA_PATH . '/js/forms.js');
 
     // The following scripts are mostly IE dependent.
     // @see http://stackoverflow.com/questions/3855294/html5shiv-vs-dean-edwards-ie7-js-vs-modernizr-which-to-choose
@@ -36,7 +37,6 @@ function vanilla_preprocess_html(&$vars) {
         $library = libraries_detect('jquery.chosen');
         if (!empty($library['installed'])) {
             libraries_load('jquery.chosen');
-            drupal_add_js(VANILLA_PATH . '/js/forms.js');
         }
 
         $library = libraries_detect('jquery.placeholder');
