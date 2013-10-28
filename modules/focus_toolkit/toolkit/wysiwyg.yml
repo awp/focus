@@ -58,8 +58,6 @@ ckeditor:
         NumberedList: 1
         Link: 1
         Unlink: 1
-        Indent: 1
-        Outdent: 1
         Blockquote: 1
         PasteText: 1
         Format: 1
