@@ -38,7 +38,6 @@ function _vanilla_add_css($filename) {
  * @param string $html
  *   The html string which will have each word wrapped.
  *
-
  * @param array $options
  *   An associative array containing:
  *   - tag: An html element string (i.e. 'span') that will be used as the
@@ -56,13 +55,24 @@ function _vanilla_html_wrap(&$html, $options = array()) {
         $options['tag'] = 'span';
     }
 
-    preg_match_all('#\<.*?\>(.*?)\<\/#i', $html, $matches);
+    $words = explode('<', $html);
+    $i = 0;
 
-    foreach ($matches[1] as $i => $raw) {
-        $wrapped = trim(strip_tags($raw));
-        _vanilla_string_wrap($wrapped, $options['tag']);
-        $html = str_replace($raw, $wrapped, $html);
+    foreach ($words as &$word) {
+        if (empty($word)) {
+            continue;
+        }
+
+        if (FALSE !== strpos($word, '>')) {
+            $parts = explode('>', $word);
+            // $parts[1] should be the html-wrapped string.
+            if (!empty($parts[1])) {
+                _vanilla_string_wrap($parts[1], $options['tag'], $i);
+            }
+            $word = implode('>', $parts);
+        }
     }
+    $html = implode('<', $words);
 }
 
 /**
@@ -73,11 +83,25 @@ function _vanilla_html_wrap(&$html, $options = array()) {
  *
  * @param string $tag
  *   An html tag to wrap each word in.
+ *
+ * @param int $start
+ *   An index number from which to resume part class indexing.
  */
-function _vanilla_string_wrap(&$string, $tag = 'span') {
+function _vanilla_string_wrap(&$string, $tag = 'span', &$start = FALSE) {
     $parts = explode(' ', $string);
-    foreach ($parts as $k => &$part) {
-        $part = "<$tag class='part-$k'>$part</$tag>";
+    if (count($parts) > 1) {
+        foreach ($parts as $k => &$part) {
+            // Don't wrap empty spaces...
+            if (empty($part)) {
+                continue;
+            }
+
+            if (FALSE !== $start) {
+                $k = $start++;
+            }
+
+            $part = "<$tag class='part-$k'>$part</$tag>";
+        }
     }
     $string = implode(' ', $parts);
 }
