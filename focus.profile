@@ -9,7 +9,17 @@ module_load_include('inc', 'focus', 'includes/libraries');
 module_load_include('inc', 'focus', 'includes/preprocess');
 
 /**
- * Implements hook_views_api()
+ * Implements hook_init().
+ */
+function focus_init() {
+    // Login page should always be /user.
+    if (user_is_anonymous() && $_GET['q'] == 'user/login') {
+        drupal_goto('user');
+    }
+}
+
+/**
+ * Implements hook_views_api().
  */
 function focus_views_api() {
     return array(
