@@ -53,6 +53,7 @@ dependencies[] = fast_404
 dependencies[] = field_collection
 dependencies[] = field_group
 dependencies[] = file_entity
+dependencies[] = globalredirect
 dependencies[] = imageapi_optimize
 dependencies[] = jquery_update
 dependencies[] = link
