@@ -3,8 +3,15 @@
     Drupal.behaviors.vanillaForms = {
         attach: function(cx, s) {
             if (!!$.fn.chosen) {
-                $('select').chosen({
-                    disable_search_threshold: 10
+                var chzn = {
+                    disable_search_threshold: 8
+                }
+                $('select').chosen(chzn);
+
+                $('legend a').click(function() {
+                    var fs = $(this).closest('fieldset');
+                    $('.chzn-container', fs).remove();
+                    $('select', fs).removeClass('chzn-done').show().chosen(chzn);
                 });
             }
 
