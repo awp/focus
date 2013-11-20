@@ -47,6 +47,9 @@ function focus_admin_paths() {
         $paths = array(
             'user'   => TRUE,
             'user/*' => TRUE,
+            'node/*/log' => TRUE,
+            'node/*/track' => TRUE,
+            'node/*/revisions/*/list' => TRUE,
         );
 
         return $paths;
