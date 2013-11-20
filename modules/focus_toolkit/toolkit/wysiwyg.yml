@@ -10,7 +10,7 @@ ckeditor:
     filters:
       filter_html:
         settings:
-          allowed_html: "<p> <a> <em> <strong>"
+          allowed_html: "<p> <a> <em> <strong> <br>"
           filter_html_help: 0
     roles:
       authenticated user
