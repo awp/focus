@@ -72,51 +72,6 @@ function focus_media_token_to_markup_alter(&$element, &$tag_info, &$settings) {
 }
 
 /**
- * Implements hook_filter_info().
- */
-// function focus_filter_info() {
-    // $filters['focus_caption'] = array(
-        // 'title' => t('FOCUS Image Caption'),
-        // 'description' => t("Adds captions to images"),
-        // 'process callback' => 'focus_filter_caption',
-        // 'weight' => 10,
-        // 'cache' => FALSE,
-    // );
-
-    // return $filters;
-// }
-
-/**
- * Callback for hook_filter_info.
- */
-// function focus_filter_caption($text) {
-    // return preg_replace_callback("#\<img.*?\>#i", 'focus_filter_caption_callback', $text);
-// }
-
-/**
- * Callback for preg_replace_callback.
- */
-// function focus_filter_caption_callback($match) {
-    // $image = reset($match);
-//
-    // if (!is_string($image)) throw new Exception('Unable to find matching tag');
-//
-    // preg_match_all('#title="(.*?)"#i', $image, $title);
-//
-    // $output = '<span class="inline-image-wrapper">';
-    // $output .= '<span class="inline-image">';
-    // $output .= $image;
-//
-    // if (!empty($title[1][0])) {
-        // $output .= "<span class='inline-image-caption'>{$title[1][0]}</span>";
-    // }
-//
-    // $output .= '</span></span>';
-//
-    // return $output;
-// }
-
-/**
  * Implements hook_theme_registry_alter()
  */
 function focus_theme_registry_alter(&$theme_registry) {
