@@ -52,7 +52,7 @@ fi
 
 # Build the distribution and copy the profile in place.
 echo "Building the FOCUS distribution..."
-drush make $FOCUS_PATH/scripts/focus.make $DESTINATION
+drush make $FOCUS_PATH/scripts/focus.make $DESTINATION --no-cache
 
 # Add custom focus patches
 echo "Implementing FOCUS patches..."

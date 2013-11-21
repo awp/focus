@@ -38,7 +38,7 @@ cd ../../
 
 # Update Drupal, contrib modules, and libraries.
 echo "Updating the FOCUS distribution..."
-drush -y make $WT4_PATH/scripts/focus.make
+drush -y make $WT4_PATH/scripts/focus.make --no-cache
 
 # Update the system and registry so we don't break the bootstrap
 echo "Updating the system registry..."
