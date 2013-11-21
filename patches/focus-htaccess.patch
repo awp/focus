@@ -1,5 +1,5 @@
 diff --git a/.htaccess b/.htaccess
-index 02c56f8..56c07a0 100644
+index 7ccb6a2..a1fdca0 100644
 --- a/.htaccess
 +++ b/.htaccess
 @@ -29,9 +29,17 @@ DirectoryIndex index.php index.html index.htm
@@ -12,7 +12,7 @@ index 02c56f8..56c07a0 100644
 +  php_flag html_errors                      on
 +  
 +  php_value max_execution_time              60
-+  php_value memory_limit                    512M
++  php_value memory_limit                    256M
 +  php_value post_max_size                   500M
 +  php_value upload_max_filesize             500M
    php_value mbstring.http_input             pass
@@ -21,7 +21,7 @@ index 02c56f8..56c07a0 100644
  </IfModule>
  
  # Requires mod_expires to be enabled.
-@@ -137,3 +145,13 @@ DirectoryIndex index.php index.html index.htm
+@@ -141,3 +149,12 @@ DirectoryIndex index.php index.html index.htm
      </FilesMatch>
    </IfModule>
  </IfModule>
@@ -34,4 +34,3 @@ index 02c56f8..56c07a0 100644
 +AddType font/ttf .ttf
 +AddType application/x-font-woff .woff
 +AddType application/vnd.ms-fontobject .eot
-+
