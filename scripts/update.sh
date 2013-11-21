@@ -40,13 +40,6 @@ cd ../../
 echo "Updating the FOCUS distribution..."
 drush -y make $WT4_PATH/scripts/focus.make
 
-# Update the system and registry so we don't break the bootstrap
-echo "Updating the system registry..."
-drush sqlq "UPDATE system SET filename = REPLACE(filename,'sites/all/modules','sites/all/modules/contrib') WHERE filename LIKE '%sites/all/modules%' AND filename NOT LIKE '%sites/all/modules/contrib%'"
-drush sqlq "UPDATE system SET filename = REPLACE(filename,'sites/all/themes','sites/all/themes/contrib') WHERE filename LIKE '%sites/all/themes%' AND filename NOT LIKE '%sites/all/themes/contrib%'"
-drush sqlq "UPDATE registry SET filename = REPLACE(filename,'sites/all/modules','sites/all/modules/contrib') WHERE filename LIKE '%sites/all/modules%' AND filename NOT LIKE '%sites/all/modules/contrib%'"
-drush sqlq "UPDATE registry SET filename = REPLACE(filename,'sites/all/themes','sites/all/themes/contrib') WHERE filename LIKE '%sites/all/themes%' AND filename NOT LIKE '%sites/all/themes/contrib%'"
-
 # Clear the bootstrap cache to allow the updates to set in.
 echo "Clearing the bootstrap cache..."
 php -r "print json_encode(array());" | drush cache-set --format=json lookup_cache -
@@ -71,4 +64,4 @@ fi
 drush updb
 
 # All done.
-echo "Congratulations!  FOCUS has finished updating."
+echo "Congratulations! FOCUS has finished updating."
