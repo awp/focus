@@ -15,3 +15,7 @@ $(TAR):
 	then \
 		scripts/local.sh $(TAR); \
 	fi
+	@if [ $@ = "webdav" ]; \
+	then \
+		scripts/webdav.sh $(TAR); \
+	fi
