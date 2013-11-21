@@ -38,7 +38,7 @@ cd ../../
 
 # Update Drupal, contrib modules, and libraries.
 echo "Updating the FOCUS distribution..."
-drush -y make $WT4_PATH/scripts/focus.make
+drush make -y $WT4_PATH/scripts/focus.make --no-cache
 
 # Clear the bootstrap cache to allow the updates to set in.
 echo "Clearing the bootstrap cache..."
