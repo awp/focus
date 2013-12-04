@@ -53,11 +53,10 @@ function vanilla_preprocess_html(&$vars) {
         if (!empty($library['installed']) && $vars['add_respond_js']) {
             libraries_load('respondjs');
         }
-        else {
-            $library = libraries_detect('html5shiv');
-            if (!empty($library['installed']) && $vars['add_html5_shim']) {
-                libraries_load('html5shiv');
-            }
+
+        $library = libraries_detect('html5shiv');
+        if (!empty($library['installed']) && $vars['add_html5_shim']) {
+            libraries_load('html5shiv');
         }
     }
 
