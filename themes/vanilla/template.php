@@ -49,11 +49,6 @@ function vanilla_preprocess_html(&$vars) {
             libraries_load('spin-js');
         }
 
-        $library = libraries_detect('ie7-js');
-        if (!empty($library['installed'])) {
-            libraries_load('ie7-js');
-        }
-
         $library = libraries_detect('respondjs');
         if (!empty($library['installed']) && $vars['add_respond_js']) {
             libraries_load('respondjs');

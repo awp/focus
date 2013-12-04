@@ -100,27 +100,6 @@ function vanilla_libraries_info() {
         ),
     );
 
-    $libraries['ie7-js'] = array(
-        'name' => 'IE9js',
-        'vendor url' => 'https://code.google.com/p/ie7-js/',
-        'download url' => 'https://code.google.com/p/ie7-js/',
-        'version arguments' => array(
-            'file' => 'IE9.js',
-            'pattern' => '/version:"(.*?)"/i',
-            'lines' => 6,
-        ),
-        'files' => array(
-            'js' => array(
-                'IE9.js' => array(
-                    'browsers' => array(
-                        'IE' => 'lt IE 9',
-                        '!IE' => FALSE,
-                    ),
-                ),
-            ),
-        ),
-    );
-
     $libraries['html5shiv'] = array(
         'name' => 'HTML5 Shiv',
         'vendor url' => 'https://code.google.com/p/html5shiv/',
