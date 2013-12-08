@@ -36,22 +36,6 @@ function webtree_vanilla_libraries_info() {
         ),
     );
 
-    $libraries['ie7-js'] = array(
-        'name' => 'IE7js',
-        'vendor url' => 'https://code.google.com/p/ie7-js/',
-        'download url' => 'https://code.google.com/p/ie7-js/',
-        'version arguments' => array(
-            'file' => 'IE7.js',
-            'pattern' => '/version:"(.*?)"/i',
-            'lines' => 6,
-        ),
-        'files' => array(
-            'js' => array(
-                'IE7.js',
-            ),
-        ),
-    );
-
     $libraries['html5shiv'] = array(
         'name' => 'HTML5 Shiv',
         'vendor url' => 'https://code.google.com/p/html5shiv/',
