@@ -1,3 +1,6 @@
 file:
-  default: Inline
-  teaser: !Teaser
+  default: Default
+  large:   Large
+  medium:  Medium
+  small:   Small
+  teaser:  !Teaser
