@@ -57,11 +57,10 @@ function focus_admin_paths() {
 }
 
 /**
- * Implements hook_media_token_to_markup_alter().
+ * Implements hook_media_wysiwyg_token_to_markup_alter().
  */
-function focus_media_token_to_markup_alter(&$element, &$tag_info, &$settings) {
-    // Check for floated images and add a class to the element container to
-    // reflect the float.
+function focus_media_wysiwyg_token_to_markup_alter(&$element, &$tag_info, &$settings) {
+    // Add a class to the element container to reflect float styles.
     $file =& $element['content']['file'];
     if (!empty($file['#attributes']['style'])) {
         preg_match_all('#float\:[\s]?(.*?)\;#i', $file['#attributes']['style'], $floats);
