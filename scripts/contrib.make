@@ -61,6 +61,7 @@ projects[fast_404][version] = 1.3
 projects[fast_404][subdir] = contrib
 projects[fast_404][patch][] = https://drupal.org/files/1500092-dbtng-enable.patch
 projects[fast_404][patch][] = https://drupal.org/files/1875350-mysqli.patch
+projects[fast_404][patch][] = https://drupal.org/files/fast_404-period-as-ext-1975016-1.patch
 projects[feeds][version] = 2.0-alpha8
 projects[feeds][subdir] = contrib
 projects[feeds_jsonpath_parser][version] = 1.0-beta2
