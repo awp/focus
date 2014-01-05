@@ -107,7 +107,6 @@ projects[media_vimeo][version] = 2.0-rc1
 projects[media_vimeo][subdir] = contrib
 projects[media_youtube][version] = 2.x-dev
 projects[media_youtube][subdir] = contrib
-projects[media_youtube][patch][] = https://drupal.org/files/issues/provide-access-wrapper-1823376-6.patch
 projects[memcache][version] = 1.0
 projects[memcache][subdir] = contrib
 projects[menu_block][version] = 2.3
