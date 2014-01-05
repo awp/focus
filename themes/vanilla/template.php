@@ -50,12 +50,12 @@ function vanilla_preprocess_html(&$vars) {
         }
 
         $library = libraries_detect('respondjs');
-        if (!empty($library['installed']) && $vars['add_respond_js']) {
+        if (!empty($library['installed']) && !empty($vars['add_respond_js'])) {
             libraries_load('respondjs');
         }
 
         $library = libraries_detect('html5shiv');
-        if (!empty($library['installed']) && $vars['add_html5_shim']) {
+        if (!empty($library['installed']) && !empty($vars['add_html5_shim'])) {
             libraries_load('html5shiv');
         }
     }

@@ -89,13 +89,13 @@ function vanilla_libraries_info() {
         'vendor url' => 'https://github.com/fgnass/spin.js/',
         'download url' => 'https://github.com/fgnass/spin.js/',
         'version arguments' => array(
-            'file' => 'spin.js',
-            'pattern' => '/v([\d]\.[\d]\.[\d])/i',
-            'lines' => 1,
+            'file' => 'package.json',
+            'pattern' => '@([\d]\.[\d]\.[\d])@i',
+            'lines' => 3,
         ),
         'files' => array(
             'js' => array(
-                'spin.js',
+                'spin.min.js',
             ),
         ),
     );
