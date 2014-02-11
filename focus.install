@@ -370,10 +370,12 @@ function focus_complete_installation() {
     $modules = system_rebuild_module_data();
 
     $disable_themes = array('bartik');
+    $enable_themes  = array('vanilla');
     $disable_blocks = array('help', 'recent', 'form', 'new', 'online');
     $enable_modules = array('entityconnect');
 
     $operations = array(
+        array('_focus_themes_enable', array($enable_themes)),
         array('_focus_themes_disable', array($disable_themes)),
         array('_focus_blocks_disable', array($disable_blocks)),
     );
@@ -942,4 +944,13 @@ function focus_update_7006(&$sandbox) {
 
     $sandbox['#finished'] = TRUE;
 
+}
+
+/**
+ * Enable base theme (vanilla).
+ */
+function focus_update_7007(&$sandbox) {
+    theme_enable(array('vanilla'));
+
+    $sandbox['#finished'] = TRUE;
 }
