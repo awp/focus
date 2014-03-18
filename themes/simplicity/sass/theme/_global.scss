@@ -2,6 +2,37 @@ body{
   background: $bg;
   color: $black;
   font-family: $rr;
+  margin: 0;
+  line-height: 1.6;
+}
+
+#content{
+  border-left: $tabsize solid $ltblue;
+  padding: 3rem $contentgutter;
+  & > header{
+    margin-bottom: 3rem;
+  }
+}
+
+#page-title{
+  margin: 0;
+}
+
+.breadcrumb{
+  font-family: $rl;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0;
+  ul,
+  ol{
+    padding: 0;
+  }
+  li{
+    display: inline-block;
+  }
+  .separator{
+    margin: 0 0.5rem;
+  }
 }
 
 h1{
@@ -29,6 +60,13 @@ h5{
 
 h6{
 
+}
+
+small {
+  color: #BABABA;
+  font-weight: 400;
+  font-family: 'Roboto';
+  padding-left: 0.5rem;
 }
 
 a{
@@ -66,4 +104,14 @@ legend{
       color: $blue;
     }
   }
+}
+
+td {
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.description {
+  font-style: italic;
+  font-size: 0.8rem;
 }

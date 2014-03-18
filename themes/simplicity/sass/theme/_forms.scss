@@ -43,12 +43,14 @@ textarea{
 }
 
 input[type="submit"] {
+  display: inline-block;
   background: $blue;
   color: $white;
   font: normal 22px/1 $rb;
   width: 308px;
   height: 70px;
   border: none !important;
+  margin-right: 2.5rem;
   @include transition(background 0.2s);
   &:hover,
   &:focus{
@@ -83,6 +85,11 @@ $inputs:
       }
     }
   }
+}
+
+fieldset{
+  border: 1px solid $gray;
+  padding: 0 36px;
 }
 
 .form-item{
@@ -288,4 +295,101 @@ form .form-item .chzn-container{
   .highlighted{
     background: $blue;
   }
+}
+
+
+#content .vertical-tabs{
+  border: none;
+  margin: 0;
+  .vertical-tabs-list{
+    border: none;
+    background: $ltblue;
+    color: $dkblue;
+    width: 17rem;
+    margin-left: -($tabsize + $contentgutter);
+    box-shadow: 0 -17rem $ltblue;
+    li{
+      border: none;
+      background: none;
+      font-size: 18px;
+      &:hover,
+      &:focus{
+        outline: none;
+      }
+      a:after{
+        content: "";
+        display: block;
+        width: 0;
+        padding: 0.5rem;
+        background: $ltblue;
+        border: 0.5em solid $bg;
+        border-radius: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        margin: -1em 0 0 -1rem;
+        opacity: 0;
+        transition: opacity $timing, border $timing;
+      }
+      &.selected{
+        color: $white;
+        a:after{
+          opacity: 1;
+        }
+      }
+      a{
+        padding: 2rem;
+        position: relative;
+        color: inherit;
+        &:hover,
+        &:focus{
+          outline: none;
+        }
+      }
+      strong{
+        color: inherit;
+      }
+    }
+    .summary:not(:empty){
+      display: block;
+      font-style: italic;
+      font-size: 11px;
+      margin-top: 16px;
+    }
+  }
+  .vertical-tabs-pane{
+    padding: 2rem 0 0;
+  }
+}
+
+// Specific items
+
+#edit-title{
+  padding: 24px 0;
+  background: none;
+  border: none;
+  border-bottom: 3px solid $blue;
+  font-weight: 200;
+  font-size: 2.5em;
+  color: $dkblue;
+  padding: 0 0 24px;
+  &:focus{
+    outline: none;
+  }
+}
+
+#edit-preview{
+  background: $gray;
+}
+
+.form-type-checkbox + .form-type-checkbox {
+margin-top: -30px;
+}
+
+.button {
+  padding: 1rem 2.5rem;
+  background-color: #DDD;
+  color: $white;
+  font-family: "RobotoBold";
+  margin-right: 1rem;
 }

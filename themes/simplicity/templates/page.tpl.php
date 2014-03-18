@@ -10,6 +10,7 @@
 
 <div id="page">
 
+    <?php /* ?>
     <header class="header" id="header" role="banner">
         <div class="wrapper">
             <?php print render($page['header']); ?>
@@ -18,17 +19,20 @@
             </nav>
         </div>
     </header>
+    <?php */ ?>
 
     <div id="main">
         <div class="wrapper">
             <section id="content" role="main">
-                <?php print $breadcrumb; ?>
                 <a id="main-content"></a>
-                <?php print render($title_prefix); ?>
-                <?php if ($title): ?>
-                    <h1 class="page--title title" id="page-title"><?php print $title; ?></h1>
-                <?php endif; ?>
-                <?php print render($title_suffix); ?>
+                <header>
+                    <?php print render($title_prefix); ?>
+                    <?php if ($title): ?>
+                        <h1 class="page--title title" id="page-title"><?php print $title; ?></h1>
+                    <?php endif; ?>
+                    <?php print render($title_suffix); ?>
+                    <?php print $breadcrumb; ?>
+                </header>
                 <?php print render($page['content']); ?>
                 <?php print $feed_icons; ?>
             </section>
