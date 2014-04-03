@@ -169,7 +169,7 @@ projects[webform][subdir] = contrib
 projects[wysiwyg][version] = 2.x-dev
 projects[wysiwyg][subdir] = contrib
 #projects[wysiwyg][patch][] = https://drupal.org/files/wysiwyg-support_v4_ckeditor-1853550-73.patch
-projects[wysiwyg][patch][] = https://drupal.org/files/wysiwyg_field_size_507696_96_0.patch
+#projects[wysiwyg][patch][] = https://drupal.org/files/wysiwyg_field_size_507696_96_0.patch
 projects[xmlsitemap][version] = 2.0-rc2
 projects[xmlsitemap][subdir] = contrib
 
