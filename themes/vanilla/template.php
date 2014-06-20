@@ -34,11 +34,6 @@ function vanilla_preprocess_html(&$vars) {
             libraries_load('jquery.custom-file-input');
         }
 
-        $library = libraries_detect('jquery.chosen');
-        if (!empty($library['installed'])) {
-            libraries_load('jquery.chosen');
-        }
-
         $library = libraries_detect('jquery.placeholder');
         if (!empty($library['installed'])) {
             libraries_load('jquery.placeholder');

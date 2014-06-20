@@ -25,13 +25,6 @@ function simplicity_preprocess_html(&$vars, $hook) {
         default:
             drupal_add_css(SIMPLICITY_PATH . '/css/default.css');
     }
-
-    if (function_exists('libraries_detect')) {
-        $library = libraries_detect('jquery.chosen');
-        if (!empty($library['installed'])) {
-            libraries_load('jquery.chosen');
-        }
-    }
 }
 
 /**
