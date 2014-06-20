@@ -52,8 +52,8 @@ input[type="submit"] {
   background: $dkgray;
   color: $white;
   font: normal 22px/1 $rb;
-  width: 12rem;
-  height: 4rem;
+  width: auto;
+  padding: 1.5rem 4rem;
   border: none !important;
   margin: 0 1.5rem 1.5rem 0;
   @include transition(background 0.2s);
@@ -99,7 +99,8 @@ $inputs:
   }
 }
 
-fieldset{
+fieldset,
+.container-inline{
   border: 1px solid $gray;
   padding: 2rem;
 }
@@ -259,12 +260,11 @@ select{
   background: $white !important;
   color: $black;
   font: normal 18px/1.5 $rl;
-  border-bottom: 3px solid $blue !important;
-  padding: 24px 28px 28px;
+  border: 1px solid $gray;
+  border-bottom: 3px solid $gray !important;
+  padding: 1rem 2rem 1rem 1.3rem;
   position: relative;
   z-index: 10;
-  width: 100%;
-  width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -280,9 +280,9 @@ select{
 }
 
 #content .vertical-tabs{
-  border: none;
   margin: 0 0 2rem;
   display: flex;
+  border: 1rem solid $gray;
   .vertical-tabs-list{
     border: none;
     background: $gray;
@@ -343,7 +343,7 @@ select{
     width: 100%;
   }
   .vertical-tabs-pane{
-    padding: 2rem 0 0 2rem;
+    padding: 2rem;
   }
 }
 
@@ -364,7 +364,7 @@ select{
 }
 
 .form-type-checkbox + .form-type-checkbox {
-margin-top: -30px;
+  margin-top: 0;
 }
 
 .button {
@@ -375,6 +375,13 @@ margin-top: -30px;
   margin-right: 1rem;
 }
 
-.context-plugins .context-plugin-info{
-  padding: 2rem;
+.context-plugins{
+  .context-plugin-form{
+    .form-checkboxes {
+      max-height: none;
+    }
+  }
+  .context-plugin-info{
+    padding: 2rem;
+  }
 }

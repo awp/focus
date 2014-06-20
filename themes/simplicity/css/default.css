@@ -210,7 +210,7 @@ body {
 
 /* line 9, ../sass/theme/_global.scss */
 #content {
-  padding: 3rem 6rem;
+  padding: 2rem 3rem;
 }
 /* line 11, ../sass/theme/_global.scss */
 #content > header {
@@ -296,34 +296,48 @@ form {
 
 /* line 92, ../sass/theme/_global.scss */
 fieldset {
-  margin-bottom: 80px;
+  margin-bottom: 2rem;
 }
 
 /* line 96, ../sass/theme/_global.scss */
+table {
+  width: 100%;
+}
+
+/* line 100, ../sass/theme/_global.scss */
 legend {
   line-height: 1;
-  margin-bottom: 40px;
 }
-/* line 100, ../sass/theme/_global.scss */
+/* line 103, ../sass/theme/_global.scss */
 legend a {
   text-decoration: none;
   display: inline-block;
 }
-/* line 103, ../sass/theme/_global.scss */
+/* line 106, ../sass/theme/_global.scss */
 legend a:hover {
   color: #00c2e7;
 }
 
-/* line 109, ../sass/theme/_global.scss */
+/* line 112, ../sass/theme/_global.scss */
 td {
   line-height: 2;
   padding: 1rem 0;
 }
 
-/* line 114, ../sass/theme/_global.scss */
+/* line 117, ../sass/theme/_global.scss */
 .description {
   font-style: italic;
   font-size: 0.8rem;
+}
+
+/* line 122, ../sass/theme/_global.scss */
+.links.inline {
+  padding: 0;
+}
+/* line 124, ../sass/theme/_global.scss */
+.links.inline li {
+  display: inline-block;
+  margin: 0.5rem;
 }
 
 /* line 1, ../sass/theme/_forms.scss */
@@ -397,8 +411,8 @@ input[type="submit"] {
   background: #c8c8c8;
   color: white;
   font: normal 22px/1 "RobotoBold", sans-serif;
-  width: 12rem;
-  height: 4rem;
+  width: auto;
+  padding: 1.5rem 4rem;
   border: none !important;
   margin: 0 1.5rem 1.5rem 0;
   -webkit-transition: background 0.2s;
@@ -491,25 +505,26 @@ input[type="radio"]:checked + label:before {
   margin: -1px 4px 1px 0;
 }
 
-/* line 102, ../sass/theme/_forms.scss */
-fieldset {
+/* line 103, ../sass/theme/_forms.scss */
+fieldset,
+.container-inline {
   border: 1px solid #dbdbdb;
   padding: 2rem;
 }
 
-/* line 107, ../sass/theme/_forms.scss */
+/* line 108, ../sass/theme/_forms.scss */
 .form-item {
   margin-bottom: 60px;
 }
-/* line 109, ../sass/theme/_forms.scss */
+/* line 110, ../sass/theme/_forms.scss */
 .form-item:last-child {
   margin-bottom: 0;
 }
-/* line 112, ../sass/theme/_forms.scss */
+/* line 113, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm {
   position: relative;
 }
-/* line 114, ../sass/theme/_forms.scss */
+/* line 115, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm .password-strength {
   position: absolute;
   right: 0;
@@ -522,12 +537,12 @@ fieldset {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 124, ../sass/theme/_forms.scss */
+/* line 125, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm .password-indicator {
   background-color: white;
   height: 100%;
 }
-/* line 129, ../sass/theme/_forms.scss */
+/* line 130, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm .password-strength-title,
 .form-item.form-type-password-confirm .password-strength-text {
   font: normal 12px/32px "RobotoMedium", sans-serif;
@@ -536,16 +551,16 @@ fieldset {
   left: 20px;
   color: #00b5d8;
 }
-/* line 136, ../sass/theme/_forms.scss */
+/* line 137, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm .password-strength-text {
   left: auto;
   right: 20px;
 }
-/* line 140, ../sass/theme/_forms.scss */
+/* line 141, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm .indicator {
   background: #9ef0ff;
 }
-/* line 145, ../sass/theme/_forms.scss */
+/* line 146, ../sass/theme/_forms.scss */
 .form-item.confirm-parent > div {
   position: absolute;
   left: -20px;
@@ -555,7 +570,7 @@ fieldset {
   height: 12px;
   margin: 0;
 }
-/* line 154, ../sass/theme/_forms.scss */
+/* line 155, ../sass/theme/_forms.scss */
 .form-item.confirm-parent .ok {
   background: url(../img/check.png) no-repeat;
   width: 14px;
@@ -564,7 +579,7 @@ fieldset {
   top: 0;
   left: 0;
 }
-/* line 161, ../sass/theme/_forms.scss */
+/* line 162, ../sass/theme/_forms.scss */
 .form-item.confirm-parent .ok:after {
   content: '';
   background: url(../img/check.png) no-repeat;
@@ -574,7 +589,7 @@ fieldset {
   top: 171px;
   left: 0;
 }
-/* line 172, ../sass/theme/_forms.scss */
+/* line 173, ../sass/theme/_forms.scss */
 .form-item .password-suggestions {
   position: absolute;
   right: 0;
@@ -587,14 +602,14 @@ fieldset {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 182, ../sass/theme/_forms.scss */
+/* line 183, ../sass/theme/_forms.scss */
 .form-item .description {
   font: normal 12px/1.5 "RobotoMedium", sans-serif;
   color: #c8c8c8;
   margin-top: 12px;
 }
 
-/* line 193, ../sass/theme/_forms.scss */
+/* line 194, ../sass/theme/_forms.scss */
 .form-radios .form-item,
 .form-checkboxes .form-item,
 .form-type-checkbox .form-item,
@@ -602,13 +617,13 @@ fieldset {
   margin-bottom: 0 !important;
 }
 
-/* line 198, ../sass/theme/_forms.scss */
+/* line 199, ../sass/theme/_forms.scss */
 .fieldset-description {
   margin-bottom: 40px;
   font-family: "RobotoLightItalic", sans-serif;
 }
 
-/* line 206, ../sass/theme/_forms.scss */
+/* line 207, ../sass/theme/_forms.scss */
 .collapsible.collapsed legend a:before {
   -webkit-transform: rotate(0);
   -moz-transform: rotate(0);
@@ -616,11 +631,11 @@ fieldset {
   -o-transform: rotate(0);
   transform: rotate(0);
 }
-/* line 212, ../sass/theme/_forms.scss */
+/* line 213, ../sass/theme/_forms.scss */
 .collapsible legend a {
   text-decoration: none !important;
 }
-/* line 214, ../sass/theme/_forms.scss */
+/* line 215, ../sass/theme/_forms.scss */
 .collapsible legend a:before {
   content: '';
   display: inline-block;
@@ -636,16 +651,16 @@ fieldset {
   margin-bottom: 4px;
 }
 
-/* line 228, ../sass/theme/_forms.scss */
+/* line 229, ../sass/theme/_forms.scss */
 .form-type-textfield {
   position: relative;
 }
-/* line 230, ../sass/theme/_forms.scss */
+/* line 231, ../sass/theme/_forms.scss */
 .form-type-textfield input {
   position: relative;
   z-index: 1;
 }
-/* line 234, ../sass/theme/_forms.scss */
+/* line 235, ../sass/theme/_forms.scss */
 .form-type-textfield .field-suffix {
   position: absolute;
   z-index: 10;
@@ -653,31 +668,30 @@ fieldset {
   top: 50%;
   margin-top: -12px;
 }
-/* line 241, ../sass/theme/_forms.scss */
+/* line 242, ../sass/theme/_forms.scss */
 .form-type-textfield .machine-name-label {
   display: none;
 }
-/* line 244, ../sass/theme/_forms.scss */
+/* line 245, ../sass/theme/_forms.scss */
 .form-type-textfield .machine-name-value {
   color: #c8c8c8;
   margin-right: 8px;
 }
-/* line 250, ../sass/theme/_forms.scss */
+/* line 251, ../sass/theme/_forms.scss */
 .form-type-textfield .admin-link:after, .form-type-textfield .admin-link:before {
   content: '';
 }
 
-/* line 258, ../sass/theme/_forms.scss */
+/* line 259, ../sass/theme/_forms.scss */
 select {
   background: white !important;
   color: #707070;
   font: normal 18px/1.5 "RobotoLight", sans-serif;
-  border-bottom: 3px solid #00c2e7 !important;
-  padding: 24px 28px 28px;
+  border: 1px solid #dbdbdb;
+  border-bottom: 3px solid #dbdbdb !important;
+  padding: 1rem 2rem 1rem 1.3rem;
   position: relative;
   z-index: 10;
-  width: 100%;
-  width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -696,9 +710,9 @@ select.highlighted {
 
 /* line 282, ../sass/theme/_forms.scss */
 #content .vertical-tabs {
-  border: none;
   margin: 0 0 2rem;
   display: flex;
+  border: 1rem solid #dbdbdb;
 }
 /* line 286, ../sass/theme/_forms.scss */
 #content .vertical-tabs .vertical-tabs-list {
@@ -770,7 +784,7 @@ select.highlighted {
 }
 /* line 345, ../sass/theme/_forms.scss */
 #content .vertical-tabs .vertical-tabs-pane {
-  padding: 2rem 0 0 2rem;
+  padding: 2rem;
 }
 
 /* line 352, ../sass/theme/_forms.scss */
@@ -791,7 +805,7 @@ select.highlighted {
 
 /* line 366, ../sass/theme/_forms.scss */
 .form-type-checkbox + .form-type-checkbox {
-  margin-top: -30px;
+  margin-top: 0;
 }
 
 /* line 370, ../sass/theme/_forms.scss */
@@ -803,7 +817,11 @@ select.highlighted {
   margin-right: 1rem;
 }
 
-/* line 378, ../sass/theme/_forms.scss */
+/* line 380, ../sass/theme/_forms.scss */
+.context-plugins .context-plugin-form .form-checkboxes {
+  max-height: none;
+}
+/* line 384, ../sass/theme/_forms.scss */
 .context-plugins .context-plugin-info {
   padding: 2rem;
 }

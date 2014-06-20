@@ -7,7 +7,7 @@ body{
 }
 
 #content{
-  padding: 3rem $contentgutter;
+  padding: 2rem 3rem;
   & > header{
     margin-bottom: 3rem;
   }
@@ -90,13 +90,16 @@ form{
 }
 
 fieldset{
-  margin-bottom: $bottom * 4;
+  margin-bottom: 2rem;
+}
+
+table{
+  width: 100%;
 }
 
 legend{
   @extend h4;
   line-height: 1;
-  margin-bottom: $bottom * 2;
   a{
     text-decoration: none;
     display: inline-block;
@@ -114,4 +117,12 @@ td {
 .description {
   font-style: italic;
   font-size: 0.8rem;
+}
+
+.links.inline{
+  padding: 0;
+  li{
+    display: inline-block;
+    margin: 0.5rem;
+  }
 }
