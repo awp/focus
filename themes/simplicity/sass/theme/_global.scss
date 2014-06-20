@@ -7,7 +7,6 @@ body{
 }
 
 #content{
-  border-left: $tabsize solid $ltblue;
   padding: 3rem $contentgutter;
   & > header{
     margin-bottom: 3rem;
@@ -23,6 +22,7 @@ body{
   font-size: 18px;
   line-height: 1;
   padding: 0;
+  color: $gray;
   ul,
   ol{
     padding: 0;

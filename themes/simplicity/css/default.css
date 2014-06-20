@@ -1,4 +1,4 @@
-/* line 2, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_admin-menu.scss */
+/* line 2, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_admin-menu.scss */
 #admin-menu, #admin-menu * {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -6,7 +6,7 @@
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 7, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_admin-menu.scss */
+/* line 7, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_admin-menu.scss */
 #admin-menu .dropdown span, #admin-menu .dropdown a {
   font: normal 10px/12px Arial, sans-serif !important;
   text-transform: none !important;
@@ -14,66 +14,66 @@
   height: 12px;
   padding: 4px 8px;
 }
-/* line 14, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_admin-menu.scss */
+/* line 14, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_admin-menu.scss */
 #admin-menu .dropdown li {
   font: normal 10px/12px Arial, sans-serif !important;
   position: static;
 }
 
-/* line 2, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
+/* line 2, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
 .block .contextual-links-trigger {
   text-indent: -9999px;
 }
-/* line 5, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
+/* line 5, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
 .block .contextual-links-wrapper {
   display: none;
 }
-/* line 7, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
+/* line 7, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
 .block .contextual-links-wrapper a {
   text-align: left !important;
   text-decoration: none !important;
 }
-/* line 11, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
+/* line 11, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
 .block .contextual-links-wrapper .contextual-links {
   padding: 2px !important;
   margin: 0 !important;
   list-style: none !important;
   background: #fff;
 }
-/* line 16, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
+/* line 16, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
 .block .contextual-links-wrapper .contextual-links li, .block .contextual-links-wrapper .contextual-links a {
   margin: 0 !important;
   text-transform: none !important;
   letter-spacing: normal !important;
 }
-/* line 21, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
+/* line 21, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
 .block .contextual-links-wrapper .contextual-links li:before, .block .contextual-links-wrapper .contextual-links li:after, .block .contextual-links-wrapper .contextual-links a:before, .block .contextual-links-wrapper .contextual-links a:after {
   content: '' !important;
   content: none !important;
 }
-/* line 26, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
+/* line 26, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
 .block .contextual-links-wrapper .contextual-links li {
   padding: 0 !important;
   list-style: none !important;
 }
-/* line 29, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
+/* line 29, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
 .block .contextual-links-wrapper .contextual-links li a {
   padding: 2px 6px;
   font: normal 14px/1.5 Arial, sans-serif !important;
   color: #333;
   display: block;
 }
-/* line 38, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
+/* line 38, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_blocks.scss */
 .block.contextual-links-region-active {
   outline: 1px dashed #999;
 }
 
-/* line 2, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_breadcrumbs.scss */
+/* line 2, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_breadcrumbs.scss */
 .breadcrumb ul, .breadcrumb ol {
   list-style: none;
 }
 
-/* line 6, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_elements.scss */
+/* line 6, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_elements.scss */
 .form-item,
 .form-actions,
 .item-list ul,
@@ -81,45 +81,45 @@
   margin: 0;
 }
 
-/* line 2, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_navigation.scss */
+/* line 2, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_navigation.scss */
 .navigation > ul {
   float: left;
   width: 100%;
 }
-/* line 5, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_navigation.scss */
+/* line 5, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_navigation.scss */
 .navigation > ul > li {
   float: left;
 }
-/* line 7, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_navigation.scss */
+/* line 7, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_navigation.scss */
 .navigation > ul > li a {
   display: inline-block;
 }
-/* line 5, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/base/_mixins.scss */
+/* line 5, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/base/_mixins.scss */
 .navigation > ul > li.hover, .navigation > ul > li:hover, .navigation > ul > li:focus {
   z-index: 10;
 }
-/* line 12, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_navigation.scss */
+/* line 12, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_navigation.scss */
 .navigation > ul > li.hover > ul, .navigation > ul > li:hover > ul, .navigation > ul > li:focus > ul {
   display: block;
 }
-/* line 19, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_navigation.scss */
+/* line 19, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_navigation.scss */
 .navigation ul li {
   position: relative;
   list-style: none;
   list-style-image: none;
   z-index: 1;
 }
-/* line 25, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_navigation.scss */
+/* line 25, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_navigation.scss */
 .navigation ul ul {
   position: absolute;
   display: none;
 }
-/* line 28, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_navigation.scss */
+/* line 28, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_navigation.scss */
 .navigation ul ul ul {
   display: none;
 }
 
-/* line 1, ../../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_regions.scss */
+/* line 1, ../../../../../../../.rvm/gems/ruby-2.1.1/gems/dropcloth-0.2.1/stylesheets/dropcloth/modules/_regions.scss */
 #region-page-bottom {
   overflow: hidden;
 }
@@ -210,25 +210,25 @@ body {
 
 /* line 9, ../sass/theme/_global.scss */
 #content {
-  border-left: 17rem solid #9ef0ff;
   padding: 3rem 6rem;
 }
-/* line 12, ../sass/theme/_global.scss */
+/* line 11, ../sass/theme/_global.scss */
 #content > header {
   margin-bottom: 3rem;
 }
 
-/* line 17, ../sass/theme/_global.scss */
+/* line 16, ../sass/theme/_global.scss */
 #page-title {
   margin: 0;
 }
 
-/* line 21, ../sass/theme/_global.scss */
+/* line 20, ../sass/theme/_global.scss */
 .breadcrumb {
   font-family: "RobotoLight", sans-serif;
   font-size: 18px;
   line-height: 1;
   padding: 0;
+  color: #dbdbdb;
 }
 /* line 27, ../sass/theme/_global.scss */
 .breadcrumb ul,
@@ -337,7 +337,7 @@ label {
 }
 /* line 8, ../sass/theme/_forms.scss */
 label .form-required {
-  color: #e4870d;
+  color: #ed5f00;
 }
 /* line 11, ../sass/theme/_forms.scss */
 label.option {
@@ -356,7 +356,7 @@ textarea {
   background: white;
   padding: 24px 28px;
   border: 1px solid #dbdbdb;
-  border-bottom: 3px solid #00c2e7;
+  border-bottom: 3px solid #dbdbdb;
   width: 100%;
   font: normal 18px/1.5 "RobotoLight", sans-serif;
   color: #707070;
@@ -371,46 +371,61 @@ textarea {
 /* line 33, ../sass/theme/_forms.scss */
 input:focus,
 textarea:focus {
-  border-bottom-color: #00b5d8;
+  border-bottom-color: #00c2e7;
+  outline: 0;
 }
-/* line 36, ../sass/theme/_forms.scss */
+/* line 37, ../sass/theme/_forms.scss */
 input.error,
 textarea.error {
-  border-bottom-color: #e4870d;
+  border-bottom-color: #ed5f00;
+}
+/* line 40, ../sass/theme/_forms.scss */
+input[disabled=disabled],
+textarea[disabled=disabled] {
+  background: #f4f4f4;
+  border-bottom-color: #c8c8c8;
 }
 
-/* line 41, ../sass/theme/_forms.scss */
+/* line 46, ../sass/theme/_forms.scss */
 textarea {
   padding-bottom: 40px;
 }
 
-/* line 45, ../sass/theme/_forms.scss */
+/* line 50, ../sass/theme/_forms.scss */
 input[type="submit"] {
   display: inline-block;
-  background: #00c2e7;
+  background: #c8c8c8;
   color: white;
   font: normal 22px/1 "RobotoBold", sans-serif;
-  width: 308px;
-  height: 70px;
+  width: 12rem;
+  height: 4rem;
   border: none !important;
-  margin-right: 2.5rem;
+  margin: 0 1.5rem 1.5rem 0;
   -webkit-transition: background 0.2s;
   -moz-transition: background 0.2s;
   -o-transition: background 0.2s;
   transition: background 0.2s;
 }
-/* line 56, ../sass/theme/_forms.scss */
+/* line 60, ../sass/theme/_forms.scss */
+input[type="submit"]#edit-submit {
+  background: #00c2e7;
+}
+/* line 64, ../sass/theme/_forms.scss */
+input[type="submit"]#edit-delete, input[type="submit"].remove {
+  background: #ed5f00;
+}
+/* line 68, ../sass/theme/_forms.scss */
 input[type="submit"]:hover, input[type="submit"]:focus {
   background: #00b5d8;
 }
 
-/* line 71, ../sass/theme/_forms.scss */
+/* line 83, ../sass/theme/_forms.scss */
 input[type="checkbox"] {
   opacity: 0;
   width: 0;
   position: absolute;
 }
-/* line 76, ../sass/theme/_forms.scss */
+/* line 88, ../sass/theme/_forms.scss */
 input[type="checkbox"] + label:before {
   content: '';
   display: inline-block;
@@ -422,13 +437,13 @@ input[type="checkbox"] + label:before {
   margin: -1px 4px 1px 0;
 }
 
-/* line 71, ../sass/theme/_forms.scss */
+/* line 83, ../sass/theme/_forms.scss */
 input[type="checkbox"]:checked {
   opacity: 0;
   width: 0;
   position: absolute;
 }
-/* line 76, ../sass/theme/_forms.scss */
+/* line 88, ../sass/theme/_forms.scss */
 input[type="checkbox"]:checked + label:before {
   content: '';
   display: inline-block;
@@ -440,13 +455,13 @@ input[type="checkbox"]:checked + label:before {
   margin: -1px 4px 1px 0;
 }
 
-/* line 71, ../sass/theme/_forms.scss */
+/* line 83, ../sass/theme/_forms.scss */
 input[type="radio"] {
   opacity: 0;
   width: 0;
   position: absolute;
 }
-/* line 76, ../sass/theme/_forms.scss */
+/* line 88, ../sass/theme/_forms.scss */
 input[type="radio"] + label:before {
   content: '';
   display: inline-block;
@@ -458,13 +473,13 @@ input[type="radio"] + label:before {
   margin: -1px 4px 1px 0;
 }
 
-/* line 71, ../sass/theme/_forms.scss */
+/* line 83, ../sass/theme/_forms.scss */
 input[type="radio"]:checked {
   opacity: 0;
   width: 0;
   position: absolute;
 }
-/* line 76, ../sass/theme/_forms.scss */
+/* line 88, ../sass/theme/_forms.scss */
 input[type="radio"]:checked + label:before {
   content: '';
   display: inline-block;
@@ -476,21 +491,25 @@ input[type="radio"]:checked + label:before {
   margin: -1px 4px 1px 0;
 }
 
-/* line 90, ../sass/theme/_forms.scss */
+/* line 102, ../sass/theme/_forms.scss */
 fieldset {
   border: 1px solid #dbdbdb;
-  padding: 0 36px;
+  padding: 2rem;
 }
 
-/* line 95, ../sass/theme/_forms.scss */
+/* line 107, ../sass/theme/_forms.scss */
 .form-item {
-  margin-bottom: 60px !important;
+  margin-bottom: 60px;
 }
-/* line 97, ../sass/theme/_forms.scss */
+/* line 109, ../sass/theme/_forms.scss */
+.form-item:last-child {
+  margin-bottom: 0;
+}
+/* line 112, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm {
   position: relative;
 }
-/* line 99, ../sass/theme/_forms.scss */
+/* line 114, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm .password-strength {
   position: absolute;
   right: 0;
@@ -503,12 +522,12 @@ fieldset {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 109, ../sass/theme/_forms.scss */
+/* line 124, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm .password-indicator {
   background-color: white;
   height: 100%;
 }
-/* line 114, ../sass/theme/_forms.scss */
+/* line 129, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm .password-strength-title,
 .form-item.form-type-password-confirm .password-strength-text {
   font: normal 12px/32px "RobotoMedium", sans-serif;
@@ -517,16 +536,16 @@ fieldset {
   left: 20px;
   color: #00b5d8;
 }
-/* line 121, ../sass/theme/_forms.scss */
+/* line 136, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm .password-strength-text {
   left: auto;
   right: 20px;
 }
-/* line 125, ../sass/theme/_forms.scss */
+/* line 140, ../sass/theme/_forms.scss */
 .form-item.form-type-password-confirm .indicator {
   background: #9ef0ff;
 }
-/* line 130, ../sass/theme/_forms.scss */
+/* line 145, ../sass/theme/_forms.scss */
 .form-item.confirm-parent > div {
   position: absolute;
   left: -20px;
@@ -536,7 +555,7 @@ fieldset {
   height: 12px;
   margin: 0;
 }
-/* line 139, ../sass/theme/_forms.scss */
+/* line 154, ../sass/theme/_forms.scss */
 .form-item.confirm-parent .ok {
   background: url(../img/check.png) no-repeat;
   width: 14px;
@@ -545,7 +564,7 @@ fieldset {
   top: 0;
   left: 0;
 }
-/* line 146, ../sass/theme/_forms.scss */
+/* line 161, ../sass/theme/_forms.scss */
 .form-item.confirm-parent .ok:after {
   content: '';
   background: url(../img/check.png) no-repeat;
@@ -555,7 +574,7 @@ fieldset {
   top: 171px;
   left: 0;
 }
-/* line 157, ../sass/theme/_forms.scss */
+/* line 172, ../sass/theme/_forms.scss */
 .form-item .password-suggestions {
   position: absolute;
   right: 0;
@@ -568,14 +587,14 @@ fieldset {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 167, ../sass/theme/_forms.scss */
+/* line 182, ../sass/theme/_forms.scss */
 .form-item .description {
   font: normal 12px/1.5 "RobotoMedium", sans-serif;
   color: #c8c8c8;
   margin-top: 12px;
 }
 
-/* line 178, ../sass/theme/_forms.scss */
+/* line 193, ../sass/theme/_forms.scss */
 .form-radios .form-item,
 .form-checkboxes .form-item,
 .form-type-checkbox .form-item,
@@ -583,13 +602,13 @@ fieldset {
   margin-bottom: 0 !important;
 }
 
-/* line 183, ../sass/theme/_forms.scss */
+/* line 198, ../sass/theme/_forms.scss */
 .fieldset-description {
   margin-bottom: 40px;
   font-family: "RobotoLightItalic", sans-serif;
 }
 
-/* line 191, ../sass/theme/_forms.scss */
+/* line 206, ../sass/theme/_forms.scss */
 .collapsible.collapsed legend a:before {
   -webkit-transform: rotate(0);
   -moz-transform: rotate(0);
@@ -597,11 +616,11 @@ fieldset {
   -o-transform: rotate(0);
   transform: rotate(0);
 }
-/* line 197, ../sass/theme/_forms.scss */
+/* line 212, ../sass/theme/_forms.scss */
 .collapsible legend a {
   text-decoration: none !important;
 }
-/* line 199, ../sass/theme/_forms.scss */
+/* line 214, ../sass/theme/_forms.scss */
 .collapsible legend a:before {
   content: '';
   display: inline-block;
@@ -617,16 +636,16 @@ fieldset {
   margin-bottom: 4px;
 }
 
-/* line 213, ../sass/theme/_forms.scss */
+/* line 228, ../sass/theme/_forms.scss */
 .form-type-textfield {
   position: relative;
 }
-/* line 215, ../sass/theme/_forms.scss */
+/* line 230, ../sass/theme/_forms.scss */
 .form-type-textfield input {
   position: relative;
   z-index: 1;
 }
-/* line 219, ../sass/theme/_forms.scss */
+/* line 234, ../sass/theme/_forms.scss */
 .form-type-textfield .field-suffix {
   position: absolute;
   z-index: 10;
@@ -634,118 +653,72 @@ fieldset {
   top: 50%;
   margin-top: -12px;
 }
-/* line 226, ../sass/theme/_forms.scss */
+/* line 241, ../sass/theme/_forms.scss */
 .form-type-textfield .machine-name-label {
   display: none;
 }
-/* line 229, ../sass/theme/_forms.scss */
+/* line 244, ../sass/theme/_forms.scss */
 .form-type-textfield .machine-name-value {
   color: #c8c8c8;
   margin-right: 8px;
 }
-/* line 235, ../sass/theme/_forms.scss */
+/* line 250, ../sass/theme/_forms.scss */
 .form-type-textfield .admin-link:after, .form-type-textfield .admin-link:before {
   content: '';
 }
 
-/* line 244, ../sass/theme/_forms.scss */
-form .form-item .chzn-container a, form .form-item .chzn-container span {
+/* line 258, ../sass/theme/_forms.scss */
+select {
   background: white !important;
   color: #707070;
-}
-/* line 248, ../sass/theme/_forms.scss */
-form .form-item .chzn-container a, form .form-item .chzn-container .chzn-drop {
-  border-color: #dbdbdb !important;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-/* line 253, ../sass/theme/_forms.scss */
-form .form-item .chzn-container .chzn-drop {
-  z-index: 100;
-}
-/* line 256, ../sass/theme/_forms.scss */
-form .form-item .chzn-container .chzn-results {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-/* line 259, ../sass/theme/_forms.scss */
-form .form-item .chzn-container .chzn-results li {
-  padding: 8px 28px 7px;
-}
-/* line 262, ../sass/theme/_forms.scss */
-form .form-item .chzn-container .chzn-results .no-results {
-  background: white;
-  color: #c8c8c8;
-}
-/* line 265, ../sass/theme/_forms.scss */
-form .form-item .chzn-container .chzn-results .no-results span {
-  color: #00c2e7;
-}
-/* line 270, ../sass/theme/_forms.scss */
-form .form-item .chzn-container > a {
   font: normal 18px/1.5 "RobotoLight", sans-serif;
   border-bottom: 3px solid #00c2e7 !important;
   padding: 24px 28px 28px;
   position: relative;
   z-index: 10;
+  width: 100%;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  border-radius: 0;
 }
-/* line 276, ../sass/theme/_forms.scss */
-form .form-item .chzn-container > a:after {
-  content: '';
-  border-top: 10px solid #c8c8c8;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  display: inline-block;
-  vertical-align: middle;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  margin-top: -5px;
-}
-/* line 289, ../sass/theme/_forms.scss */
-form .form-item .chzn-container div {
-  background-color: white !important;
-}
-/* line 291, ../sass/theme/_forms.scss */
-form .form-item .chzn-container div b {
-  background: none !important;
-}
-/* line 295, ../sass/theme/_forms.scss */
-form .form-item .chzn-container .highlighted {
+/* line 273, ../sass/theme/_forms.scss */
+select.highlighted {
   background: #00c2e7;
 }
 
-/* line 301, ../sass/theme/_forms.scss */
+/* line 278, ../sass/theme/_forms.scss */
+.link-field-subrow {
+  display: flex;
+}
+
+/* line 282, ../sass/theme/_forms.scss */
 #content .vertical-tabs {
   border: none;
-  margin: 0;
+  margin: 0 0 2rem;
+  display: flex;
 }
-/* line 304, ../sass/theme/_forms.scss */
+/* line 286, ../sass/theme/_forms.scss */
 #content .vertical-tabs .vertical-tabs-list {
   border: none;
-  background: #9ef0ff;
-  color: #00b5d8;
-  width: 17rem;
-  margin-left: -23rem;
-  box-shadow: 0 -17rem #9ef0ff;
+  background: #dbdbdb;
+  color: #707070;
+  width: 30rem;
+  margin: 0;
 }
-/* line 311, ../sass/theme/_forms.scss */
+/* line 292, ../sass/theme/_forms.scss */
 #content .vertical-tabs .vertical-tabs-list li {
   border: none;
   background: none;
   font-size: 18px;
 }
-/* line 316, ../sass/theme/_forms.scss */
+/* line 297, ../sass/theme/_forms.scss */
 #content .vertical-tabs .vertical-tabs-list li:hover, #content .vertical-tabs .vertical-tabs-list li:focus {
   outline: none;
 }
-/* line 319, ../sass/theme/_forms.scss */
+/* line 300, ../sass/theme/_forms.scss */
 #content .vertical-tabs .vertical-tabs-list li a:after {
   content: "";
   display: block;
@@ -761,41 +734,46 @@ form .form-item .chzn-container .highlighted {
   opacity: 0;
   transition: opacity 0.15s ease, border 0.15s ease;
 }
-/* line 334, ../sass/theme/_forms.scss */
+/* line 315, ../sass/theme/_forms.scss */
 #content .vertical-tabs .vertical-tabs-list li.selected {
-  color: white;
+  color: #c8c8c8;
 }
-/* line 336, ../sass/theme/_forms.scss */
+/* line 317, ../sass/theme/_forms.scss */
 #content .vertical-tabs .vertical-tabs-list li.selected a:after {
   opacity: 1;
 }
-/* line 340, ../sass/theme/_forms.scss */
+/* line 321, ../sass/theme/_forms.scss */
 #content .vertical-tabs .vertical-tabs-list li a {
   padding: 2rem;
   position: relative;
   color: inherit;
 }
-/* line 345, ../sass/theme/_forms.scss */
+/* line 326, ../sass/theme/_forms.scss */
 #content .vertical-tabs .vertical-tabs-list li a:hover, #content .vertical-tabs .vertical-tabs-list li a:focus {
   outline: none;
 }
-/* line 349, ../sass/theme/_forms.scss */
+/* line 330, ../sass/theme/_forms.scss */
 #content .vertical-tabs .vertical-tabs-list li strong {
   color: inherit;
 }
-/* line 353, ../sass/theme/_forms.scss */
+/* line 334, ../sass/theme/_forms.scss */
 #content .vertical-tabs .vertical-tabs-list .summary:not(:empty) {
   display: block;
   font-style: italic;
   font-size: 11px;
   margin-top: 16px;
 }
-/* line 360, ../sass/theme/_forms.scss */
+/* line 341, ../sass/theme/_forms.scss */
+#content .vertical-tabs .vertical-tabs-panes {
+  flex: auto;
+  width: 100%;
+}
+/* line 345, ../sass/theme/_forms.scss */
 #content .vertical-tabs .vertical-tabs-pane {
-  padding: 2rem 0 0;
+  padding: 2rem 0 0 2rem;
 }
 
-/* line 367, ../sass/theme/_forms.scss */
+/* line 352, ../sass/theme/_forms.scss */
 #edit-title {
   padding: 24px 0;
   background: none;
@@ -806,28 +784,28 @@ form .form-item .chzn-container .highlighted {
   color: #00b5d8;
   padding: 0 0 24px;
 }
-/* line 376, ../sass/theme/_forms.scss */
+/* line 361, ../sass/theme/_forms.scss */
 #edit-title:focus {
   outline: none;
 }
 
-/* line 381, ../sass/theme/_forms.scss */
-#edit-preview {
-  background: #dbdbdb;
-}
-
-/* line 385, ../sass/theme/_forms.scss */
+/* line 366, ../sass/theme/_forms.scss */
 .form-type-checkbox + .form-type-checkbox {
   margin-top: -30px;
 }
 
-/* line 389, ../sass/theme/_forms.scss */
+/* line 370, ../sass/theme/_forms.scss */
 .button {
   padding: 1rem 2.5rem;
   background-color: #DDD;
   color: white;
   font-family: "RobotoBold";
   margin-right: 1rem;
+}
+
+/* line 378, ../sass/theme/_forms.scss */
+.context-plugins .context-plugin-info {
+  padding: 2rem;
 }
 
 /* line 2, ../sass/theme/_content.scss */
