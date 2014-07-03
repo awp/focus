@@ -142,7 +142,6 @@ projects[view_unpublished][version] = 1.1
 projects[view_unpublished][subdir] = contrib
 projects[views][version] = 3.8
 projects[views][subdir] = contrib
-projects[views][patch][] = https://drupal.org/files/views_1055616_81_cache.patch
 projects[views_block_area][version] = 1.1
 projects[views_block_area][subdir] = contrib
 projects[views_column_class][version] = 1.0-alpha1
