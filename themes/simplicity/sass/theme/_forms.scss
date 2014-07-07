@@ -41,6 +41,10 @@ textarea{
     background: $bg;
     border-bottom-color: $dkgray;
   }
+  &[type=checkbox]{
+    width: auto;
+    display: inline-block;
+  }
 }
 
 textarea{
@@ -53,7 +57,7 @@ input[type="submit"] {
   color: $white;
   font: normal 22px/1 $rb;
   width: auto;
-  padding: 1.5rem 4rem;
+  padding: 1.5rem 3rem;
   border: none !important;
   margin: 0 1.5rem 1.5rem 0;
   @include transition(background 0.2s);
@@ -81,39 +85,51 @@ input[type="submit"] {
   }
 }
 
-$inputs:
-    'input[type="checkbox"]',
-    'input[type="checkbox"]:checked',
-    'input[type="radio"]',
-    'input[type="radio"]:checked';
-
-@for $i from 1 through length($inputs) {
-  $x: -($i * 20px - 20);
-  $input: nth($inputs, $i);
-
-  #{$input} {
-    opacity: 0;
-    width: 0;
-    position: absolute;
-    + label{
-      &:before{
-        content: '';
-        display: inline-block;
-        width: 20px;
-        height: 16px;
-        background-image: url('../img/input.png');
-        background-position: $x 0 !important;
-        vertical-align: middle;
-        margin: -1px 4px 1px 0;
-      }
-    }
-  }
-}
+//$inputs:
+//    'input[type="checkbox"]',
+//    'input[type="checkbox"]:checked',
+//    'input[type="radio"]',
+//    'input[type="radio"]:checked';
+//
+//@for $i from 1 through length($inputs) {
+//  $x: -($i * 20px - 20);
+//  $input: nth($inputs, $i);
+//
+//  #{$input} {
+//    opacity: 0;
+//    width: 0;
+//    position: absolute;
+//    + label{
+//      &:before{
+//        content: '';
+//        display: inline-block;
+//        width: 20px;
+//        height: 16px;
+//        background-image: url('../img/input.png');
+//        background-position: $x 0 !important;
+//        vertical-align: middle;
+//        margin: -1px 4px 1px 0;
+//      }
+//    }
+//  }
+//}
 
 fieldset,
 .container-inline{
   border: 1px solid $gray;
   padding: 2rem;
+}
+
+.form-wrapper{
+  margin-bottom: 2rem;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.form-field-type-field-collection{
+  border: 0.5rem solid $gray;
+  padding: 0.5rem;
 }
 
 .form-item{
