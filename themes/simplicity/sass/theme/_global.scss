@@ -95,6 +95,23 @@ fieldset{
 
 table{
   width: 100%;
+  font-size: 0.8rem;
+  border: 1px solid $gray;
+  border-collapse: collapse;
+}
+
+th{
+  border-bottom: 3px solid $gray;
+  padding: 1rem 0.5rem;
+}
+
+tr{
+  border-bottom: 1px solid $gray;
+}
+
+td {
+  line-height: 2;
+  padding: 0.75rem 0.5rem;
 }
 
 legend{
@@ -107,11 +124,6 @@ legend{
       color: $blue;
     }
   }
-}
-
-td {
-  line-height: 2;
-  padding: 0.5rem 0.25rem;
 }
 
 .description {

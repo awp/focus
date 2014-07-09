@@ -4,3 +4,7 @@
 	text-transform: uppercase;
 	font-weight: 700;
 }
+
+.media-widget .preview:empty{
+  margin-right: 0;
+}

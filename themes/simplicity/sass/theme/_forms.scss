@@ -1,10 +1,9 @@
 label{
   display: block;
-  font: normal 12px/1 $rk;
+  font: normal 12px/1.4 $rk;
   color: $blue;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: $bottom;
   .form-required{
     color: $red;
   }
@@ -16,16 +15,17 @@ label{
     display: inline;
     cursor: pointer;
   }
+  & + *{
+    margin-top: $bottom;
+  }
 }
 
 input,
 textarea{
-  display: block;
   background: $white;
-  padding: 24px 28px;
+  padding: $padding;
   border: 1px solid $gray;
   border-bottom: 3px solid $gray;
-  width: 100%;
   font: normal 18px/1.5 $rl;
   color: $black;
   @include box-sizing(border-box);
@@ -41,7 +41,8 @@ textarea{
     background: $bg;
     border-bottom-color: $dkgray;
   }
-  &[type=checkbox]{
+  &[type=checkbox],
+  &[type=radio]{
     width: auto;
     display: inline-block;
   }
@@ -62,6 +63,7 @@ input[type="submit"] {
   margin: 0 1.5rem 1.5rem 0;
   @include transition(background 0.2s);
   &#edit-submit,
+  &#edit-next,
   &#edit-save,
   &#edit-continue{
     background: $blue;
@@ -85,35 +87,6 @@ input[type="submit"] {
   }
 }
 
-//$inputs:
-//    'input[type="checkbox"]',
-//    'input[type="checkbox"]:checked',
-//    'input[type="radio"]',
-//    'input[type="radio"]:checked';
-//
-//@for $i from 1 through length($inputs) {
-//  $x: -($i * 20px - 20);
-//  $input: nth($inputs, $i);
-//
-//  #{$input} {
-//    opacity: 0;
-//    width: 0;
-//    position: absolute;
-//    + label{
-//      &:before{
-//        content: '';
-//        display: inline-block;
-//        width: 20px;
-//        height: 16px;
-//        background-image: url('../img/input.png');
-//        background-position: $x 0 !important;
-//        vertical-align: middle;
-//        margin: -1px 4px 1px 0;
-//      }
-//    }
-//  }
-//}
-
 fieldset,
 .container-inline{
   border: 1px solid $gray;
@@ -128,8 +101,12 @@ fieldset,
 }
 
 .form-field-type-field-collection{
-  border: 0.5rem solid $gray;
-  padding: 0.5rem;
+  border: 1px solid $gray;
+  padding: 0.5rem 1rem;
+}
+
+form .field-multiple-table{
+  margin-bottom: 1rem;
 }
 
 .form-item{
@@ -284,12 +261,13 @@ fieldset,
 // Select
 
 select{
-  background: $white !important;
+  background: $white;
   color: $black;
   font: normal 18px/1.5 $rl;
   border: 1px solid $gray;
   border-bottom: 3px solid $gray !important;
-  padding: 1rem 2rem 1rem 1.3rem;
+  padding: $padding;
+  padding-right: 3rem;
   position: relative;
   z-index: 10;
   -webkit-appearance: none;
@@ -297,6 +275,10 @@ select{
   -ms-appearance: none;
   appearance: none;
   border-radius: 0;
+  background-image: url('../img/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: calc(100% - 1rem) 50%;
   &.highlighted{
     background: $blue;
   }
@@ -395,11 +377,12 @@ select{
 }
 
 .button {
-  padding: 1rem 2.5rem;
+  padding: $padding;
   background-color: #DDD;
   color: $white;
   font-family: "RobotoBold";
   margin-right: 1rem;
+  display: inline-block !important;
 }
 
 .context-plugins{
