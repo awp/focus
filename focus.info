@@ -1,7 +1,7 @@
 name = FOCUS for Drupal
 description = Welcome to FOCUS for Drupal.
 core = 7.x
-version = 7.x-3.1
+version = 7.x-3.2
 distribution_name = FOCUS
 exclusive = TRUE
 
