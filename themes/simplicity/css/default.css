@@ -250,19 +250,20 @@ h1 {
   color: #00c2e7;
   border-bottom: 3px solid #00c2e7;
   margin-bottom: 60px;
+  height: auto !important;
 }
 
-/* line 49, ../sass/theme/_global.scss */
+/* line 50, ../sass/theme/_global.scss */
 h3 {
   font: normal 27px/1.5 "RobotoLight", sans-serif;
 }
 
-/* line 53, ../sass/theme/_global.scss */
+/* line 54, ../sass/theme/_global.scss */
 h4, legend {
   font: normal 23px/1.5 "RobotoLight", sans-serif;
 }
 
-/* line 65, ../sass/theme/_global.scss */
+/* line 66, ../sass/theme/_global.scss */
 small {
   color: #BABABA;
   font-weight: 400;
@@ -270,36 +271,36 @@ small {
   padding-left: 0.5rem;
 }
 
-/* line 72, ../sass/theme/_global.scss */
+/* line 73, ../sass/theme/_global.scss */
 a {
   color: #00c2e7;
   text-decoration: none;
 }
-/* line 76, ../sass/theme/_global.scss */
+/* line 77, ../sass/theme/_global.scss */
 a:hover, a:focus {
   text-decoration: underline;
 }
-/* line 79, ../sass/theme/_global.scss */
+/* line 80, ../sass/theme/_global.scss */
 a:visited {
   color: #00b5d8;
 }
 
-/* line 84, ../sass/theme/_global.scss */
+/* line 85, ../sass/theme/_global.scss */
 p {
   margin-bottom: 20px;
 }
 
-/* line 88, ../sass/theme/_global.scss */
+/* line 89, ../sass/theme/_global.scss */
 form {
   padding-bottom: 60px;
 }
 
-/* line 92, ../sass/theme/_global.scss */
+/* line 93, ../sass/theme/_global.scss */
 fieldset {
   margin-bottom: 2rem;
 }
 
-/* line 96, ../sass/theme/_global.scss */
+/* line 97, ../sass/theme/_global.scss */
 table {
   width: 100%;
   font-size: 0.8rem;
@@ -307,48 +308,48 @@ table {
   border-collapse: collapse;
 }
 
-/* line 103, ../sass/theme/_global.scss */
+/* line 104, ../sass/theme/_global.scss */
 th {
   border-bottom: 3px solid #dbdbdb;
   padding: 1rem 0.5rem;
 }
 
-/* line 108, ../sass/theme/_global.scss */
+/* line 109, ../sass/theme/_global.scss */
 tr {
   border-bottom: 1px solid #dbdbdb;
 }
 
-/* line 112, ../sass/theme/_global.scss */
+/* line 113, ../sass/theme/_global.scss */
 td {
   line-height: 2;
   padding: 0.75rem 0.5rem;
 }
 
-/* line 117, ../sass/theme/_global.scss */
+/* line 118, ../sass/theme/_global.scss */
 legend {
   line-height: 1;
 }
-/* line 120, ../sass/theme/_global.scss */
+/* line 121, ../sass/theme/_global.scss */
 legend a {
   text-decoration: none;
   display: inline-block;
 }
-/* line 123, ../sass/theme/_global.scss */
+/* line 124, ../sass/theme/_global.scss */
 legend a:hover {
   color: #00c2e7;
 }
 
-/* line 129, ../sass/theme/_global.scss */
+/* line 130, ../sass/theme/_global.scss */
 .description {
   font-style: italic;
   font-size: 0.8rem;
 }
 
-/* line 134, ../sass/theme/_global.scss */
+/* line 135, ../sass/theme/_global.scss */
 .links.inline {
   padding: 0;
 }
-/* line 136, ../sass/theme/_global.scss */
+/* line 137, ../sass/theme/_global.scss */
 .links.inline li {
   display: inline-block;
   margin: 0.5rem;
