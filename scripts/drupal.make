@@ -3,7 +3,7 @@ api = 2
 core = 7.x
 
 ; Core
-projects[drupal][version] = 7.31
+projects[drupal][version] = 7.32
 
 ; Patches for Core
 projects[drupal][patch][] = https://drupal.org/files/1074108-skip-profile-16-7.x-do-not-test.patch
