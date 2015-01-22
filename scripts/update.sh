@@ -1,4 +1,6 @@
 #!/bin/bash
+# Compatible with drush 5.5 and up due to stability to drush make.
+# @see https://drupal.org/node/1719512
 set -e
 
 #
@@ -6,18 +8,6 @@ set -e
 #
 
 WT4_PATH="`pwd`"
-
-# Check Drush Version
-# Compatible with drush 5.5 and up due to stability to drush make.
-# @see https://drupal.org/node/1719512
-DRUSH_VERSION=$(drush --version)
-DRUSH_MIN="5.5"
-IFS=' ' read -a array <<< $DRUSH_VERSION
-VERSION=(`echo "${array[2]} < $DRUSH_MIN" | bc`)
-if [ "$VERSION" == "1" ]; then
-	echo "Update requires Drush version $DRUSH_MIN and up; you are running $DRUSH_VERSION.  Consider updating drush or manually update your project."
-	exit
-fi
 
 # Check that sites/default has proper permissions to be updated
 TEST=$(test -w ../../sites/default; echo $?);
