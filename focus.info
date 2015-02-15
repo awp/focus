@@ -21,7 +21,7 @@ dependencies[] = menu
 dependencies[] = number
 dependencies[] = options
 dependencies[] = path
-dependencies[] = search
+; dependencies[] = search
 dependencies[] = taxonomy
 dependencies[] = rdf
 
@@ -63,7 +63,7 @@ dependencies[] = missioncontrol
 dependencies[] = module_filter
 dependencies[] = pathauto
 dependencies[] = retina_images
-dependencies[] = search_config
+; dependencies[] = search_config
 dependencies[] = sitewide
 dependencies[] = structural
 dependencies[] = toolkit
