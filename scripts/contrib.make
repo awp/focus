@@ -88,6 +88,7 @@ projects[media][subdir] = contrib
 #projects[media][patch][] = https://drupal.org/files/issues/media-wysiwyg-alt-title-handling-2126697-6.patch
 #projects[media][patch][] = https://drupal.org/files/issues/media-wysiwyg-improve-our-macro-handling-2126755-88.patch
 #projects[media][patch][] = https://drupal.org/files/issues/media-wysiwyg-fields-with-wysiwyg-2170759-14.patch
+projects[media][patch][] = https://www.drupal.org/files/issues/file_entity-remove-contextual-links-2401811-11.patch
 projects[media][patch][] = https://drupal.org/files/issues/media-media_wysiwyg_wysiwyg_allowed_attributes_UI-2168291-8.patch
 projects[media_flickr][version] = 2.0-alpha3
 projects[media_flickr][subdir] = contrib
