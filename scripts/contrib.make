@@ -1,5 +1,5 @@
 ; Contrib Modules
-projects[addressfield][version] = 1.0-beta5
+projects[addressfield][version] = 1.0
 projects[addressfield][subdir] = contrib
 projects[addressfield][patch][] = https://drupal.org/files/addressfield-element_info-970048-31.patch
 projects[addressfield][patch][] = https://drupal.org/files/addressfield-flexible-orgainsation-label-1846850-5.patch
@@ -12,7 +12,7 @@ projects[backup_migrate][version] = 2.8
 projects[backup_migrate][subdir] = contrib
 projects[better_formats][version] = 1.0-beta1
 projects[better_formats][subdir] = contrib
-projects[calendar][version] = 3.4
+projects[calendar][version] = 3.5
 projects[calendar][subdir] = contrib
 projects[ckeditor_link][version] = 2.3
 projects[ckeditor_link][subdir] = contrib
