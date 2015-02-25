@@ -1,8 +1,8 @@
 ; Contrib Modules
-projects[addressfield][version] = 1.0
+projects[addressfield][version] = 1.0-beta5
 projects[addressfield][subdir] = contrib
 projects[addressfield][patch][] = https://drupal.org/files/addressfield-element_info-970048-31.patch
-projects[addressfield][patch][] = https://drupal.org/files/addressfield-flexible-orgainsation-label-1846850-9.patch
+projects[addressfield][patch][] = https://drupal.org/files/addressfield-flexible-orgainsation-label-1846850-5.patch
 projects[admin_menu][version] = 3.0-rc4
 projects[admin_menu][subdir] = contrib
 projects[auto_nodetitle][version] = 1.0
