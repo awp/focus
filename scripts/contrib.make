@@ -33,6 +33,7 @@ projects[ctools][patch][] = https://drupal.org/files/autosubmit_enhanced_textfie
 projects[date][version] = 2.8
 projects[date][subdir] = contrib
 projects[date][patch][] = https://drupal.org/files/date-repeat-field-nested-2065747-1.patch
+projects[date][patch][] = https://drupal.org/files/issues/date-title_date_formats-2294973-70.patch
 projects[date_ical][version] = 2.13
 projects[date_ical][subdir] = contrib
 projects[date_popup_authored][version] = 1.1
