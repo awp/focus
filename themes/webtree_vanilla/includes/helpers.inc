@@ -56,26 +56,7 @@ function webtree_vanilla_load_css() {
  * Load base webtree_vanilla js
  */
 function webtree_vanilla_load_js() {
-    // TODO: manage these as optional add-ons in config
     drupal_add_library('system', 'ui.button');
-
-    if (function_exists('libraries_load')) {
-        // add selectmenu and appropriate theme styles
-        $library = libraries_detect('jquery.ui.selectmenu');
-        if (!empty($library['installed'])) {
-            libraries_load('jquery.ui.selectmenu');
-            drupal_add_js(drupal_get_path('theme', 'webtree_vanilla') . '/js/selectmenu.js');
-        }
-
-        drupal_add_css(WEBTREE_VANILLA_PATH . '/css/ui.css', array('group' => CSS_THEME, 'weight' => -10));
-        webtree_vanilla_add_css('ui.selectmenu.css');
-
-        // TODO: DEPRECATED
-        // Expire Sept 30, 2013
-        // Naming a css file in a custom theme jquery.ui.selectmenu.css prevents
-        // the core selectmenu styles from being loaded.
-        // webtree_vanilla_add_css('jquery.ui.selectmenu.css');
-    }
 
     // no additional customizations for maintenance mode
     if (defined('MAINTENANCE_MODE')) return;
